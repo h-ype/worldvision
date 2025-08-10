@@ -1,0 +1,1617 @@
+<header id="header"><!-- D : 마이월드비전 페이지의 경우 header_myworld 클래스 추가 -->
+
+	<script type="text/javascript">
+		
+		loading_open();
+		$(document).ready(function(){
+			
+			fncSetGA4Html();
+			
+			
+			if(false){
+				fncGetSessionTime();
+			}
+			
+			
+			fncGetLoginYn();
+			
+			
+			fncSearchSearchWordList();
+
+			if(false){
+				show_layer('ly_pop_content_0');
+			}
+			
+			$(".all_dep1").children(":first").addClass('on');
+			
+			
+			$(".nickname").on("click", function(){
+				
+				if($(".nickname").hasClass('on')){
+					
+					
+					$(".my_lyr").hide(); 
+					$(".nickname").removeClass('on');
+				} else {
+					
+					
+					$(".nickname").addClass('on');
+					$(".my_lyr").show(); 
+				}
+			});
+			
+			
+			$('body').on('click', function(e){
+				
+				var $tgPoint = $(e.target);
+			    var $popCallBtn1 = $tgPoint.hasClass('nickname')
+			    var $popCallBtn2 = $tgPoint.hasClass('name')
+			    var $popArea = $tgPoint.hasClass('my_lyr-box')
+			 
+			    if ( !$popCallBtn1 && !$popCallBtn2 && !$popArea ) {
+					$(".my_lyr").hide(); 
+					$(".nickname").removeClass('on');
+			    }
+			});
+			
+			
+			$("#btnHeaderSrcWord").on("click", function(){
+				
+				var searchWord = $("#txtHeaderSearchWord").val();
+				
+				
+				btnHeaderSrchWord(searchWord);
+				
+			});
+			
+			
+			$("#txtHeaderSearchWord").keydown(function(key) {
+				if( key.keyCode == 13 ){
+					
+					$("#btnHeaderSrcWord").trigger("click");
+				}
+			});
+			
+		});
+		
+		if(false){
+			function hide_popup_layer(index){
+				var idx = Number(index);
+				hide_layer('ly_pop_content_' + index);
+				$('#ly_pop_content_'+index).remove();
+				show_layer('ly_pop_content_' + (idx+1));
+			}
+		}
+		
+		
+		function fncNextLayerPop(popIdx, nextPopIdx) {	
+			
+			$("#ly_content_" + popIdx).remove();
+			$('html').css({ 'overflow-y': '', 'margin-right': '0', 'width': '100%' });
+			
+			
+			if(nextPopIdx != 0){
+				show_layer('ly_content_' + nextPopIdx);
+			}
+		}
+		
+		
+		function fncHeaderMovePage(webTargetUrl, btnTagrgetFlag, popIdx, nextPopIdx) {
+			if(btnTagrgetFlag == '1') {
+				
+				window.location.href = webTargetUrl;
+			} else if (btnTagrgetFlag == '2') {
+				
+				var openNewWindow = window.open('about:blank');
+				openNewWindow.location.href = webTargetUrl;
+			} 
+			
+			
+			fncNextLayerPop(popIdx, nextPopIdx);
+		}
+		
+		
+		function fncSetGA4Html() {
+			
+			$("body").prepend("<noscript><iframe src=\"https://www.googletagmanager.com/ns.html?id=GTM-WCG8PZC4\" height=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe></noscript>");
+			$("body").prepend("<noscript><iframe src=\"https://www.googletagmanager.com/ns.html?id=GTM-K6H3TK3\" height=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe></noscript>");
+		}
+	
+	</script>
+	
+	
+	<script src="https://t1.kakaocdn.net/kakao_js_sdk/2.3.0/kakao.min.js" integrity="sha384-70k0rrouSYPWJt7q9rSTKpiTfX6USlMYjZUtr1Du+9o4cGvhPAWxngdtVZDdErlh" crossorigin="anonymous"></script>
+	<script src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.2.js" charset="utf-8"></script>
+	<script>
+		
+		Kakao.init('fd979209f64aa04ba1f4ec68fd424975');  	
+	</script>
+
+	<div class="header_wrap">
+		
+			
+			
+				<p class="header_logo"><a href="https://www.worldvision.or.kr/"><img src="https://www.worldvision.or.kr/static/images/common/logo.svg" alt="world vision"></a></p> <!-- 메인 아닐경우 -->
+			
+		
+
+		<div class="header_util">
+			
+				
+					<a href="https://www.worldvision.or.kr/loginProcess/initLogin">로그인</a>
+					<a href="https://www.worldvision.or.kr/membership/initMembership?openYn=Y">회원가입</a>
+				
+				
+			
+			<a href="javascript:loading_open_hreflink('https://my.worldvision.or.kr', '1');">마이월드비전</a>
+			<a href="javascript:void(0);" onclick="srch_open();" class="btn_srch"><span class="hide">검색</span></a>
+		</div>
+		
+		<nav class="header_gnb">
+			<ul class="gnb_dep1">
+			
+				<li class="gnb_dep1_list">
+				
+				
+					
+						<a href="https://www.worldvision.or.kr/supportGuide/main" class="gnb_dep1_link">후원안내</a>
+					
+					
+				
+				
+					<div class="gnb_dep2" style="height: 2px;">
+						<ul class="inner">
+						
+							<li class="gnb_dep2_list">
+							
+								
+									<a href="https://www.worldvision.or.kr/supportGuide/domesticChild" class="gnb_dep2_link"><span>국내아동</span></a>
+								
+								
+							
+							
+							</li>
+						
+							<li class="gnb_dep2_list">
+							
+								
+								
+									<p class="gnb_dep2_link"><span>해외아동</span></p>
+								
+							
+							
+								<ul class="gnb_dep3">
+								
+									<li class="gnb_dep3_list">
+										<a href="https://www.worldvision.or.kr/supportGuide/overseaChild" class="gnb_dep3_link"><span>해외아동후원 안내</span></a>
+									</li>
+								
+									<li class="gnb_dep3_list">
+										<a href="https://www.worldvision.or.kr/supportGuide/overseaChildSearch" class="gnb_dep3_link"><span>해외아동 선택하기</span></a>
+									</li>
+								
+								</ul>
+							
+							</li>
+						
+							<li class="gnb_dep2_list">
+							
+								
+									<a href="https://www.worldvision.or.kr/supportGuide/overseaBusiness" class="gnb_dep2_link"><span>해외사업</span></a>
+								
+								
+							
+							
+							</li>
+						
+							<li class="gnb_dep2_list">
+							
+								
+									<a href="https://www.worldvision.or.kr/supportGuide/domesticBusiness" class="gnb_dep2_link"><span>국내사업</span></a>
+								
+								
+							
+							
+							</li>
+						
+							<li class="gnb_dep2_list">
+							
+								
+									<a href="https://www.worldvision.or.kr/supportGuide/emergency" class="gnb_dep2_link"><span>긴급구호</span></a>
+								
+								
+							
+							
+							</li>
+						
+							<li class="gnb_dep2_list">
+							
+								
+									<a href="https://www.worldvision.or.kr/supportGuide/northKorea" class="gnb_dep2_link"><span>북한사업</span></a>
+								
+								
+							
+							
+							</li>
+						
+							<li class="gnb_dep2_list">
+							
+								
+									<a href="https://www.worldvision.or.kr/supportGuide/allBusiness" class="gnb_dep2_link"><span>전체사업</span></a>
+								
+								
+							
+							
+							</li>
+						
+							<li class="gnb_dep2_list">
+							
+								
+									<a href="https://www.worldvision.or.kr/supportGuide/anniversary" class="gnb_dep2_link"><span>기념일후원</span></a>
+								
+								
+							
+							
+							</li>
+						
+							<li class="gnb_dep2_list">
+							
+								
+									<a href="https://www.worldvision.or.kr/supportGuide/highSupportInfo" class="gnb_dep2_link"><span>고액후원/유산기부</span></a>
+								
+								
+							
+							
+								<ul class="gnb_dep3">
+								
+									<li class="gnb_dep3_list">
+										<a href="https://www.worldvision.or.kr/supportGuide/highSupportInfo" class="gnb_dep3_link"><span>소개</span></a>
+									</li>
+								
+									<li class="gnb_dep3_list">
+										<a href="https://www.worldvision.or.kr/supportGuide/highSupportClub" class="gnb_dep3_link"><span>밥피어스아너클럽</span></a>
+									</li>
+								
+									<li class="gnb_dep3_list">
+										<a href="https://www.worldvision.or.kr/supportGuide/highSupportChurch" class="gnb_dep3_link"><span>디아코니아처치</span></a>
+									</li>
+								
+									<li class="gnb_dep3_list">
+										<a href="https://www.worldvision.or.kr/supportGuide/highSupportLegacy" class="gnb_dep3_link"><span>유산기부</span></a>
+									</li>
+								
+								</ul>
+							
+							</li>
+						
+							<li class="gnb_dep2_list">
+							
+								
+									<a href="https://www.worldvision.or.kr/supportGuide/enterpriseSupportInfo" class="gnb_dep2_link"><span>기업후원</span></a>
+								
+								
+							
+							
+								<ul class="gnb_dep3">
+								
+									<li class="gnb_dep3_list">
+										<a href="https://www.worldvision.or.kr/supportGuide/enterpriseSupportInfo" class="gnb_dep3_link"><span>소개</span></a>
+									</li>
+								
+									<li class="gnb_dep3_list">
+										<a href="https://www.worldvision.or.kr/supportGuide/enterpriseSupportList" class="gnb_dep3_link"><span>함께하는 기업</span></a>
+									</li>
+								
+									<li class="gnb_dep3_list">
+										<a href="https://www.worldvision.or.kr/supportGuide/enterpriseSupportInquiry" class="gnb_dep3_link"><span>후원문의</span></a>
+									</li>
+								
+								</ul>
+							
+							</li>
+						
+							<li class="gnb_dep2_list">
+							
+								
+									<a href="https://www.worldvision.or.kr/supportGuide/visionStoreInfo" class="gnb_dep2_link"><span>비전스토어</span></a>
+								
+								
+							
+							
+								<ul class="gnb_dep3">
+								
+									<li class="gnb_dep3_list">
+										<a href="https://www.worldvision.or.kr/supportGuide/visionStoreInfo" class="gnb_dep3_link"><span>소개</span></a>
+									</li>
+								
+									<li class="gnb_dep3_list">
+										<a href="https://www.worldvision.or.kr/supportGuide/visionStoreNews" class="gnb_dep3_link"><span>소식</span></a>
+									</li>
+								
+									<li class="gnb_dep3_list">
+										<a href="https://www.worldvision.or.kr/supportGuide/visionStoreSearch" class="gnb_dep3_link"><span>찾기</span></a>
+									</li>
+								
+									<li class="gnb_dep3_list">
+										<a href="https://www.worldvision.or.kr/supportGuide/visionStoreSubmit" class="gnb_dep3_link"><span>신청</span></a>
+									</li>
+								
+								</ul>
+							
+							</li>
+						
+						</ul>
+					</div>
+				
+				
+				</li>
+			
+				<li class="gnb_dep1_list">
+				
+				
+					
+						<a href="https://www.worldvision.or.kr/businessGuide/main" class="gnb_dep1_link">사업안내</a>
+					
+					
+				
+				
+					<div class="gnb_dep2">
+						<ul class="inner">
+						
+							<li class="gnb_dep2_list">
+							
+								
+								
+									<p class="gnb_dep2_link"><span>해외사업</span></p>
+								
+							
+							
+								<ul class="gnb_dep3">
+								
+									<li class="gnb_dep3_list">
+										<a href="https://www.worldvision.or.kr/businessGuide/areaDevelop" class="gnb_dep3_link"><span>지역개발사업</span></a>
+									</li>
+								
+									<li class="gnb_dep3_list">
+										<a href="https://www.worldvision.or.kr/businessGuide/education" class="gnb_dep3_link"><span>교육사업</span></a>
+									</li>
+								
+									<li class="gnb_dep3_list">
+										<a href="https://www.worldvision.or.kr/businessGuide/health" class="gnb_dep3_link"><span>보건영양사업</span></a>
+									</li>
+								
+									<li class="gnb_dep3_list">
+										<a href="https://www.worldvision.or.kr/businessGuide/water" class="gnb_dep3_link"><span>식수위생사업</span></a>
+									</li>
+								
+									<li class="gnb_dep3_list">
+										<a href="https://www.worldvision.or.kr/businessGuide/calamity" class="gnb_dep3_link"><span>자연재난구호사업</span></a>
+									</li>
+								
+									<li class="gnb_dep3_list">
+										<a href="https://www.worldvision.or.kr/businessGuide/war" class="gnb_dep3_link"><span>분쟁대응사업</span></a>
+									</li>
+								
+								</ul>
+							
+							</li>
+						
+							<li class="gnb_dep2_list">
+							
+								
+								
+									<p class="gnb_dep2_link"><span>국내사업</span></p>
+								
+							
+							
+								<ul class="gnb_dep3">
+								
+									<li class="gnb_dep3_list">
+										<a href="https://www.worldvision.or.kr/businessGuide/dream" class="gnb_dep3_link"><span>꿈지원사업</span></a>
+									</li>
+								
+									<li class="gnb_dep3_list">
+										<a href="https://www.worldvision.or.kr/businessGuide/danger" class="gnb_dep3_link"><span>위기아동지원사업</span></a>
+									</li>
+								
+									<li class="gnb_dep3_list">
+										<a href="https://www.worldvision.or.kr/businessGuide/starve" class="gnb_dep3_link"><span>결식아동지원사업</span></a>
+									</li>
+								
+									<li class="gnb_dep3_list">
+										<a href="https://www.worldvision.or.kr/businessGuide/violence" class="gnb_dep3_link"><span>취약아동특화사업</span></a>
+									</li>
+								
+								</ul>
+							
+							</li>
+						
+							<li class="gnb_dep2_list">
+							
+								
+									<a href="https://www.worldvision.or.kr/businessGuide/advocacy" class="gnb_dep2_link"><span>아동옹호사업</span></a>
+								
+								
+							
+							
+							</li>
+						
+							<li class="gnb_dep2_list">
+							
+								
+								
+									<p class="gnb_dep2_link"><span>북한사업</span></p>
+								
+							
+							
+								<ul class="gnb_dep3">
+								
+									<li class="gnb_dep3_list">
+										<a href="https://www.worldvision.or.kr/businessGuide/northFood" class="gnb_dep3_link"><span>영양사업</span></a>
+									</li>
+								
+									<li class="gnb_dep3_list">
+										<a href="https://www.worldvision.or.kr/businessGuide/northWater" class="gnb_dep3_link"><span>식수사업</span></a>
+									</li>
+								
+								</ul>
+							
+							</li>
+						
+							<li class="gnb_dep2_list">
+							
+								
+								
+									<p class="gnb_dep2_link"><span>사업장안내</span></p>
+								
+							
+							
+								<ul class="gnb_dep3">
+								
+									<li class="gnb_dep3_list">
+										<a href="https://www.worldvision.or.kr/businessGuide/overseaBusinessMap" class="gnb_dep3_link"><span>해외사업장 안내</span></a>
+									</li>
+								
+									<li class="gnb_dep3_list">
+										<a href="https://www.worldvision.or.kr/businessGuide/domesticBusinessMap" class="gnb_dep3_link"><span>국내사업장 안내</span></a>
+									</li>
+								
+								</ul>
+							
+							</li>
+						
+						</ul>
+					</div>
+				
+				
+				</li>
+			
+				<li class="gnb_dep1_list">
+				
+				
+					
+						<a href="https://www.worldvision.or.kr/campaign/progress" class="gnb_dep1_link">캠페인</a>
+					
+					
+				
+				
+					<div class="gnb_dep2" style="height: 2px;">
+						<ul class="inner">
+						
+							<li class="gnb_dep2_list">
+							
+								
+									<a href="https://www.worldvision.or.kr/campaign/progress" class="gnb_dep2_link"><span>진행중인 캠페인</span></a>
+								
+								
+							
+							
+							</li>
+						
+							<li class="gnb_dep2_list">
+							
+								
+									<a href="https://www.worldvision.or.kr/campaign/last" class="gnb_dep2_link"><span>지난 캠페인</span></a>
+								
+								
+							
+							
+							</li>
+						
+							<li class="gnb_dep2_list">
+							
+								
+									<a href="https://www.worldvision.or.kr/campaign/result" class="gnb_dep2_link"><span>캠페인 결과보고</span></a>
+								
+								
+							
+							
+							</li>
+						
+						</ul>
+					</div>
+				
+				
+				</li>
+			
+				<li class="gnb_dep1_list">
+				
+				
+					
+						<a href="https://www.worldvision.or.kr/participate/subMain" class="gnb_dep1_link">참여하기</a>
+					
+					
+				
+				
+					<div class="gnb_dep2" style="height: 2px;">
+						<ul class="inner">
+						
+							<li class="gnb_dep2_list">
+							
+								
+								
+									<p class="gnb_dep2_link"><span>자원봉사참여</span></p>
+								
+							
+							
+								<ul class="gnb_dep3">
+								
+									<li class="gnb_dep3_list">
+										<a href="https://www.worldvision.or.kr/participate/volunteerTranslation" class="gnb_dep3_link"><span>번역봉사</span></a>
+									</li>
+								
+									<li class="gnb_dep3_list">
+										<a href="https://www.worldvision.or.kr/participate/volunteerGeneral" class="gnb_dep3_link"><span>일반봉사</span></a>
+									</li>
+								
+									<li class="gnb_dep3_list">
+										<a href="https://www.worldvision.or.kr/participate/recruitmentNotice" class="gnb_dep3_link"><span>모집공고</span></a>
+									</li>
+								
+								</ul>
+							
+							</li>
+						
+							<li class="gnb_dep2_list">
+							
+								
+									<a href="https://www.worldvision.or.kr/participate/schoolParticipation" class="gnb_dep2_link"><span>학교참여</span></a>
+								
+								
+							
+							
+							</li>
+						
+							<li class="gnb_dep2_list">
+							
+								
+								
+									<p class="gnb_dep2_link"><span>후원자참여</span></p>
+								
+							
+							
+								<ul class="gnb_dep3">
+								
+									<li class="gnb_dep3_list">
+										<a href="https://www.worldvision.or.kr/participate/supportFamilyDay" class="gnb_dep3_link"><span>패밀리데이</span></a>
+									</li>
+								
+									<li class="gnb_dep3_list">
+										<a href="https://www.worldvision.or.kr/participate/supportVisionRoad" class="gnb_dep3_link"><span>비전로드</span></a>
+									</li>
+								
+									<li class="gnb_dep3_list">
+										<a href="https://www.worldvision.or.kr/participate/supportOpenMeeting" class="gnb_dep3_link"><span>열린모임</span></a>
+									</li>
+								
+								</ul>
+							
+							</li>
+						
+							<li class="gnb_dep2_list">
+							
+								
+								
+									<p class="gnb_dep2_link"><span>교회참여</span></p>
+								
+							
+							
+								<ul class="gnb_dep3">
+								
+									<li class="gnb_dep3_list">
+										<a href="https://www.worldvision.or.kr/participate/churchVisionSunday" class="gnb_dep3_link"><span>비전주일</span></a>
+									</li>
+								
+									<li class="gnb_dep3_list">
+										<a href="https://www.worldvision.or.kr/participate/churchSeasonCampaign" class="gnb_dep3_link"><span>절기캠페인</span></a>
+									</li>
+								
+								</ul>
+							
+							</li>
+						
+						</ul>
+					</div>
+				
+				
+				</li>
+			
+				<li class="gnb_dep1_list">
+				
+				
+					
+						<a href="https://www.worldvision.or.kr/informationCenter/main" class="gnb_dep1_link">안내센터</a>
+					
+					
+				
+				
+					<div class="gnb_dep2" style="height: 2px;">
+						<ul class="inner">
+						
+							<li class="gnb_dep2_list">
+							
+								
+									<a href="https://www.worldvision.or.kr/informationCenter/story" class="gnb_dep2_link"><span>스토리</span></a>
+								
+								
+							
+							
+							</li>
+						
+							<li class="gnb_dep2_list">
+							
+								
+									<a href="https://www.worldvision.or.kr/informationCenter/faq" class="gnb_dep2_link"><span>FAQ</span></a>
+								
+								
+							
+							
+							</li>
+						
+							<li class="gnb_dep2_list">
+							
+								
+									<a href="https://www.worldvision.or.kr/informationCenter/centerVisitInfo" class="gnb_dep2_link"><span>기관방문신청</span></a>
+								
+								
+							
+							
+							</li>
+						
+							<li class="gnb_dep2_list">
+							
+								
+									<a href="https://www.worldvision.or.kr/informationCenter/policy" class="gnb_dep2_link"><span>정책 및 약관</span></a>
+								
+								
+							
+							
+							</li>
+						
+							<li class="gnb_dep2_list">
+							
+								
+									<a href="https://www.worldvision.or.kr/informationCenter/news" class="gnb_dep2_link"><span>새소식</span></a>
+								
+								
+							
+							
+							</li>
+						
+							<li class="gnb_dep2_list">
+							
+								
+									<a href="https://www.worldvision.or.kr/informationCenter/letter" class="gnb_dep2_link"><span>소식지</span></a>
+								
+								
+							
+							
+							</li>
+						
+							<li class="gnb_dep2_list">
+							
+								
+									<a href="https://www.worldvision.or.kr/informationCenter/report" class="gnb_dep2_link"><span>보고서</span></a>
+								
+								
+							
+							
+							</li>
+						
+						</ul>
+					</div>
+				
+				
+				</li>
+			
+				<li class="gnb_dep1_list">
+				
+				
+					
+						<a href="https://www.worldvision.or.kr/worldVisionIntro/introInfo" class="gnb_dep1_link">월드비전</a>
+					
+					
+				
+				
+					<div class="gnb_dep2" style="height: 2px;">
+						<ul class="inner">
+						
+							<li class="gnb_dep2_list">
+							
+								
+								
+									<p class="gnb_dep2_link"><span>월드비전은</span></p>
+								
+							
+							
+								<ul class="gnb_dep3">
+								
+									<li class="gnb_dep3_list">
+										<a href="https://www.worldvision.or.kr/worldVisionIntro/introInfo" class="gnb_dep3_link"><span>소개</span></a>
+									</li>
+								
+									<li class="gnb_dep3_list">
+										<a href="https://www.worldvision.or.kr/worldVisionIntro/introInternational" class="gnb_dep3_link"><span>성과 및 핵심사업</span></a>
+									</li>
+								
+									<li class="gnb_dep3_list">
+										<a href="https://www.worldvision.or.kr/worldVisionIntro/introVision" class="gnb_dep3_link"><span>비전/가치/사명</span></a>
+									</li>
+								
+								</ul>
+							
+							</li>
+						
+							<li class="gnb_dep2_list">
+							
+								
+								
+									<p class="gnb_dep2_link"><span>한국월드비전</span></p>
+								
+							
+							
+								<ul class="gnb_dep3">
+								
+									<li class="gnb_dep3_list">
+										<a href="https://www.worldvision.or.kr/worldVisionIntro/kWVisionHistory" class="gnb_dep3_link"><span>연혁</span></a>
+									</li>
+								
+									<li class="gnb_dep3_list">
+										<a href="https://www.worldvision.or.kr/worldVisionIntro/kWVisionGroup" class="gnb_dep3_link"><span>조직도</span></a>
+									</li>
+								
+									<li class="gnb_dep3_list">
+										<a href="https://www.worldvision.or.kr/worldVisionIntro/kWVisionInterview" class="gnb_dep3_link"><span>인사말</span></a>
+									</li>
+								
+									<li class="gnb_dep3_list">
+										<a href="https://www.worldvision.or.kr/worldVisionIntro/vake" class="gnb_dep3_link"><span>베이크</span></a>
+									</li>
+								
+									<li class="gnb_dep3_list">
+										<a href="https://www.wvchoir.or.kr/index/" target="_blank" class="gnb_dep3_link"><span>합창단</span></a>
+									</li>
+								
+								</ul>
+							
+							</li>
+						
+							<li class="gnb_dep2_list">
+							
+								
+								
+									<p class="gnb_dep2_link"><span>투명경영</span></p>
+								
+							
+							
+								<ul class="gnb_dep3">
+								
+									<li class="gnb_dep3_list">
+										<a href="https://www.worldvision.or.kr/worldVisionIntro/managementEthics" class="gnb_dep3_link"><span>투명경영실현</span></a>
+									</li>
+								
+									<li class="gnb_dep3_list">
+										<a href="https://www.worldvision.or.kr/worldVisionIntro/managementFinance" class="gnb_dep3_link"><span>재무예산보고</span></a>
+									</li>
+								
+									<li class="gnb_dep3_list">
+										<a href="https://www.worldvision.or.kr/worldVisionIntro/managementYearlyBusiness" class="gnb_dep3_link"><span>사업보고서</span></a>
+									</li>
+								
+								</ul>
+							
+							</li>
+						
+							<li class="gnb_dep2_list">
+							
+								
+									<a href="https://www.worldvision.or.kr/worldVisionIntro/ambassadors" class="gnb_dep2_link"><span>친선홍보대사</span></a>
+								
+								
+							
+							
+							</li>
+						
+							<li class="gnb_dep2_list">
+							
+								
+								
+									<p class="gnb_dep2_link"><span>인재채용</span></p>
+								
+							
+							
+								<ul class="gnb_dep3">
+								
+									<li class="gnb_dep3_list">
+										<a href="https://www.worldvision.or.kr/worldVisionIntro/recruitIntro" class="gnb_dep3_link"><span>소개</span></a>
+									</li>
+								
+									<li class="gnb_dep3_list">
+										<a href="https://www.worldvision.or.kr/worldVisionIntro/recruitList" class="gnb_dep3_link"><span>단시간근로자 채용공고</span></a>
+									</li>
+								
+								</ul>
+							
+							</li>
+						
+						</ul>
+					</div>
+				
+				
+				</li>
+			
+			</ul>
+		</nav>
+
+		<div class="header_nav">
+			<p class="tit">페이지타이틀</p>
+			<a href="javascript:void(0);" class="btn_back"><span class="hide">뒤로가기</span></a><!-- D : 마이월드비전 메인 페이지에서는 뒤로가기 비노출 -->
+			<!--<a href="javascript:void(0);" onclick="show_layer('ly_mwv_alt');" class="btn_alt"><img src="/static/images/common/btn-alt.svg" alt="알림"><span>8</span></a> D : 20230925 #8885 2차 오픈용으로 주석 처리  --> <!-- 20211130 수정 -->
+		</div>
+
+		<div class="header_btn">
+			<a href="#all_gnb" class="btn_all"><span>전체 메뉴</span></a>
+		</div>
+	</div>
+
+	<div class="all_gnb" id="all_gnb">
+		<div class="all_gnb_header">
+			<p class="all_tit">전체메뉴</p>
+
+			<div class="all_user_info">
+				
+					
+						<!-- D : 비로그인 -->
+						<p class="btn_login">
+							<a href="https://www.worldvision.or.kr/loginProcess/initLogin"><span>로그인</span></a>
+						</p>
+					
+					
+				
+			</div>
+			
+			<div class="user_btn">
+				<a href="javascript:void(0);" onclick="loginCheck(); show_layer('ly_newsletter');" class="btn_news"><span>뉴스레터 신청</span></a>
+				<a href="https://my.worldvision.or.kr/myWorldVision/subMain" class="btn_mwv"><span>마이월드비전</span></a>
+			</div>
+
+			<div class="all_gnb_util">
+				<a href="javascript:void(0);" onclick="srch_open();" class="btn_srch"><img src="https://www.worldvision.or.kr/static/images/common/btn-search-w.svg" alt="검색"></a>
+				<a href="javascript:void(0);" class="btn_setting"><img src="https://www.worldvision.or.kr/static/images/common/btn-app-setting.svg" alt="앱설정"></a>
+				<a href="javascript:void(0);" class="btn_close"><img src="https://www.worldvision.or.kr/static/images/common/btn-all-close.svg" alt="전체메뉴 닫기"></a>
+			</div>
+		</div>
+		<div class="all_gnb_con">
+			<ul class="all_dep1">
+			
+				<li class="all_dep1_list on">
+				
+					
+						<a href="https://www.worldvision.or.kr/supportGuide/main" class="all_dep1_link"><span>후원안내</span></a>
+					
+					
+				
+				
+					<a href="javascript:void(0);" class="all_dep1_btn"><span>후원안내</span></a>
+					<ul class="all_dep2">
+					
+						<li class="all_dep2_list">
+						
+							
+								<a href="https://www.worldvision.or.kr/supportGuide/domesticChild" class="all_dep2_link"><span>국내아동</span></a>
+							
+							
+						
+						
+						</li>
+					
+						<li class="all_dep2_list">
+						
+							
+							
+								<p class="all_dep2_link"><span>해외아동</span></p>
+							
+						
+						
+							<a href="javascript:void(0);" class="all_dep2_btn"><span class="hide">3뎁스 메뉴 열기/닫기</span></a>
+							<ul class="all_dep3">
+							
+								<li class="all_dep3_list">
+									<a href="https://www.worldvision.or.kr/supportGuide/overseaChild" class="all_dep3_link"><span>해외아동후원 안내</span></a>
+								</li>
+							
+								<li class="all_dep3_list">
+									<a href="https://www.worldvision.or.kr/supportGuide/overseaChildSearch" class="all_dep3_link"><span>해외아동 선택하기</span></a>
+								</li>
+							
+							</ul>
+						
+						</li>
+					
+						<li class="all_dep2_list">
+						
+							
+								<a href="https://www.worldvision.or.kr/supportGuide/overseaBusiness" class="all_dep2_link"><span>해외사업</span></a>
+							
+							
+						
+						
+						</li>
+					
+						<li class="all_dep2_list">
+						
+							
+								<a href="https://www.worldvision.or.kr/supportGuide/domesticBusiness" class="all_dep2_link"><span>국내사업</span></a>
+							
+							
+						
+						
+						</li>
+					
+						<li class="all_dep2_list">
+						
+							
+								<a href="https://www.worldvision.or.kr/supportGuide/emergency" class="all_dep2_link"><span>긴급구호</span></a>
+							
+							
+						
+						
+						</li>
+					
+						<li class="all_dep2_list">
+						
+							
+								<a href="https://www.worldvision.or.kr/supportGuide/northKorea" class="all_dep2_link"><span>북한사업</span></a>
+							
+							
+						
+						
+						</li>
+					
+						<li class="all_dep2_list">
+						
+							
+								<a href="https://www.worldvision.or.kr/supportGuide/allBusiness" class="all_dep2_link"><span>전체사업</span></a>
+							
+							
+						
+						
+						</li>
+					
+						<li class="all_dep2_list">
+						
+							
+								<a href="https://www.worldvision.or.kr/supportGuide/anniversary" class="all_dep2_link"><span>기념일후원</span></a>
+							
+							
+						
+						
+						</li>
+					
+						<li class="all_dep2_list">
+						
+							
+								<a href="https://www.worldvision.or.kr/supportGuide/highSupportInfo" class="all_dep2_link"><span>고액후원/유산기부</span></a>
+							
+							
+						
+						
+							<a href="javascript:void(0);" class="all_dep2_btn"><span class="hide">3뎁스 메뉴 열기/닫기</span></a>
+							<ul class="all_dep3">
+							
+								<li class="all_dep3_list">
+									<a href="https://www.worldvision.or.kr/supportGuide/highSupportInfo" class="all_dep3_link"><span>소개</span></a>
+								</li>
+							
+								<li class="all_dep3_list">
+									<a href="https://www.worldvision.or.kr/supportGuide/highSupportClub" class="all_dep3_link"><span>밥피어스아너클럽</span></a>
+								</li>
+							
+								<li class="all_dep3_list">
+									<a href="https://www.worldvision.or.kr/supportGuide/highSupportChurch" class="all_dep3_link"><span>디아코니아처치</span></a>
+								</li>
+							
+								<li class="all_dep3_list">
+									<a href="https://www.worldvision.or.kr/supportGuide/highSupportLegacy" class="all_dep3_link"><span>유산기부</span></a>
+								</li>
+							
+							</ul>
+						
+						</li>
+					
+						<li class="all_dep2_list">
+						
+							
+								<a href="https://www.worldvision.or.kr/supportGuide/enterpriseSupportInfo" class="all_dep2_link"><span>기업후원</span></a>
+							
+							
+						
+						
+							<a href="javascript:void(0);" class="all_dep2_btn"><span class="hide">3뎁스 메뉴 열기/닫기</span></a>
+							<ul class="all_dep3">
+							
+								<li class="all_dep3_list">
+									<a href="https://www.worldvision.or.kr/supportGuide/enterpriseSupportInfo" class="all_dep3_link"><span>소개</span></a>
+								</li>
+							
+								<li class="all_dep3_list">
+									<a href="https://www.worldvision.or.kr/supportGuide/enterpriseSupportList" class="all_dep3_link"><span>함께하는 기업</span></a>
+								</li>
+							
+								<li class="all_dep3_list">
+									<a href="https://www.worldvision.or.kr/supportGuide/enterpriseSupportInquiry" class="all_dep3_link"><span>후원문의</span></a>
+								</li>
+							
+							</ul>
+						
+						</li>
+					
+						<li class="all_dep2_list">
+						
+							
+								<a href="https://www.worldvision.or.kr/supportGuide/visionStoreInfo" class="all_dep2_link"><span>비전스토어</span></a>
+							
+							
+						
+						
+							<a href="javascript:void(0);" class="all_dep2_btn"><span class="hide">3뎁스 메뉴 열기/닫기</span></a>
+							<ul class="all_dep3">
+							
+								<li class="all_dep3_list">
+									<a href="https://www.worldvision.or.kr/supportGuide/visionStoreInfo" class="all_dep3_link"><span>소개</span></a>
+								</li>
+							
+								<li class="all_dep3_list">
+									<a href="https://www.worldvision.or.kr/supportGuide/visionStoreNews" class="all_dep3_link"><span>소식</span></a>
+								</li>
+							
+								<li class="all_dep3_list">
+									<a href="https://www.worldvision.or.kr/supportGuide/visionStoreSearch" class="all_dep3_link"><span>찾기</span></a>
+								</li>
+							
+								<li class="all_dep3_list">
+									<a href="https://www.worldvision.or.kr/supportGuide/visionStoreSubmit" class="all_dep3_link"><span>신청</span></a>
+								</li>
+							
+							</ul>
+						
+						</li>
+					
+					</ul>
+				
+				</li>
+			
+				<li class="all_dep1_list">
+				
+					
+						<a href="https://www.worldvision.or.kr/businessGuide/main" class="all_dep1_link"><span>사업안내</span></a>
+					
+					
+				
+				
+					<a href="javascript:void(0);" class="all_dep1_btn"><span>사업안내</span></a>
+					<ul class="all_dep2">
+					
+						<li class="all_dep2_list">
+						
+							
+							
+								<p class="all_dep2_link"><span>해외사업</span></p>
+							
+						
+						
+							<a href="javascript:void(0);" class="all_dep2_btn"><span class="hide">3뎁스 메뉴 열기/닫기</span></a>
+							<ul class="all_dep3">
+							
+								<li class="all_dep3_list">
+									<a href="https://www.worldvision.or.kr/businessGuide/areaDevelop" class="all_dep3_link"><span>지역개발사업</span></a>
+								</li>
+							
+								<li class="all_dep3_list">
+									<a href="https://www.worldvision.or.kr/businessGuide/education" class="all_dep3_link"><span>교육사업</span></a>
+								</li>
+							
+								<li class="all_dep3_list">
+									<a href="https://www.worldvision.or.kr/businessGuide/health" class="all_dep3_link"><span>보건영양사업</span></a>
+								</li>
+							
+								<li class="all_dep3_list">
+									<a href="https://www.worldvision.or.kr/businessGuide/water" class="all_dep3_link"><span>식수위생사업</span></a>
+								</li>
+							
+								<li class="all_dep3_list">
+									<a href="https://www.worldvision.or.kr/businessGuide/calamity" class="all_dep3_link"><span>자연재난구호사업</span></a>
+								</li>
+							
+								<li class="all_dep3_list">
+									<a href="https://www.worldvision.or.kr/businessGuide/war" class="all_dep3_link"><span>분쟁대응사업</span></a>
+								</li>
+							
+							</ul>
+						
+						</li>
+					
+						<li class="all_dep2_list">
+						
+							
+							
+								<p class="all_dep2_link"><span>국내사업</span></p>
+							
+						
+						
+							<a href="javascript:void(0);" class="all_dep2_btn"><span class="hide">3뎁스 메뉴 열기/닫기</span></a>
+							<ul class="all_dep3">
+							
+								<li class="all_dep3_list">
+									<a href="https://www.worldvision.or.kr/businessGuide/dream" class="all_dep3_link"><span>꿈지원사업</span></a>
+								</li>
+							
+								<li class="all_dep3_list">
+									<a href="https://www.worldvision.or.kr/businessGuide/danger" class="all_dep3_link"><span>위기아동지원사업</span></a>
+								</li>
+							
+								<li class="all_dep3_list">
+									<a href="https://www.worldvision.or.kr/businessGuide/starve" class="all_dep3_link"><span>결식아동지원사업</span></a>
+								</li>
+							
+								<li class="all_dep3_list">
+									<a href="https://www.worldvision.or.kr/businessGuide/violence" class="all_dep3_link"><span>취약아동특화사업</span></a>
+								</li>
+							
+							</ul>
+						
+						</li>
+					
+						<li class="all_dep2_list">
+						
+							
+								<a href="https://www.worldvision.or.kr/businessGuide/advocacy" class="all_dep2_link"><span>아동옹호사업</span></a>
+							
+							
+						
+						
+						</li>
+					
+						<li class="all_dep2_list">
+						
+							
+							
+								<p class="all_dep2_link"><span>북한사업</span></p>
+							
+						
+						
+							<a href="javascript:void(0);" class="all_dep2_btn"><span class="hide">3뎁스 메뉴 열기/닫기</span></a>
+							<ul class="all_dep3">
+							
+								<li class="all_dep3_list">
+									<a href="https://www.worldvision.or.kr/businessGuide/northFood" class="all_dep3_link"><span>영양사업</span></a>
+								</li>
+							
+								<li class="all_dep3_list">
+									<a href="https://www.worldvision.or.kr/businessGuide/northWater" class="all_dep3_link"><span>식수사업</span></a>
+								</li>
+							
+							</ul>
+						
+						</li>
+					
+						<li class="all_dep2_list">
+						
+							
+							
+								<p class="all_dep2_link"><span>사업장안내</span></p>
+							
+						
+						
+							<a href="javascript:void(0);" class="all_dep2_btn"><span class="hide">3뎁스 메뉴 열기/닫기</span></a>
+							<ul class="all_dep3">
+							
+								<li class="all_dep3_list">
+									<a href="https://www.worldvision.or.kr/businessGuide/overseaBusinessMap" class="all_dep3_link"><span>해외사업장 안내</span></a>
+								</li>
+							
+								<li class="all_dep3_list">
+									<a href="https://www.worldvision.or.kr/businessGuide/domesticBusinessMap" class="all_dep3_link"><span>국내사업장 안내</span></a>
+								</li>
+							
+							</ul>
+						
+						</li>
+					
+					</ul>
+				
+				</li>
+			
+				<li class="all_dep1_list">
+				
+					
+						<a href="https://www.worldvision.or.kr/campaign/progress" class="all_dep1_link"><span>캠페인</span></a>
+					
+					
+				
+				
+					<a href="javascript:void(0);" class="all_dep1_btn"><span>캠페인</span></a>
+					<ul class="all_dep2">
+					
+						<li class="all_dep2_list">
+						
+							
+								<a href="https://www.worldvision.or.kr/campaign/progress" class="all_dep2_link"><span>진행중인 캠페인</span></a>
+							
+							
+						
+						
+						</li>
+					
+						<li class="all_dep2_list">
+						
+							
+								<a href="https://www.worldvision.or.kr/campaign/last" class="all_dep2_link"><span>지난 캠페인</span></a>
+							
+							
+						
+						
+						</li>
+					
+						<li class="all_dep2_list">
+						
+							
+								<a href="https://www.worldvision.or.kr/campaign/result" class="all_dep2_link"><span>캠페인 결과보고</span></a>
+							
+							
+						
+						
+						</li>
+					
+					</ul>
+				
+				</li>
+			
+				<li class="all_dep1_list">
+				
+					
+						<a href="https://www.worldvision.or.kr/participate/subMain" class="all_dep1_link"><span>참여하기</span></a>
+					
+					
+				
+				
+					<a href="javascript:void(0);" class="all_dep1_btn"><span>참여하기</span></a>
+					<ul class="all_dep2">
+					
+						<li class="all_dep2_list">
+						
+							
+							
+								<p class="all_dep2_link"><span>자원봉사참여</span></p>
+							
+						
+						
+							<a href="javascript:void(0);" class="all_dep2_btn"><span class="hide">3뎁스 메뉴 열기/닫기</span></a>
+							<ul class="all_dep3">
+							
+								<li class="all_dep3_list">
+									<a href="https://www.worldvision.or.kr/participate/volunteerTranslation" class="all_dep3_link"><span>번역봉사</span></a>
+								</li>
+							
+								<li class="all_dep3_list">
+									<a href="https://www.worldvision.or.kr/participate/volunteerGeneral" class="all_dep3_link"><span>일반봉사</span></a>
+								</li>
+							
+								<li class="all_dep3_list">
+									<a href="https://www.worldvision.or.kr/participate/recruitmentNotice" class="all_dep3_link"><span>모집공고</span></a>
+								</li>
+							
+							</ul>
+						
+						</li>
+					
+						<li class="all_dep2_list">
+						
+							
+								<a href="https://www.worldvision.or.kr/participate/schoolParticipation" class="all_dep2_link"><span>학교참여</span></a>
+							
+							
+						
+						
+						</li>
+					
+						<li class="all_dep2_list">
+						
+							
+							
+								<p class="all_dep2_link"><span>후원자참여</span></p>
+							
+						
+						
+							<a href="javascript:void(0);" class="all_dep2_btn"><span class="hide">3뎁스 메뉴 열기/닫기</span></a>
+							<ul class="all_dep3">
+							
+								<li class="all_dep3_list">
+									<a href="https://www.worldvision.or.kr/participate/supportFamilyDay" class="all_dep3_link"><span>패밀리데이</span></a>
+								</li>
+							
+								<li class="all_dep3_list">
+									<a href="https://www.worldvision.or.kr/participate/supportVisionRoad" class="all_dep3_link"><span>비전로드</span></a>
+								</li>
+							
+								<li class="all_dep3_list">
+									<a href="https://www.worldvision.or.kr/participate/supportOpenMeeting" class="all_dep3_link"><span>열린모임</span></a>
+								</li>
+							
+							</ul>
+						
+						</li>
+					
+						<li class="all_dep2_list">
+						
+							
+							
+								<p class="all_dep2_link"><span>교회참여</span></p>
+							
+						
+						
+							<a href="javascript:void(0);" class="all_dep2_btn"><span class="hide">3뎁스 메뉴 열기/닫기</span></a>
+							<ul class="all_dep3">
+							
+								<li class="all_dep3_list">
+									<a href="https://www.worldvision.or.kr/participate/churchVisionSunday" class="all_dep3_link"><span>비전주일</span></a>
+								</li>
+							
+								<li class="all_dep3_list">
+									<a href="https://www.worldvision.or.kr/participate/churchSeasonCampaign" class="all_dep3_link"><span>절기캠페인</span></a>
+								</li>
+							
+							</ul>
+						
+						</li>
+					
+					</ul>
+				
+				</li>
+			
+				<li class="all_dep1_list">
+				
+					
+						<a href="https://www.worldvision.or.kr/informationCenter/main" class="all_dep1_link"><span>안내센터</span></a>
+					
+					
+				
+				
+					<a href="javascript:void(0);" class="all_dep1_btn"><span>안내센터</span></a>
+					<ul class="all_dep2">
+					
+						<li class="all_dep2_list">
+						
+							
+								<a href="https://www.worldvision.or.kr/informationCenter/story" class="all_dep2_link"><span>스토리</span></a>
+							
+							
+						
+						
+						</li>
+					
+						<li class="all_dep2_list">
+						
+							
+								<a href="https://www.worldvision.or.kr/informationCenter/faq" class="all_dep2_link"><span>FAQ</span></a>
+							
+							
+						
+						
+						</li>
+					
+						<li class="all_dep2_list">
+						
+							
+								<a href="https://www.worldvision.or.kr/informationCenter/centerVisitInfo" class="all_dep2_link"><span>기관방문신청</span></a>
+							
+							
+						
+						
+						</li>
+					
+						<li class="all_dep2_list">
+						
+							
+								<a href="https://www.worldvision.or.kr/informationCenter/policy" class="all_dep2_link"><span>정책 및 약관</span></a>
+							
+							
+						
+						
+						</li>
+					
+						<li class="all_dep2_list">
+						
+							
+								<a href="https://www.worldvision.or.kr/informationCenter/news" class="all_dep2_link"><span>새소식</span></a>
+							
+							
+						
+						
+						</li>
+					
+						<li class="all_dep2_list">
+						
+							
+								<a href="https://www.worldvision.or.kr/informationCenter/letter" class="all_dep2_link"><span>소식지</span></a>
+							
+							
+						
+						
+						</li>
+					
+						<li class="all_dep2_list">
+						
+							
+								<a href="https://www.worldvision.or.kr/informationCenter/report" class="all_dep2_link"><span>보고서</span></a>
+							
+							
+						
+						
+						</li>
+					
+					</ul>
+				
+				</li>
+			
+				<li class="all_dep1_list">
+				
+					
+						<a href="https://www.worldvision.or.kr/worldVisionIntro/introInfo" class="all_dep1_link"><span>월드비전</span></a>
+					
+					
+				
+				
+					<a href="javascript:void(0);" class="all_dep1_btn"><span>월드비전</span></a>
+					<ul class="all_dep2">
+					
+						<li class="all_dep2_list">
+						
+							
+							
+								<p class="all_dep2_link"><span>월드비전은</span></p>
+							
+						
+						
+							<a href="javascript:void(0);" class="all_dep2_btn"><span class="hide">3뎁스 메뉴 열기/닫기</span></a>
+							<ul class="all_dep3">
+							
+								<li class="all_dep3_list">
+									<a href="https://www.worldvision.or.kr/worldVisionIntro/introInfo" class="all_dep3_link"><span>소개</span></a>
+								</li>
+							
+								<li class="all_dep3_list">
+									<a href="https://www.worldvision.or.kr/worldVisionIntro/introInternational" class="all_dep3_link"><span>성과 및 핵심사업</span></a>
+								</li>
+							
+								<li class="all_dep3_list">
+									<a href="https://www.worldvision.or.kr/worldVisionIntro/introVision" class="all_dep3_link"><span>비전/가치/사명</span></a>
+								</li>
+							
+							</ul>
+						
+						</li>
+					
+						<li class="all_dep2_list">
+						
+							
+							
+								<p class="all_dep2_link"><span>한국월드비전</span></p>
+							
+						
+						
+							<a href="javascript:void(0);" class="all_dep2_btn"><span class="hide">3뎁스 메뉴 열기/닫기</span></a>
+							<ul class="all_dep3">
+							
+								<li class="all_dep3_list">
+									<a href="https://www.worldvision.or.kr/worldVisionIntro/kWVisionHistory" class="all_dep3_link"><span>연혁</span></a>
+								</li>
+							
+								<li class="all_dep3_list">
+									<a href="https://www.worldvision.or.kr/worldVisionIntro/kWVisionGroup" class="all_dep3_link"><span>조직도</span></a>
+								</li>
+							
+								<li class="all_dep3_list">
+									<a href="https://www.worldvision.or.kr/worldVisionIntro/kWVisionInterview" class="all_dep3_link"><span>인사말</span></a>
+								</li>
+							
+								<li class="all_dep3_list">
+									<a href="https://www.worldvision.or.kr/worldVisionIntro/vake" class="all_dep3_link"><span>베이크</span></a>
+								</li>
+							
+								<li class="all_dep3_list">
+									<a href="https://www.wvchoir.or.kr/index/" target="_blank" class="all_dep3_link"><span>합창단</span></a>
+								</li>
+							
+							</ul>
+						
+						</li>
+					
+						<li class="all_dep2_list">
+						
+							
+							
+								<p class="all_dep2_link"><span>투명경영</span></p>
+							
+						
+						
+							<a href="javascript:void(0);" class="all_dep2_btn"><span class="hide">3뎁스 메뉴 열기/닫기</span></a>
+							<ul class="all_dep3">
+							
+								<li class="all_dep3_list">
+									<a href="https://www.worldvision.or.kr/worldVisionIntro/managementEthics" class="all_dep3_link"><span>투명경영실현</span></a>
+								</li>
+							
+								<li class="all_dep3_list">
+									<a href="https://www.worldvision.or.kr/worldVisionIntro/managementFinance" class="all_dep3_link"><span>재무예산보고</span></a>
+								</li>
+							
+								<li class="all_dep3_list">
+									<a href="https://www.worldvision.or.kr/worldVisionIntro/managementYearlyBusiness" class="all_dep3_link"><span>사업보고서</span></a>
+								</li>
+							
+							</ul>
+						
+						</li>
+					
+						<li class="all_dep2_list">
+						
+							
+								<a href="https://www.worldvision.or.kr/worldVisionIntro/ambassadors" class="all_dep2_link"><span>친선홍보대사</span></a>
+							
+							
+						
+						
+						</li>
+					
+						<li class="all_dep2_list">
+						
+							
+							
+								<p class="all_dep2_link"><span>인재채용</span></p>
+							
+						
+						
+							<a href="javascript:void(0);" class="all_dep2_btn"><span class="hide">3뎁스 메뉴 열기/닫기</span></a>
+							<ul class="all_dep3">
+							
+								<li class="all_dep3_list">
+									<a href="https://www.worldvision.or.kr/worldVisionIntro/recruitIntro" class="all_dep3_link"><span>소개</span></a>
+								</li>
+							
+								<li class="all_dep3_list">
+									<a href="https://www.worldvision.or.kr/worldVisionIntro/recruitList" class="all_dep3_link"><span>단시간근로자 채용공고</span></a>
+								</li>
+							
+							</ul>
+						
+						</li>
+					
+					</ul>
+				
+				</li>
+			
+			</ul>
+		</div>
+	</div>
+</header>

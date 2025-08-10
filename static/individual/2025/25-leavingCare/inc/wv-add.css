@@ -1,0 +1,42 @@
+/**
+폰트
+**/
+/* 노토 */
+@font-face{
+  font-family:'noto';
+  font-style:normal;
+  font-weight:400;
+  src:url('https://www.worldvision.or.kr/static/fonts/noto-sans-kr-400.eot');
+  src:local(''),
+       url('https://www.worldvision.or.kr/static/fonts/noto-sans-kr-400.eot?#iefix') format('embedded-opentype'),
+       url('https://www.worldvision.or.kr/static/fonts/noto-sans-kr-400.woff2') format('woff2'),
+       url('https://www.worldvision.or.kr/static/fonts/noto-sans-kr-400.woff') format('woff'),
+       url('https://www.worldvision.or.kr/static/fonts/noto-sans-kr-400.ttf') format('truetype'),
+       url('https://www.worldvision.or.kr/static/fonts/noto-sans-kr-400.svg#NotoSansKR') format('svg');
+}
+@font-face{
+  font-family:'noto';
+  font-style:normal;
+  font-weight:500;
+  src:url('https://www.worldvision.or.kr/static/fonts/noto-sans-kr-500.eot');
+  src:local(''),
+       url('https://www.worldvision.or.kr/static/fonts/noto-sans-kr-500.eot?#iefix') format('embedded-opentype'),
+       url('https://www.worldvision.or.kr/static/fonts/noto-sans-kr-500.woff2') format('woff2'),
+       url('https://www.worldvision.or.kr/static/fonts/noto-sans-kr-500.woff') format('woff'),
+       url('https://www.worldvision.or.kr/static/fonts/noto-sans-kr-500.ttf') format('truetype'),
+       url('https://www.worldvision.or.kr/static/fonts/noto-sans-kr-500.svg#NotoSansKR') format('svg');
+}
+@font-face{
+  font-family:'noto';
+  font-style:normal;
+  font-weight:700;
+  src:url('https://www.worldvision.or.kr/static/fonts/noto-sans-kr-700.eot');
+  src:local(''),
+       url('https://www.worldvision.or.kr/static/fonts/noto-sans-kr-700.eot?#iefix') format('embedded-opentype'),
+       url('https://www.worldvision.or.kr/static/fonts/noto-sans-kr-700.woff2') format('woff2'),
+       url('https://www.worldvision.or.kr/static/fonts/noto-sans-kr-700.woff') format('woff'),
+       url('https://www.worldvision.or.kr/static/fonts/noto-sans-kr-700.ttf') format('truetype'),
+       url('https://www.worldvision.or.kr/static/fonts/noto-sans-kr-700.svg#NotoSansKR') format('svg');
+}
+.loading_wrap{display:none}
+.footer_wrap .footer_customer .letter{padding:5px 0}

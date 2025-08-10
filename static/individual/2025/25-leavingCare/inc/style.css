@@ -1,0 +1,185 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
+@font-face {
+    font-family: 'ridi';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{font-family: 'Pretendard Variable', '맑은고딕', sans-serif;}
+
+
+.fs14 {font-size: 14px;}
+.fs16 {font-size: 16px;}
+.fs18 {font-size: 18px;}
+.fs20 {font-size: 20px;}  
+.lh20 {line-height: 20px;}
+.tac {text-align: center;} 
+.mt10 {margin-top: 10px;}
+.mt16 {margin-top: 16px;}
+.mt20 {margin-top: 20px;}
+.mt40 {margin-top: 40px;}
+.cOrange {color: #ff6600 !important;}
+.c2 {color: #222;}
+.c5 {color: #555;}
+
+
+.letterfromgirl > section {position: relative;}
+
+.letterfromgirl .sec-1 {background-image:url(../img/bg-section1.png); background-position: center top; background-repeat: no-repeat; padding:64px 0 56px; background-size: 100%;}
+
+.letterfromgirl .sec-2 {background-image:url(../img/bg-section2.png); background-position: center top; background-repeat: no-repeat; padding:64px 0 56px;  }
+
+.letterfromgirl .sec-3 {background-color: #fbeee0; min-height: 656px;}
+.letterfromgirl .sec-5 {background-image:url(../img/bg-section2.png); background-position: center top; background-repeat: no-repeat; padding:64px 0 56px;}
+.letterfromgirl .sec-6 {background-image:url(../img/bg-section6.png); background-repeat: no-repeat; background-size: cover; padding:50px 0 78px;}
+
+.letterfromgirl .sec-1 h1 {font-family: 'ridi'; font-size: 27px; line-height: 36px;  text-align: center; color: #383432;}
+.letterfromgirl .sec-1 h1 b {font-weight: bold;}
+.letterfromgirl .sec-1 figure {position: relative; left: 50%; top: 50px; margin-left: -166px; height: 400px;}
+.letterfromgirl .sec-1 figure:before {content: ""; position: absolute; z-index: 2; display: block; background-image: url('../img/photo-frame.png'); background-repeat:no-repeat; width: 343px; height: 380px; background-size: 100%;}
+.letterfromgirl .sec-1 figure img {position: relative; left: 86px; top: 33px;} 
+.letterfromgirl .sec-2 h1 {font-family: 'ridi'; letter-spacing: -0.04em; font-size: 22px; line-height: 35px;  text-align: center; color: #383432;}
+.letterfromgirl .sec-2 h1 b {font-weight: bold;}
+.letterfromgirl .sec-2 h2 {font-family: 'ridi'; text-align: center; letter-spacing: -0.04em; font-size: 22px; line-height: 32px; position: relative;}
+.letterfromgirl .sec-2 h2::before {content: ''; display: block; width: 58px; height: 45px; background-image: url(../img/ico-txt-circle.png); background-size: 100%; background-repeat: no-repeat; position: absolute; left: 50%; margin-left: -95px; top: 32px;}
+.letterfromgirl .sec-2 h2::after {content: ''; display: block; width: 110px; height: 10px; background-image: url(../img/ico-txt-line.png);background-size: 100%;background-repeat: no-repeat; position: absolute; left: 50%; margin-left: -120px; top: 89px;}
+
+
+.letterfromgirl .sec-2 h3 {color: #ff6600; font-family: 'ridi'; font-size: 18px; line-height: 28px; text-align: center; margin-top: 24px;}
+.letterfromgirl .sec-2 .photoframe {margin-top: 17px;}
+.letterfromgirl .sec-2 .photoframe .swiper-slide {text-align: center;}
+.letterfromgirl .sec-2 .photoframe .swiper-slide figure {position: relative; top: 0; z-index: 1; margin: 0 auto;}
+.letterfromgirl .sec-2 .photoframe .swiper-slide > img {position: absolute; top: 20px; left: 50%; margin-left: -92px; }
+
+
+.letterfromgirl .sec-2 .ico-wrap {position: relative;}
+.letterfromgirl .sec-2 .ico-wrap figure {position: absolute;}
+.letterfromgirl .sec-2 .ico-wrap figure.ico-letter {left: 50%; margin-left: 120px; top: 8px;}
+.letterfromgirl .sec-2 .ico-wrap figure.ico-stamp {left: 50%; margin-left: -210px; top: 60px;}
+.letterfromgirl .sec-2 .ico-wrap figure.ico-letter img {width: 64px;}
+.letterfromgirl .sec-2 .ico-wrap figure.ico-stamp img {width: 58px;}
+
+
+.letterfromgirl .sec-2 .ico-wrap figure.ico-hat1 {left: 50%; margin-left: 70px; top: -31px;}
+.letterfromgirl .sec-2 .ico-wrap figure.ico-hat2 {left: 50%; margin-left: -185px; top: 99px;}
+.letterfromgirl .sec-2 .ico-wrap figure.ico-hat1 img {width: 64px;}
+.letterfromgirl .sec-2 .ico-wrap figure.ico-hat2 img {width: 58px;}
+
+
+.letterfromgirl .sec-2 .ico-wrap p {text-align: center; font-size: 17px; line-height: 28px;color: #333; letter-spacing: -0.04em;} 
+.letterfromgirl .sec-2 .ico-wrap p + p {margin-top: 13px;}
+.letterfromgirl .sec-2 .ico-wrap p b {font-weight: 600; color: #ff6600;}
+
+.letterfromgirl .sec-2 .ico-wrap + .tac {margin-top: 20px; margin-bottom: 70px;}
+.letterfromgirl .sec-2 .tac .grow-btn {   font-weight: 600;  width: 266px; height: 45px; line-height: 45px; border-radius: 5px; background-color: #ff6600; color: #fff; padding: 0 35px;  background-image: url(../img/ico-go.png); background-size: 8px; background-repeat: no-repeat; background-position: right 35px top 50%; box-shadow: 2px 2px 9px 0 rgba(243,126,49,0.45);}
+
+.letterfromgirl .sec-2 .change {margin-top: 16px; padding:0 14%;  }
+.letterfromgirl .sec-2 .change .swiper-slide { height: auto;}
+
+.letterfromgirl .sec-2 .change .box-change {height: 100%; background-color: rgba(255, 255, 255, 0.6);border: 1px solid #ddd; border-radius: 20px; padding: 30px 28px 36px;}
+.letterfromgirl .sec-2 .change .box-change h4 {display: flex;  justify-content: center; align-items: center; gap: 15px; height: 50px;}
+.letterfromgirl .sec-2 .change .box-change h4 strong {font-family: 'ridi'; color: #ff6600; font-size: 20px; line-height: 24px;}
+.letterfromgirl .sec-2 .change .box-change p {margin-top: 10px; letter-spacing: -0.04em; font-size: 14px; line-height: 24px; color: #555;}
+
+.letterfromgirl .sec-3 figure {position: absolute; width: 128px; height: 149px; left: 50%; top: 206px; margin-left: -64px;}
+.letterfromgirl .sec-3 .thx-frame { position: absolute; width: 342px; height: 514px; top: 23px; left: 50%; margin-left: -170px; z-index: 2; text-align: center; background-image: url(../img/thx-frame.png); background-repeat: no-repeat; background-size: 100%; }
+.letterfromgirl .sec-3 .thx-frame .c_title {font-family: 'ridi'; margin-top: 40px; color: #222;}
+.letterfromgirl .sec-3 .thx-frame .c_title p {font-family: 'ridi'; line-height: 20px;}
+.letterfromgirl .sec-3 .thx-frame .c_title h2 {font-weight: bold;}
+.letterfromgirl .sec-3 .thx-frame p.txt-small {font-size: 14px; margin-top: 8px;}
+
+.letterfromgirl .sec-3 .thx-frame p.sig {position: absolute; bottom: 40px; font-family: 'ridi'; font-size: 13px; left: 61px; letter-spacing: -0.04em;}
+.letterfromgirl .sec-3 .thx-frame .c_table {display: grid; grid-template-columns: 60px 100px; position: absolute; bottom: 90px; left: 50%; margin-left: -80px; gap: 6px 0;}
+.letterfromgirl .sec-3 .thx-frame .c_table dt {font-size: 12px; font-weight: 500; text-align: left; line-height: 17px; color: #ff6600;}
+.letterfromgirl .sec-3 .thx-frame .c_table dd {font-size: 14px; font-weight: 600; text-align: left; line-height: 17px; letter-spacing: -0.04em;}
+.letterfromgirl .sec-3 .thx-btn {position: absolute; font-weight: 600; bottom: 48px; width: 266px; height: 45px; left: 50%; margin-left: -133px; border-radius: 5px; background-color: #ff6600; color: #fff; padding: 0 35px; background-image: url(../img/ico-download.png); background-repeat: no-repeat; background-position: right 35px top 50%; box-shadow: 2px 2px 9px 0 rgba(243,126,49,0.45);}
+
+
+
+
+/* 향후후원안내 */
+.letterfromgirl .sec-4 {background-image: url(../img/bg-section4.png); padding-top: 45px; padding-bottom: 60px;}
+.letterfromgirl .sec-4 h2 {font-family: 'ridi'; text-align: center; font-size: 22px; color: #5c3608; font-weight: bold; padding-bottom: 32px;}
+.letterfromgirl .sec-4 .ch_box {background-color: #fff; width: 500px; margin: 0 auto; border-radius: 20px; padding: 23px;}
+.letterfromgirl .sec-4 .ch_box + .ch_box {margin-top: 20px;}
+.letterfromgirl .sec-4 .ch_box.tac {padding: 23px 23px 34px;}
+.letterfromgirl .sec-4 .ch_box dl dt {text-align: left; border-bottom: 1px dashed #ff6600; padding-bottom: 10px; margin-bottom: 10px; font-family: 'ridi'; font-size: 14px; line-height: 28px; color: #5c3608; background-image: url('../img/ico-q.png'); background-size: 14px; background-repeat: no-repeat; background-position: left top 6px; padding-left: 22px; font-weight: bold;}
+.letterfromgirl .sec-4 .ch_box dl dd {font-size: 14px; line-height: 28px; color: #6d665e; font-weight: 500; text-align: left; padding: 0 10px;}
+.letterfromgirl .sec-4 .ch_box dl dd span {color: #ff6600; font-weight: 700;}
+.btn-main {width: 276px; height: 45px; background-color: #ff6600; color: #fff; border-radius: 5px; font-size: 14px; font-weight: 600; text-align: center;}
+.btn-line {width: 276px; height: 45px; border: 1px solid #ff6600; color: #ff6600; border-radius: 5px; font-size: 14px; font-weight: 600; text-align: center; line-height: 37px; background-color: #fff;}
+
+
+/* section5 */
+.letterfromgirl .sec-5 h2 {font-size: 20px; font-family: 'ridi'; color: #332e28; text-align: center; margin-bottom: 15px;} 
+.letterfromgirl .sec-5 h2 span,
+.letterfromgirl .sec-5 h2 strong {font-weight: bold;} 
+.letterfromgirl .sec-5 > figure img {display: block; border-radius: 20px; overflow: hidden; margin: 0 auto;}
+.letterfromgirl .sec-5 > p {font-family: 'ridi'; font-size: 17px; color: #332e28; text-align: center; margin-top: 27px; font-weight: bold;}
+.letterfromgirl .sec-5 > ul {font-size: 14px; width: 215px; margin: 19px auto 0;}
+.letterfromgirl .sec-5 > ul li {display: flex; color: #555; gap: 0 12px;}
+.letterfromgirl .sec-5 > ul li + li {margin-top: 20px;}
+.letterfromgirl .sec-5 > ul li b {font-weight: 600;}
+.letterfromgirl .sec-5 > ul li figure {width: 50px;}
+.letterfromgirl .sec-5 > ul li figure img {width: 36px;}
+.letterfromgirl .sec-5 .c_table {display: grid; grid-template-columns: 45px 100px; font-family: 'ridi';  gap: 4px 16px ; line-height: 20px; margin-top: 18px; justify-content: center;}
+.letterfromgirl .sec-5 .c_table dt {text-align: right; color: #ff6600;font-size: 14px;}
+.letterfromgirl .sec-5 .c_table dd {text-align: left; color: #55493a;font-size: 16px;}
+
+
+/* section6 */
+.box-opinion::before {content: ''; background-image: url(../img/ico-add-clip.png); background-repeat: no-repeat; background-size: 100%; display: block; width: 35px; height: 36px; position: absolute; top: -25px; left: 50%; margin-left: -17px;}
+.box-opinion {position: relative; background-image: url('../img/bg-opinion.png'); border-radius: 20px; border: 1px solid #e3d5c3;  width:344px; height: 177px; margin: 0 auto; text-align: center; padding-top: 40px;}
+.box-opinion p {font-family: 'ridi';}
+.box-opinion ul {display: flex; width: 274px; margin: 16px auto 0; gap:17px; }
+.box-opinion ul li {width: 100%;}
+.box-opinion ul li button {width: 100%; height: 45px; background-color: #ff6600; border-radius: 5px; font-weight: 600; font-size: 15px; color: #fff;text-align: center; display: flex; justify-content: center;align-items: center; gap: 6px;}
+.box-opinion ul li button img {width: 20px; height: 20px;  }
+.box-opinion ul li:last-child button {width: 100%; height: 45px; background-color: #fff; border: 1px solid #ff6600; color: #ff6600;}
+.box-add {background-image: url('../img/bg-add.png'); border-radius: 20px; width:344px; height: 183px; margin: 20px auto 0; text-align: center; padding-top: 20px; border: 1px solid #e3d5c3;}
+.box-add p {font-family: 'ridi'; font-size: 14px; line-height: 24px;}
+
+
+
+@media screen and (max-width: 768px) { 
+    .letterfromgirl .sec-1 {background-position: center bottom 0; background-size: cover;     padding: 64px 0 10px;}
+    .letterfromgirl .sec-1 figure {top: 17px;}
+        
+    .letterfromgirl .sec-2 {background-image: url('../img/bg-section2-m.png'); background-size: 100%; background-repeat: repeat;} 
+ 
+}
+
+
+@media screen and (max-width: 640px) { 
+    .letterfromgirl .sec-4 .ch_box {width: calc(100% - 32px);}
+    .letterfromgirl .sec-2 .ico-wrap figure.ico-letter img,
+    .letterfromgirl .sec-2 .ico-wrap figure.ico-stamp img {width: 50px;}
+    .letterfromgirl .sec-2 .ico-wrap figure.ico-letter { margin-left: 110px; top: 8px;}
+    .letterfromgirl .sec-2 .ico-wrap figure.ico-stamp {margin-left: -160px; top: 70px;}
+    .letterfromgirl .sec-2 .change {padding:0 8%;  }
+}
+
+@media screen and (max-width: 390px) { 
+    .box-opinion {width: calc(100% - 32px); height: auto; padding: 20px 16px;}
+    .box-opinion ul {width: 100%;}
+    .box-add {width: calc(100% - 32px); height: auto; padding: 20px 16px;}
+    .btn-line,
+    .btn-main {width: 100%;}
+    .letterfromgirl .sec-3 {min-height: 170vw;}
+    .letterfromgirl .sec-3 figure {top: 53vw; margin-left: -16vw;}
+    .letterfromgirl .sec-3 figure img {width: 32vw;}
+    .letterfromgirl .sec-3 .thx-btn {width: 266px;}
+    .letterfromgirl .sec-3 .thx-frame {width: calc(100% - 32px); height: 131vw; margin-left: -45%;}
+    .letterfromgirl .sec-3 .thx-frame .c_title {margin-top: 9vw;}
+    .letterfromgirl .sec-3 .thx-frame .c_title h2 {font-size: 6vw;}
+    .letterfromgirl .sec-3 .thx-frame .c_title p {font-size: 4vw;}
+    .letterfromgirl .sec-3 .thx-frame p.txt-small {font-size: 3vw; line-height: 5vw; margin-top: 1vw;}
+    .letterfromgirl .sec-3 .thx-frame .c_table {bottom: 23vw;}
+    .letterfromgirl .sec-3 .thx-frame p.sig {bottom: 12vw; left: 13vw; font-size: 3.2vw; }
+
+    .letterfromgirl .sec-2 .ico-wrap figure.ico-hat2 {top: 88px;margin-left: -165px;}
+
+
+    
+}
