@@ -26,7 +26,7 @@ body{font-family: 'Pretendard Variable', '맑은고딕', sans-serif;}
 
 .letterfromgirl > section {position: relative;}
 
-.letterfromgirl .sec-1 {background-image:url(../img/bg-section1.png); background-position: center top; background-repeat: no-repeat; padding:64px 0 56px; background-size: 100%;}
+.letterfromgirl .sec-1 {background-image:url(../img/bg-section1.png); background-position: center top; background-repeat: no-repeat; padding:64px 0 80px; background-size: cover; background-position: center bottom;}
 
 .letterfromgirl .sec-2 {background-image:url(../img/bg-section2.png); background-position: center top; background-repeat: no-repeat; padding:64px 0 56px;  }
 
@@ -34,11 +34,15 @@ body{font-family: 'Pretendard Variable', '맑은고딕', sans-serif;}
 .letterfromgirl .sec-5 {background-image:url(../img/bg-section2.png); background-position: center top; background-repeat: no-repeat; padding:64px 0 56px;}
 .letterfromgirl .sec-6 {background-image:url(../img/bg-section6.png); background-repeat: no-repeat; background-size: cover; padding:50px 0 78px;}
 
-.letterfromgirl .sec-1 h1 {font-family: 'ridi'; font-size: 27px; line-height: 36px;  text-align: center; color: #383432;}
+.letterfromgirl .sec-1 h1 {max-width: 500px; margin: 0 auto; font-family: 'ridi'; font-size: 27px; line-height: 36px;  text-align: center; color: #383432;}
 .letterfromgirl .sec-1 h1 b {font-weight: bold;}
-.letterfromgirl .sec-1 figure {position: relative; left: 50%; top: 50px; margin-left: -166px; height: 400px;}
-.letterfromgirl .sec-1 figure:before {content: ""; position: absolute; z-index: 2; display: block; background-image: url('../img/photo-frame.png'); background-repeat:no-repeat; width: 343px; height: 380px; background-size: 100%;}
-.letterfromgirl .sec-1 figure img {position: relative; left: 86px; top: 33px;} 
+.letterfromgirl .sec-1 .img-wrap {width: 343px; position: relative; left: 50%; top: 50px; margin-left: -166px; height: auto; padding: 0 0 130px; }
+
+.letterfromgirl .sec-1 .img-wrap:before {content: ""; position: absolute; z-index: 2; display: block; background-image: url('../img/photo-frame1.png'); background-repeat:no-repeat; width: 343px; height: 50%; background-size: 100%;}
+.letterfromgirl .sec-1 .img-wrap:after {content: ""; position: absolute; z-index: 2; display: block; background-image: url('../img/photo-frame3.png'); bottom: 0; background-repeat:no-repeat; width: 343px; height: 50%; background-size: 100%; background-position: center bottom 0;}
+
+.letterfromgirl .sec-1 figure {width: 172px; position: relative; left: 86px; top: 33px; }
+.letterfromgirl .sec-1 figure img {width: 100%;} 
 .letterfromgirl .sec-2 h1 {font-family: 'ridi'; letter-spacing: -0.04em; font-size: 22px; line-height: 35px;  text-align: center; color: #383432;}
 .letterfromgirl .sec-2 h1 b {font-weight: bold;}
 .letterfromgirl .sec-2 h2 {font-family: 'ridi'; text-align: center; letter-spacing: -0.04em; font-size: 22px; line-height: 32px; position: relative;}
@@ -46,11 +50,29 @@ body{font-family: 'Pretendard Variable', '맑은고딕', sans-serif;}
 .letterfromgirl .sec-2 h2::after {content: ''; display: block; width: 110px; height: 10px; background-image: url(../img/ico-txt-line.png);background-size: 100%;background-repeat: no-repeat; position: absolute; left: 50%; margin-left: -120px; top: 89px;}
 
 
-.letterfromgirl .sec-2 h3 {color: #ff6600; font-family: 'ridi'; font-size: 18px; line-height: 28px; text-align: center; margin-top: 24px;}
+.letterfromgirl .sec-2 h3 {max-width: 500px; margin: 0 auto; color: #ff6600; font-family: 'ridi'; font-size: 18px; line-height: 28px; text-align: center; margin-top: 24px;}
+.letterfromgirl .sec-2 p {max-width: 500px; margin: 0 auto;}
 .letterfromgirl .sec-2 .photoframe {margin-top: 17px;}
 .letterfromgirl .sec-2 .photoframe .swiper-slide {text-align: center;}
-.letterfromgirl .sec-2 .photoframe .swiper-slide figure {position: relative; top: 0; z-index: 1; margin: 0 auto;}
-.letterfromgirl .sec-2 .photoframe .swiper-slide > img {position: absolute; top: 20px; left: 50%; margin-left: -92px; }
+.letterfromgirl .sec-2 .photoframe .swiper-slide .img-wrap {position: relative;}
+  
+ 
+.letterfromgirl .sec-2 .photoframe .swiper-slide .img-wrap.frame-2 figure::before {background-image: url('../img/frame-2-top.png');}
+.letterfromgirl .sec-2 .photoframe .swiper-slide .img-wrap.frame-2 figure::after  {background-image: url('../img/frame-2-bottom.png');}
+.letterfromgirl .sec-2 .photoframe .swiper-slide .img-wrap.frame-3 figure::before {background-image: url('../img/frame-3-top.png');}
+.letterfromgirl .sec-2 .photoframe .swiper-slide .img-wrap.frame-3 figure::after  {background-image: url('../img/frame-3-bottom.png');}
+.letterfromgirl .sec-2 .photoframe .swiper-slide .img-wrap.frame-4 figure::before {background-image: url('../img/frame-4-top.png');}
+.letterfromgirl .sec-2 .photoframe .swiper-slide .img-wrap.frame-4 figure::after  {background-image: url('../img/frame-4-bottom.png');} 
+
+.letterfromgirl .sec-2 .photoframe .swiper-slide figure {width: 180px; position: relative; height: auto; margin: 0 auto; padding: 27px 0 0;}
+.letterfromgirl .sec-2 .photoframe .swiper-slide figure::before {content: "";  display: block; position: absolute; background-image: url('../img/frame-1-top.png'); width: calc(100% + 27px); height:50%; background-position: center top ; background-size: 100%; background-repeat: no-repeat; margin: -13px;}
+.letterfromgirl .sec-2 .photoframe .swiper-slide figure::after {content: ""; display: block; position: absolute; background-image: url('../img/frame-1-bottom.png'); width: calc(100% + 27px); height:50%; background-position: center bottom ; background-size: 100%; bottom: 0; background-repeat: no-repeat; margin: -13px;}
+
+.letterfromgirl .sec-2 .photoframe .swiper-slide figure img {width:100%;  height: auto;}
+
+
+
+
 
 
 .letterfromgirl .sec-2 .ico-wrap {position: relative;}
@@ -79,21 +101,33 @@ body{font-family: 'Pretendard Variable', '맑은고딕', sans-serif;}
 
 .letterfromgirl .sec-2 .change .box-change {height: 100%; background-color: rgba(255, 255, 255, 0.6);border: 1px solid #ddd; border-radius: 20px; padding: 30px 28px 36px;}
 .letterfromgirl .sec-2 .change .box-change h4 {display: flex;  justify-content: center; align-items: center; gap: 15px; height: 50px;}
+.letterfromgirl .sec-2 .change .box-change h4 img {width:auto; max-height: 48px;}
 .letterfromgirl .sec-2 .change .box-change h4 strong {font-family: 'ridi'; color: #ff6600; font-size: 20px; line-height: 24px;}
 .letterfromgirl .sec-2 .change .box-change p {margin-top: 10px; letter-spacing: -0.04em; font-size: 14px; line-height: 24px; color: #555;}
 
-.letterfromgirl .sec-3 figure {position: absolute; width: 128px; height: 149px; left: 50%; top: 206px; margin-left: -64px;}
-.letterfromgirl .sec-3 .thx-frame { position: absolute; width: 342px; height: 514px; top: 23px; left: 50%; margin-left: -170px; z-index: 2; text-align: center; background-image: url(../img/thx-frame.png); background-repeat: no-repeat; background-size: 100%; }
-.letterfromgirl .sec-3 .thx-frame .c_title {font-family: 'ridi'; margin-top: 40px; color: #222;}
-.letterfromgirl .sec-3 .thx-frame .c_title p {font-family: 'ridi'; line-height: 20px;}
-.letterfromgirl .sec-3 .thx-frame .c_title h2 {font-weight: bold;}
-.letterfromgirl .sec-3 .thx-frame p.txt-small {font-size: 14px; margin-top: 8px;}
+.letterfromgirl .sec-3 {padding-top: 24px;}
+.letterfromgirl .sec-3 figure { width: 128px; height: auto; margin: 0 auto; padding: 17px 0 36px;}
+.letterfromgirl .sec-3 figure img{width: 100%; height: auto;}
+.letterfromgirl .sec-3 .thx-frame {width: 336px; margin: 0 auto;}
+.letterfromgirl .sec-3 .thx-frame-top {width: 100%;text-align: center; background-size: 100%; background-image: url('../img/thx-frame-top.png'); background-repeat: no-repeat; }
 
-.letterfromgirl .sec-3 .thx-frame p.sig {position: absolute; bottom: 40px; font-family: 'ridi'; font-size: 13px; left: 61px; letter-spacing: -0.04em;}
-.letterfromgirl .sec-3 .thx-frame .c_table {display: grid; grid-template-columns: 60px 100px; position: absolute; bottom: 90px; left: 50%; margin-left: -80px; gap: 6px 0;}
+.letterfromgirl .sec-3 .thx-frame-middle {position: relative;}
+.letterfromgirl .sec-3 .thx-frame-middle::before {content: ""; display: block; position: absolute; background-image: url('../img/thx-frame-mid1.png'); width: 100%; height: 50%; background-position: center top ; background-size: 100%;}
+.letterfromgirl .sec-3 .thx-frame-middle::after {content: ""; display: block; position: absolute; background-image: url('../img/thx-frame-mid2.png'); width: 100%; height: 50%; background-position: center bottom ; background-size: 100%; bottom: 0;}
+ 
+
+.letterfromgirl .sec-3 .c_title {font-family: 'ridi'; padding-top: 40px; color: #222;}
+.letterfromgirl .sec-3 .c_title p {font-family: 'ridi'; line-height: 20px;}
+.letterfromgirl .sec-3 .c_title h2 {font-weight: bold;}
+.letterfromgirl .sec-3 p.txt-small {font-size: 14px; margin-top: 8px;}
+
+.letterfromgirl .sec-3 .thx-frame-bottom {width: 100%;text-align: center; background-size: 100%; background-image: url('../img/thx-frame-bottom.png'); background-repeat: no-repeat;  background-position: center bottom; padding-bottom: 34px;}
+.letterfromgirl .sec-3 .thx-frame p.sig {  font-family: 'ridi'; font-size: 13px; left: 61px; letter-spacing: -0.04em; text-align: left; padding-left: 60px; margin-top: 34px;}
+.letterfromgirl .sec-3 .thx-frame .c_table {display: grid; grid-template-columns: 60px 100px;   gap: 6px 0; justify-content: center;}
 .letterfromgirl .sec-3 .thx-frame .c_table dt {font-size: 12px; font-weight: 500; text-align: left; line-height: 17px; color: #ff6600;}
 .letterfromgirl .sec-3 .thx-frame .c_table dd {font-size: 14px; font-weight: 600; text-align: left; line-height: 17px; letter-spacing: -0.04em;}
-.letterfromgirl .sec-3 .thx-btn {position: absolute; font-weight: 600; bottom: 48px; width: 266px; height: 45px; left: 50%; margin-left: -133px; border-radius: 5px; background-color: #ff6600; color: #fff; padding: 0 35px; background-image: url(../img/ico-download.png); background-repeat: no-repeat; background-position: right 35px top 50%; box-shadow: 2px 2px 9px 0 rgba(243,126,49,0.45);}
+.letterfromgirl .sec-3 .btn-wrap {padding: 30px 0 48px; text-align: center;}
+.letterfromgirl .sec-3 .thx-btn {display: inline-block; text-align: left; font-weight: 600; width: 100%; max-width: 266px; height: 45px; line-height: 45px;border-radius: 5px; background-color: #ff6600; color: #fff; padding: 0 35px; background-image: url(../img/ico-download.png); background-repeat: no-repeat; background-position: right 35px top 50%; box-shadow: 2px 2px 9px 0 rgba(243,126,49,0.45);}
 
 
 
@@ -107,15 +141,17 @@ body{font-family: 'Pretendard Variable', '맑은고딕', sans-serif;}
 .letterfromgirl .sec-4 .ch_box dl dt {text-align: left; border-bottom: 1px dashed #ff6600; padding-bottom: 10px; margin-bottom: 10px; font-family: 'ridi'; font-size: 14px; line-height: 28px; color: #5c3608; background-image: url('../img/ico-q.png'); background-size: 14px; background-repeat: no-repeat; background-position: left top 6px; padding-left: 22px; font-weight: bold;}
 .letterfromgirl .sec-4 .ch_box dl dd {font-size: 14px; line-height: 28px; color: #6d665e; font-weight: 500; text-align: left; padding: 0 10px;}
 .letterfromgirl .sec-4 .ch_box dl dd span {color: #ff6600; font-weight: 700;}
-.btn-main {width: 276px; height: 45px; background-color: #ff6600; color: #fff; border-radius: 5px; font-size: 14px; font-weight: 600; text-align: center;}
-.btn-line {width: 276px; height: 45px; border: 1px solid #ff6600; color: #ff6600; border-radius: 5px; font-size: 14px; font-weight: 600; text-align: center; line-height: 37px; background-color: #fff;}
+
+.btn-main {display: block; width: 276px; height: 45px; line-height: 45px; background-color: #ff6600; color: #fff; border-radius: 5px; font-size: 14px; font-weight: 600; text-align: center; margin-left: auto; margin-right: auto;}
+.btn-line {display: block; width: 276px; height: 45px; border: 1px solid #ff6600; color: #ff6600; border-radius: 5px; font-size: 14px; font-weight: 600; text-align: center; line-height: 45px; background-color: #fff; margin-left: auto; margin-right: auto;} 
 
 
 /* section5 */
 .letterfromgirl .sec-5 h2 {font-size: 20px; font-family: 'ridi'; color: #332e28; text-align: center; margin-bottom: 15px;} 
 .letterfromgirl .sec-5 h2 span,
 .letterfromgirl .sec-5 h2 strong {font-weight: bold;} 
-.letterfromgirl .sec-5 > figure img {display: block; border-radius: 20px; overflow: hidden; margin: 0 auto;}
+.letterfromgirl .sec-5 > figure{display: block; border-radius: 20px; overflow: hidden; margin: 0 auto; width: 151px; height: auto;}
+.letterfromgirl .sec-5 > figure img {width: 100%;}
 .letterfromgirl .sec-5 > p {font-family: 'ridi'; font-size: 17px; color: #332e28; text-align: center; margin-top: 27px; font-weight: bold;}
 .letterfromgirl .sec-5 > ul {font-size: 14px; width: 215px; margin: 19px auto 0;}
 .letterfromgirl .sec-5 > ul li {display: flex; color: #555; gap: 0 12px;}
@@ -127,6 +163,8 @@ body{font-family: 'Pretendard Variable', '맑은고딕', sans-serif;}
 .letterfromgirl .sec-5 .c_table dt {text-align: right; color: #ff6600;font-size: 14px;}
 .letterfromgirl .sec-5 .c_table dd {text-align: left; color: #55493a;font-size: 16px;}
 
+.letterfromgirl .sec-5 > h2,
+.letterfromgirl .sec-5 > p {max-width: 500px; margin-left:auto; margin-right: auto;}
 
 /* section6 */
 .box-opinion::before {content: ''; background-image: url(../img/ico-add-clip.png); background-repeat: no-repeat; background-size: 100%; display: block; width: 35px; height: 36px; position: absolute; top: -25px; left: 50%; margin-left: -17px;}
@@ -134,16 +172,16 @@ body{font-family: 'Pretendard Variable', '맑은고딕', sans-serif;}
 .box-opinion p {font-family: 'ridi';}
 .box-opinion ul {display: flex; width: 274px; margin: 16px auto 0; gap:17px; }
 .box-opinion ul li {width: 100%;}
-.box-opinion ul li button {width: 100%; height: 45px; background-color: #ff6600; border-radius: 5px; font-weight: 600; font-size: 15px; color: #fff;text-align: center; display: flex; justify-content: center;align-items: center; gap: 6px;}
-.box-opinion ul li button img {width: 20px; height: 20px;  }
-.box-opinion ul li:last-child button {width: 100%; height: 45px; background-color: #fff; border: 1px solid #ff6600; color: #ff6600;}
+.box-opinion ul li a {display: block; width: 100%; height: 45px; background-color: #ff6600; border-radius: 5px; font-weight: 600; font-size: 15px; color: #fff;text-align: center; display: flex; justify-content: center;align-items: center; gap: 6px;}
+.box-opinion ul li a img {width: 20px; height: 20px;  }
+.box-opinion ul li:last-child a {width: 100%; height: 45px; background-color: #fff; border: 1px solid #ff6600; color: #ff6600;}
 .box-add {background-image: url('../img/bg-add.png'); border-radius: 20px; width:344px; height: 183px; margin: 20px auto 0; text-align: center; padding-top: 20px; border: 1px solid #e3d5c3;}
 .box-add p {font-family: 'ridi'; font-size: 14px; line-height: 24px;}
 
 
 
 @media screen and (max-width: 768px) { 
-    .letterfromgirl .sec-1 {background-position: center bottom 0; background-size: cover;     padding: 64px 0 10px;}
+    .letterfromgirl .sec-1 {background-position: center bottom 0; background-size: cover;   }
     .letterfromgirl .sec-1 figure {top: 17px;}
         
     .letterfromgirl .sec-2 {background-image: url('../img/bg-section2-m.png'); background-size: 100%; background-repeat: repeat;} 
@@ -152,12 +190,17 @@ body{font-family: 'Pretendard Variable', '맑은고딕', sans-serif;}
 
 
 @media screen and (max-width: 640px) { 
-    .letterfromgirl .sec-4 .ch_box {width: calc(100% - 32px);}
+    .letterfromgirl h1,
+    .letterfromgirl h2,
+    .letterfromgirl h3,
+    .letterfromgirl p{padding: 0 20px;}
+
     .letterfromgirl .sec-2 .ico-wrap figure.ico-letter img,
     .letterfromgirl .sec-2 .ico-wrap figure.ico-stamp img {width: 50px;}
     .letterfromgirl .sec-2 .ico-wrap figure.ico-letter { margin-left: 110px; top: 8px;}
     .letterfromgirl .sec-2 .ico-wrap figure.ico-stamp {margin-left: -160px; top: 70px;}
     .letterfromgirl .sec-2 .change {padding:0 8%;  }
+    .letterfromgirl .sec-4 .ch_box {width: calc(100% - 32px);}
 }
 
 @media screen and (max-width: 390px) { 
@@ -167,16 +210,15 @@ body{font-family: 'Pretendard Variable', '맑은고딕', sans-serif;}
     .btn-line,
     .btn-main {width: 100%;}
     .letterfromgirl .sec-3 {min-height: 170vw;}
-    .letterfromgirl .sec-3 figure {top: 53vw; margin-left: -16vw;}
-    .letterfromgirl .sec-3 figure img {width: 32vw;}
+    .letterfromgirl .sec-3 figure {} 
     .letterfromgirl .sec-3 .thx-btn {width: 266px;}
-    .letterfromgirl .sec-3 .thx-frame {width: calc(100% - 32px); height: 131vw; margin-left: -45%;}
-    .letterfromgirl .sec-3 .thx-frame .c_title {margin-top: 9vw;}
-    .letterfromgirl .sec-3 .thx-frame .c_title h2 {font-size: 6vw;}
-    .letterfromgirl .sec-3 .thx-frame .c_title p {font-size: 4vw;}
-    .letterfromgirl .sec-3 .thx-frame p.txt-small {font-size: 3vw; line-height: 5vw; margin-top: 1vw;}
-    .letterfromgirl .sec-3 .thx-frame .c_table {bottom: 23vw;}
-    .letterfromgirl .sec-3 .thx-frame p.sig {bottom: 12vw; left: 13vw; font-size: 3.2vw; }
+    .letterfromgirl .sec-3 .thx-frame {width: calc(100% - 32px); }
+    .letterfromgirl .sec-3 .c_title {margin-top: 9vw;}
+    .letterfromgirl .sec-3 .c_title h2 {font-size: 6vw;}
+    .letterfromgirl .sec-3 .c_title p {font-size: 4vw;}
+    .letterfromgirl .sec-3 p.txt-small {font-size: 3vw; line-height: 5vw; margin-top: 1vw;}
+    .letterfromgirl .sec-3 .thx-frame .c_table { }
+    .letterfromgirl .sec-3 .thx-frame p.sig { font-size: 3.2vw; }
 
     .letterfromgirl .sec-2 .ico-wrap figure.ico-hat2 {top: 88px;margin-left: -165px;}
 
