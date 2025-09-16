@@ -1,11 +1,11 @@
 .g-camp { font-family: 'Gmarket Sans';}
 .g-camp .c-green {color: #639736;}
 .g-camp .ta-c {text-align: center;}
-.g-camp .inner {width: 100%; max-width: 1200px; margin: 0 auto;}
+.g-camp .inner {width: 100%; max-width: 1340px; margin: 0 auto; position: relative;}
 .g-camp .flex-box {display: flex; flex-wrap: wrap; align-content: center}
 .g-camp .ai-c {align-items: center;}
 
-.g-camp.main {background-image: url('../images/main-bg.jpg'); background-repeat: no-repeat; height: 1800px; background-position: center top;}
+.g-camp.smain {background-image: url('../images/main-bg.jpg'); background-repeat: no-repeat; height: 1800px; background-position: center top;}
 .g-camp.sec1 {background-position: center top;}
 .g-camp.sec2 {background-position: center top;}
 .g-camp.sec3 {background-image: url('../images/sec3-bg.jpg'); background-repeat: no-repeat; height: 960px; background-position: center top;}
@@ -20,15 +20,15 @@
 
 
 /* main */
-.g-camp.main .main-tit {text-align: center; padding-top: 140px; width: 540px;}
-.g-camp.main .main-tit h1 p {color:#f9c158; font-family: 'noto sans'; font-size: 26px;}
-.g-camp.main .main-tit > p {margin-top:40px; font-size: 24px; font-family: 'noto sans'; color: #fff;} 
-.g-camp.main .main-tit > p strong {font-weight: 600;}
-.g-camp.main .main-tit > p span {color: #fff67f;}
-.g-camp.main .main-tit a {display: block; margin:44px auto 0; font-family: 'pretendard'; font-size: 26px; width: 378px; height: 88px; line-height: 88px; background: #CAB15D; background: linear-gradient(90deg,rgba(202, 177, 93, 1) 0%, rgba(99, 151, 54, 1) 90%); color: #fff; box-sizing: border-box; text-align: left; padding-left: 78px; border-radius: 44px; position: relative;}
-.g-camp.main .main-tit a  span {color: #fff67f;}
+.g-camp.smain .main-tit {text-align: center; padding-top: 140px; width: 540px;}
+.g-camp.smain .main-tit h1 p {color:#f9c158; font-family: 'noto sans'; font-size: 26px;}
+.g-camp.smain .main-tit > p {margin-top:40px; font-size: 24px; font-family: 'noto sans'; color: #fff;} 
+.g-camp.smain .main-tit > p strong {font-weight: 600;}
+.g-camp.smain .main-tit > p span {color: #fff67f;}
+.g-camp.smain .main-tit a {display: block; margin:44px auto 0; font-family: 'pretendard'; font-size: 26px; width: 378px; height: 88px; line-height: 88px; background: #CAB15D; background: linear-gradient(90deg,rgba(202, 177, 93, 1) 0%, rgba(99, 151, 54, 1) 90%); color: #fff; box-sizing: border-box; text-align: left; padding-left: 78px; border-radius: 44px; position: relative; font-weight: 600;}
+.g-camp.smain .main-tit a  span {color: #fff67f;}
 
-.g-camp.main .main-tit a:after {content: ""; display: block; position: absolute; width: 74px; height: 74px; border-radius: 50%; background-color: #fff; right: 7px; top: 7px; background-image: url('../images/sec7-arrow.png'); background-repeat: no-repeat; background-position: center center;}
+.g-camp.smain .main-tit a:after {content: ""; display: block; position: absolute; width: 74px; height: 74px; border-radius: 50%; background-color: #fff; right: 7px; top: 7px; background-image: url('../images/sec7-arrow.png'); background-repeat: no-repeat; background-position: center center;}
 
 
 
@@ -40,19 +40,47 @@
     50% { background-image:url('../images/sec1-img2.jpg') }
 }
 
-.g-camp.sec1 h2 {text-align: center; padding-top: 54px;}
-.g-camp.sec1 p {color: #fff; font-family: 'pretendard'; font-size: 16px;}
-.g-camp.sec1 p + p {margin-top: 20px;}
+.g-camp.sec1 h2 {text-align: center; padding-top: 150px;}
+.g-camp.sec1 p {color: #fff; font-family: 'pretendard'; font-size: 25px; line-height: 43px; padding-left: 4px;}
+.g-camp.sec1 p + p {margin-top: 26px;}
 .g-camp.sec1 p b {font-weight: 600;}
+.g-camp.sec1 p strong {font-weight: 600; line-height: 33px; height: 33px; background-color: #f9bd57; display: inline-block; color: #222; padding: 0 4px;}
+.g-camp.sec1 p span {font-weight: 600; color: #f9bd57;}
+.g-camp.sec1 div.scroll {padding: 60px 0 80px; text-align: center;}
 
 
+.g-camp.sec1 .line-box {position: absolute; right: 0; top: 70%;}
+.g-camp.sec1 .line-box .line {position: relative; left: -170px;}
+.g-camp.sec1 .line-box .txt-box {border: 1px solid #f9c158; background-color: rgba(255,255,255,0.1); font-size: 18px; line-height: 30px; font-family: pretendard; border-radius: 26px; width: 440px; height: auto; padding: 30px 30px 30px 46px; color: #fff; position: relative;  }
+.g-camp.sec1 .line-box .txt-box::before {content: "*"; font-weight: 600; color: #f9c158; position: absolute; left: 30px;}
+.g-camp.sec1 .line-box .txt-box strong {font-weight: 600; color: #f9c158; }
 
 /* sec2 */
-.g-camp.sec2 {height: 960px; animation:img-change2 7s ease infinite; }
+.g-camp.sec2 {height: 960px; animation:img-change2 7s ease infinite; display: flex; flex-wrap: wrap; align-content: center;  }
 @keyframes img-change2 {
     0%,100% { background-image:url('../images/sec2-img1.jpg') }
     50% { background-image:url('../images/sec2-img2.jpg') }
 }
+.g-camp.sec2 .inner {display: flex; justify-content: flex-end;}
+.g-camp.sec2 .txt-box {width: 630px;}
+
+
+/* sec3 */
+.g-camp.sec3 {display: flex; flex-wrap: wrap;align-content: center; }
+
+.g-camp.sec2 h3 + p,
+.g-camp.sec3 h3 + p {margin-top: 58px;}
+.g-camp.sec2 p,
+.g-camp.sec3 p {color: #222; font-family: 'pretendard'; font-size: 25px; line-height: 43px; padding-left: 4px;}
+.g-camp.sec2 p + p,
+.g-camp.sec3 p + p {margin-top: 26px;}
+.g-camp.sec2 p strong,
+.g-camp.sec3 p strong {font-weight: 600; line-height: 33px; height: 33px; background-color: #639736; display: inline-block; color: #fff; padding: 0 4px;}
+.g-camp.sec2 p b,
+.g-camp.sec3 p b {font-weight: 600;}
+.g-camp.sec2 p span ,
+.g-camp.sec3 p span {font-weight: 600; color: #639736;}
+
 
 
 /* sec9 */
