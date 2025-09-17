@@ -355,18 +355,14 @@
                                 <div class="card_back">
                                     <figure><img src="images/sec5-img01-hover.png" alt=""></figure>
                                     <div class="txt">
+                                        <p class="cont">
+                                            <b>매일 60명</b> 이상의 소녀가 조혼으로 인한 <b>임신·출산 합병증으로 사망</b>합니다.
+                                        </p>
                                         <p class="tit">
                                             <b>13살</b>이라는 나이에<br>
                                             <b>첫아이</b>를 낳다가<br>
                                             <strong>세상을 떠난 마리암</strong>
                                         </p>
-                                        <p class="cont">
-                                            매일 60명 이상의 소녀가 <br>
-                                            조혼으로 인한 <br>
-                                            임신·출산 합병증으로 사망합니다.
-                                        </p>
-
-
                                     </div>
                                 </div>
                             </div>
@@ -384,15 +380,13 @@
                                 <div class="card_back">
                                     <figure><img src="images/sec5-img02-hover.png" alt=""></figure>
                                     <div class="txt">
+                                        <p class="cont">
+                                            18세 이전에   결혼한 여성들은 <b>가정폭력에   노출될 확률</b>이 <b>2배</b> 더 높습니다.
+                                        </p>
                                         <p class="tit">
                                             남편의 폭력을 견디다 <br>
                                             못해 아이를 데리고<br>
                                             <strong>도망쳐 나온 티비스</strong>
-                                        </p>
-                                        <p class="cont">
-                                            18세 이전에 <br>
-                                            결혼한 여성들은 가정폭력에 <br>
-                                            노출될 확률이 2배 더 높습니다.
                                         </p>
                                     </div>
                                 </div>
@@ -411,18 +405,17 @@
                                 <div class="card_back">
                                     <figure><img src="images/sec5-img03-hover.png" alt=""></figure>
                                     <div class="txt">
+                                        <p class="cont">
+                                            출산 중 생긴 <strong>*누공</strong> 사례의 
+                                            <b>4명</b> 중 1명은 이른 임신과 출산을 겪은  
+                                            소녀들에게서 발생합니다.
+                                        </p>
+                                        <p class="stxt"><strong>*누공</strong>은 출산 과정에서 내장에 구멍이 생겨 대소변이 새어 나오는 병입니다.</p>
                                         <p class="tit">
                                             어린 나이에 <br>
                                             임신과 출산을 반복해<br>
                                             <strong>누공병에 걸린 샤론</strong>
                                         </p>
-                                        <p class="cont">
-                                            출산 중 생긴 *누공 사례의 <br>
-                                            4명 중 1명은 이른 임신과 출산을 겪은 <br>
-                                            소녀들에게서 발생합니다.
-                                        </p>
-
-                                        <p class="stxt">*누공은 출산 과정에서 내장에 구멍이 생겨 대소변이 새어 나오는 병입니다.</p>
                                     </div>
                                 </div>
                             </div>
@@ -567,7 +560,7 @@
                     </div>
                 </div>
             </div>
-            <div class="g-camp sec9 pc">
+            <div class="g-camp sec9">
                 <div class="inner">
                     <h2>FAQ</h2>
                     <div class="tab-main">
@@ -642,7 +635,8 @@
                                                 <p class="tit">A.</p>
                                                 <p>기존 후원자이신 경우, 일시후원(5만원 이상)을 통해 위드베어를 받으실 수 있으며 일시후원금은 해외사업비로
                                                     사용됩니다. <br> 더 많은 분들이 소녀들을 위해 동참하실 수 있도록 일시후원은 선착순 300명으로 제한하오니 이
-                                                    점 너그러이 양해를 부탁드립니다.</p>
+                                                    점 너그러이 양해를 부탁드립니다. <br><br>
+                                                    <a href="" target="_blank"><img src="images/btn-loc.png" alt="일시후원하기"></a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -802,6 +796,13 @@
         });
 
         AOS.init();
+        $(".acc-warp .accordion .acc-box").click(function() {
+    // 1. 모든 형제 요소들에서 'on' 클래스를 제거
+    $(this).siblings().removeClass('on');
+    
+    // 2. 클릭된 요소에 'on' 클래스를 토글
+    $(this).toggleClass('on');
+});
         document.querySelectorAll('.comparison-slider').forEach(sliderContainer => {
             const afterWrapper = sliderContainer.querySelector('.after-img');
             const sliderBar = sliderContainer.querySelector('.slider-bar');
