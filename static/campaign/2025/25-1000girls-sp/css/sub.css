@@ -302,6 +302,11 @@
 
 @media screen and (max-width: 1280px) {
     .g-camp.sec2, .g-camp.sec3 {height: 780px;background-size: cover;}
+    .g-camp.sec2 .txt-box,
+    .g-camp.sec3 .txt-box {width: 490px;}
+    .g-camp.sec2 .txt-box img,
+    .g-camp.sec3 .txt-box img {height: 120px;}
+    .g-camp.sec4 {height: 560px;background-size: cover;}
     .g-camp.sec7-2 ul {padding-left: 24px;}
     .g-camp.sec7-2 .withbear {transform: scale(0.9); top: 125px;}
     .g-camp.sec8 .inner > p br  {display: none;}
