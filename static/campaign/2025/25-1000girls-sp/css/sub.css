@@ -14,7 +14,6 @@
 .g-camp.sec6 {background-image: url('../images/sec6-bg.jpg'); background-repeat: no-repeat; background-position: center top;}
 .g-camp.sec7-1 {background-image: url('../images/sec7-bg1.jpg'); background-repeat: no-repeat; height: 959px; background-position: center top;}
 .g-camp.sec7-2 {background-image: url('../images/sec7-bg2.jpg'); background-repeat: no-repeat; height: 467px; background-position: center top;}
-
 .g-camp.sec8 {background-color:#faf9f6;}
 .g-camp.sec9 {background-color:#eff4eb;}
 
@@ -92,9 +91,6 @@
 
 @-webkit-keyframes fadeOutDown{0%{opacity:1}to{opacity:0;-webkit-transform:translate3d(0,70%,0);transform:translate3d(0,70%,0)}}@keyframes fadeOutDown{0%{opacity:1}to{opacity:0;-webkit-transform:translate3d(0,70%,0);transform:translate3d(0,70%,0)}}
 
- 
-
-
 /* sec2 */
 .g-camp.sec2 {height: 960px; animation:img-change2 7s ease infinite; display: flex; flex-wrap: wrap; align-content: center;  }
 @keyframes img-change2 {
@@ -119,7 +115,6 @@
 .g-camp.sec3 p b {font-weight: 600;}
 .g-camp.sec2 p span ,
 .g-camp.sec3 p span {font-weight: 600; color: #639736;}
-
 
 
 /* sec5 */
@@ -219,7 +214,6 @@
     50%{-webkit-transform:rotate(7deg);transform:rotate(7deg)}
 }
 
-
 @-webkit-keyframes onoff{
     0%{opacity: 0;}
     50%{opacity: 1;}
@@ -261,7 +255,9 @@
 /* sec9 */
 .g-camp.sec9 h2 {font-size: min(6vw, 68px); padding:  min(10vw, 115px) 0 min(5.4vw, 54px) 0; text-align: center; color: #639736; font-weight: 600;}
 .g-camp.sec9 .inner {padding: 0 2vw;}
-
+.g-camp.sec9 .img-list {display: flex; }
+.g-camp.sec9 .img-list li {padding: 24px;}
+.g-camp.sec9 .img-list li img {height: min(32vw, 303px);}
 
 /* tab - sec9 */
 .tab-main {position: relative;width: 100%; padding-bottom: min(13vw, 150px);}
@@ -304,10 +300,8 @@
     .g-camp:not(.sec5, .sec6) .inner {padding: 0 3%;}
 }
 
-
 @media screen and (max-width: 1280px) {
     .g-camp.sec2, .g-camp.sec3 {height: 780px;background-size: cover;}
-
     .g-camp.sec7-2 ul {padding-left: 24px;}
     .g-camp.sec7-2 .withbear {transform: scale(0.9); top: 125px;}
     .g-camp.sec8 .inner > p br  {display: none;}
