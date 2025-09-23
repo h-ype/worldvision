@@ -255,13 +255,13 @@
 
         <section id="container">
             <!-- 컨텐츠 작업 영역 -->
-            <div class="g_floating pc">
+            <div class="g_floating">
                 <a href="" class="donate-btn" id="btn-floatcdonation">
                     <div class="cf_img">
                         <img src="images/b-floating.png" alt="조혼 위기 여아 구하기" class="pc">
-                        <img src="images/b-floating.png" alt="조혼 위기 여아 구하기" class="mo">
+                        <img src="images/mo-b-floating.png" alt="조혼 위기 여아 구하기" class="mo">
                     </div>
-                    <div class="txt"><span>조혼 위기</span><br>여아 구하기</div>
+                    <div class="txt"><span>조혼 위기</span><br> 여아 구하기</div>
                 </a>
             </div>
 
@@ -658,8 +658,8 @@
             </div>
             <div class="g-camp sec7-2 pc7">
                 <div class="inner">
-                    <h3 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">안녕! 나는 다시 돌아온<span>위드베어야</span>
-                    </h3>
+                    <h3 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><img src="images/sec7-tit.png"
+                            alt="안녕! 나는 다시 돌아온 위드베어야"></h3> 
                     <ul>
                         <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">원피스 정중앙에는 <strong>World
                                 Vision</strong>과
@@ -683,13 +683,13 @@
             </div>
             <div class="g-camp sec7-2 mo7">
                 <div class="inner">
-                    <h3 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><img src=""
+                    <h3 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><img src="images/mo-sec7-tit.png"
                             alt="안녕! 나는 다시 돌아온 위드베어야"></h3>
 
                     <ul>
                         <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">원피스 정중앙에는 <strong>World
                                 Vision</strong>과
-                            <strong>With</strong>의 <br>의미를 담은 오렌지빛
+                            <strong>With</strong>의 의미를 담은 오렌지빛
                             <strong>‘W’</strong>를 품고 있어
                         </li>
                         <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="900">귀여운 꽃핀을 귀에 달고 소녀들의 목소리에 귀
@@ -1084,6 +1084,14 @@
             centeredSlides: true,
             autoplay: {
                 delay: 1500,
+            },
+            breakpoints: {
+                368: {
+                    slidesPerView: 1.4,  //브라우저가 768보다 클 때
+                },
+                768: {
+                    slidesPerView: 2,  //브라우저가 768보다 클 때
+                },
             },
         });
     </script>
