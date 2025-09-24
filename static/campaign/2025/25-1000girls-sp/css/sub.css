@@ -495,7 +495,7 @@
     .g-camp.sec8 div a span {font-size: min(4.4vw, 17px);}
     .g-camp.sec8 .swiper-button-next, .g-camp.sec8 .swiper-button-prev {display: none;}
 
-    .g-camp.sec8 .swBox .txt {padding: 4.8vw 7vw 0;}
+    .g-camp.sec8 .swBox .txt {padding: 4.8vw 6vw 0;}
     .g-camp.sec8 .swBox .txt h4 {font-size: min(6vw, 25px);}
     .g-camp.sec8 .swBox .txt p {font-size: min(4vw, 16px); line-height: 1.5; margin-top: 2vw;}
     .g-camp.sec8 .swBox .swiper-slide .innBox {border-radius: 20px;}
