@@ -197,6 +197,10 @@
 .g-camp.sec5 h2 {font-size: 52px; line-height: 74px; padding: 120px 0 54px ; text-align: center; color: #222; font-weight: 600;}
 .g-camp.sec5 .card_area.pc {display: flex; justify-content: center; padding-bottom: 140px;}
 .g-camp.sec5 .card_area.pc .flip {width:33%; height: min(55.5224vw, 716px); position: relative; perspective: 1100px;}
+.g-camp.sec5 .card_area.pc .flip .card_front {opacity: 1;}
+.g-camp.sec5 .card_area.pc .flip .card_back {opacity: 0;}
+.g-camp.sec5 .card_area.pc .flip:hover .card_front {opacity: 0;}
+.g-camp.sec5 .card_area.pc .flip:hover .card_back {opacity: 1;}
 .g-camp.sec5 .card_area.pc .card figure img {width: 100%; height: min(55.5224vw, 716px);}
 .g-camp.sec5 .card_area.pc .card .txt {position: absolute; z-index: 1;}
 .g-camp.sec5 .card_area.pc .card { width: 100%; height: 100%; position: relative;transition: 0.4s; transform-style: preserve-3d;}
@@ -218,7 +222,7 @@
 .g-camp.sec5 .card_area.pc .card_back .txt .stxt strong {font-weight: 600; color: #639736;}
 
 .g-camp.sec5 .card_area.pc .flip::after {content: ""; width: min(5.2vw, 70px); height:  min(5.2vw, 70px);   background-image: url('../images/sec5-arrow.png'); display: block; position: absolute; right: min(1.04vw, 14px); bottom: min(1.04vw, 14px); background-size: 100%;}
-.g-camp.sec5 .card_area.pc .card > * {width:100%; border-radius: 15px; backface-visibility: hidden; position: absolute;}
+.g-camp.sec5 .card_area.pc .card > * {width:100%; border-radius: 15px; /*backface-visibility: hidden;*/ position: absolute;}
 .g-camp.sec5 .card_area.pc .card h3 {font-size: 3.6rem; font-family: 'GmarketSansBold';}
 .g-camp.sec5 .card_area.pc .card .s_tit {font-size: 2rem; padding: 10px 0 0 0;}
 
