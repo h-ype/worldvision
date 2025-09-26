@@ -1,4 +1,4 @@
-.g-camp { font-family: 'Gmarket Sans';}
+.g-camp { font-family: 'Gmarket Sans'; overflow-x: hidden;}
 .g-camp .c-green {color: #639736;}
 .g-camp .ta-c {text-align: center;}
 .g-camp .inner {width: 100%; max-width: 1340px; margin: 0 auto; position: relative;}
@@ -97,7 +97,7 @@
 
 .bg-animate {position: relative;  background-repeat: no-repeat;  width: 100%;  height: auto;  overflow: hidden;}
 .bg-animate::before,
-.bg-animate::after {  content: "";  position: absolute;  inset: 0;  display: block;  background-size: 100%;  background-repeat: no-repeat;  background-position: center center;  transition: opacity 1s;
+.bg-animate::after {  content: "";  position: absolute;  inset: 0;  display: block;  background-size: cover;  background-repeat: no-repeat;  background-position: center center;  transition: opacity 1s;
 }
 
 .sec1.pc.bg-animate::before { background-image: url('../images/sec1-img1.jpg'); }
