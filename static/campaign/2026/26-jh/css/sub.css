@@ -5,8 +5,8 @@
 #container .g_floating {display:inline-block;position:fixed; top:200px; right: 260px;transition: 0.3s all;z-index:10;text-align: right;} 
 #container .g_floating a {overflow:hidden;border-radius:10px;transition:0.3s all;position:absolute;}
 #container .g_floating .cf_img {position:relative; z-index:1;}
-#container .g_floating .txt {position:absolute; font-size:20px; line-height:26px;text-align:center;font-weight:700;color:#fff;width:100%;z-index:3; bottom:40px; left:50%; transform: translate(-50%, 0%);}
-#container .g_floating .txt span{color:#fff67f}
+#container .g_floating .txt {position:absolute; font-size:19px; line-height:26px;text-align:center;font-weight:700;color:#fff;width:100%;z-index:3; bottom:48px; left:50%; transform: translate(-50%, 0%); padding-right: 5px;}
+#container .g_floating .txt span{color:#e8c9a8}
 #container .g_floating .txt img{margin-top: 7px;}
 #container .g_floating:hover {-webkit-animation: bounce 0.35s ease-out alternate infinite; animation: bounce 0.35s ease-out alternate infinite;}
 @-webkit-keyframes bounce {
@@ -37,7 +37,19 @@
 .g-camp a.btn.big-brown {background: #AF671B;
 background: linear-gradient(52deg,rgba(175, 103, 27, 1) 0%, rgba(130, 73, 12, 1) 99%); border: 1px solid #AF671B;}
 
+.jh-chosen .inner {width: 1200px; margin: 0 auto;}
+
 /* main */
+.jh-chosen.overview {background-image: url("../images/overview_bg.png"); background-position: center top; height: 1065px;}
+.jh-chosen.why {background-image: url("../images/why_bg.png"); background-position: center top; height: 845px;}
+.jh-chosen.lineBanner {background-image: url("../images/lineBanner_bg.png"); background-position: center top; height: 485px;}
+.jh-chosen.partygo {background-image: url("../images/partygo_bg.png"); background-position: center top; height: 1680px;}
+.jh-chosen.gift {background-image: url("../images/gift_bg.png"); background-position: center top; height: 960px;}
+.jh-chosen.bgJh {background-image: url("../images/bgJh_bg.png"); background-repeat: repeat; background-position: center top; height: 1000px;}
+.jh-chosen.chosenBtn {background-image: url("../images/chosenBtn_bg.png"); background-position: center top; height:1480px;}
+.jh-chosen.postcard {background-image: url("../images/postcard_bg.png"); background-position: center top; height: 895px;}
+.jh-chosen.kidsBox {background-image: url("../images/kidsBox_bg.png"); background-position: center top; height: 825px;} 
+
 .g-camp.smain {position: relative; background-color: #2c1f16;}
 .g-camp.smain.pc > figure {overflow: hidden; height: min(150vw, 1800px);}
 .g-camp.smain.pc > figure img {position: relative; left: 50%; transform: translateX(-50%); z-index: 0;}
