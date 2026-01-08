@@ -796,12 +796,10 @@
             },
             spaceBetween: -120,
             centeredSlides: true,
-            breakpoints: {
-                368: {
-                },
-                768: {
-                },
-            },
+        });
+
+        msgBoxSlider.on('click', function () {
+            msgBoxSlider.slideNext();
         });
 
         const sections = document.querySelectorAll('.bg-animate');
