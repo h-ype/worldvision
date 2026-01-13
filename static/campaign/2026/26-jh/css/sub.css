@@ -51,7 +51,7 @@ box-shadow: 5px 5px 15px 5px rgba(49,40,26,0.12);}
 
 /* main */
 .jh-chosen.overview.desktop {background-image: url("../images/overview_bg.png"); background-position: center top; height: 1065px;}
-.jh-chosen.why.desktop {background-image: url("../images/why_bg.png"); background-position: center top; height: 845px; background-size: cover;}
+.jh-chosen.why {background-image: url("../images/why_bg.png"); background-position: center top; height: 845px; background-size: cover;}
 .jh-chosen.lineBanner {background-image: url("../images/lineBanner_bg.png"); background-position: center top; height: 485px;}
 .jh-chosen.partygo {background-image: url("../images/partygo_bg.png"); background-position: center top; height: auto; padding-bottom: 130px;}
 .jh-chosen.gift {background-image: url("../images/gift_bg.png"); background-position: center top; max-height: 960px; padding-bottom: 154px;}
@@ -69,25 +69,25 @@ box-shadow: 5px 5px 15px 5px rgba(49,40,26,0.12);}
 .jh-chosen.overview.desktop .inner .main-tit h1 p + figure {margin-top: 48px;}
 .jh-chosen.overview.desktop .inner .main-tit div {margin: 64px 0 54px; font-size: 24px; color: #391502; line-height: 1.6;}
 
-.jh-chosen.why.desktop {position: relative;}
-.jh-chosen.why.desktop figure.msg { position: absolute;left: 50%; margin-left: -675px; top: 250px; z-index: 2;}
-.jh-chosen.why.desktop figure.jh { position: absolute; left: 50%; bottom: 0; margin-left: -620px;}
-.jh-chosen.why.desktop > div {position: absolute; left: 50%; padding-left: min(6vw, 100px);  width: 50vw;}
-.jh-chosen.why.desktop > div > p {font-size: clamp(16px, 2.4vw, 24px); line-height: 1.5; color: #391502; margin-top: 120px;}
-.jh-chosen.why.desktop > div > p + p {margin-top: 45px;}
+.jh-chosen.why {position: relative;}
+.jh-chosen.why figure.msg { position: absolute;left: 50%; margin-left: -675px; top: 250px; z-index: 2;}
+.jh-chosen.why figure.jh { position: absolute; left: 50%; bottom: 0; margin-left: -620px;}
+.jh-chosen.why > div {position: absolute; left: 50%; padding-left: min(6vw, 100px);  width: 50vw;}
+.jh-chosen.why > div > p {font-size: clamp(16px, 2.4vw, 24px); line-height: 1.5; color: #391502; margin-top: 120px;}
+.jh-chosen.why > div > p + p {margin-top: 45px;}
 
-.jh-chosen.why.desktop .msg {height: 176px; margin-top: 68px; position: absolute;}
-.jh-chosen.why.desktop .msg:hover {cursor: pointer;}
-.jh-chosen.why.desktop .msg .swiper-wrapper {height: 176px; position: relative;  transition-timing-function: ease}
-.jh-chosen.why.desktop .msg .swiper-slide {height: 130px; transition: all 0.05s;  transition-timing-function: ease}
-.jh-chosen.why.desktop .msg .swiper-slide div {border-radius: 40px; width: 480px; height: 130px; background-color: #faf8f6; border: 1px solid #ebe6de; display: flex; flex-wrap: wrap; align-items: center; padding:0 24px; gap: 12px; color: #391502; -webkit-box-shadow: 0px 8px 14px -1px rgba(49,40,26,0.1); box-shadow: 0px 8px 14px -1px rgba(49,40,26,0.1);}
-.jh-chosen.why.desktop .msg .swiper-slide div p span {font-weight: 800; display: block;} 
-.jh-chosen.why.desktop .msg .swiper-slide figure img {width: 80px; height: 80px;} 
-.jh-chosen.why.desktop .msg .swiper-slide.swiper-slide-prev {z-index: 3;}
-.jh-chosen.why.desktop .msg .swiper-slide.swiper-slide-active {z-index: 2;}
-.jh-chosen.why.desktop .msg .swiper-slide.swiper-slide-next {z-index: 1;}
+.jh-chosen.why .msg {height: 176px; margin-top: 68px; position: absolute;  }
+.jh-chosen.why .msg:hover {cursor: pointer;}
+.jh-chosen.why .msg .swiper-wrapper {height: 176px; position: relative;  transition-timing-function: ease}
+.jh-chosen.why .msg .swiper-slide {height: 130px; transition: all 0.05s;  transition-timing-function: ease}
+.jh-chosen.why .msg .swiper-slide div {border-radius: 40px; width: 480px; height: 130px; background-color: #faf8f6; border: 1px solid #ebe6de; display: flex; flex-wrap: wrap; align-items: center; padding:0 24px; gap: 12px; color: #391502; -webkit-box-shadow: 0px 2px 6px -1px rgba(49,40,26,0.09); box-shadow: 0px 2px 6px -1px rgba(49,40,26,0.09);}
+.jh-chosen.why .msg .swiper-slide div p span {font-weight: 800; display: block;} 
+.jh-chosen.why .msg .swiper-slide figure img {width: 80px; height: 80px;} 
+.jh-chosen.why .msg .swiper-slide.swiper-slide-prev {z-index: 3;}
+.jh-chosen.why .msg .swiper-slide.swiper-slide-active {z-index: 2;}
+.jh-chosen.why .msg .swiper-slide.swiper-slide-next {z-index: 1;}
 
-.jh-chosen.why.desktop .msg .swiper-slide:not(.swiper-slide-prev, .swiper-slide-active, .swiper-slide-next) {opacity: 0;}
+.jh-chosen.why .msg .swiper-slide:not(.swiper-slide-prev, .swiper-slide-active, .swiper-slide-next) {opacity: 0;}
 
 .jh-chosen.lineBanner {text-align: center; font-size: 32px; color: #fff; display: flex; align-items: center; justify-content: center;}
 
@@ -182,7 +182,7 @@ box-shadow: 5px 5px 15px 5px rgba(49,40,26,0.12);}
 .jh-chosen.faqBox .img-list li {padding: 24px;}
 .jh-chosen.faqBox .img-list li img {height: min(32vw, 303px);}
 
-.jh-chosen.faqBox .partyover {font-size: min(4vw, 20px); color: #391502;line-height: 1.4; text-align: center; padding-bottom: min(12vw, 120px);}
+.jh-chosen.faqBox .partyover {font-size: min(4.4vw, 20px); color: #391502;line-height: 1.4; text-align: center; padding-bottom: min(12vw, 120px);}
 .jh-chosen.faqBox .partyover strong {font-weight: 800;}
 
 .tab-main {position: relative;width: 100%; padding-bottom: min(7vw, 60px);}
@@ -198,7 +198,7 @@ box-shadow: 5px 5px 15px 5px rgba(49,40,26,0.12);}
 .tab-main input[id='tab1']:checked ~ div.tab-1, 
 .tab-main input[id='tab2']:checked ~ div.tab-2 {display: block;} 
 .acc-warp .accordion .acc-box {border-radius: min(3vw, 15px);background:#fff;margin:0 0 15px 0;padding:min(6vw, 30px) min(3.5vw, 35px);box-shadow:1px 1px 10px 5px rgba(3, 24, 41, 0.02); position:relative;} 
-.acc-warp .accordion .acc-box .tit{color:#bb8c5a;font-weight:800;margin-right:min(2.4vw, 35px);line-height: 1.3;font-size: min(4.8vw, 28px);} 
+.acc-warp .accordion .acc-box .tit{font-size: min(4.8vw, 28px); color:#bb8c5a;font-weight:800;margin-right:min(2.4vw, 35px);line-height: 1.3;} 
 .acc-warp .accordion .acc-box .tit + p {color: #391502; line-height: 1.4;}
 .acc-warp .accordion .acc-box .acc-tab {text-align: left;}
 .acc-warp .accordion .acc-box .acc-q {font-size: min(4.5vw, 24px); margin-bottom:30px;  font-weight:800;cursor:pointer;position:relative;}
@@ -224,15 +224,15 @@ box-shadow: 5px 5px 15px 5px rgba(49,40,26,0.12);}
     .jh-chosen.overview.desktop .inner .main-tit h1 p + figure {margin-top: 3.3vw;}
     .jh-chosen.overview.desktop .inner .main-tit h1 p + figure img {height: 6.8vw;}
 
-    .jh-chosen.why.desktop {height: 710px;}
-    .jh-chosen.why.desktop figure.msg {margin-left:-490px; top: 220px; width: 190px;}
-    .jh-chosen.why.desktop figure.jh {  width: 490px; margin-left: -480px;}
-    .jh-chosen.why.desktop figure > img {width: 100%;}
-    .jh-chosen.why.desktop > div > p {margin-top: 80px;}
+    .jh-chosen.why {height: 710px;}
+    .jh-chosen.why figure.msg {margin-left:-490px; top: 220px; width: 190px;}
+    .jh-chosen.why figure.jh {  width: 490px; margin-left: -480px;}
+    .jh-chosen.why figure > img {width: 100%;}
+    .jh-chosen.why > div > p {margin-top: 80px;}
  
-    .jh-chosen.why.desktop > div > p + p {margin-top: 17px;}
-    .jh-chosen.why.desktop .msg .swiper-slide div {width: 100%;}
-    .jh-chosen.why.desktop .msg {margin-top: 4vw;}
+    .jh-chosen.why > div > p + p {margin-top: 17px;}
+    .jh-chosen.why .msg .swiper-slide div {width: 100%;}
+    .jh-chosen.why .msg {margin-top: 4vw;}
 
 }
 
@@ -291,32 +291,38 @@ box-shadow: 5px 5px 15px 5px rgba(49,40,26,0.12);}
     .jh-chosen.overview.mob .inner div {color: #391502; font-size: min(4.9vw, 32px); padding-bottom: 6vw; position: relative; margin-top: -12vw;}
     .jh-chosen.overview.mob .inner a {margin: 0 auto; text-align: left;}
 
-    .jh-chosen.why.desktop {display: none;}
-    .jh-chosen.why.mob {display: block !important; height: auto; padding-bottom: 12vw; background-image: url('../images/why_bg1_m.png'); position: relative;}
-    .jh-chosen.why.mob figure.msg {position: absolute; z-index: 2; top: 43vw; left: 50%; margin-left: -44vw;}
-    .jh-chosen.why.mob figure.msg img {width: 37vw;}
-    .jh-chosen.why.mob figure.jh {background-image: url('../images/why_bg2_m.png'); text-align: center; padding-top: 8vw; overflow: hidden; height: 100vw; background-size: 10vw;}
-    .jh-chosen.why.mob figure.jh img {width: 76vw; margin-left: 10vw;}
-    .jh-chosen.why.mob > div {padding: 0 7vw;}
-    .jh-chosen.why.mob > div > p {color: #391502; font-size: min(4.9vw, 32px); margin-top: 9vw; padding: 0 1vw; line-height: 1.5;}
-    .jh-chosen.why.mob > div > p + p {margin-top: 3vw;}
+    .jh-chosen.why {display: block !important; height: auto; padding-bottom: 12vw; background-image: url('../images/why_bg1_m.png'); background-size: 30vw; background-repeat: repeat; position: relative;}
+    .jh-chosen.why figure.msg {position: absolute; z-index: 2; top: 37vw; left: 50%; margin-left: -44vw;}
+    .jh-chosen.why figure.msg img {width: 37vw;}
+    .jh-chosen.why figure.jh {position: relative; width: 100%; left: 0; margin-left: 0; background-image: url('../images/why_bg2_m.png'); text-align: center; padding-top: 8vw; overflow: hidden; height: 100vw; background-size: 10vw;}
+    .jh-chosen.why figure.jh img {width: 76vw; margin-left: 10vw;}
+    .jh-chosen.why > div {padding: 0 7vw; position: relative; width: 100%; left: 0;}
+    .jh-chosen.why > div > p {color: #391502; font-size: min(4.9vw, 32px); margin-top: 9vw; padding: 0 1vw; line-height: 1.5;}
+    .jh-chosen.why > div > p + p {margin-top: 3vw;}
+    .jh-chosen.why > div > p .hide_mo {display: none;}
+
+    .jh-chosen.why .msg {position: relative; height: calc(13vw + 60px); margin-top: 7vw;}
+    .jh-chosen.why .msg .swiper-slide div {border-radius: min(5vw, 50px); width: 100%; padding: 2.4vw 3vw; gap: 2.2vw; height: auto;  }
+    .jh-chosen.why .msg .swiper-slide div p {font-size: min(3.2vw, 28px);}
+    .jh-chosen.why .msg .swiper-slide div p span {font-weight: 800; display: block;}
+    .jh-chosen.why .msg .swiper-slide figure img {width: min(14vw, 80px); height: min(14vw, 80px);}
         
-    .jh-chosen.why.mob > div.msgInner {margin-top: 5vw; padding: 0 6vw; height: calc(15vw + 40px);}
+    .jh-chosen.why > div.msgInner {margin-top: 5vw; padding: 0 6vw; }
     .msgMobile .swiper-wrapper {height: 176px; position: relative;}
     .msgMobile .swiper-slide {height: 130px; }
     .msgMobile .swiper-slide div {border-radius: min(5vw, 50px); width: 100%; height: auto; background-color: #faf8f6; border: 1px solid #ebe6de; display: flex; flex-wrap: wrap; align-items: center; padding: 2.4vw 3vw; gap: 2.2vw; color: #391502; -webkit-box-shadow: 0px 8px 14px -1px rgba(49,40,26,0.1); box-shadow: 0px 8px 14px -1px rgba(49,40,26,0.1);}
-    .msgMobile .swiper-slide div p {font-size: min(3.7vw, 28px);}
+    .msgMobile .swiper-slide div p {font-size: min(3.6vw, 28px);}
     .msgMobile .swiper-slide div p span {font-weight: 800; display: block;}
     .msgMobile .swiper-slide-prev {z-index: 3; transition: 0.2s; }
     .msgMobile .swiper-slide-active {z-index: 2; transition: 0.2s; }
     .msgMobile .swiper-slide-next {z-index: 1; transition: 0.2s;  }
     .msgMobile .swiper-slide:not(.swiper-slide-prev, .swiper-slide-active, .swiper-slide-next) {opacity: 0;}
-    .msgMobile .swiper-slide figure img {width: min(14vw, 80px); height: min(14vw, 80px);}
+
     
     .jh-chosen.theychoose.desktop {display: none;}
     .jh-chosen.theychoose.mob {display: block !important; background-color: #f6f0ef; padding-bottom: 21vw;}
     .jh-chosen.theychoose.mob p {padding: 12vw 7.6vw 6vw; font-size: min(4.9vw, 32px); color: #391502;}
-    .chosenMob {position: relative;  padding: 0 7.6vw;}
+    .chosenMob {position: relative;  padding: 0 7.6vw; }
     .chosenMob .swiper-slide {border-radius: 30px; overflow: hidden;}
     .chosenMob .swiper-slide img {width: 100%;}
     .chosenMob .swiper-button-prev,
@@ -358,7 +364,7 @@ box-shadow: 5px 5px 15px 5px rgba(49,40,26,0.12);}
     .jh-chosen.bgJh.mob ul li span {font-size: min(3vw, 22px); }
     .jh-chosen.bgJh.mob ul li + li {margin-top: 3vw;}
     .jh-chosen.bgJh.mob ul li div {padding-bottom: 1vw;}
-    .jh-chosen.bgJh.mob ul li p {font-size: min(4vw, 28px); text-align: left; line-height: 1.3;margin-top: 0.4vw;}
+    .jh-chosen.bgJh.mob ul li p {font-size: min(4.2vw, 30px); text-align: left; line-height: 1.3;margin-top: 0.4vw;}
     .jh-chosen.bgJh.mob ul li p + small {font-size: min(3vw, 22px);color: #391502; display: block;}
 
     .jh-chosen.gift {height: auto; max-height: 100%; padding-bottom: 12vw; background-image: url('../images/gift_bg_m.png'); background-size: cover;}
@@ -415,7 +421,7 @@ box-shadow: 5px 5px 15px 5px rgba(49,40,26,0.12);}
     .acc-warp .accordion .acc-box {margin-bottom: min(2.7vw, 15px); padding: min(6.5vw, 25px);}
     .acc-warp .accordion .acc-box .arrow {width: 15px; height: 15px;}
     .acc-warp .accordion .acc-box .acc-a,
-    .acc-warp .accordion .acc-box .tit + p {font-size: min(4vw, 19px);}
+    .acc-warp .accordion .acc-box .tit + p {font-size: min(4vw, 21px);}
     .acc-warp .accordion .acc-box .arrow {right: 26px;}
     .tab-main .tab-main-content {margin-top: min(6vw, 25px);} 
     .tab-main .tab-main-nav a label {height: min(10vw, 90px); line-height: min(10vw, 90px);}
