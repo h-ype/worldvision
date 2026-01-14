@@ -70,7 +70,7 @@ box-shadow: 5px 5px 15px 5px rgba(49,40,26,0.12);}
 .jh-chosen.overview.desktop .inner .main-tit div {margin: 64px 0 54px; font-size: 24px; color: #391502; line-height: 1.6;}
 
 .jh-chosen.why {position: relative;}
-.jh-chosen.why figure.msg { position: absolute;left: 50%; margin-left: -675px; top: 250px; z-index: 2;}
+.jh-chosen.why figure.msg { position: absolute;left: 50%; margin-left: -675px; top: 290px; z-index: 2;}
 .jh-chosen.why figure.jh { position: absolute; left: 50%; bottom: 0; margin-left: -620px;}
 .jh-chosen.why > div {position: absolute; left: 50%; padding-left: min(6vw, 100px);  width: 50vw;}
 .jh-chosen.why > div > p {font-size: clamp(16px, 2.4vw, 24px); line-height: 1.5; color: #391502; margin-top: 120px;}
@@ -225,14 +225,14 @@ box-shadow: 5px 5px 15px 5px rgba(49,40,26,0.12);}
     .jh-chosen.overview.desktop .inner .main-tit h1 p + figure img {height: 6.8vw;}
 
     .jh-chosen.why {height: 710px;}
-    .jh-chosen.why figure.msg {margin-left:-490px; top: 220px; width: 190px;}
+    .jh-chosen.why figure.msg {margin-left:-490px; top: 272px; width: 190px;}
     .jh-chosen.why figure.jh {  width: 490px; margin-left: -480px;}
     .jh-chosen.why figure > img {width: 100%;}
     .jh-chosen.why > div > p {margin-top: 80px;}
  
     .jh-chosen.why > div > p + p {margin-top: 17px;}
-    .jh-chosen.why .msg .swiper-slide div {width: 100%;}
-    .jh-chosen.why .msg {margin-top: 4vw;}
+    .jh-chosen.why div.msg {margin-top: 4vw;}
+    .jh-chosen.why div.msg .swiper-slide div {width: 100%;}
 
 }
 
@@ -406,7 +406,7 @@ box-shadow: 5px 5px 15px 5px rgba(49,40,26,0.12);}
     .jh-chosen.kidsBox div ul li figure img {width: 100%;}
     .jh-chosen.kidsBox div ul li:nth-child(2) {padding: 0;}
     .jh-chosen.kidsBox div ul li h3 {margin-top: 0; font-size: min(4.2vw, 26px);}
-    .jh-chosen.kidsBox div ul li p {width: 51vw; margin-top: 0.8vw; font-size: min(3.4vw, 19px);}
+    .jh-chosen.kidsBox div ul li p {width: 51vw; margin-top: 0.8vw; font-size: min(3.4vw, 19px); line-height:  1.55;}
     .jh-chosen.kidsBox div ul li p br {display: none;}
     .jh-chosen.kidsBox .inner > div {max-width: 640px; width: 100%; margin: 0 auto;}
 
