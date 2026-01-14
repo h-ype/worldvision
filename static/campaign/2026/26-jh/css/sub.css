@@ -432,4 +432,7 @@ box-shadow: 5px 5px 15px 5px rgba(49,40,26,0.12);}
 
 @media screen and (max-width: 768px) {
     .jh-chosen.faqBox .partyover br {display: none;}
+    
+    .jh-chosen.why .msg {height: 25vw;}
+
 }

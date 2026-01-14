@@ -931,14 +931,27 @@
             slidesPerView: 3,
             spaceBetween: -110,
             allowTouchMove: false,
+            preventClicks: false,       // 클릭 방지 해제
+            preventClicksPropagation: false,
             loop: true,
             autoplay: {
-                delay: 3000,
+                delay: 1200,
             },
-            spaceBetween: -120,
             breakpoints: {
                 980: {
-                    spaceBetween: -(window.innerWidth * 0.15),
+                    spaceBetween: -100,
+                },
+                800: {
+                    spaceBetween: -100,
+                },
+                768: {
+                    spaceBetween: -130,
+                },
+                540: {
+                    spaceBetween: -90,
+                },
+                480: {
+                    spaceBetween: -76,
                 }
             },
             centeredSlides: true,
