@@ -204,6 +204,7 @@
     .content-container .section2 figure {left: -40px;}
     .content-container .section3 ul li h4 {margin-top: -60px;}
     .content-container .section4 .text {left: 40%;}
+    .content-container .section8 .inner {padding: 0 min(7.34vw,47px);}
 }
 
 @media screen and (max-width: 1024px) {
@@ -223,12 +224,12 @@
     .content-container .section1.mo .text {padding-top: min(8.44vw, 54px);}
     .content-container .section1.mo .text h4 {font-size: min(4.5vw, 28.8px);}
     .content-container .section1.mo .text h4 span {color: #c7454d; font-weight: 700;}
-    .content-container .section1.mo .text h1 {padding-top: min(1.5vw, 10px);}
-    .content-container .section1.mo .text h1 img {width: min(93.75vw, 600px); }
-    .content-container .section1.mo .text p {font-size: min(4.44vw, 28.4px); margin-top: min(-12.5vw, -80px); position: relative; line-height: 1.3;}
-    .content-container .section1.mo .text > figure {width: min(76.6vw, 490px); margin: 0 auto; position: relative; margin-top: min(-3.13vw, 20px);}
+    .content-container .section1.mo .text h1 {padding-top: min(1.5vw, 10px); line-height: 0; text-align: center;}
+    .content-container .section1.mo .text h1 img {width: min(91vw, 600px); }
+    .content-container .section1.mo .text p {font-size: min(4.44vw, 28.4px); margin-top: min(-18.75vw, -120px); position: relative; line-height: 1.3; padding-bottom: min(4.69vw, 30px);}
+    .content-container .section1.mo .text > figure {width: min(72.6vw, 465px); margin: 0 auto; position: relative; margin-top: min(-3.13vw, 20px);}
     .content-container .section1.mo .text figure img {width: 100%;}        
-    .content-container .section1.mo a {position: relative; display: flex; align-items: center;  width: min(90.5%, 579.2px); padding: min(1vw, 6.4px); height: auto; border: min(0.63vw, 4px) solid #683418; background-color: #3c2106; font-weight: 700; border-radius: min(3.64vw, 23.3px);   color: #fff; transition: all 0.3s; margin: min(3.75vw, 24px) auto 0;}
+    .content-container .section1.mo a {position: relative; display: flex; align-items: center;  width: min(90.5%, 579.2px); padding: min(1vw, 6.4px); height: auto; border: min(0.63vw, 4px) solid #683418; background-color: #3c2106; font-weight: 700; border-radius: min(3.64vw, 23.3px);   color: #fff; transition: all 0.3s; margin: 0 auto;}
     .content-container .section1.mo a figure {border-radius: min(2.6vw, 16.6px); overflow: hidden; width: min(22.97vw, 147px);}
     .content-container .section1.mo a figure img {width: 100%;}
     .content-container .section1.mo a span {padding-left: 4.75vw; padding-top: 1vw; font-size: min(4.2vw, 26.9px);}
@@ -251,7 +252,7 @@
     .content-container .section2 .swiper-pagination-bullet {width: min(8.09vw, 51.8px); height: min(2.83vw, 18.1px); border-radius: min(1.4vw, 9px); background-color: #ecbec1; opacity: 1}
     .content-container .section2 .swiper-pagination-bullet-active {background-color: #c8444f;}
 
-    .content-container .section3 {padding: min(14.38vw, 92px) 0 ;}
+    .content-container .section3 {padding: min(13.28vw, 85px) 0 ;}
     .content-container .section3 h2 {font-size: min(5.8vw, 36.5px); padding-bottom: min(7vw, 45px); letter-spacing: -0.24vw;}
     .content-container .section3 h2 br {display: none;}
     .content-container .section3 ul {flex-direction: column; gap:min(5vw, 32px)}
