@@ -11,8 +11,8 @@
     font-display: swap;
 }
 
-#container {font-family: "Aggravo"; overflow: hidden; color: #3c2106;}
-#container a {font-family: "Aggravo";}
+.content-container {font-family: "Aggravo"; font-weight: 300; overflow: hidden; color: #3c2106;}
+.content-container a {font-family: "Aggravo";}
 .content-container p {font-family: "Aggravo" !important;}
 .content-container strong {font-weight: 700;} 
 .content-container .inner {width: 100%; max-width: 1280px; margin: 0 auto; position: relative; z-index: 0; padding: 0 40px;}
@@ -23,25 +23,25 @@
 .content-container .pc {display: block;}
 .content-container .mo {display: none;}
 
-#container .g_floating {display:inline-block;position:fixed;z-index:10;} 
-#container .g_floating.pc {top:200px; right: 30px; transition: 0.3s all;}
-#container .g_floating.pc a {overflow:hidden; transition:0.3s all; color: #fff;}
-#container .g_floating.pc a .txt {display: block; width: 100%; position: absolute; bottom: 5px; font-weight: 300; font-size: 14.6px; text-align: center;}
-#container .g_floating.pc:hover {-webkit-animation: bounce 0.35s ease-out alternate infinite; animation: bounce 0.35s ease-out alternate infinite;}
+.g_floating {display:inline-block;position:fixed;z-index:10; font-family: "Aggravo";} 
+.g_floating.pc {top:200px; right: 30px; transition: 0.3s all;}
+.g_floating.pc a {overflow:hidden; transition:0.3s all; color: #fff;}
+.g_floating.pc a .txt {display: block; width: 100%; position: absolute; bottom: 5px; font-weight: 300; font-size: 14.6px; text-align: center;}
+.g_floating.pc:hover {-webkit-animation: bounce 0.35s ease-out alternate infinite; animation: bounce 0.35s ease-out alternate infinite;}
 @-webkit-keyframes bounce {0% {-webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0);}100% {-webkit-transform: translate3d(0, -7px, 0); transform: translate3d(0, -7px, 0);}}
 @keyframes bounce {0% {-webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0);}100% {-webkit-transform: translate3d(0, -7px, 0); transform: translate3d(0, -7px, 0);}}
 .content-container .pc a.btn {transition: transform 0.4s ease-in-out; }
 .content-container .pc a.btn:hover{-webkit-transform: scale(1.015); -ms-transform: scale(1.015); transform: scale(1.015);}
 
 /* section1 */
-.content-container .section1.pc {background-image: url('../images/section1_bg.jpg'); background-position: center top 50%; background-size: cover; height: 1220px; overflow: hidden; position: relative;}
+.content-container .section1.pc {background-image: url('https://www.worldvision.or.kr/uploads/campaign/template/26-gnd-sy-pink/20260320/section1_bg.jpg'); background-position: center top 50%; background-size: cover; height: 1220px; overflow: hidden; position: relative;}
 .content-container .section1.pc figure {position: absolute; z-index: 3; margin-top: 73px; left: 50%; margin-left: -720px;}
 .content-container .section1.pc .text {width: 620px; position: relative; left: 50%; margin-left: -20px; padding: 120px 0 65px ;}
 .content-container .section1.pc .text h4 {font-size: 26px; padding-bottom: 15px}
 .content-container .section1.pc .text p {font-size: 24px; padding: 40px 0 52px; line-height: 36px; }
 .content-container .section1 .text p span {font-weight: 700; color: #c7454d;}
 .content-container .section1 .text p strong {font-weight: 700;}
-.content-container .section1.pc a {font-size: 27px; display: flex; align-items: center; width: 500px; height: 110px; border: 2px solid #683418; background-color: #3c2106; font-weight: 700; border-radius: 20px; background-image: url('../images/section1_btn_img.webp'); background-repeat: no-repeat; background-position: left; color: #fff; transition: all 0.3s;}
+.content-container .section1.pc a {font-size: 27px; display: flex; align-items: center; width: 500px; height: 110px; border: 2px solid #683418; background-color: #3c2106; font-weight: 700; border-radius: 20px; background-image: url('https://www.worldvision.or.kr/uploads/campaign/template/26-gnd-sy-pink/20260320/section1_btn_img.webp'); background-repeat: no-repeat; background-position: left; color: #fff; transition: all 0.3s;}
 .content-container .section1.pc a span {padding-left: 120px; line-height: 40px; margin-top:10px;}
 .content-container .section1.pc a span + img {padding-left: 35px; transition: ease-in 0.3s;}
 .content-container .section1.pc a:hover {background-color: #361d04;}
@@ -51,12 +51,12 @@
 .content-container .section1 .swiper .swiper-slide {overflow: hidden; border-radius: 40px; border: 2px solid #f9bbc5; width: 410px; margin-left: -2px;}
 .content-container .section1 .swiper .swiper-slide img {width: 100%;}
 .content-container .section1.pc .txt_scroll {position: absolute; left: 50%; margin-left: 620px; transform: rotate(-90deg); font-weight: 700; line-height: 32px; font-size: 22px; top: 370px;z-index: 0; padding-left: 45px; letter-spacing: 0.1vw; -webkit-animation: fadeOutLeft 2s ease-out  infinite; animation: fadeOutLeft 2s ease-out  infinite;}
-.content-container .section1.pc .txt_scroll:before {content:  ""; width: 40px ; height: 24px; background-image: url('../images/section1_scroll.webp'); display: block; position: absolute; left: 0; background-repeat: no-repeat;}
+.content-container .section1.pc .txt_scroll:before {content:  ""; width: 40px ; height: 24px; background-image: url('https://www.worldvision.or.kr/uploads/campaign/template/26-gnd-sy-pink/20260320/section1_scroll.webp'); display: block; position: absolute; left: 0; background-repeat: no-repeat;}
 @-webkit-keyframes fadeOutLeft{0%{opacity:1;transform: rotate(-90deg);}to{opacity:0;-webkit-transform:rotate(-90deg)translate3d(-30%,0,0);transform:rotate(-90deg)translate3d(-30%,0,0)}}
 @keyframes fadeOutLeft{0%{opacity:1;transform: rotate(-90deg);}to{opacity:0;-webkit-transform:rotate(-90deg)translate3d(-30%,0,0);transform:rotate(-90deg)translate3d(-30%,0,0)}}
 
 /* section2 */
-.content-container .section2 {background-image: url('../images/section2_bg.jpg'); background-size: cover; background-position: left 20% top 50%; background-repeat: no-repeat; padding: 120px 0 110px;}
+.content-container .section2 {background-image: url('https://www.worldvision.or.kr/uploads/campaign/template/26-gnd-sy-pink/20260320/section2_bg.jpg'); background-size: cover; background-position: left 20% top 50%; background-repeat: no-repeat; padding: 120px 0 110px;}
 .content-container .section2 .inner {position: relative; }
 .content-container .section2 figure {position: absolute; top: 26%; left: -80px; z-index: 0;}
 .content-container .section2 figure img { width: 68vw; max-width: 880px;}
@@ -66,7 +66,7 @@
 .content-container .section2 p {font-size: 24px; line-height: 36px; padding-top: 54px;}
 
 /* section3 */
-.content-container .section3 {background-image: url('../images/section3_bg.jpg'); background-position: center top 50%; background-repeat: no-repeat; padding: 134px 0 130px;}
+.content-container .section3 {background-image: url('https://www.worldvision.or.kr/uploads/campaign/template/26-gnd-sy-pink/20260320/section3_bg.jpg'); background-position: center top 50%; background-repeat: no-repeat; padding: 134px 0 130px;}
 .content-container .section3 h2 {text-align: center; font-size: 42px; font-weight: 700; padding-bottom: min(7.8vw, 60px); line-height: 1.35;}
 .content-container .section3 h2 span {color: #c7454d;}
 .content-container .section3 ul {display: flex; justify-content: space-between; gap: 24px;}
@@ -77,7 +77,7 @@
 .content-container .section3 a:hover {background-color: #361e05;}
 
 /* section4 */
-.content-container .section4 {background-image: url('../images/section4_bg.jpg'); background-repeat: no-repeat; background-size: contain; background-color: #FAE7E9; background-position: 50% 50%; }
+.content-container .section4 {background-image: url('https://www.worldvision.or.kr/uploads/campaign/template/26-gnd-sy-pink/20260320/section4_bg.jpg'); background-repeat: no-repeat; background-size: contain; background-color: #FAE7E9; background-position: 50% 50%; }
 .content-container .section4 .text {position: relative; left: 50%;   padding: 150px 0 70px 80px; width: 540px;}
 .content-container .section4 .text p {font-size: 28px;  line-height: 1.53;}
 .content-container .section4 .text strong {font-weight: 700;}
@@ -85,7 +85,7 @@
 .content-container .section4 figure {text-align: right; padding-top: 17px; margin-right: -14px;}
 
 /* section5 */
-.content-container .section5 {background-color: #f8f8f8; background-image: url('../images/section5_bg1.jpg'); background-repeat: no-repeat; background-position: right 0 bottom -10px; background-size: min(50vw, 939px); padding-top: 80px;}
+.content-container .section5 {background-color: #f8f8f8; background-image: url('https://www.worldvision.or.kr/uploads/campaign/template/26-gnd-sy-pink/20260320/section5_bg1.jpg'); background-repeat: no-repeat; background-position: right 0 bottom -10px; background-size: min(50vw, 939px); padding-top: 80px;}
 .content-container .section5 .text {gap: 40px; display: flex; align-items: center;}
 .content-container .section5 .text figure {width: 26.95vw; max-width: 345px; text-align: center;}
 .content-container .section5 .text figure img {width:210px;}
@@ -104,7 +104,7 @@
 .content-container .section5 .inner > figure {padding-top: 40px; padding-bottom:67px; margin-left: -32px;} 
 
 /* section6 */
-.content-container .section6 {background-image: url('../images/section6_bg.jpg'); background-position: center top 50%; background-size: cover;}
+.content-container .section6 {background-image: url('https://www.worldvision.or.kr/uploads/campaign/template/26-gnd-sy-pink/20260320/section6_bg.jpg'); background-position: center top 50%; background-size: cover;}
 .content-container .section6 .text {text-align: right; padding: 170px 0;}
 .content-container .section6 .text h2 {font-size: 42px; font-weight: 700;}
 .content-container .section6 .text h2 span { color: #c7454d;}
@@ -112,13 +112,13 @@
 .content-container .section6 .text p span { font-weight: 700; color: #c7454d;}
 
 /* section7 */
-.content-container .section7 {background-image: url('../images/section7_bg.jpg'); background-position: center top 50%; background-size: cover;}
+.content-container .section7 {background-image: url('https://www.worldvision.or.kr/uploads/campaign/template/26-gnd-sy-pink/20260320/section7_bg.jpg'); background-position: center top 50%; background-size: cover;}
 .content-container .section7 .text {text-align: center; left: 49%; width: 50%; max-width: 640px; position: relative;}
 .content-container .section7 h4 {font-size: 24px;padding-top: 130px;}
 .content-container .section7 h2 {font-weight: 700; font-size: 36px; line-height: 1.4; padding: 40px 0 50px;}
 .content-container .section7 h2 span {color: #c7454d;}
 .content-container .section7 p {font-size: 16px; padding:50px 0 130px; line-height: 1.4;}
-.content-container .section7 .pc a {font-size: 27px; display: flex; align-items: center; width: 500px; height: 110px; border: 2px solid #edb5b8; background-color: #ebc2c4; font-weight: 700; border-radius: 20px; margin: 0 auto; background-image: url('../images/section1_btn_img.webp'); background-repeat: no-repeat; background-position: left; transition: all 0.3s; -webkit-box-shadow: 0px 0px 15px 0px rgba(189,99,104,0.19);box-shadow: 0px 0px 15px 0px rgba(189,99,104,0.19);}
+.content-container .section7 .pc a {font-size: 27px; display: flex; align-items: center; width: 500px; height: 110px; border: 2px solid #edb5b8; background-color: #ebc2c4; font-weight: 700; border-radius: 20px; margin: 0 auto; background-image: url('https://www.worldvision.or.kr/uploads/campaign/template/26-gnd-sy-pink/20260320/section1_btn_img.webp'); background-repeat: no-repeat; background-position: left; transition: all 0.3s; -webkit-box-shadow: 0px 0px 15px 0px rgba(189,99,104,0.19);box-shadow: 0px 0px 15px 0px rgba(189,99,104,0.19);}
 .content-container .section7 .pc a span {padding-left: 120px; line-height: 40px; margin-top:10px;}
 .content-container .section7 .pc a span + img {padding-left: 17px;transition: all 0.3s;}
 .content-container .section7 .pc a:hover {background-color: #f4d2d2;}
@@ -132,7 +132,7 @@
 .content-container .section8 p {color: #fff; font-size: 24px;}
 
 /* section9 */
-.content-container .section9 {background-image: url('../images/section9_bg.jpg'); padding:120px 0 160px; background-size: cover;}
+.content-container .section9 {background-image: url('https://www.worldvision.or.kr/uploads/campaign/template/26-gnd-sy-pink/20260320/section9_bg.jpg'); padding:120px 0 160px; background-size: cover;}
 .content-container .section9 h2 {font-size: 42px; line-height: 1.4; font-weight: 700; text-align: center;color: #3c2106; padding-bottom:40px;}
 .content-container .section9 h2 span {color: #c7454d;}
 .content-container .section9 .swiper-wrapper {transition-timing-function: linear !important;}
@@ -156,7 +156,7 @@
 .content-container .section11 h3 {font-weight: 700; font-size: 28px; color: #3c2106; }
 .content-container .section11 h3 span {color: #c7454d;}
 .content-container .section11 h3 + p{margin-top: 32px; font-size: 17px; color: #3c2106;}
-.content-container .section11 .btn {background-color: #fff; border: 2px solid #dfdfdf; border-radius:20px;  width: 370px; height: 138px; font-size: 20px; color: #3c2106; padding-left: 50px; background-image: url('../images/section11_arrow.jpg'); background-repeat: no-repeat; background-position: right 50px top 50%; transition: all 0.3s; }
+.content-container .section11 .btn {background-color: #fff; border: 2px solid #dfdfdf; border-radius:20px;  width: 370px; height: 138px; font-size: 20px; color: #3c2106; padding-left: 50px; background-image: url('https://www.worldvision.or.kr/uploads/campaign/template/26-gnd-sy-pink/20260320/section11_arrow.jpg'); background-repeat: no-repeat; background-position: right 50px top 50%; transition: all 0.3s; }
 .content-container .section11 .btn:hover {background-position: right 45px top 50%; -webkit-transform: scale(1.015); -ms-transform: scale(1.015); transform: scale(1.015);}
 .content-container .section11 .btn strong {font-size: 24px;}
 
@@ -171,7 +171,7 @@
 .acc-warp .acc-box .acc-q .tit { display: flex; align-items: flex-start;  color: #412001;   width: 100%;}
 .acc-warp .acc-box .acc-q .tit a {display: flex;}
 .acc-warp .acc-box .acc-q .tit span { flex-shrink: 0; font-size: min(4.8vw, 28px); font-weight: 800; color: #c7454d; margin-right: min(2.4vw, 35px); line-height: 1.3;}
-.acc-warp .acc-box .arrow { flex-shrink: 0; display: block; width: clamp(15px, 2.8vw, 25px); height: clamp(15px, 2.8vw, 25px); background: url(../images/faq_arrow.jpg) center / contain no-repeat; transition: transform 0.4s;}
+.acc-warp .acc-box .arrow { flex-shrink: 0; display: block; width: clamp(15px, 2.8vw, 25px); height: clamp(15px, 2.8vw, 25px); background: url('https://www.worldvision.or.kr/uploads/campaign/template/26-gnd-sy-pink/20260320/faq_arrow.jpg') center / contain no-repeat; transition: transform 0.4s;}
 .acc-warp .acc-box.on .arrow { transform: rotate(180deg);}
 .acc-warp .acc-box .acc-a { display: none; font-size: 19px; padding-top: 20px; overflow: hidden;  }
 .acc-warp .acc-box.on .acc-a { display: block;}
@@ -210,17 +210,17 @@
 @media screen and (max-width: 1024px) {
     .content-container .pc {display: none;}
     .content-container .mo {display: block ;}
-    #container .g_floating.mo { width:100%; bottom: 4vw; opacity: 0;
+    .g_floating.mo { width:100%; bottom: 4vw; opacity: 0;
     visibility: hidden; transform: translateY(20px); transition: all 0.4s ease-in-out; box-sizing: border-box;}
-    #container .g_floating.mo.is-visible {opacity: 1;visibility: visible;transform: translateY(0);}
-    #container .g_floating.mo a {display: flex; align-items: center; width: min(90vw, 576px); background-color: #3c2106; border-radius: min(2.4vw, 15.4px); border: min(0.63vw, 4px) solid #69331b; margin: 0 auto; font-weight: 700; font-size: min(5.3vw, 33.9px); padding: min(1vw, 6.4px); box-sizing: border-box;}
-    #container .g_floating.mo figure {overflow:hidden; border-radius: min(2.2vw, 14.1px); display: flex;  }
-    #container .g_floating.mo figure img {width: min(23vw, 147.2px); }
-    #container .g_floating.mo a span {color: #fff; padding-left: min(10.15vw, 65px);}
+    .g_floating.mo.is-visible {opacity: 1;visibility: visible;transform: translateY(0);}
+    .g_floating.mo a {display: flex; align-items: center; width: min(90vw, 576px); background-color: #3c2106; border-radius: min(2.4vw, 15.4px); border: min(0.63vw, 4px) solid #69331b; margin: 0 auto; font-weight: 700; font-size: min(5.3vw, 33.9px); padding: min(1vw, 6.4px); box-sizing: border-box;}
+    .g_floating.mo figure {overflow:hidden; border-radius: min(2.2vw, 14.1px); display: flex;  }
+    .g_floating.mo figure img {width: min(23vw, 147.2px); }
+    .g_floating.mo a span {color: #fff; padding-left: min(10.15vw, 65px);}
 
     .content-container .inner {padding: 0 min(7.34vw, 47px); max-width: 640px;}
 
-    .content-container .section1.mo {height: auto; background-image: url('../images/section1_bg_mo.jpg'); background-repeat: no-repeat; background-size: cover; text-align: center;}
+    .content-container .section1.mo {height: auto; background-image: url('https://www.worldvision.or.kr/uploads/campaign/template/26-gnd-sy-pink/20260320/section1_bg_mo.jpg'); background-repeat: no-repeat; background-size: cover; text-align: center;}
     .content-container .section1.mo .text {padding-top: min(8.44vw, 54px);}
     .content-container .section1.mo .text h4 {font-size: min(4.5vw, 28.8px);}
     .content-container .section1.mo .text h4 span {color: #c7454d; font-weight: 700;}
@@ -237,7 +237,7 @@
     .content-container .section1.mo .swiper {padding: min(9.4vw, 60px) 0 min(14vw, 90px);}
     .content-container .section1.mo .swiper .swiper-slide {width: min(45vw,280px); border: min(0.63vw, 4px) solid #ffb9c7;}
 
-    .content-container .section2 {padding: min(11vw, 75px) 0; background-image: url(../images/section2_bg_mo.jpg); background-repeat: no-repeat; background-size: cover; background-position: center top 0; background-color: #fbf1f2;}
+    .content-container .section2 {padding: min(11vw, 75px) 0; background-image: url('https://www.worldvision.or.kr/uploads/campaign/template/26-gnd-sy-pink/20260320/section2_bg_mo.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center top 0; background-color: #fbf1f2;}
     .content-container .section2 h2 {font-size: min(6.5vw, 41.6px);}
     .content-container .section2 p {font-size: min(4.6vw, 28px); line-height: 1.3; padding-top: min(5.2vw, 33.3px);}
     .content-container .section2 figure {left: 0; position: relative; text-align: center;}
@@ -262,7 +262,7 @@
     .content-container .section3 ul li h4 {font-size: min(4.6vw, 29.4px); margin-top: min(57vw, 370px); top: 0;}
     .content-container .section3 a { font-size: min(5.3vw, 33.9px); width: 100%; height: min(18.75vw, 120px); line-height: min(18.75vw, 120px); margin: min(8.13vw, 52px) auto 0; border-radius: min(2.4vw, 15.4px);}
 
-    .content-container .section4 {background-image: url('../images/section4_bg_mo.jpg'); background-position: center top; background-size: contain; background-repeat: no-repeat; background-color: #f9e9ea; padding-top: 120%; padding-bottom: 8.3vw;} 
+    .content-container .section4 {background-image: url('https://www.worldvision.or.kr/uploads/campaign/template/26-gnd-sy-pink/20260320/section4_bg_mo.jpg'); background-position: center top; background-size: contain; background-repeat: no-repeat; background-color: #f9e9ea; padding-top: 120%; padding-bottom: 8.3vw;} 
     .content-container .section4 .text {left: 0; padding: 0; width: 100%;}
     .content-container .section4 .text p {font-size: min(4.6vw, 29.4px); line-height: 1.3;}
     .content-container .section4 figure {padding-top: 0; position: relative; margin-top: -5vw;  width: 100%;}
@@ -282,14 +282,14 @@
     .content-container .section5 ul li h3 {font-size: min(5.5vw, 35.2px); padding: min(1.8vw, 11.5px) min(2.2vw, 14.1px) 0;}
     .content-container .section5 ul li p {font-size: min(4.5vw, 28.8px); margin-top: min(3vw, 24px); padding-top: 0; line-height: 1.4;}
 
-    .content-container .section6 {background-image: url('../images/section6_bg_mo.jpg'); background-size: cover; background-repeat: no-repeat; padding-top: 15vw;  }
+    .content-container .section6 {background-image: url('https://www.worldvision.or.kr/uploads/campaign/template/26-gnd-sy-pink/20260320/section6_bg_mo.jpg'); background-size: cover; background-repeat: no-repeat; padding-top: 15vw;  }
     .content-container .section6 > figure {width: min(84vw, 540px); margin: 0 auto;}
     .content-container .section6 > figure img {width: 100%;}    
     .content-container .section6 .text {text-align: left; padding: 11.5vw 0 13vw;}
     .content-container .section6 .text h2 {font-size: min(6vw, 40.2px);}
     .content-container .section6 .text p {font-size: min(4.5vw, 28.8px); line-height: 1.3; margin-top: min(4vw, 25.6px);}
 
-    .content-container .section7 {background-image: url(../images/section7_bg_mo.jpg); background-position: top center; background-repeat: no-repeat; background-color: #FDEEF1; padding-top: 109%; background-size: contain;}
+    .content-container .section7 {background-image: url('https://www.worldvision.or.kr/uploads/campaign/template/26-gnd-sy-pink/20260320/section7_bg_mo.jpg'); background-position: top center; background-repeat: no-repeat; background-color: #FDEEF1; padding-top: 109%; background-size: contain;}
     .content-container .section7 .text {text-align: center; left: 0; width: 100%; max-width: 100%;}
     .content-container .section7 .text h4 {font-size: min(4.5vw, 28.8px); padding-top: 0;}
     .content-container .section7 .text h4 span {font-weight: 700; color: #c7454d;}
@@ -305,7 +305,7 @@
     .content-container .section8 h3 {font-size: min(4.75vw, 30.4px); letter-spacing: -0.24vw;}
     .content-container .section8 p {font-size: min(3.88vw, 24.8px); }
 
-    .content-container .section9 {padding: min(13.6vw, 87px) 0 min(21.9vw, 140px); background-image: url('../images/section9_bg_mo.jpg'); background-size: cover;}
+    .content-container .section9 {padding: min(13.6vw, 87px) 0 min(21.9vw, 140px); background-image: url('https://www.worldvision.or.kr/uploads/campaign/template/26-gnd-sy-pink/20260320/section9_bg_mo.jpg'); background-size: cover;}
     .content-container .section9 h2 {padding-bottom: 6vw; font-size: min(7vw, 44.8px);}
     .content-container .section9 .swiper-wrapper .swiper-slide {width: min(48.13vw, 308px);}
     .content-container .section9 .swiper-wrapper .swiper-slide img{width: 100%;}
@@ -323,7 +323,7 @@
     .content-container .section11 .bgGray {padding: min(12vw, 77px) 0;}
     .content-container .section11 h3 {font-size: min(5.8vw, 37.1px);}
     .content-container .section11 h3 + p {margin-top: min(5.6vw, 36px); font-size: min(4.69vw, 30px);}
-    .content-container .section11 .btn {width: 100%; background-image: url('../images/section11_arrow_mo.webp'); font-size: min(4.85vw, 31px); height: min(26.4vw, 169px); background-size: min(7.68vw, 49.2px);}
+    .content-container .section11 .btn {width: 100%; background-image: url('https://www.worldvision.or.kr/uploads/campaign/template/26-gnd-sy-pink/20260320/section11_arrow_mo.webp'); font-size: min(4.85vw, 31px); height: min(26.4vw, 169px); background-size: min(7.68vw, 49.2px);}
     .content-container .section11 .btn strong {font-size: min(5.33vw, 34.1px);}
 
     .content-container .faqBox .inner {width: 100%; padding: 0 0 14vw;}
@@ -343,4 +343,8 @@
 
 @media screen and (max-width: 880px) {
     .content-container .faqBox .inner {padding: 0 min(4.4vw, 28px) 14vw; max-width: 100%;}
+}
+
+@media screen and (max-width: 768px) {
+    .content-container .section1.mo {padding-top: 52px;}
 }
