@@ -262,6 +262,7 @@
     .content-container .section3 ul li figure img {max-width: 100%;}
     .content-container .section3 ul li h4 {font-size: min(4.6vw, 29.4px); margin-top: min(57vw, 370px); top: 0;}
     .content-container .section3 a { font-size: min(5.3vw, 33.9px); width: 100%; height: min(18.75vw, 120px); line-height: min(18.75vw, 120px); margin: min(8.13vw, 52px) auto 0; border-radius: min(2.4vw, 15.4px);}
+    .content-container .section3 a:hover {background-color: #3c2106; -webkit-transform: scale(1); -ms-transform: scale(1); transform: scale(1);}
 
     .content-container .section4 {background-image: url('https://www.worldvision.or.kr/uploads/campaign/template/26-gnd-sy-pink/20260320/section4_bg_mo.jpg'); background-position: center top; background-size: contain; background-repeat: no-repeat; background-color: #f9e9ea; padding-top: 120%; padding-bottom: 8.3vw;} 
     .content-container .section4 .text {left: 0; padding: 0; width: 100%;}
