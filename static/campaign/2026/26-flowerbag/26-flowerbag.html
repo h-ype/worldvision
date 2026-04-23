@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="#fff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+    <!-- SEO 정보 입력-->
+    <title>한국월드비전 공식홈 | 세계 최대 구호개발 NGO - 월드비전</title>
+    <meta name="description" content="한국월드비전은 지구촌 2억 명 어린이와 가족, 지역사회를 돕는 글로벌 NGO 입니다. 월드비전은 투명한 기부금을 약속합니다.">
+    <meta property="og:title" content="한국월드비전 공식홈 | 세계 최대 구호개발 NGO - 월드비전">
+    <meta property="og:description" content="한국월드비전은 지구촌 2억 명 어린이와 가족, 지역사회를 돕는 글로벌 NGO 입니다. 월드비전은 투명한 기부금을 약속합니다.">
+    <meta property="og:image" content="https://www.worldvision.or.kr/static/images/common/logo.webp">
+    <meta property="og:url" content="https://www.worldvision.or.kr/">
+    <link rel="canonical" href="//www.worldvision.or.kr">
+
+    <!-- //SEO 정보 입력 -->
+
+    <link rel="shortcut icon" href="https://www.worldvision.or.kr/static/images/common/favicon.ico">
+    <link type="text/css" rel="stylesheet" href="https://www.worldvision.or.kr/static/css/jquery-ui.min.css">
+    <link type="text/css" rel="stylesheet" href="https://www.worldvision.or.kr/static/css/swiper.min.css">
+    <link type="text/css" rel="stylesheet" href="https://www.worldvision.or.kr/static/css/common.css?v=20240226171940">
+    <link type="text/css" rel="stylesheet" href="https://www.worldvision.or.kr/static/css/main.css?v=20240226171940">
+    <link type="text/css" rel="stylesheet" href="https://www.worldvision.or.kr/static/css/sub.css?v=20240226171940">
+    <link type="text/css" rel="stylesheet" href="https://www.worldvision.or.kr/static/css/module.css?v=20240226171940">
+    <link type="text/css" rel="stylesheet" href="https://www.worldvision.or.kr/static/css/cmsModule.css">
+    <link type="text/css" rel="stylesheet"
+        href="https://gb.worldvision.or.kr/resources/wvFrt/project/template/inc/wv-add.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean"
+        rel="stylesheet">
+
+
+    <style>
+        #container .container {
+            min-height: 500px
+        }
+
+        [class^='box'] {
+            width: initial;
+            display: initial;
+            padding: initial;
+        }
+    </style>
+
+    <script type="text/javascript" src="https://www.worldvision.or.kr/static/js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="https://www.worldvision.or.kr/static/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://www.worldvision.or.kr/static/js/jquery.nicescroll.min.js"></script>
+    <script type="text/javascript" src="https://www.worldvision.or.kr/static/js/swiper.min.js"></script>
+    <script type="text/javascript" src="https://www.worldvision.or.kr/static/js/in-view.js"></script>
+    <script type="text/javascript" src="https://www.worldvision.or.kr/static/js/ui.js"></script>
+    <script type="text/javascript" src="https://www.worldvision.or.kr/static/js/common/common.js?v=20240226171940">
+    </script>
+    <script type="text/javascript" src="https://www.worldvision.or.kr/static/js/common.js?v=20240226171940"></script>
+    <script type="text/javascript" src="https://www.worldvision.or.kr/static/js/cmsModule.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="https://www.worldvision.or.kr/static/css/section.css">
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //타이틀 내용 엔터처리
+            $('.l-grid input[name=titleContents]').closest('.l-grid').each(function (i) {
+                var titleContents = $(this).find('input[name=titleContents]').val();
+                if (typeof titleContents != "undefined" && titleContents != '') {
+                    titleContents = titleContents.replaceAll("\n", "<br/>")
+                    $(this).find('p[name=titleContentsPc]').append(titleContents);
+                    $(this).find('p[name=titleContentsMo]').append(titleContents);
+                }
+            });
+
+            //영상.내용 엔터처리
+            $('.l-grid input[name=videoContents]').closest('.l-grid').each(function (i) {
+                var videoContents = $(this).find('input[name=videoContents]').val();
+                if (typeof videoContents != "undefined" && videoContents != '') {
+                    videoContents = videoContents.replaceAll("\n", "<br/>")
+                    $(this).find('p[name=videoContentsPc]').append(videoContents);
+                    $(this).find('p[name=videoContentsMo]').append(videoContents);
+                }
+            });
+
+            //텍스트상자.설명 엔터처리
+            $('.section-banner input[name=textContents]').closest('.section-banner').each(function (i) {
+                var textContents = $(this).find('input[name=textContents]').val();
+                if (typeof textContents != "undefined" && textContents != '') {
+                    textContents = textContents.replaceAll("\n", "<br/>")
+                    $(this).find('p[name=textContentsPc]').append(textContents);
+                    $(this).find('p[name=textContentsMo]').append(textContents);
+                }
+            });
+            //텍스트상자.내용 엔터처리
+            $('.l-grid input[name=textPContents]').closest('.l-grid').each(function (i) {
+                var textPContents = $(this).find('input[name=textPContents]').val();
+                if (typeof textPContents != "undefined" && textPContents != '') {
+                    textPContents = textPContents.replaceAll("\n", "<br/>")
+                    $(this).find('p[name=pContentsPc]').append(textPContents);
+                    $(this).find('p[name=pContentsMo]').append(textPContents);
+                }
+            });
+
+            //변화3단.내용 엔터처리
+            $('.section-banner input[name=changeContents]').closest('.section-banner').each(function (i) {
+                var changeContents = $(this).find('input[name=changeContents]').val();
+                if (typeof changeContents != "undefined" && changeContents != '') {
+                    changeContents = changeContents.replaceAll("\n", "<br/>")
+                    $(this).find('p[name=changeContentsPc]').append(changeContents);
+                    $(this).find('p[name=changeContentsMo]').append(changeContents);
+                }
+            });
+        });
+
+        //버튼클릭 링크이동 이벤트
+        function moveLink(flag, url) {
+            var setUrl = '';
+            if (url.includes('https')) {
+                setUrl = url;
+            } else {
+                setUrl = 'https://' + url
+            }
+
+            if (flag == '1') {
+                location.href = setUrl;
+            } else {
+                window.open(setUrl);
+            }
+        }
+
+        //플로팅 클릭이벤트
+        function clickArrow() {
+
+            var floatUrl = $("#floatUrl").val();
+            var floatTargetFlag = $("#floatTargetFlag").val();
+
+            var setUrl = '';
+            if (floatUrl.includes('https')) {
+                setUrl = floatUrl;
+            } else {
+                setUrl = 'https://' + floatUrl
+            }
+
+            if (floatTargetFlag == '1') {
+                location.href = setUrl;
+            } else {
+                window.open(setUrl);
+            }
+        }
+
+        $(function () {
+
+
+            $("#arrow").click(function () { });
+
+            /* 섹션 스와이퍼 */
+            var section_swiper = new Array();
+            $('.section_swiper').each(function (e) {
+                section_swiper[e] = new Swiper($(this).find('.swiper-container'), {
+                    //loop: true, /* loop: true 넣음 에러남 */
+                    pagination: {
+                        el: $(this).find('.progress_pagination'),
+                        type: "progressbar"
+                    },
+                    navigation: {
+                        nextEl: $(this).find('.btn_next'),
+                        prevEl: $(this).find('.btn_prev')
+                    },
+                    on: {
+                        init: function () {
+                            var len = this.slides.length;
+                            var idx = this.activeIndex + 1;
+                            $('.section_swiper').eq(e).find('.total').text(len);
+                            $('.section_swiper').eq(e).find('.idx').text(idx);
+                            if (len == 1) {
+                                setTimeout(function () {
+                                    section_swiper[e].destroy();
+                                    $('.section_swiper').eq(e).find('.pag_wrap')
+                                        .hide();
+                                });
+                            }
+                        },
+                        update: function () {
+                            var len = this.slides.length;
+                            var idx = this.activeIndex + 1;
+                            $('.section_swiper').eq(e).find('.total').text(len);
+                            $('.section_swiper').eq(e).find('.idx').text(idx);
+                            if (len == 1) {
+                                setTimeout(function () {
+                                    section_swiper[e].destroy();
+                                    $('.section_swiper').eq(e).find('.pag_wrap')
+                                        .hide();
+                                });
+                            }
+                        },
+                        slideChange: function () {
+                            var len = this.slides.length;
+                            var idx = this.activeIndex + 1;
+                            if (idx > len) {
+                                idx = 1;
+                            } else if (idx < 1) {
+                                idx = len;
+                            }
+                            $('.section_swiper').eq(e).find('.idx').text(idx);
+                        }
+                    }
+                });
+
+                /* //이미지 모듈 높이 값 제어
+                $('.section_swiper').each(function () {
+	
+                    var _length = $(this).find('.swiper-slide');
+                    var $target = _length.find('.caption');
+	
+                    if (_length.length > 1) {
+                        var $maxHeight = 0;
+	
+                        $target.each(function () {
+                            $thisHeight = $(this).height();
+	
+                            if ($thisHeight > $maxHeight) {
+                                $maxHeight = $thisHeight;
+                            }
+                        });
+                        $target.height($maxHeight);
+                    }
+                }); */
+            });
+
+        });
+    </script>
+
+    <script async="" src="https://script.hotjar.com/modules.3ba69200791f16077ba8.js" charset="utf-8"></script>
+    <script type="text/javascript" async=""
+        src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/651132761/?random=1708935699077&amp;cv=11&amp;fst=1708935699077&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45be42l0za200&amp;gcd=13l3l3l3l1&amp;dma=0&amp;u_w=1920&amp;u_h=1080&amp;url=https%3A%2F%2Fwww.worldvision.or.kr%2Fparticipate%2FchurchVisionSunday&amp;ref=https%3A%2F%2Fwww.worldvision.or.kr%2FworldVisionIntro%2FintroInfo&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=%EB%B9%84%EC%A0%84%EC%A3%BC%EC%9D%BC%20%7C%20%EC%B0%B8%EC%97%AC%ED%95%98%EA%B8%B0%20-%20%EC%9B%94%EB%93%9C%EB%B9%84%EC%A0%84&amp;npa=0&amp;pscdl=noapi&amp;auid=1947791541.1708906766&amp;uaa=x86&amp;uab=64&amp;uafvl=Chromium%3B122.0.6261.69%7CNot(A%253ABrand%3B24.0.0.0%7CGoogle%2520Chrome%3B122.0.6261.69&amp;uamb=0&amp;uap=Windows&amp;uapv=10.0.0&amp;uaw=0&amp;fledge=1&amp;data=event%3Dgtag.config&amp;rfmt=3&amp;fmt=4">
+        </script>
+
+
+    <!-- 추가 css js 입력 -->
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link href="css/sub.css" rel="stylesheet">
+    <!-- //추가 css js 입력 -->
+
+</head>
+
+<body>
+
+    <div id="wrap">
+        <!-- top-menu -->
+        <div data-include-path="https://gb.worldvision.or.kr/resources/wvFrt/project/template/inc/top-menu.html"></div>
+        <!-- //top-menu -->
+
+        <section id="container">
+            <!-- 컨텐츠 작업 영역 -->
+            <div class="g_floating pc">
+                <a href="" class="donate-btn"
+                    id="main-btn-donate-pc" target="_self">
+                    <div class="cf_img">
+                        <img src="images/btn_float_bg.jpg"
+                            alt="후원하고 지구꽃가방 받기">
+                    </div>
+                    <div class="txt">후원하고<br><span>지구꽃가방</span>받기</div>
+                </a>
+            </div>
+            <div class="g_floating mo">
+                <a href="" class="donate-btn"
+                    id="main-btn-donate-mo" target="_self">
+                    후원하고 <span>지구꽃가방</span> 받기
+                </a>
+            </div>
+            <div class="content-container">
+                <div class="mainArea pc">
+                    <dl>
+                        <dt>배우 최희진</dt>
+                        <dd>
+                            <h2>월드비전 해외 기후 위기 대응 캠페인</h2>
+                            <h1>
+                                <figure><img src="images/main_h1.png" alt="다시, 꽃피울 지구"></figure>
+                                <p>With 배우 최희진</p>
+                            </h1>
+                            <h3><strong>기후 위기</strong>로 <strong>메마른 땅에 살아가는 <br>​아이들</strong> 삶을 지구꽃가방으로 <br>함께 꽃 피워 주세요.</h3>
+                            <a href="http://" target="_blank" class="btn btn_primary" rel="noopener noreferrer">후원하고 지구꽃가방 받기</a>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="mainArea mo">
+                    <h2>월드비전 해외 기후 위기 대응 캠페인</h2>
+                    <h1>
+                        <figure><img src="images/main_h1_m.png" alt="다시, 꽃피울 지구"></figure>
+                        <p>With 배우 최희진</p>
+                    </h1>
+                    <h3><strong>기후 위기</strong>로 <strong>메마른 땅에 살아가는 <br>​아이들</strong> 삶을 지구꽃가방으로 <br>함께 꽃 피워 주세요.</h3>
+                    <a href="http://" target="_blank" class="btn btn_primary" rel="noopener noreferrer">후원하고 지구꽃가방 받기</a>
+                </div>
+                <div class="section1">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img
+                                    src="images/section1_img1.jpg"
+                                    alt=" 롤링 이미지">
+                            </div>
+                            <div class="swiper-slide"><img
+                                    src="images/section1_img2.jpg"
+                                    alt=" 롤링 이미지">
+                            </div>
+                            <div class="swiper-slide"><img
+                                    src="images/section1_img3.jpg"
+                                    alt=" 롤링 이미지">
+                            </div>
+                            <div class="swiper-slide"><img
+                                    src="images/section1_img4.jpg"
+                                    alt=" 롤링 이미지">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section2">
+                    <dl>
+                        <dt>
+                            <figure>
+                                <img src="images/section2_img.jpg" alt="배우 최희진의 사진" class="pc">
+                                <img src="images/section2_img_m.jpg" alt="배우 최희진의 사진" class="mo">
+                            </figure>
+                        </dt>
+                        <dd>
+                            <h1>
+                                <img src="images/section2_txt1.png" alt="당연하게 여겼던 물 한 모금이 ​지구 반대편 아이들에게는 생존이라는 것을 깨달았어요" class="pc">
+                                <img src="images/section2_txt1_m.png" alt="당연하게 여겼던 물 한 모금이 ​지구 반대편 아이들에게는 생존이라는 것을 깨달았어요" class="mo">
+                            </h1>
+                            <p><strong>기후 위기로 참혹한 현실을 겪는 아이들</strong>에게 <br>지금 가장 필요한 건 <strong>다정한 관심</strong>이더라고요. <br> <strong></strong>기후 위기로 무너진 한 아이의 이야기 <br><strong>​잠시만 귀 기울여 주실래요?</strong></p>
+                            <figure><img src="images/section2_txt2.png" alt="배우 최희진"></figure>
+                            <a href="#section3"><img src="images/section2_arr.png" alt="다음 섹션으로 이동"></a>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="section3">
+                    <h2>
+                        <img src="images/section3_title.png" alt="기후위기가 무너뜨린 10살 아추카의 삶">
+                    </h2>
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="images/section3_slide1.jpg" alt="롤링 이미지" class="pc">
+                                <img src="images/section3_slide1_m.jpg" alt="롤링 이미지" class="mo">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/section3_slide2.jpg" alt="롤링 이미지" class="pc">
+                                <img src="images/section3_slide2_m.jpg" alt="롤링 이미지" class="mo">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/section3_slide3.jpg" alt="롤링 이미지" class="pc">
+                                <img src="images/section3_slide3_m.jpg" alt="롤링 이미지" class="mo">
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next"> &gt; </div>
+                        <div class="swiper-button-prev"> &lt; </div>
+                    </div>
+                </div>
+                <div class="section4">
+                    <h2>
+                        <img src="images/section4_title.png" alt="아추카와 같은 아이들이​ 아프리카 대륙에서만 매년 1억 명 이상이며 기후변화로 고통받고 있습니다." class="pc">
+                        <img src="images/section4_title_m.png" alt="아추카와 같은 아이들이​ 아프리카 대륙에서만 매년 1억 명 이상이며 기후변화로 고통받고 있습니다." class="mo">
+                    </h2>
+                    <ul>
+                        <li>
+                            <figure>
+                                <img src="images/section4_card1.jpg" alt="노동에 내몰리는 아동" class="pc">
+                                <img src="images/section4_card1_m.jpg" alt="노동에 내몰리는 아동" class="mo">
+                            </figure>
+                            <div class="textBox">
+                                <p>기후 위기로 노동에 내몰리는 아동</p>
+                                <strong>약 1억 6천만 명</strong>    
+                                <span>(ILO & UNICEF, 2025)</span>
+                            </div>
+                        </li>
+                        <li>
+                            <figure>
+                                <img src="images/section4_card2.jpg" alt="영양실조 아동" class="pc">
+                                <img src="images/section4_card2_m.jpg" alt="영양실조 아동" class="mo">
+                            </figure>
+                            <div class="textBox">
+                                <p>기후위기로 인한 영양실조 아동​</p>
+                                <strong>2,700만 명</strong>
+                                <span>(WFP & UNICEF, 2025)</span>
+                            </div>
+                        </li>
+                        <li>
+                            <figure>
+                                <img src="images/section4_card3.jpg" alt="조혼 여아" class="pc">
+                                <img src="images/section4_card3_m.jpg" alt="조혼 여아" class="mo">
+                            </figure>
+                            <div class="textBox">
+                                <p>기후 위기로 인한 조혼 여아​</p>
+                                <strong>매년 900만 명</strong>
+                                <span>(Save the Children, 2023)</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="" class="btn">지금 후원하기</a>
+                </div>
+                <div class="section5">
+                    <div class="inner">
+                        <figure><img src="images/section5_logo.png" alt="월드비전 및 플리츠마마 로고"></figure>
+                        <h2><span>지구</span>와 <span>아이들의 내일</span>을 담는 <strong>리사이클 지구꽃가방</strong></h2>
+                        <small>리사이클 브랜드 플리츠마마와 함께 <br class="mo">콜라보한 지구꽃가방!</small>
+                        <p><span>지구꽃가방</span>은 <br><strong>기후 위기</strong>로 고통받는 전 세계 아이들의 삶에<br><strong>희망을 심는 상징</strong>을 담고있어요.</p>
+                        <p><span>버려진 페트병 16개</span>에<br class="pc">새로운 숨결을 <br class="mo">불어넣어<br class="pc"> <span>지구꽃가방 1개</span>가 완성됩니다!</p>
+                    </div>
+                </div>
+                <div class="section6-pin">
+                    <div class="section6">
+                        <dl>
+                            <dt>
+                                <div class="title">
+                                    <h2>배우 최희진 <span>PICK!</span></h2>
+                                    <p>Look Book</p>
+                                </div>
+                                <div>
+                                    <div class="video-container">
+                                        <iframe 
+                                            src="https://www.youtube.com/embed/IdYnvETUkxg?si=Ilx77RIM6NcBxDqu" 
+                                            title="YouTube Shorts" 
+                                            frameborder="0" 
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                            allowfullscreen>
+                                        </iframe>
+                                    </div>
+                                </div>
+                                <div class="text">
+                                    <p>지구도 지키고, 아이도 지키는 착한 지구꽃가방!</p>
+                                    <small>#지구꽃가방 # 최희진픽 #여름가방 #기후위기 #데일리룩</small>
+                                </div>
+                            </dt>
+                            <dd>
+                                <ul>
+                                    <li><img src="images/section6_img1.jpg" alt="최희진 lookbook 이미지"></li>
+                                    <li><img src="images/section6_img2.jpg" alt="최희진 lookbook 이미지"></li>
+                                    <li><img src="images/section6_img3.jpg" alt="최희진 lookbook 이미지"></li>
+                                    <li><img src="images/section6_img4.jpg" alt="최희진 lookbook 이미지"></li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="section7">
+                    <div class="inner">
+                        <ul>
+                            <li>
+                                <figure>
+                                    <img src="images/section7_img1.jpg" alt="지구꽃가방 이미지">
+                                </figure>
+                                <div class="text">
+                                    <h3><img src="images/section7_title1.png" alt="Texture"></h3>
+                                    <p>시원하고 탄탄한 소재로 <br>짜여진 니트백 이에요!  </p>
+                                </div>
+                            </li>
+                            <li>
+                                <figure>
+                                    <img src="images/section7_img2.jpg" alt="지구꽃가방 이미지">
+                                </figure>
+                                <div class="text">
+                                    <h3><img src="images/section7_title2.png" alt="Pleats"></h3>
+                                    <p>간편하게 접었다 폈다<br>할 수 있어 휴대가 쉽고, <br>수납력이 좋아요</p>
+                                </div>
+                            </li>
+                            <li>
+                                <figure>
+                                    <img src="images/section7_img3.jpg" alt="지구꽃가방 이미지">
+                                </figure>
+                                <div class="text">
+                                    <h3><img src="images/section7_title3.png" alt="Recycled Paper"></h3>
+                                    <p>환경을 생각해<br>생분해성이 좋은 재생 용지로 <br>패킹 박스를 제작했어요​</p>
+                                </div>
+                            </li>
+                            <li>
+                                <figure>
+                                    <img src="images/section7_img4.jpg" alt="지구꽃가방 이미지">
+                                </figure>
+                                <div class="text">
+                                    <h3><img src="images/section7_title4.png" alt="size"></h3>
+                                    <p>가로 25cm, 세로 17cm,<br>폭 12cm로 보조배터리,<br>접이식 우산, 책, 파우치를<br>담을 수 있어요!</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section8">
+                    <dl>
+                        <dt>
+                            <figure class="pc"><img src="images/section8_img.jpg" alt="배우 최희진 사진"></figure>
+                            <figure class="mo"><img src="images/section8_img_m.jpg" alt="배우 최희진 사진"></figure>
+                        </dt>
+                        <dd>
+                            <h3>
+                                <img src="images/section8_title.png" alt="기후 위기로 아픈 현실을 마주한 아이들의 삶이​ 더 이상 메마르지 않도록 지구꽃가방 같이 들어주실래요?" class="pc">
+                                <img src="images/section8_title_m.png" alt="기후 위기로 아픈 현실을 마주한 아이들의 삶이​ 더 이상 메마르지 않도록 지구꽃가방 같이 들어주실래요?" class="mo">
+                            </h3>
+                            <p><strong>후원에 참여해 주신 분들께</strong> 감사의 마음을 담아​<br>리사이클 브랜드 플리츠마마와 함께 제작한 <br><strong>지구꽃가방</strong>을 드립니다​</p>
+                            <a href="" class="btn btn_primary">후원하고​ 지구꽃가방 받기​</a>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="section9">
+                    <dl>
+                        <dt>
+                            <figure>
+                                <img src="images/section9_img.jpg" alt="웃고있는 아이" class="pc">
+                                <img src="images/section9_img_m.jpg" alt="웃고있는 아이" class="mo">
+                            </figure>
+                        </dt>
+                        <dd>
+                            <h2>후원으로 기후위기를 <br>막을 수 있을까요?</h2>
+                            <h3>후원자님과 함께라면 충분히 변화될 수 있어요!</h3>
+                            <p>아이들과 마을 주민의 삶을 지키기 위해 <br>월드비전은 아래의 기후변화대응사업 노하우로<br>지난 21년간 <strong>서울 전체 면적 20배가 넘는<br>120만 헥타르 토지</strong>를 복원시켰습니다.</p>
+                        </dd>
+                    </dl>
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <figure><img src="images/section9_slide1.jpg" alt="긴급 식량지원"></figure>
+                                <div class="text">
+                                    <h4>긴급 식량지원</h4>
+                                    <p>학교급식 프로그램과 주민식단 프로그램으로 시급한 영양상태를 개선합니다.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure><img src="images/section9_slide2.jpg" alt="아동의 풍성한 삶"></figure>
+                                <div class="text">
+                                    <h4>아동의 풍성한 삶​</h4>
+                                    <p>안정된 환경에서 ​아동들이 교육을 받으며​ 밝은 미래를 꿈꾸고, 건강하고 행복한 일상을 누립니다.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure><img src="images/section9_slide3.jpg" alt="농민주도 산림복원"></figure>
+                                <div class="text">
+                                        <h4>농민주도 산림복원​</h4>
+                                        <p>땅 밑에 살아있는 뿌리를 찾아​ 보호하고 가지 치는 방식으로 ​빠르게 토지와 생태계를 복원합니다.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure><img src="images/section9_slide4.jpg" alt="지역협동조합 구성"></figure>
+                                <div class="text">
+                                    <h4>지역협동조합 구성​</h4>
+                                    <p>건강한 농산물 생산과​ 판매 역량을 강화해​ 마을 사람들의 지속가능한​ 생계를 도모합니다.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure><img src="images/section9_slide5.jpg" alt="안전한 식수 확보와 ​공동체 회복"></figure>
+                                <div class="text">
+                                    <h4>안전한 식수 확보와 ​공동체 회복​</h4>
+                                    <p>깨끗한 식수 공급으로​아동의 건강이 회복되고 ​마을 내 주민 갈등이 해결됩니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next"> &gt; </div>
+                        <div class="swiper-button-prev"> &lt; </div>
+                    </div>
+                    <div class="disclaimer">
+                        보내주시는 후원금은 케냐, 에티오피아, 우간다, 잠비아 4개국에서 ​기후변화대응사업과 아이들을 살리는 지역개발사업을 위해 사용됩니다.
+                    </div>
+                </div>
+                <div class="faqBox">
+                    <div class="inner">
+                        <h2>FAQ</h2>
+                        <div class="acc-warp">
+                            <div class="acc-box__tab">
+                                <ul>
+                                    <li><a href="">참여문의</a></li>
+                                    <li><a href="">가방문의</a></li>
+                                    <li><a href="">배송문의</a></li>
+                                </ul>
+                            </div>
+                            <div class="acc-box__tabpanel">
+                                <div class="acc-box on">
+                                    <div class="acc-box__q">
+                                        <a id="arr-question-11"><span>Q.</span>지구꽃가방은 어떻게 받을 수 있나요?</a>
+                                        <button class="btn_arrow" id="arr-btn-11"></button>
+                                    </div>
+                                    <div class="acc-box__a">
+                                        <div class="a-cont">
+                                            <span>A.</span>
+                                            <div>
+                                                <p>&lt;다시, 꽃피울 지구&gt; 캠페인을 통해 해외사업을 정기후원하시면 가방 1개를 발송해 드립니다. 아이들에게 지속적인 변화를 만들기 위해 정기 후원으로 동참을 부탁드립니다.</p>
+                                            </div>
+                                       </div>
+                                    </div>
+                                </div>
+                                <div class="acc-box">
+                                    <div class="acc-box__q">
+                                        <a id="arr-question-12"><span>Q.</span>후원을 여러 차례 하면 여러 개를 받을 수 있나요?</a>
+                                        <button class="btn_arrow" id="arr-btn-12"></button>
+                                    </div>
+                                    <div class="acc-box__a">
+                                        <div class="a-cont">
+                                            <span>A.</span>
+                                            <div>
+                                                <p>해외사업후원 1건당 가방 1개가 발송됩니다. </p>
+                                            </div>
+                                       </div>
+                                    </div>
+                                </div>
+                                <div class="acc-box">
+                                    <div class="acc-box__q">
+                                        <a id="arr-question-13"><span>Q.</span>기존 후원자도 지구꽃가방을 받을 수 있나요?</a>
+                                        <button class="btn_arrow" id="arr-btn-13"></button>
+                                    </div>
+                                    <div class="acc-box__a">
+                                        <div class="a-cont">
+                                            <span>A.</span>
+                                            <div>
+                                                <p>​기존 정기 후원으로 함께해 주셔서 감사합니다. 아이들의 건강한 내일이 꾸준히 지속될 수 있도록 추가로 정기후원을 신청하시면 지구꽃가방을 받으실 수 있습니다.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acc-box__tabpanel">
+                                <div class="acc-box on">
+                                    <div class="acc-box__q">
+                                        <a id="arr-question-21"><span>Q.</span>지구꽃가방의 소재는 무엇인가요?</a>
+                                        <button class="btn_arrow" id="arr-btn-21"></button>
+                                    </div>
+                                    <div class="acc-box__a">
+                                        <div class="a-cont">
+                                            <span>A.</span>
+                                            <div>
+                                                <p>지구꽃가방은 버려진 페트병을 재활용한 친환경 원사 ‘리젠 코리아(regen korea)’로 만들어졌습니다. 가방 1개당 16개의 페트병이 재활용되며, 지속 가능한 패션을 위해 자투리 천이 남지 않는 홀가먼트 방식으로 제작됩니다.
+                                                </p>
+                                            </div>
+                                       </div>
+                                    </div>
+                                </div>
+                                <div class="acc-box">
+                                    <div class="acc-box__q">
+                                        <a id="arr-question-4"><span>Q.</span>지구꽃가방 상세 사이즈가 어떻게 되나요?</a>
+                                        <button class="btn_arrow" id="arr-btn-4"></button>
+                                    </div>
+                                    <div class="acc-box__a">
+                                        <div class="a-cont">
+                                            <span>A.</span>
+                                            <div>
+                                                <p>아래 사진을 참고해 주세요. 니트와 플리츠 디자인 특성상 ​제품의 가로, 세로 사이즈는 유동적으로 늘어납니다. </p>
+                                                <figure><img src="images/faq_img.jpg" alt="지구꽃사진 상세 사이즈 : 가로 : 25.5cm, 세로 : 17cm, 끈길이 단면 : 15cm, 폭 : 12cm"></figure>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acc-box__tabpanel">
+                                <div class="acc-box on">
+                                    <div class="acc-box__q">
+                                        <a id="arr-question-31"><span>Q.</span>후원 신청하면 언제 가방을 받아 볼 수 있나요?</a>
+                                        <button class="btn_arrow" id="arr-btn-31"></button>
+                                    </div>
+                                    <div class="acc-box__a">
+                                        <div class="a-cont">
+                                            <span>A.</span>
+                                            <div>
+                                                <p>지구꽃가방은 첫 후원금 납부일 기준 3주 이내에 받아 보실 수 있습니다. 만일 결제 정보 오류 등의 사유로 첫 후원금이 납부되지 않는 경우 가방이 발송되지 않으니 이 점 확인 부탁드립니다. 
+                                                </p>
+                                            </div>
+                                       </div>
+                                    </div>
+                                </div>
+                                <div class="acc-box">
+                                    <div class="acc-box__q">
+                                        <a id="arr-question-32"><span>Q.</span>배송지를 변경하고 싶어요.</a>
+                                        <button class="btn_arrow" id="arr-btn-32"></button>
+                                    </div>
+                                    <div class="acc-box__a">
+                                        <div class="a-cont">
+                                            <span>A.</span>
+                                            <div>
+                                                <p>후원 신청 시 입력하신 주소로 발송됩니다. 주소지 오기입으로 인한 재발송은 어려우니 후원 신청 시 정확한 주소를 입력해 주세요. 배송지 변경은 월드비전 홈페이지 또는 대표전화(02-2078-7000)를 통해 가능하며, ​발송 시작 안내 연락을 받으신 이후에는 배송지 변​경이 어렵습니다.
+                                            </p>
+                                            </div>
+                                       </div>
+                                    </div>
+                                </div>
+                                <div class="acc-box">
+                                    <div class="acc-box__q">
+                                        <div class="tit">
+                                            <a id="arr-question-33"><span>Q.</span>교환, 반품은 어떻게 하나요?</a>
+                                        </div>
+                                        <button class="btn_arrow" id="arr-btn-33"></button>
+                                    </div>
+                                    <div class="acc-box__a">
+                                        <div class="a-cont">
+                                            <span>A.</span>
+                                            <div>
+                                                <p>후원 신청 완료 후, ①단순 변심 ②분실 ③사용 중 생긴 손상의 경우에는 교환 및 반품이 어렵습니다. 불량의 경우, 수령 후 1개월 이내 월드비전 홈페이지 또는 대표전화(02-2078-7000)로 연락 주시면 이후 프로세스를 안내해 드립니다.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //컨텐츠 작업 영역 -->
+        </section>
+    </div>
+    <!-- footer -->
+    <div data-include-path="https://gb.worldvision.or.kr/resources/wvFrt/project/template/inc/footer.html"></div>
+    <!-- //footer -->
+    </div>
+
+    <script>
+        window.addEventListener('load', function () {
+            var allElements = document.getElementsByTagName('*');
+            Array.prototype.forEach.call(allElements, function (el) {
+                var includePath = el.dataset.includePath;
+                if (includePath) {
+                    var xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4 && this.status == 200) {
+                            el.outerHTML = this.responseText;
+                        }
+                    };
+                    xhttp.open('GET', includePath, true);
+                    xhttp.send();
+                }
+            });
+        });
+
+        // FAQ 탭
+        (function () {
+            var $tabs = $('.acc-box__tab li');
+            var $panels = $('.acc-box__tabpanel');
+
+            // 초기화: 첫 번째 탭/패널에 on 클래스 부여
+            $tabs.first().addClass('on');
+            $panels.first().addClass('on');
+
+            $tabs.each(function (index) {
+                $(this).on('click', function (e) {
+                    e.preventDefault();
+                    $tabs.removeClass('on');
+                    $(this).addClass('on');
+                    $panels.removeClass('on');
+                    $panels.eq(index).addClass('on');
+                });
+            });
+        })();
+
+        $(".acc-warp .acc-box").click(function () {
+            $(this).siblings().removeClass('on');
+            $(this).toggleClass('on');
+        });
+
+        window.addEventListener('scroll', function () {
+            const floatingBtn = document.querySelector('.g_floating.mo');
+            if (window.scrollY > 700) {
+                floatingBtn.classList.add('is-visible');
+            } else {
+                floatingBtn.classList.remove('is-visible');
+            }
+        });
+
+        var swiper3 = new Swiper(".section3 .swiper", {
+            slidesPerView: 1,
+            effect: 'fade',
+            speed: 1000,
+            loop: true,
+            fadeEffect: {
+                crossFade: true
+            },
+            spaceBetween: 0,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                prevEl: ".swiper-button-prev",
+                nextEl: ".swiper-button-next",
+            }
+        });
+
+        var swiper9 = new Swiper(".section9 .swiper", {
+            slidesPerView: 5,
+            centeredSlides: true,
+            spaceBetween: 30,
+            speed: 1000,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                prevEl: ".swiper-button-prev",
+                nextEl: ".swiper-button-next",
+            },
+            breakpoints: {
+                640: {
+                slidesPerView: 1.3,
+                },
+                1024: {
+                slidesPerView: 1.5,
+                },
+                1480: {
+                slidesPerView: 3.1,
+                }
+            }
+        });
+
+        // swiper9 슬라이드 높이 동기화 
+        function equalizeSection9SlideHeights() {
+            const slides = document.querySelectorAll('.section9 .swiper-slide');
+            slides.forEach(slide => slide.style.height = '');
+            let maxHeight = 0;
+            slides.forEach(slide => {
+                const h = slide.offsetHeight;
+                if (h > maxHeight) maxHeight = h;
+            });
+            slides.forEach(slide => slide.style.height = maxHeight + 'px');
+        }
+
+        window.addEventListener('load', equalizeSection9SlideHeights);
+        window.addEventListener('resize', function () {
+            clearTimeout(window.section9Resizer);
+            window.section9Resizer = setTimeout(equalizeSection9SlideHeights, 200);
+        });
+
+
+        let swiperInstances = {};
+
+        function initInfiniteSwiper(selector) {
+            const container = document.querySelector(selector);
+            if (!container) return;
+
+            const wrapper = container.querySelector('.swiper-wrapper');
+            if (!wrapper || wrapper.offsetWidth === 0) return;
+
+            if (swiperInstances[selector]) {
+                swiperInstances[selector].destroy(true, true);
+                delete swiperInstances[selector];
+
+                wrapper.querySelectorAll('[data-cloned]').forEach(el => el.remove());
+            }
+
+            const slides = [...wrapper.children];
+            let safetyNet = 0;
+
+            while (wrapper.scrollWidth < window.innerWidth * 5 && safetyNet < 20) {
+                slides.forEach(el => {
+                    const clone = el.cloneNode(true);
+                    clone.setAttribute('data-cloned', 'true');
+                    wrapper.appendChild(clone);
+                });
+                safetyNet++;
+            }
+
+            const instance = new Swiper(`${selector} .swiper`, {
+                slidesPerView: 'auto',
+                spaceBetween: 40,
+                loop: true,
+                freeMode: true,
+                freeModeMomentum: false,
+                speed: 5000,
+                autoplay: {
+                    delay: 0,
+                    disableOnInteraction: false,
+                },
+                breakpoints: {
+                    640: {
+                    slidesPerView: 1.1,
+                    },
+                    1024: {
+                    spaceBetween:  20,
+                    slidesPerView: 1.5,
+                    }
+                },
+            });
+
+            function applyLinear() {
+                if (instance && instance.wrapperEl) {
+                    instance.wrapperEl.style.transitionTimingFunction = 'linear';
+                }
+            }
+
+            function resumeAutoplay() {
+                if (!instance || !instance.autoplay) return;
+                instance.autoplay.stop();
+                setTimeout(function () {
+                    instance.autoplay.start();
+                    applyLinear();
+                }, 50);
+            }
+
+            applyLinear();
+
+            // Swiper 영역 내 드래그 종료 시 자동 슬라이드 재개
+            instance.on('touchEnd', function () {
+                resumeAutoplay();
+            });
+
+            // 영역 밖에서 마우스를 떼었을 때도 자동 슬라이드 재개
+            document.addEventListener('pointerup', function () {
+                resumeAutoplay();
+            });
+
+            swiperInstances[selector] = instance;
+        }
+
+        function handleSwipers() {
+            initInfiniteSwiper('.section1');
+        }
+
+        window.addEventListener('load', handleSwipers);
+
+        window.addEventListener('resize', function () {
+            clearTimeout(window.swiperResizer);
+            window.swiperResizer = setTimeout(handleSwipers, 200);
+        });
+
+
+
+        /* ====================================================
+         * Smooth Scroll to Section
+         * ==================================================== */
+        const SCROLL_EASING = {
+            easeInOutQuad:  t => t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t,
+            easeInOutCubic: t => t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1,
+            easeInOutQuart: t => t < 0.5 ? 8 * t * t * t * t : 1 - 8 * (--t) * t * t * t,
+            easeOutExpo:    t => t === 1 ? 1 : 1 - Math.pow(2, -10 * t),
+            easeInOutSine:  t => -(Math.cos(Math.PI * t) - 1) / 2,
+            easeInOutCirc:  t => { t *= 2; if (t < 1) return -0.5 * (Math.sqrt(1 - t * t) - 1); t -= 2; return 0.5 * (Math.sqrt(1 - t * t) + 1); },
+        };
+
+        function scrollToSection(targetEl, duration, easingFn) {
+            const start = window.scrollY;
+            const end   = targetEl.getBoundingClientRect().top + start;
+            const diff  = end - start;
+            let startTime = null;
+
+            function step(timestamp) {
+                if (!startTime) startTime = timestamp;
+                const elapsed  = timestamp - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                window.scrollTo(0, start + diff * easingFn(progress));
+                if (progress < 1) requestAnimationFrame(step);
+            }
+            requestAnimationFrame(step);
+        }
+
+        document.querySelector('a[href="#section3"]').addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector('.section3');
+            if (!target) return;
+            scrollToSection(
+                target,
+                1200,                            // 스크롤 시간 (ms) — 필요 시 변경
+                SCROLL_EASING.easeInOutCirc    // easing 변경 시 이 부분만 교체
+            );
+        });
+    </script>
+
+</body>
+
+</html>
