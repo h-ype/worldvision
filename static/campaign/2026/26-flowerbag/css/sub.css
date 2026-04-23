@@ -401,6 +401,7 @@ a.btn_primary:hover::after {right: 28px;}
 @media screen and (max-width: 768px) {
     .mainArea {background-size: 133%;}
     .content-container .section5 {background-size: 133%;}
+    .content-container .section6-pin {background-size: contain;}
 
 }
 
