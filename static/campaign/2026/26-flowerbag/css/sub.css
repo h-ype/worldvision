@@ -39,8 +39,9 @@
 .mainArea dl dd h3 {width: 320px; font-size: 24px; margin-top: 47px; margin-left: 16px;}
 .mainArea a.btn_primary {margin: 40px 12px 0;}
 
-a.btn_primary {display: block;  color: #fff; border-radius: 50px; font-size: 29px; height: 40px; line-height: 40px; padding: 30px 0 30px 55px; font-weight: 700; border: 2px solid #6caef1; background: linear-gradient(90deg,rgba(54, 127, 201, 1) 0%, rgba(127, 190, 255, 1) 100%); width: 387px; box-sizing: content-box; position: relative;}
+a.btn_primary {display: block; transition: background 0.3s; color: #fff; border-radius: 50px; font-size: 29px; height: 40px; line-height: 40px; padding: 30px 0 30px 55px; font-weight: 700; border: 2px solid #6caef1; background: linear-gradient(90deg,rgba(54, 127, 201, 1) 0%, rgba(127, 190, 255, 1) 100%); width: 387px; box-sizing: content-box; position: relative;}
 a.btn_primary::after {content: ""; transition: all 0.3s; width: 38px; height: 12px; display: block; position: absolute; background-image: url('../images/main_arr.png'); right: 36px; top: calc(50% - 7px); }
+a.btn_primary:hover {background: linear-gradient(90deg,rgba(39, 111, 183, 1) 0%, rgba(73, 163, 255, 1) 100%);}
 a.btn_primary:hover::after {right: 28px;}
 
 .content-container .section1 {background-image: url('../images/section1_bg.jpg'); background-repeat: repeat-x; height: 1124px; position: relative; padding-top: 150px; }
@@ -93,9 +94,10 @@ a.btn_primary:hover::after {right: 28px;}
 .content-container .section4 ul li .textBox p {font-size: 20px; }
 .content-container .section4 ul li .textBox strong {display: block; font-size: 40px; font-weight: 700; line-height: 50px;}
 .content-container .section4 ul li .textBox span {font-size: 16px; }
-.content-container .section4 a.btn {display: block; margin: 77px auto 0; color: #fff; border-radius: 50px; font-size: 32px; height: 40px; line-height: 40px; padding: 30px 0 30px 75px; font-weight: 700; border: 2px solid #b0532b; background: linear-gradient(90deg,rgba(196, 88, 0, 1) 0%, rgba(151, 48, 37, 1) 100%); width: 357px; box-sizing: content-box; position: relative;}
+.content-container .section4 a.btn {display: block; margin: 77px auto 0; color: #fff; transition: background 0.3s; border-radius: 50px; font-size: 32px; height: 40px; line-height: 40px; padding: 30px 0 30px 75px; font-weight: 700; border: 2px solid #b0532b; background: linear-gradient(90deg,rgba(196, 88, 0, 1) 0%, rgba(151, 48, 37, 1) 100%); width: 357px; box-sizing: content-box; position: relative;}
 .content-container .section4 a.btn::after {content: ""; transition: all 0.3s; width: 36px; height: 10px; display: block; position: absolute; background-image: url('../images/section4_arr.png'); right: 56px; top: calc(50% - 6px); }
 .content-container .section4 a.btn:hover::after {right: 49px;}
+.content-container .section4 a.btn:hover {background: linear-gradient(90deg,rgba(137, 45, 32, 1) 0%, rgba(176, 79, 0, 1) 100%);}
 
 .content-container .section5 {background-image: url('../images/section5_bg.jpg'); background-size: cover; background-repeat: no-repeat; height: 781px; color: #fff; background-position: left 50% top 50%;}
 .content-container .section5 .inner {width: 1380px;}
