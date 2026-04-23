@@ -14,14 +14,11 @@
 .content-container .mo {display: none;}
 
 .g_floating {display:inline-block;position:fixed;z-index:99999; font-family: "Pretendard Variable", Pretendard; }
-.g_floating.pc {top:200px; right: 30px; transition: 0.3s all; padding: 4px; 
+.g_floating.pc {top:200px; right: 30px; transition: 0.3s all; padding: 4px;
   border-radius: 20px;
-  background-image: linear-gradient(#fff, #fff), 
-                    linear-gradient(to bottom, #4facfe 0%, #f093fb 100%);
-  background-origin: border-box;
-  background-clip: content-box, border-box;
-  background-image: linear-gradient(#fff, #fff), 
-                    linear-gradient(to bottom, #52aaf7, #fad3bb);}
+  background-image: linear-gradient(#fff, #fff), linear-gradient(to bottom, #4facfe 0%, #f093fb 100%);
+  background-origin: border-box; background-clip: content-box, border-box;
+  background-image: linear-gradient(#fff, #fff), linear-gradient(to bottom, #52aaf7, #fad3bb);}
 .g_floating.pc .cf_img {overflow:hidden; border-radius: 16px;}
 .g_floating.pc a {overflow:hidden; border-radius: 20px; transition:0.3s all; }
 .g_floating.pc a .txt {display: block; color: #09253d; width: 154px; position: absolute; bottom: 20px; font-weight: 300; font-size: 20px; line-height: 26px; letter-spacing: -0.04em; font-weight: 700; text-align: center;}
@@ -50,7 +47,7 @@ a.btn_primary:hover::after {right: 28px;}
 .content-container .section1::before {content: ""; width: 547px; height: 130px; background-image: url('../images/section1_bg_txt1.png'); background-repeat: no-repeat; position: absolute; top: 40px; left: 40px;} 
 .content-container .section1::after {content: ""; width: 806px; height: 130px; background-image: url('../images/section1_bg_txt2.png'); background-repeat: no-repeat; position: absolute; bottom: 60px; right: 30px;} 
 .content-container .section1 .swiper-wrapper {transition-timing-function: linear !important; }
-.content-container .section1 .swiper-wrapper .swiper-slide {width: 574px; border-radius: 40px; overflow: hidden;}
+.content-container .section1 .swiper-wrapper .swiper-slide {width: 574px; border-radius: 40px; overflow: hidden; box-shadow: 17.5px 23px 57px rgba(24, 52, 81, 0.07);}
 .content-container .section1 .swiper-wrapper .swiper-slide:nth-child {width: 655px;}
 
 .content-container .section2 {display: flex; height: 722px; justify-content: center; background-image: url('../images/section2_bg.jpg'); background-repeat: repeat-x;}
@@ -173,12 +170,12 @@ a.btn_primary:hover::after {right: 28px;}
 .faqBox .inner h2 {font-size: 65px; font-family: 'pretendard' !important; line-height: 65px; font-weight: 800; color: #102c47; text-align: center; padding: 0 0 54px;}
 .acc-warp .acc-box__tab ul {display: flex;  gap: 20px;align-items: center; justify-content: center;}
 .acc-warp .acc-box__tab ul li {flex: 1; height: 80px;}
-.acc-warp .acc-box__tab ul li a {display: block; height: 100%; line-height: 80px; text-align: center; font-size: 24px; font-weight: 700; color: #080c0f; color: #0f1519; background-color: #fff; border-radius: 8px; }
+.acc-warp .acc-box__tab ul li a {display: block; height: 100%; line-height: 80px; text-align: center; font-size: 24px; font-weight: 700; color: #080c0f; color: #0f1519; background-color: #fff; border-radius: 8px; box-shadow: 17.5px 23px 57px rgba(24, 52, 81, 0.07);}
 .acc-warp .acc-box__tab ul li.on a {background-color: #4078b0; color: #fff;}
 .acc-box__tabpanel {display: none;}
 .acc-box__tabpanel.on {display: block; margin-top: 50px; display: flex; flex-direction: column; gap: 20px;}
 
-.acc-box__tabpanel .acc-box {background-color: #fff; border-radius: 15px; }
+.acc-box__tabpanel .acc-box {background-color: #fff; border-radius: 15px; box-shadow: 17.5px 23px 57px rgba(24, 52, 81, 0.07);}
 .acc-box__tabpanel .acc-box .acc-box__q {display: flex; justify-content: space-between; cursor: pointer;font-size: 24px; font-weight: 700; padding: 24px 40px; gap: min(30px, 3.88vw);}
 .acc-box__tabpanel .acc-box .acc-box__q .tit {display: flex; }
 .acc-box__tabpanel .acc-box .acc-box__q a {color: #0f1519; display: flex; line-height: 32px; gap: 30px;}
