@@ -1654,6 +1654,7 @@
 @media screen and (max-width: 1024px) {
   .schedule-card__day.daytwo .rightimg {
     width: min(68px, 8.85vw);
+    top: max(-70px, -6.8vw);
   }
 }
 .schedule-card__desc {

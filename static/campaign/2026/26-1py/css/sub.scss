@@ -1809,6 +1809,7 @@ $color-white: #ffffff;
 
         @include pc {
           width: min(68px, 8.85vw);
+          top: max(-70px, -6.8vw);
         }
       }
     }
