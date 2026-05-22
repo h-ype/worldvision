@@ -530,7 +530,7 @@ $color-white: #ffffff;
   }
 
   .swiper-slide {
-    transition: scale 0.4s;
+    transition: transform 0.4s;
     transform: scale(0.85);
 
     &.swiper-slide-active {
@@ -1497,7 +1497,7 @@ $color-white: #ffffff;
   overflow: hidden;
   background-image: url('../images/section8_bg.jpg');
   background-position: bottom center;
-  padding-bottom: 1040px; 
+  padding-bottom: 1040px;
   background-repeat: no-repeat;
 
   @include mo {

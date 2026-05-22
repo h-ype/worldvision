@@ -427,7 +427,7 @@
   overflow: visible;
 }
 .sec-why .swiper-slide {
-  transition: scale 0.4s;
+  transition: transform 0.4s;
   transform: scale(0.85);
 }
 .sec-why .swiper-slide.swiper-slide-active {
