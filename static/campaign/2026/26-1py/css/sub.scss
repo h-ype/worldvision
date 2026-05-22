@@ -9,6 +9,7 @@
   src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareRound/NanumSquareRoundR.eot);
   src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareRound/NanumSquareRoundR.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareRound/NanumSquareRoundR.woff2) format("woff2"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareRound/NanumSquareRoundR.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareRound/NanumSquareRoundR.ttf) format("truetype");
 }
+
 @font-face {
   font-family: 'NanumSquareRound';
   font-weight: 800;
@@ -106,7 +107,7 @@ $color-white: #ffffff;
   margin-left: -960px;
 
   @include pc {
-  margin-left: max(-384px, -50.00vw);
+    margin-left: max(-384px, -50.00vw);
   }
 
 }
@@ -127,23 +128,91 @@ $color-white: #ffffff;
   font-weight: 400;
 
   p {
-    font-family: 'NanumSquareRound'; 
+    font-family: 'NanumSquareRound';
   }
 }
 
-.sbtn_float { z-index: 999; position: fixed; overflow: hidden;  transition: transform 0.3s;  -webkit-box-shadow: 0px 5px 15px 5px rgba(0,0,32,0.2); 
-  box-shadow: 0px 5px 15px 5px rgba(0,0,32,0.2); }
-.sbtn_float:hover { transform: translateY(-3px); }
-.sbtn_float.pc {display: block;
- background-image: url('../images/sbtn_float_pc.jpg'); background-repeat: no-repeat; background-size: 100%; width: 180px; height: 240px; border-radius: 18px;  border: 4px solid #0e5e63; right: 20px; top: 200px;}
+.sbtn_float {
+  z-index: 999;
+  position: fixed;
+  overflow: hidden;
+  transition: transform 0.3s;
+  -webkit-box-shadow: 0px 5px 15px 5px rgba(0, 0, 32, 0.2);
+  box-shadow: 0px 5px 15px 5px rgba(0, 0, 32, 0.2);
+}
 
-.sbtn_float dl {display: flex; flex-direction: column; align-items: center; font-size: 26px; text-align: center; font-weight: 800; color: $color-teal-dark; padding-top: 154px; line-height: 1.2; font-family: 'NanumSquareRound' !important;}
-.sbtn_float dl dd {display: flex; align-items: center; justify-content: center; gap: 4px;}
-.sbtn_float dl dd img {width: 22px; height: 22px !important;}
+.sbtn_float:hover {
+  transform: translateY(-3px);
+}
 
-.sbtn_float.mo {background-image: url('../images/sbtn_float_mo.jpg'); background-repeat: no-repeat; bottom:min(40px, 5.20vw); left:50%; transform: translateX(-50%);  background-size: 100%; width: min(598px, 77.86vw); height: min(142px, 18.48vw); border-radius: min(20px, 2.6vw); border: 4px solid #0e5e63; display: flex !important; align-items: center; justify-content: flex-end; padding-right: min(62px, 8.07vw);}
-.sbtn_float.mo p {font-size: min(40px, 5.2vw); display: flex !important;  gap: 10px; align-items: center; font-weight: 800; color: $color-teal-dark;}
-.sbtn_float.mo p img {width: min(38px, 4.94vw); height: min(38px, 4.94vw) !important;}
+.sbtn_float.pc {
+  display: block;
+  background-image: url('../images/sbtn_float_pc.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 180px;
+  height: 240px;
+  border-radius: 18px;
+  border: 4px solid #0e5e63;
+  right: 20px;
+  top: 200px;
+}
+
+.sbtn_float dl {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 26px;
+  text-align: center;
+  font-weight: 800;
+  color: $color-teal-dark;
+  padding-top: 154px;
+  line-height: 1.2;
+  font-family: 'NanumSquareRound' !important;
+}
+
+.sbtn_float dl dd {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.sbtn_float dl dd img {
+  width: 22px;
+  height: 22px !important;
+}
+
+.sbtn_float.mo {
+  background-image: url('../images/sbtn_float_mo.jpg');
+  background-repeat: no-repeat;
+  bottom: min(40px, 5.20vw);
+  left: 50%;
+  transform: translateX(-50%);
+  background-size: 100%;
+  width: min(598px, 77.86vw);
+  height: min(142px, 18.48vw);
+  border-radius: min(20px, 2.6vw);
+  border: 4px solid #0e5e63;
+  display: flex !important;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: min(62px, 8.07vw);
+}
+
+.sbtn_float.mo p {
+  font-size: min(40px, 5.2vw);
+  display: flex !important;
+  gap: 10px;
+  align-items: center;
+  font-weight: 800;
+  color: $color-teal-dark;
+}
+
+.sbtn_float.mo p img {
+  width: min(38px, 4.94vw);
+  height: min(38px, 4.94vw) !important;
+}
 
 // =========================================================
 // AOS (Animate On Scroll)
@@ -273,9 +342,11 @@ $color-white: #ffffff;
       margin: 0 auto;
       width: min(651px, 90%);
     }
+
     img.ttl {
       position: relative;
       z-index: 3;
+
       @include pc {
         width: 100%;
       }
@@ -316,6 +387,7 @@ $color-white: #ffffff;
   bottom: 20px;
   left: -10px;
   animation: swayLeft 3.5s ease-in-out infinite;
+
   @include pc {
     width: min(100px, 13.63vw);
     bottom: 0;
@@ -328,6 +400,7 @@ $color-white: #ffffff;
   top: 84px;
   right: -28px;
   animation: swayRight 4s ease-in-out infinite;
+
   @include pc {
     width: min(100px, 13.63vw);
     top: min(120px, 15.63vw);
@@ -435,6 +508,7 @@ $color-white: #ffffff;
     width: 49px;
     height: 49px;
     cursor: pointer;
+
     @include pc {
       display: none;
     }
@@ -495,6 +569,7 @@ $color-white: #ffffff;
 .why-card {
   position: relative;
   z-index: 1;
+
   &__img {
     width: 100%;
     height: auto;
@@ -502,9 +577,11 @@ $color-white: #ffffff;
     border-radius: 16px;
     overflow: hidden;
     border: 4px solid #0e5e63;
+
     img {
       width: 100%;
     }
+
     @include pc {
       border-radius: min(32px, 4.1vw);
       border-width: 4px;
@@ -556,7 +633,8 @@ $color-white: #ffffff;
       color: $color-text-dark;
     }
   }
-  + .dgn-shadow {
+
+  +.dgn-shadow {
     bottom: 21px;
     z-index: 0;
   }
@@ -579,10 +657,12 @@ $color-white: #ffffff;
 
   figure {
     width: 100%;
-    margin: 0; padding: 0;
+    margin: 0;
+    padding: 0;
 
     img {
       margin: 0 auto;
+
       @include pc {
         width: 100%;
       }
@@ -689,7 +769,7 @@ $color-white: #ffffff;
   text-align: left;
   padding: 0 0 41px;
   z-index: 1;
-  
+
 
   &__wrap {
 
@@ -751,8 +831,9 @@ $color-white: #ffffff;
 .accordion {
   margin: 0 38px;
   border-top: 2px solid $color-teal-dark;
-  @include pc{
-    margin: 0  min(38px, 4.9vw);
+
+  @include pc {
+    margin: 0 min(38px, 4.9vw);
   }
 
   .info {
@@ -771,7 +852,8 @@ $color-white: #ffffff;
         font-size: min(34px, 4.4vw);
       }
     }
-    ul{
+
+    ul {
       li {
         padding: 0 40px;
         position: relative;
@@ -782,17 +864,21 @@ $color-white: #ffffff;
         text-align: left;
         line-height: 30px;
         color: $color-text-dark;
+
         @include pc {
           padding: 0 0 0 min(17px, 2.21vw);
           line-height: 1.7;
           font-size: min(30px, 3.9vw);
         }
+
         &:before {
-            content: "· ";
-            @include pc {
-              position: absolute;
-              left: 0; top: 0px;
-            }
+          content: "· ";
+
+          @include pc {
+            position: absolute;
+            left: 0;
+            top: 0px;
+          }
         }
 
         strong {
@@ -818,13 +904,16 @@ $color-white: #ffffff;
     font-size: 19px;
     font-weight: 800;
     color: $color-teal-dark;
+
     p {
       font-weight: 800;
       line-height: 40px;
+
       @include pc {
         font-size: min(33px, 4.3vw);
       }
     }
+
     @include pc {
       font-size: min(33px, 4.3vw);
       padding: min(44px, 5.7vw) min(44px, 5.7vw) min(44px, 5.7vw) min(50px, 6.5vw);
@@ -838,6 +927,7 @@ $color-white: #ffffff;
     border-bottom: 2px solid $color-teal-dark;
     font-weight: 800;
     flex-shrink: 0;
+
     @include pc {
       font-size: min(29px, 3.77vw);
     }
@@ -874,6 +964,7 @@ $color-white: #ffffff;
     color: $color-teal-dark;
     padding-left: 12px;
     letter-spacing: -0.05em;
+
     @include pc {
       line-height: 1.8;
       font-size: min(34px, 4.4vw);
@@ -888,6 +979,7 @@ $color-white: #ffffff;
     &.dark {
       margin: 12px 0 0px;
       color: $color-text-dark;
+
       @include pc {
         font-size: min(29px, 3.77vw);
       }
@@ -895,6 +987,7 @@ $color-white: #ffffff;
 
     &.mid {
       margin-top: 32px;
+
       @include pc {
         margin-top: min(36px, 4.6vw);
       }
@@ -907,6 +1000,7 @@ $color-white: #ffffff;
     list-style: decimal;
     list-style-position: inside;
     color: $color-text-dark;
+
     @include pc {
       font-size: min(29px, 3.77vw);
       line-height: 1.6;
@@ -914,18 +1008,21 @@ $color-white: #ffffff;
 
     li {
       position: relative;
-      letter-spacing: -0.06em; 
+      letter-spacing: -0.06em;
+
       @include pc {
         padding: 0 0 0 min(17px, 2.21vw);
-        letter-spacing: -0.03em; 
+        letter-spacing: -0.03em;
       }
     }
 
     li::before {
       content: '· ';
+
       @include pc {
         position: absolute;
-        left: 0; top: 0px;
+        left: 0;
+        top: 0px;
       }
     }
   }
@@ -944,12 +1041,13 @@ $color-white: #ffffff;
     font-weight: 800;
     color: $color-teal-dark;
     letter-spacing: -0.04em;
+
     @include pc {
       font-size: min(51px, 6.8vw);
     }
   }
 }
- 
+
 
 .process-item {
   width: 454px;
@@ -963,6 +1061,7 @@ $color-white: #ffffff;
   &:nth-child(1) {
     left: 15px;
     z-index: 2;
+
     @include pc {
       left: 0;
     }
@@ -971,7 +1070,8 @@ $color-white: #ffffff;
       border-radius: 16px 16px 0 0;
       height: 152px;
       padding-top: 20px;
-      @include pc { 
+
+      @include pc {
         border-radius: min(41px, 5.33vw) min(41px, 5.33vw) 0 0;
         height: min(226px, 29.17vw);
         padding-top: min(21px, 2.7vw);
@@ -979,6 +1079,7 @@ $color-white: #ffffff;
 
       .process-item__left {
         width: 160px;
+
         @include pc {
           width: min(243px, 31.64vw);
         }
@@ -996,13 +1097,14 @@ $color-white: #ffffff;
         border: 4px solid $color-teal-dark;
         padding: 10px 13px 16px;
         background-color: $color-white;
+
         @include pc {
           font-size: min(29px, 3.78vw);
           letter-spacing: -0.03em;
           padding: min(19px, 2.47vw) 0 min(24px, 3.12vw) min(29px, 3.78vw);
           border-radius: 0 0 min(32px, 4.17vw) min(32px, 4.17vw);
         }
-              
+
         @include mo {
           border-width: 3px;
         }
@@ -1014,6 +1116,7 @@ $color-white: #ffffff;
     left: -90px;
     top: -16px;
     z-index: 1;
+
     @include pc {
       top: max(-20px, -2.6vw);
       left: max(-83px, -10.81vw);
@@ -1021,16 +1124,19 @@ $color-white: #ffffff;
 
     .process-item__inner {
       height: 225px;
+
       @include pc {
         height: min(330px, 42.97vw);
         padding-top: min(37px, 4.82vw);
       }
+
       .process-item__left {
         @include pc {
           width: min(303px, 39.45vw);
           padding-left: min(56px, 7.29vw);
         }
       }
+
       .process-item__right {
         padding-top: 10px;
       }
@@ -1049,10 +1155,12 @@ $color-white: #ffffff;
 
     .process-item__inner {
       height: 260px;
+
       @include pc {
         height: min(375px, 48.83vw);
         padding-top: min(61px, 7.94vw);
       }
+
       .process-item__left {
         @include pc {
           width: min(299px, 38.93vw);
@@ -1068,9 +1176,10 @@ $color-white: #ffffff;
     align-items: center;
     justify-content: center;
     border-radius: 16px;
-    
+
     position: relative;
     z-index: 1;
+
     @include pc {
       border-radius: min(32px, 4.17vw);
     }
@@ -1081,8 +1190,10 @@ $color-white: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
+
     @include pc {
       width: min(250px, 32.55vw);
+
       img {
         width: min(160px, 20vw);
       }
@@ -1120,6 +1231,7 @@ $color-white: #ffffff;
     font-weight: 700;
     line-height: 1.4;
     color: $color-white;
+
     @include pc {
       font-size: min(38px, 4.9vw);
     }
@@ -1129,20 +1241,21 @@ $color-white: #ffffff;
 
 .dgn-shadow {
   position: relative;
-    display: block;
-    background-image: url('../images/dgn_shadow.webp');
-    background-repeat: repeat;
-    border-radius: 0 0 15px 15px;
-    z-index: 0;
-    width: 100%;
-    height: 30px;
-    left: 0;
-    @include pc {
-      height: min(50px, 6.25vw);
-      bottom: max(-20px, -2.6vw);
-      border-radius: 0 0 min(32px, 4.17vw) min(32px, 4.17vw);
-      background-size: 2vw;
-    }
+  display: block;
+  background-image: url('../images/dgn_shadow.webp');
+  background-repeat: repeat;
+  border-radius: 0 0 15px 15px;
+  z-index: 0;
+  width: 100%;
+  height: 30px;
+  left: 0;
+
+  @include pc {
+    height: min(50px, 6.25vw);
+    bottom: max(-20px, -2.6vw);
+    border-radius: 0 0 min(32px, 4.17vw) min(32px, 4.17vw);
+    background-size: 2vw;
+  }
 
   &__cream {
     position: relative;
@@ -1161,6 +1274,7 @@ $color-white: #ffffff;
       z-index: 0;
       bottom: -13px;
       left: 0;
+
       @include pc {
         height: min(50px, 6.25vw);
         bottom: max(-20px, -2.6vw);
@@ -1187,6 +1301,7 @@ $color-white: #ffffff;
       z-index: -1;
       bottom: -13px;
       left: 0;
+
       @include pc {
         background-size: 1.5vw;
         height: min(50px, 6.25vw);
@@ -1204,6 +1319,7 @@ $color-white: #ffffff;
 .sec-delegate {
   background: $color-bg-cream;
   padding: 100px 0 18px;
+
   @include pc {
     padding: min(50px, 6.51vw) 0 0;
   }
@@ -1226,15 +1342,18 @@ $color-white: #ffffff;
   @include mo {
     border-width: 3px;
   }
+
   &__wrap {
     width: min(90%, 1195px);
     margin: 0 auto;
+
     @include pc {
       width: min(90%, 768px);
     }
+
     .dgn-shadow {
       z-index: 0;
-      bottom:16px;
+      bottom: 16px;
     }
   }
 
@@ -1251,6 +1370,7 @@ $color-white: #ffffff;
     dd {
       position: relative;
       padding-bottom: 10px;
+
       @include pc {
         flex: 1;
         width: 100%;
@@ -1265,6 +1385,7 @@ $color-white: #ffffff;
     color: $color-yellow;
     margin-bottom: 36px;
     line-height: 1.4;
+
     @include pc {
       font-size: min(46px, 5.99vw);
     }
@@ -1275,6 +1396,7 @@ $color-white: #ffffff;
     line-height: 1.7;
     letter-spacing: -0.04em;
     color: $color-white;
+
     @include pc {
       font-size: min(34px, 4.43vw);
     }
@@ -1290,6 +1412,7 @@ $color-white: #ffffff;
     right: 5%;
     pointer-events: none;
     animation: swayRight 3.8s ease-in-out infinite;
+
     @include pc {
       width: min(170px, 22.14vw);
       bottom: min(106px, 13.80vw);
@@ -1303,6 +1426,7 @@ $color-white: #ffffff;
     right: -10px;
     pointer-events: none;
     animation: swayLeft 4.5s ease-in-out infinite;
+
     @include pc {
       width: min(92px, 11.98vw);
       bottom: min(230px, 29.95vw);
@@ -1328,6 +1452,7 @@ $color-white: #ffffff;
   border-radius: 15px;
   text-decoration: none;
   transition: all 0.3s ease;
+
   &:hover {
     transform: scale(1.02);
     background-color: #f8ee71;
@@ -1343,6 +1468,7 @@ $color-white: #ffffff;
     font-size: min(38px, 4.95vw);
     height: min(120px, 15.62vw);
   }
+
   img {
     @include pc {
       width: min(38px, 4.95vw);
@@ -1363,6 +1489,7 @@ $color-white: #ffffff;
   background-position: bottom center;
   padding-bottom: 1040px;
   background-repeat: no-repeat;
+
   @include pc {
     background-image: url('../images/section8_bg_mo.jpg');
     background-size: 100%;
@@ -1373,6 +1500,7 @@ $color-white: #ffffff;
     padding-top: 60px;
     position: relative;
     z-index: 1;
+
     @include pc {
       padding-top: min(70px, 9.11vw);
     }
@@ -1394,6 +1522,7 @@ $color-white: #ffffff;
     font-size: 28px;
     color: $color-text-dark;
     text-align: center;
+
     @include pc {
       font-size: min(38px, 4.95vw);
     }
@@ -1411,7 +1540,7 @@ $color-white: #ffffff;
     img {
       margin: 0 auto;
 
-      @include pc{
+      @include pc {
         width: min(651px, 84.95vw) !important;
         height: auto;
       }
@@ -1423,10 +1552,11 @@ $color-white: #ffffff;
 // SEC 09 + 10 - EVENT + SCHEDULE (통합)
 // =========================================================
 .sec-event {
-  background: url('../images/section9_bg.jpg') top center / cover no-repeat;
+  background: url('../images/section9_bg.jpg') top center / 1980px no-repeat;
   overflow: hidden;
   text-align: center;
-  padding-bottom: 340px;
+  padding-bottom: 360px;
+
   @include pc {
     background-image: url('../images/section9_bg_mo.jpg');
     width: 100%;
@@ -1441,6 +1571,7 @@ $color-white: #ffffff;
     img {
       height: 28px;
       width: auto;
+
       @include pc {
         width: min(416px, 54.22vw);
         height: auto;
@@ -1454,6 +1585,7 @@ $color-white: #ffffff;
     align-items: center;
     justify-content: center;
     margin-bottom: 56px;
+
     @include pc {
       margin-bottom: min(64px, 8.33vw);
     }
@@ -1466,6 +1598,7 @@ $color-white: #ffffff;
     z-index: 0;
     flex-shrink: 0;
     animation: swayLeft 4s ease-in-out infinite;
+
     @include pc {
       width: min(154px, 20.14vw);
       left: min(90px, 11.72vw);
@@ -1477,6 +1610,7 @@ $color-white: #ffffff;
     position: relative;
     z-index: 1;
     padding-right: 20px;
+
     img {
       @include pc {
         width: min(570px, 74.22vw);
@@ -1491,6 +1625,7 @@ $color-white: #ffffff;
     top: -30px;
     flex-shrink: 0;
     animation: swayRight 3.5s ease-in-out infinite;
+
     @include pc {
       width: min(112px, 14.65vw);
       left: max(-90px, -11.72vw);
@@ -1504,6 +1639,7 @@ $color-white: #ffffff;
     line-height: 1.4;
     color: rgba(255, 255, 255, 0.9);
     margin-bottom: 41px;
+
     @include pc {
       font-size: min(38px, 4.95vw);
       margin-bottom: min(76px, 9.90vw);
@@ -1513,6 +1649,7 @@ $color-white: #ffffff;
       font-weight: 800;
       color: $color-yellow;
     }
+
     span {
       font-weight: 800;
     }
@@ -1539,11 +1676,12 @@ $color-white: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.2);
   text-align: left;
 
-  @include pc { 
+  @include pc {
     padding: min(50px, 6.51vw) min(32px, 4.17vw);
     width: 100%;
     border-radius: min(32px, 4.17vw);
   }
+
   &__wrap {
     padding: 24px 0 0;
   }
@@ -1552,6 +1690,7 @@ $color-white: #ffffff;
     background-color: $color-white;
     border-radius: 20px;
     padding: 28px 24px;
+
     @include pc {
       padding: min(20px, 2.60vw) min(40px, 5.21vw) min(30px, 3.91vw);
     }
@@ -1559,6 +1698,7 @@ $color-white: #ffffff;
     +.schedule-card__inner {
       margin-top: 29px;
       padding: 20px 24px 48px;
+
       @include pc {
         margin-top: 22px;
         padding: min(10px, 1.30vw) min(40px, 5.21vw) min(50px, 6.51vw);
@@ -1573,10 +1713,12 @@ $color-white: #ffffff;
     &.dayone {
       right: 110px;
       top: -20px;
+
       @include pc {
         right: min(74px, 9.77vw);
         top: max(-30px, -3.91vw);
       }
+
       img {
         @include pc {
           width: min(260px, 33.77vw);
@@ -1587,11 +1729,13 @@ $color-white: #ffffff;
     &.daytwo {
       right: 90px;
       bottom: 125px;
+
       @include pc {
         width: min(300px, 39.06vw);
         right: min(75px, 9.77vw);
         bottom: min(170px, 22.14vw);
       }
+
       img {
         @include pc {
           width: min(330px, 42.97vw);
@@ -1606,6 +1750,7 @@ $color-white: #ffffff;
     margin-top: 88px;
     color: $color-white;
     letter-spacing: -0.05em;
+
     @include pc {
       margin-top: min(151px, 19.66vw);
       font-size: min(38px, 4.95vw);
@@ -1622,11 +1767,11 @@ $color-white: #ffffff;
       padding: 26px 0 40px;
       font-size: 18px;
       color: $color-white;
-      
-    @include pc {
-      padding: min(26px, 3.39vw) 0 min(65px, 8.46vw);
-      font-size: min(30px, 3.91vw);
-    }
+
+      @include pc {
+        padding: min(26px, 3.39vw) 0 min(65px, 8.46vw);
+        font-size: min(30px, 3.91vw);
+      }
     }
   }
 }
@@ -1644,6 +1789,7 @@ $color-white: #ffffff;
     display: flex;
     align-items: center;
     gap: 5px;
+
     @include pc {
       padding: min(4px, 0.52vw) 0px;
       gap: 0;
@@ -1681,8 +1827,10 @@ $color-white: #ffffff;
     font-weight: 800;
     color: $color-yellow;
   }
+
   &::before {
     content: "* ";
+
     @include pc {
       position: absolute;
       left: 0;
@@ -1694,6 +1842,7 @@ $color-white: #ffffff;
   img {
     margin: 0 auto;
     width: min(93%, 800px);
+
     @include pc {
       width: min(90%, 768px);
     }
@@ -1707,6 +1856,7 @@ $color-white: #ffffff;
   background: $color-white;
   padding: 130px 0 160px;
   margin: 0 auto;
+
   @include pc {
     padding: min(157px, 20.47vw) 0 min(150px, 19.53vw);
   }
@@ -1714,16 +1864,18 @@ $color-white: #ffffff;
   &__title {
     text-align: center;
     margin-bottom: 59px;
+
     @include pc {
       margin-bottom: min(90px, 11.72vw);
     }
 
     img {
       margin: 0 auto;
+
       @include pc {
-      width: min(226px, 29.53vw);
+        width: min(226px, 29.53vw);
       }
-      
+
     }
   }
 }
@@ -1734,6 +1886,7 @@ $color-white: #ffffff;
   gap: 20px;
   width: min(90%, 1140px);
   margin: 0 auto;
+
   @include pc {
     gap: min(21px, 2.73vw);
   }
@@ -1743,6 +1896,7 @@ $color-white: #ffffff;
   background-color: #e7f3f5;
   border-radius: 16px;
   padding: 30px 27px 0 27px;
+
   @include pc {
     border-radius: min(18px, 2.34vw);
     padding: min(30px, 3.91vw) min(20px, 2.60vw) 0 min(20px, 2.60vw);
@@ -1759,6 +1913,7 @@ $color-white: #ffffff;
     gap: 37px;
     line-height: 1.5;
     font-family: 'NanumSquareRound', 'Noto Sans KR', sans-serif;
+
     @include pc {
       gap: min(20px, 2.60vw);
       padding: 0 min(20px, 2.60vw) min(30px, 3.91vw);
@@ -1778,6 +1933,7 @@ $color-white: #ffffff;
     font-size: 28px;
     font-weight: 900;
     line-height: 1;
+
     @include pc {
       font-size: min(30px, 3.91vw);
       width: min(40px, 5.2vw);
@@ -1793,6 +1949,7 @@ $color-white: #ffffff;
     font-size: 24px;
     font-weight: 600;
     color: $color-teal-dark;
+
     @include pc {
       display: flex;
       align-items: center;
@@ -1809,6 +1966,7 @@ $color-white: #ffffff;
     background-size: 100%;
     background-position: center center;
     background-repeat: no-repeat;
+
     @include pc {
       width: min(40px, 5.2vw);
       height: min(40px, 5.2vw);
@@ -1828,13 +1986,14 @@ $color-white: #ffffff;
       transform: rotate(180deg);
     }
 
-    .faq-item__a { 
+    .faq-item__a {
       max-height: 100%;
       padding: 32px 20px 56px;
+
       @include pc {
         gap: min(20px, 2.60vw);
         font-size: min(30px, 3.91vw);
-        padding: min(20px, 2.60vw) min(20px, 2.6vw) min(56px, 7.29vw) ;
+        padding: min(20px, 2.60vw) min(20px, 2.6vw) min(56px, 7.29vw);
       }
     }
   }
@@ -1854,6 +2013,7 @@ $color-white: #ffffff;
     font-weight: 800;
     line-height: 1;
     color: $color-teal-dark;
+
     @include pc {
       font-size: min(30px, 3.91vw);
       line-height: 1.7;
@@ -1867,16 +2027,18 @@ $color-white: #ffffff;
     color: $color-text-dark;
     font-size: 20px;
     line-height: 1.55;
+
     @include pc {
       font-size: min(30px, 3.91vw);
     }
   }
 }
- 
+
 
 .sec-info {
   background-color: #ededed;
   padding: 24px 0;
+
   @include pc {
     padding: min(29px, 3.78vw) 0 min(36px, 4.69vw);
   }
@@ -1886,6 +2048,7 @@ $color-white: #ffffff;
     font-size: 20px;
     font-family: 'Noto Sans KR';
     letter-spacing: -0.04em;
+
     @include pc {
       font-size: min(30px, 3.91vw);
     }
