@@ -1373,7 +1373,7 @@
 }
 .sec-protect__inner::before {
   content: "";
-  width: 2px;
+  width: 1px;
   height: 170px;
   display: block;
   position: relative;
@@ -1568,7 +1568,7 @@
 }
 @media screen and (max-width: 1024px) {
   .schedule-card__inner + .schedule-card__inner {
-    margin-top: 22px;
+    margin-top: min(22px, 2.86vw);
     padding: min(10px, 1.3vw) min(40px, 5.21vw) min(50px, 6.51vw);
   }
 }
@@ -1592,7 +1592,7 @@
   top: -20px;
   gap: 4px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
   .schedule-card__day.dayone {
     right: min(74px, 9.77vw);
     top: max(-30px, -3.91vw);
@@ -1609,7 +1609,6 @@
 }
 .schedule-card__day.dayone .ttlimg {
   width: 201px;
-  animation: swayRight 4.4s ease-in-out infinite;
 }
 @media screen and (max-width: 1024px) {
   .schedule-card__day.dayone .ttlimg {
@@ -1639,7 +1638,6 @@
 .schedule-card__day.daytwo .ttlimg {
   width: 195px;
   margin-left: 10px;
-  animation: swayRight 4.7s ease-in-out infinite;
 }
 @media screen and (max-width: 1024px) {
   .schedule-card__day.daytwo .ttlimg {
@@ -1655,6 +1653,11 @@
   .schedule-card__day.daytwo .rightimg {
     width: min(68px, 8.85vw);
     top: max(-70px, -6.8vw);
+  }
+}
+@media screen and (max-width: 768px) {
+  .schedule-card__day.daytwo .rightimg {
+    top: max(-79px, -10.29vw);
   }
 }
 .schedule-card__desc {
@@ -1768,6 +1771,11 @@
 @media screen and (max-width: 1024px) {
   .sec-faq {
     padding: min(157px, 20.47vw) 0 min(150px, 19.53vw);
+  }
+}
+@media screen and (max-width: 768px) {
+  .sec-faq {
+    padding: min(100px, 13.02vw) 0;
   }
 }
 .sec-faq__title {
