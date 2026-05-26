@@ -269,30 +269,6 @@ $color-white: #ffffff;
   }
 }
 
-@keyframes swayR {
-
-  0%,
-  100% {
-    transform: rotate(3deg);
-  }
-
-  50% {
-    transform: rotate(-3deg);
-  }
-}
-
-@keyframes swayL {
-
-  0%,
-  100% {
-    transform: rotate(-3deg);
-  }
-
-  50% {
-    transform: rotate(3deg);
-  }
-}
-
 // =========================================================
 // SEC 01 - 메인 키비주얼
 // =========================================================
@@ -389,7 +365,7 @@ $color-white: #ffffff;
   width: 70px;
   bottom: 20px;
   left: -10px;
-  animation: swayLeft 3.5s ease-in-out infinite;
+  animation: swayLeft 2.5s ease-in-out infinite;
 
   @include pc {
     width: min(100px, 13.63vw);
@@ -402,7 +378,7 @@ $color-white: #ffffff;
   width: 80px;
   top: 84px;
   right: -28px;
-  animation: swayRight 4s ease-in-out infinite;
+  animation: swayRight 2.5s ease-in-out infinite;
 
   @include pc {
     width: min(100px, 13.63vw);
@@ -1421,7 +1397,7 @@ $color-white: #ffffff;
     bottom: 76px;
     right: 5%;
     pointer-events: none;
-    animation: swayRight 3.8s ease-in-out infinite;
+    animation: swayRight 2s ease-in-out infinite;
 
     @include pc {
       width: min(170px, 22.14vw);
@@ -1435,7 +1411,7 @@ $color-white: #ffffff;
     bottom: 170px;
     right: -10px;
     pointer-events: none;
-    animation: swayLeft 4.5s ease-in-out infinite;
+    animation: swayLeft 2s ease-in-out infinite;
 
     @include pc {
       width: min(92px, 11.98vw);
@@ -1736,11 +1712,11 @@ $color-white: #ffffff;
       position: relative;
 
       &.leftimg {
-        animation: swayLeft 3.5s ease-in-out infinite;
+        animation: swayLeft 2.5s ease-in-out infinite;
       }
 
       &.rightimg {
-        animation: swayRight 4s ease-in-out infinite;
+        animation: swayRight 2s ease-in-out infinite;
       }
     }
 
@@ -1751,7 +1727,7 @@ $color-white: #ffffff;
 
       @include mo {
         right: min(74px, 9.77vw);
-        top: max(-30px, -3.91vw);
+        top: max(-30px, -3.78vw);
       }
 
       .leftimg {
@@ -1760,6 +1736,7 @@ $color-white: #ffffff;
 
         @include pc {
           width: min(59px, 7.68vw);
+          top: min(34px, 4.43vw);
         }
       }
 
@@ -1803,11 +1780,12 @@ $color-white: #ffffff;
       .rightimg {
         width: 64px;
         top: -60px;
-        left: -30px;
+
 
         @include pc {
           width: min(68px, 8.85vw);
           top: max(-70px, -6.8vw);
+          left: max(-30px, -3.91vw);
         }
 
         @include mo {

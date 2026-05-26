@@ -193,22 +193,6 @@
     transform: rotate(-6deg) translateX(-8px);
   }
 }
-@keyframes swayR {
-  0%, 100% {
-    transform: rotate(3deg);
-  }
-  50% {
-    transform: rotate(-3deg);
-  }
-}
-@keyframes swayL {
-  0%, 100% {
-    transform: rotate(-3deg);
-  }
-  50% {
-    transform: rotate(3deg);
-  }
-}
 .sec-kv {
   position: relative;
   width: 100%;
@@ -299,7 +283,7 @@
   width: 70px;
   bottom: 20px;
   left: -10px;
-  animation: swayLeft 3.5s ease-in-out infinite;
+  animation: swayLeft 2.5s ease-in-out infinite;
 }
 @media screen and (max-width: 1024px) {
   .kv-shell {
@@ -313,7 +297,7 @@
   width: 80px;
   top: 84px;
   right: -28px;
-  animation: swayRight 4s ease-in-out infinite;
+  animation: swayRight 2.5s ease-in-out infinite;
 }
 @media screen and (max-width: 1024px) {
   .kv-crab {
@@ -1280,7 +1264,7 @@
   bottom: 76px;
   right: 5%;
   pointer-events: none;
-  animation: swayRight 3.8s ease-in-out infinite;
+  animation: swayRight 2s ease-in-out infinite;
 }
 @media screen and (max-width: 1024px) {
   .delegate-box__octopus {
@@ -1294,7 +1278,7 @@
   bottom: 170px;
   right: -10px;
   pointer-events: none;
-  animation: swayLeft 4.5s ease-in-out infinite;
+  animation: swayLeft 2s ease-in-out infinite;
 }
 @media screen and (max-width: 1024px) {
   .delegate-box__starfish {
@@ -1582,10 +1566,10 @@
   position: relative;
 }
 .schedule-card__day img.leftimg {
-  animation: swayLeft 3.5s ease-in-out infinite;
+  animation: swayLeft 2.5s ease-in-out infinite;
 }
 .schedule-card__day img.rightimg {
-  animation: swayRight 4s ease-in-out infinite;
+  animation: swayRight 2s ease-in-out infinite;
 }
 .schedule-card__day.dayone {
   right: 110px;
@@ -1595,7 +1579,7 @@
 @media screen and (max-width: 768px) {
   .schedule-card__day.dayone {
     right: min(74px, 9.77vw);
-    top: max(-30px, -3.91vw);
+    top: max(-30px, -3.78vw);
   }
 }
 .schedule-card__day.dayone .leftimg {
@@ -1605,6 +1589,7 @@
 @media screen and (max-width: 1024px) {
   .schedule-card__day.dayone .leftimg {
     width: min(59px, 7.68vw);
+    top: min(34px, 4.43vw);
   }
 }
 .schedule-card__day.dayone .ttlimg {
@@ -1647,12 +1632,12 @@
 .schedule-card__day.daytwo .rightimg {
   width: 64px;
   top: -60px;
-  left: -30px;
 }
 @media screen and (max-width: 1024px) {
   .schedule-card__day.daytwo .rightimg {
     width: min(68px, 8.85vw);
     top: max(-70px, -6.8vw);
+    left: max(-30px, -3.91vw);
   }
 }
 @media screen and (max-width: 768px) {
