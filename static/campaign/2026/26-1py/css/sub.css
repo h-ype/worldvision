@@ -133,7 +133,7 @@
   left: 50%;
   transform: translateX(-50%);
   background-size: 100%;
-  width: min(598px, 77.86vw);
+  width: min(690px, 90.2vw);
   height: min(142px, 18.48vw);
   border-radius: min(20px, 2.6vw);
   border: 2px solid #0e5e63;
@@ -144,12 +144,16 @@
 }
 
 .sbtn_float.mo p {
-  font-size: min(40px, 5.2vw);
+  font-size: min(44px, 5.72vw);
   display: flex !important;
   gap: 10px;
   align-items: center;
   font-weight: 800;
   color: #0e5e63;
+}
+.sbtn_float.mo p span {
+  display: flex !important;
+  line-height: 1;
 }
 
 .sbtn_float.mo p img {
@@ -764,6 +768,11 @@
   background-color: #e3f4f5;
   border-radius: 16px;
 }
+@media screen and (max-width: 1024px) {
+  .accordion__item {
+    border-radius: min(16px, 2.08vw);
+  }
+}
 .accordion__header {
   display: flex;
   align-items: center;
@@ -882,6 +891,9 @@
     letter-spacing: -0.03em;
   }
 }
+.accordion__sub-list li strong {
+  font-weight: 800;
+}
 .accordion__sub-list li::before {
   content: "· ";
 }
@@ -947,6 +959,11 @@
 @media screen and (max-width: 1024px) {
   .process-item:nth-child(1) .process-item__inner .process-item__left {
     width: min(243px, 31.64vw);
+  }
+}
+@media screen and (max-width: 1024px) {
+  .process-item:nth-child(1) .process-item__inner .process-item__ttl {
+    font-size: min(32px, 4.17vw);
   }
 }
 .process-item:nth-child(1) .process-item__inner + .process-item__sub {
@@ -1885,13 +1902,13 @@
 }
 .faq-item.is-open .faq-item__a {
   max-height: 100%;
-  padding: 32px 20px 56px;
+  padding: 32px 20px;
 }
 @media screen and (max-width: 1024px) {
   .faq-item.is-open .faq-item__a {
     gap: min(20px, 2.6vw);
     font-size: min(30px, 3.91vw);
-    padding: min(20px, 2.6vw) min(20px, 2.6vw) min(56px, 7.29vw);
+    padding: min(20px, 2.6vw) min(20px, 2.6vw) min(32px, 4.16vw);
   }
 }
 .faq-item__a {
@@ -1931,22 +1948,22 @@
 
 .sec-info {
   background-color: #ededed;
-  padding: 24px 0;
+  padding: 20px 0;
 }
 @media screen and (max-width: 1024px) {
   .sec-info {
-    padding: min(29px, 3.78vw) 0 min(36px, 4.69vw);
+    padding: min(20px, 2.6vw) 0;
   }
 }
 .sec-info p {
   text-align: center;
-  font-size: 20px;
+  font-size: 16px;
   font-family: "Noto Sans KR";
   letter-spacing: -0.04em;
 }
 @media screen and (max-width: 1024px) {
   .sec-info p {
-    font-size: min(30px, 3.91vw);
+    font-size: min(16px, 2.08vw);
   }
 }
 
