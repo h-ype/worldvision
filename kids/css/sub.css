@@ -596,7 +596,6 @@
 }
 .sec4.mo .st-wrap {
   position: relative;
-  height: 130vh;
 }
 .sec4.mo .sticky {
   position: relative;
@@ -609,23 +608,11 @@
   background-repeat: no-repeat;
   background-position: center top;
 }
-.sec4.mo .sticky.is-fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-.sec4.mo .sticky.is-fixed .inner {
-  overflow-y: auto;
-}
-.sec4.mo .sticky.is-end {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-}
 .sec4.mo .sticky .title {
   flex: 0 0 auto;
+}
+.sec4.mo .sticky.is-active .inner {
+  overflow-y: auto;
 }
 .sec4.mo .sticky .inner {
   padding: 0 min(30px, 4.69vw);
@@ -1208,6 +1195,7 @@
 }
 @media (max-width: 1024px) {
   .sec6-container .desc h2 {
+    margin: 0 auto;
     width: min(570px, 89vw);
     font-size: min(64px, 10vw);
     line-height: 1.4em;
@@ -1242,7 +1230,8 @@
 }
 @media (max-width: 1024px) {
   .sec6-container .desc .vd iframe {
-    height: min(294px, 45.94vw);
+    height: auto;
+    aspect-ratio: 640/320;
   }
 }
 

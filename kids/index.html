@@ -437,7 +437,7 @@
 										<div class="text">
 											<small>후원 5년차</small>
 											<p>이모도 어릴 적 월드비전의 후원아동<br>이었단다. 그래서 정민이를 보면 어린 <br>시절의 내가 떠올라. 앞으로 세상의 <br>아름답고 행복한 것들을 많이 만나길 <br>바랄게.</p>
-										</	div>
+										</div>
 									</li>
 									<li>
 										<figure><img src="images/sec4-img4-m.jpg" alt=""></figure>
@@ -921,65 +921,52 @@
 
 	<script>
 		(function () {
-			// #wrap{overflow-x:hidden}(common.css) 때문에 #wrap이 스크롤 컨테이너로 취급돼서
-			// .sticky(모바일 sec4)의 position:sticky가 뷰포트가 아니라 #wrap 기준으로 계산되어
-			// 어긋남. common.css는 그대로 두고, 여기서 스크롤 위치를 직접 계산해 position을
-			// fixed/absolute로 토글하는 방식으로 동일한 효과를 냄.
+			// 모바일 sec4: 배경(.sticky)은 고정되고 내부 카드(.inner)만 스크롤되는 형식.
+			// GSAP ScrollTrigger의 pin이 position:fixed를 자체적으로 관리하므로
+			// #wrap{overflow-x:hidden}(common.css) 때문에 position:sticky가 어긋나던
+			// 문제(간헐적으로 안 먹던 것)와 무관하게 항상 정확히 동작함.
+			gsap.registerPlugin(ScrollTrigger);
+
 			const stWrap = document.querySelector('.sec4.mo .st-wrap');
 			const sticky = document.querySelector('.sec4.mo .sticky');
 			if (!stWrap || !sticky) return;
 
-			let stWrapTop = 0;
-			let stWrapHeight = 0;
-			let stickyHeight = 0;
-
-			function measure() {
-				if (sticky.offsetHeight === 0) return; // 숨김 상태(PC 화면 등)면 측정 스킵
-				const scrollY = window.scrollY || window.pageYOffset;
-				const wasFixed = sticky.classList.contains('is-fixed');
-				const wasEnd = sticky.classList.contains('is-end');
-				// 측정 중엔 fixed/absolute 상태를 잠깐 풀어서 st-wrap 기준 원래 높이를 재야
-				// 정확함 (fixed 상태에서 재면 st-wrap이 자기 자신의 실제 위치를 못 줌)
-				sticky.classList.remove('is-fixed', 'is-end');
-				stWrapTop = stWrap.getBoundingClientRect().top + scrollY;
-				stWrapHeight = stWrap.offsetHeight;
-				stickyHeight = sticky.offsetHeight;
-				if (wasFixed) sticky.classList.add('is-fixed');
-				if (wasEnd) sticky.classList.add('is-end');
-			}
-
-			function update() {
-				const scrollY = window.scrollY || window.pageYOffset;
-				const startY = stWrapTop;
-				const endY = stWrapTop + stWrapHeight - stickyHeight;
-
-				if (scrollY < startY) {
-					sticky.classList.remove('is-fixed', 'is-end');
-				} else if (scrollY <= endY) {
-					sticky.classList.add('is-fixed');
-					sticky.classList.remove('is-end');
-				} else {
-					sticky.classList.add('is-end');
-					sticky.classList.remove('is-fixed');
+			let scrollTriggerInstance = null;
+			function setupScrollTrigger() {
+				if (sticky.offsetHeight === 0) return; // 숨김 상태(PC 화면 등)면 스킵
+				if (scrollTriggerInstance) {
+					scrollTriggerInstance.kill();
 				}
+				scrollTriggerInstance = ScrollTrigger.create({
+					trigger: stWrap,
+					start: 'top top',
+					// 진입/이탈 여유 버퍼(뷰포트 높이만큼). .inner 내부 스크롤 자체는
+					// 자체 overflow-y:auto가 처리하므로, 이 값은 그 스크롤과 무관하게
+					// 고정/해제 전환에 필요한 여유만 결정함. 너무 좁으면(예: 30%) 트랙패드를
+					// 세게 내릴 때 이 구간을 통째로 건너뛰어 카드 스크롤 없이 바로 다음
+					// 섹션으로 넘어가 버릴 수 있어서 넉넉하게 잡음.
+					end: () => '+=' + window.innerHeight,
+					pin: sticky,
+					pinSpacing: true,
+					// 그래도 아주 빠른 스크롤이 트리거 구간을 건너뛰려 하면, 건너뛰지 않고
+					// 정확히 멈추도록 강제함 (GSAP 내장 옵션).
+					fastScrollEnd: true,
+					toggleClass: { targets: sticky, className: 'is-active' },
+				});
 			}
-
-			measure();
-			update();
-			window.addEventListener('scroll', update, { passive: true });
+			setupScrollTrigger();
 
 			let resizeTimer;
 			window.addEventListener('resize', () => {
 				clearTimeout(resizeTimer);
 				resizeTimer = setTimeout(() => {
-					measure();
-					update();
+					setupScrollTrigger();
+					ScrollTrigger.refresh();
 				}, 150);
 			});
 
 			window.addEventListener('wv:include-loaded', () => {
-				measure();
-				update();
+				ScrollTrigger.refresh();
 			});
 		})();
 	</script>

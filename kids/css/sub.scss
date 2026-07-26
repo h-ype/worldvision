@@ -652,15 +652,17 @@ $breakpoints: (
 .sec4.mo {
     width: 100%;
 
+    // height를 고정하지 않음 - GSAP ScrollTrigger가 pin 구간만큼 자체 스페이서로
+    // 높이를 확보하는데, 여기서 고정 height를 걸면 스페이서와 중복/충돌함.
     .st-wrap {
         position: relative;
-        height: 130vh; // sticky(100vh) + 스크롤 버퍼(30vh). 필요하면 조절
     }
 
-    // #wrap{overflow-x:hidden}(common.css) 때문에 overflow-y가 암묵적으로 auto가 되어
-    // #wrap이 스크롤 컨테이너가 되어버리고, 그 안에서는 position:sticky가 뷰포트 기준이
-    // 아니라 #wrap 기준으로 계산되어 어긋남. common.css는 건드릴 수 없으므로, sticky
-    // 대신 JS로 스크롤 위치를 직접 계산해 position을 fixed/absolute로 토글함.
+    // GSAP ScrollTrigger가 pin을 자체적으로(position:fixed 직접 관리) 처리하므로
+    // #wrap{overflow-x:hidden}(common.css) 때문에 position:sticky가 어긋나던 문제와
+    // 무관함. pin이 활성화된 동안에는 ScrollTrigger가 붙여주는 .is-active 클래스로
+    // .inner의 스크롤만 켬(그 전엔 화면 하단에 일부만 보이는 상태에서 미리 스크롤을
+    // 가로채지 않도록 꺼둠).
     .sticky {
         position: relative;
         height: 100vh;
@@ -672,26 +674,12 @@ $breakpoints: (
         background-repeat: no-repeat;
         background-position: center top;
 
-        &.is-fixed {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-
-            .inner {
-                overflow-y: auto;
-            }
-        }
-
-        &.is-end {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-        }
-
         .title {
             flex: 0 0 auto;
+        }
+
+        &.is-active .inner {
+            overflow-y: auto;
         }
 
         .inner {
@@ -1352,6 +1340,7 @@ $breakpoints: (
             letter-spacing: -0.04em;
 
             @include media(md) {
+                margin: 0 auto;
                 width: min(570px, 89vw);
                 font-size: min(64px, 10vw);
                 line-height: 1.4em;
@@ -1385,7 +1374,9 @@ $breakpoints: (
                 height: 320px;
 
                 @include media(md) {
-                    height: min(294px, 45.94vw);
+                    height: auto;
+                    
+                aspect-ratio: 640 / 320;
                 }
             }
         }
