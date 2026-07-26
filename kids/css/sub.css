@@ -585,10 +585,6 @@
   width: 100%;
 }
 
-.sec4.pc {
-  overflow: hidden;
-  height: 980px;
-}
 @media (max-width: 1024px) {
   .sec4.pc {
     display: none;
@@ -729,19 +725,14 @@
 
 .sec4-container {
   position: relative;
-  min-height: 980px;
-  padding-top: 129px;
-  height: 130vh;
-  overflow: hidden;
+}
+.sec4-container .pin-stage {
   background-image: url("../images/sec4-bg.jpg");
+  position: relative;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
-}
-.sec4-container .pin-stage {
-  position: sticky;
-  top: 0;
-  height: 612px;
+  height: 980px;
   overflow: hidden;
   display: flex;
 }
@@ -751,7 +742,7 @@
 .sec4-container .card-track {
   position: absolute;
   top: 50%;
-  left: 30%;
+  left: 160%;
   display: flex;
   align-items: center;
   will-change: transform;
@@ -857,6 +848,7 @@
   text-align: center;
   color: #513a34;
   width: 700px;
+  padding-top: 140px;
   margin: 0 auto;
 }
 .sec4-container .title h2 {
@@ -874,6 +866,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  bottom: 65px;
 }
 .sec4-container .bn-wrap a {
   width: 363px;

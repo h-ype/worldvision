@@ -642,9 +642,8 @@ $breakpoints: (
 }
 
 .sec4.pc {
-    overflow: hidden;
-    height: 980px;
-
+    // GSAP ScrollTrigger가 pin 구간만큼 스페이서로 높이를 확보하므로, 여기서 높이를
+    // 고정하거나 overflow:hidden을 걸면 그 스페이서가 잘려서 pin이 중간에 풀려버림.
     @include media(md) {
         display: none;
     }
@@ -811,19 +810,18 @@ $breakpoints: (
 
 .sec4-container {
     position: relative;
-    min-height: 980px;
-    padding-top: 129px;
-    height: 130vh;
-    overflow: hidden;
-    background-image: url('../images/sec4-bg.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center top;
-
+    // height/overflow:hidden 고정하지 않음 - GSAP ScrollTrigger가 pin 구간만큼
+    // 스페이서로 높이를 확보하는데, 여기서 높이를 고정하거나 overflow:hidden을 걸면
+    // 그 스페이서가 잘려서 pin이 중간에 풀려버림(카드가 스크롤과 함께 세로로도 움직이는
+    // 것처럼 보이는 원인). GSAP ScrollTrigger가 pin 처리를 자체적으로(내부적으로
+    // position:fixed를 직접 관리) 해주므로, 여기서는 평소 상태만 정의하면 됨.
     .pin-stage {
-        position: sticky;
-        top: 0;
-        height: 612px;
+        background-image: url('../images/sec4-bg.jpg');
+        position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center top;
+        height: 980px;
         overflow: hidden;
         display: flex;
     }
@@ -832,7 +830,7 @@ $breakpoints: (
     .card-track {
         position: absolute;
         top: 50%;
-        left: 30%;
+        left: 160%;
         display: flex;
         align-items: center;
         will-change: transform;
@@ -975,6 +973,7 @@ $breakpoints: (
         text-align: center;
         color: #513a34;
         width: 700px;
+        padding-top: 140px;
         margin: 0 auto;
 
         h2 {
@@ -995,6 +994,10 @@ $breakpoints: (
         display: flex;
         align-items: center;
         justify-content: center;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        bottom: 65px;
 
         a {
 

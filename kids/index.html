@@ -58,6 +58,9 @@
 	<script type="text/javascript" src="https://www.worldvision.or.kr/static/js/common.js?v=20240226171940"></script>
 	<script type="text/javascript" src="https://www.worldvision.or.kr/static/js/cmsModule.js"></script>
 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
 	<link type="text/css" rel="stylesheet" href="https://www.worldvision.or.kr/static/css/section.css">
 
 	<script type="text/javascript">
@@ -338,11 +341,12 @@
 				<div class="sec4 pc">
 					<div class="sec4-container" id="sec4-container">
 					
-						<div class="title">
-							<h2>다정함은 오래 이어질 때 더 큰 힘이 됩니다</h2>
-							<p>김유선(가명) 후원자와 후원아동 정민이(가명)가 함께 키워온 시간</p>
-						</div>
 						<div class="pin-stage" id="pinStage">
+								
+							<div class="title">
+								<h2>다정함은 오래 이어질 때 더 큰 힘이 됩니다</h2>
+								<p>김유선(가명) 후원자와 후원아동 정민이(가명)가 함께 키워온 시간</p>
+							</div>
 
 							<div class="card-track" id="cardTrack">
 								<div class="card" data-index="0">
@@ -393,14 +397,15 @@
 									</div>
 								</div>
 							</div>
+								
+							<div class="bn-wrap">
+								<a href="">
+									<span>한 아이와 결연으로 이어가기</span>
+									<img src="images/arr-white.png" alt="">
+								</a>
+							</div>
 						</div>
 
-						<div class="bn-wrap">
-							<a href="">
-								<span>한 아이와 결연으로 이어가기</span>
-								<img src="images/arr-white.png" alt="">
-							</a>
-						</div>
 					</div>
 				</div>
 				<div class="sec4 mo">
@@ -784,25 +789,31 @@
 		});
 
 		(function () {
-			// ---------- 설정값 ----------
-			const SCROLL_SENSITIVITY = 0.0001;      // 휠 델타 -> progress 변환 계수
-			const EASE = 0.12;                      // progress를 따라가는 부드러움 정도(0~1)
+			// GSAP ScrollTrigger로 횡스크롤 구현.
+			// - pin: pinStage를 ScrollTrigger가 자체적으로 고정함(내부적으로 position:fixed를
+			//   직접 관리하므로, #wrap{overflow-x:hidden}(common.css) 때문에 position:sticky가
+			//   깨지던 문제와 무관함).
+			// - scrub: 실제 스크롤 위치를 progress로 그대로 사용 -> 트랙패드 관성, 방향전환,
+			//   진입/탈출 지점 불일치 등 지금까지 겪은 문제들이 구조적으로 발생하지 않음.
+			gsap.registerPlugin(ScrollTrigger);
 
 			// 카드별 y축 오프셋(-120px ~ 120px). 카드 개수가 바뀌면 이 배열도 맞춰서 늘리면 됨.
 			const Y_OFFSETS = [0, -40, 20, -40, 30, 0];
+			// progress 0~1 구간에 대응할 카드 1개당 실제 스크롤 거리(px). 짧으면 빨리
+			// 넘어가고 길면 스크롤을 더 많이 해야 다음 카드로 넘어감 - 체감에 맞춰 조절.
+			const SCROLL_DISTANCE_PER_CARD = 700;
 
 			const pinWrapper = document.getElementById('sec4-container');
-			const sec4El = document.querySelector('.sec4.pc'); // 스크롤 시작점 판정 기준
+			const pinStage = document.getElementById('pinStage');
 			const cardTrack = document.getElementById('cardTrack');
-			//const progressBar = document.getElementById('progressBar');
-			//const stageLabel = document.getElementById('stageLabel');
-			//const hintText = document.getElementById('hintText');
 			const cards = Array.from(document.querySelectorAll('.card'));
 			const CARD_COUNT = cards.length;
 
 			let TOTAL_TRAVEL = 0;   // 트랙 전체 이동 거리 (실측값)
 			let FOCUS_RANGE = 0;    // 확대/포커스 대상 거리 (실측값)
 			let FOCUS_PLATEAU = 0;  // 최대 줌 상태를 유지하는 거리 (실측값)
+
+			function clamp(v, min, max) { return Math.min(max, Math.max(min, v)); }
 
 			// 카드 폭이 min(90vw, 515px)처럼 반응형이라 해상도마다 실제 렌더링 폭이 다름.
 			// offsetLeft/offsetWidth로 실제 위치를 읽어 baseX/이동거리/포커스 범위를 재계산해야
@@ -834,11 +845,6 @@
 				return y0 + (y1 - y0) * frac;
 			}
 
-			let progress = 0;   // 목표 진행도 0~1
-			let displayed = 0;  // 실제 표시되는(보간된) 진행도
-
-			function clamp(v, min, max) { return Math.min(max, Math.max(min, v)); }
-
 			function updateVisual(p) {
 				const trackOffset = -TOTAL_TRAVEL * p; // 오른쪽 -> 왼쪽으로 이동 (음수 방향)
 
@@ -846,22 +852,7 @@
 				// y축이 0이 아닌 카드가 중앙에 올 때도 화면 중앙에 오도록 트랙 전체의 y를 이동
 				const virtualIndex = p * (CARD_COUNT - 1);
 				const trackYOffset = -interpolatedTrackBaseY(virtualIndex);
-				cardTrack.style.transform = `translate(calc(0% + ${trackOffset}px), calc(-50% + ${trackYOffset}px))`;
-
-				// 진행바 & 라벨
-				// progressBar.style.width = `${p * 100}%`;
-				// const activeIndex = clamp(Math.round(p * (CARD_COUNT - 1)), 0, CARD_COUNT - 1);
-				// stageLabel.textContent = `${String(activeIndex + 1).padStart(2, '0')} / ${String(CARD_COUNT).padStart(2, '0')}`;
-
-				// if (p <= 0.02) {
-				//   hintText.textContent = '↓ 스크롤을 내려 카드를 가로로 넘겨보세요';
-				//   hintText.style.opacity = 1;
-				// } else if (p >= 0.98) {
-				//   hintText.textContent = '↓ 계속 스크롤하면 다음 섹션으로 이동합니다';
-				//   hintText.style.opacity = 1;
-				// } else {
-				//   hintText.style.opacity = 0;
-				// }
+				gsap.set(cardTrack, { xPercent: -50, yPercent: -50, x: trackOffset, y: trackYOffset });
 
 				// 각 카드의 "현재 화면상 X 위치"가 화면 중앙(0)과 얼마나 가까운지로 스케일 계산
 				cards.forEach((card) => {
@@ -879,147 +870,52 @@
 						t = clamp(1 - (dist - FOCUS_PLATEAU) / (FOCUS_RANGE - FOCUS_PLATEAU), 0, 1);
 					}
 
-					const scale = 0.72 + t * 0.5;      // 0.72 ~ 1.22
-					const opacity = 1 + t * 0.75;   // 0.25 ~ 1.0
-					const blur = (1 - t) * 2;          // 최대 6px
+					const opacity = 1 + t * 0.75;
 
-					card.style.transform = `translateY(${baseY}px) `;
-					card.style.opacity = opacity;
-					//card.style.filter = `blur(${blur}px)`;
-					card.style.zIndex = Math.round(t * 100);
+					gsap.set(card, {
+						y: baseY,
+						opacity: opacity,
+						zIndex: Math.round(t * 100),
+					});
 				});
 			}
 
-			function loop() {
-				displayed += (progress - displayed) * EASE;
-				if (Math.abs(progress - displayed) < 0.0005) displayed = progress;
-				updateVisual(displayed);
-				requestAnimationFrame(loop);
-			}
 			measureLayout();
-			requestAnimationFrame(loop);
+			updateVisual(0);
 
-			// sec4-container의 문서 기준 절대 top/height를 캐시해둠.
-			// wheel 이벤트마다 getBoundingClientRect()를 부르면 강제 레이아웃 계산이 발생하는데,
-			// 이게 sec4 근처가 아니어도 페이지 전체 wheel 이벤트마다 실행돼서 트랙패드 관성/
-			// 방향전환 처리를 방해할 수 있음. scrollY와 캐시값만으로 가볍게 계산함.
-			let sectionTop = 0;
-			let sectionHeight = 0;
-			let sec4Top = 0; // ".sec4의 시작점"이 뷰포트 시작점에 닿는 절대 스크롤 위치
-			function measureSection() {
-				const currentScrollY = scrollLocked ? savedScrollY : (window.scrollY || window.pageYOffset);
-				const rect = pinWrapper.getBoundingClientRect();
-				sectionTop = rect.top + currentScrollY;
-				sectionHeight = pinWrapper.offsetHeight;
-				if (sec4El) {
-					sec4Top = sec4El.getBoundingClientRect().top + currentScrollY;
+			let scrollTriggerInstance = null;
+			function setupScrollTrigger() {
+				if (scrollTriggerInstance) {
+					scrollTriggerInstance.kill();
 				}
+				scrollTriggerInstance = ScrollTrigger.create({
+					trigger: pinWrapper,
+					start: 'top top',
+					end: () => '+=' + (CARD_COUNT * SCROLL_DISTANCE_PER_CARD),
+					pin: pinStage,
+					scrub: 0.3,
+					onUpdate: (self) => updateVisual(self.progress),
+				});
 			}
+			setupScrollTrigger();
 
-			function sectionRect() {
-				const scrollY = scrollLocked ? savedScrollY : (window.scrollY || window.pageYOffset);
-				const top = sectionTop - scrollY;
-				return { top, bottom: top + sectionHeight };
-			}
-
-			// 트랙패드 관성(모멘텀) 스크롤 중에는 브라우저가 wheel 이벤트를 취소 불가능하게
-			// 처리하는 경우가 있어(특히 Safari), preventDefault만으로는 실제 스크롤을 못 막고
-			// 카드가 다 지나가기 전에 다음/이전 섹션으로 넘어가 버릴 수 있음.
-			// (주의) overflow:hidden으로 막으면 브라우저가 scrollTop을 0으로 리셋시켜
-			// 페이지가 맨 위로 튀는 부작용이 있어서, 현재 스크롤 위치를 저장해두고
-			// body를 position:fixed로 그 자리에 고정하는 방식으로 스크롤을 잠금.
-			let scrollLocked = false;
-			let savedScrollY = 0;
-			function lockScroll() {
-				if (scrollLocked) return;
-				scrollLocked = true;
-				savedScrollY = window.scrollY || window.pageYOffset;
-				document.body.style.position = 'fixed';
-				document.body.style.top = `-${savedScrollY}px`;
-				document.body.style.left = '0';
-				document.body.style.right = '0';
-				document.body.style.width = '100%';
-			}
-			function unlockScroll() {
-				if (!scrollLocked) return;
-				scrollLocked = false;
-				document.body.style.position = '';
-				document.body.style.top = '';
-				document.body.style.left = '';
-				document.body.style.right = '';
-				document.body.style.width = '';
-				window.scrollTo(0, savedScrollY);
-			}
-
-			function onWheel(e) {
-				const rect = sectionRect();
-				const viewportH = window.innerHeight;
-				const stageActive = rect.top <= 0 && rect.bottom >= viewportH;
-
-				if (!stageActive) {
-					unlockScroll();
-					return; // 섹션 밖 -> 평소 스크롤 그대로 둠
-				}
-				console.log('sec4Top :' + sec4Top);
-
-				const goingDown = e.deltaY > 0;
-				const goingUp = e.deltaY < 0;
-
-				// 스크롤업으로 재진입할 땐, 아직 하이재킹 중이 아니라면 실제 스크롤 위치가
-				// sec4Top에 도달(<=)하기 전까지는 횡스크롤을 시작하지 않음. sec4Top에
-				// 도달한 순간부터 횡스크롤이 작동함.
-				if (!scrollLocked && goingUp) {
-					const scrollY = window.scrollY || window.pageYOffset;
-					if (scrollY > sec4Top) {
-						return;
-					}
-				}
-
-				// 끝 지점(마지막 카드 왼쪽으로 빠짐)에서 아래로 -> 자연 스크롤 허용
-				if (progress >= 1 && goingDown) { unlockScroll(); return; }
-				// 시작 지점(첫 카드 중앙)에서 위로 -> 자연 스크롤 허용
-				if (progress <= 0 && goingUp) { unlockScroll(); return; }
-
-				// 그 외에는 하이재킹: 스크롤을 잠그고 progress만 갱신
-				lockScroll();
-				e.preventDefault();
-				progress = clamp(progress + e.deltaY * SCROLL_SENSITIVITY, 0, 1);
-			}
-
-			window.addEventListener('wheel', onWheel, { passive: false });
-
-			// ".sec4의 시작점이 뷰포트 시작점에 닿는" 절대 스크롤 위치(sec4Top)를 가로질러
-			// 지나갈 때마다 progress를 0으로 스냅 보정함. 스크롤다운으로 진입하든
-			// 스크롤업으로 재진입하든 방향과 무관하게 동일한 지점을 기준으로 함.
-			measureSection();
-			let lastScrollY = scrollLocked ? savedScrollY : (window.scrollY || window.pageYOffset);
-			window.addEventListener('scroll', () => {
-				const scrollY = scrollLocked ? savedScrollY : (window.scrollY || window.pageYOffset);
-				const crossedStart = (lastScrollY < sec4Top && scrollY >= sec4Top) ||
-					(lastScrollY > sec4Top && scrollY <= sec4Top);
-				if (crossedStart) progress = 0;
-				lastScrollY = scrollY;
-			}, { passive: true });
-
-			// 창 크기가 바뀌면(반응형 카드 폭, 130vh 등 뷰포트 기준 높이 변경) 다시 측정
+			// 창 크기가 바뀌면(반응형 카드 폭 변경) 카드 레이아웃과 트리거를 다시 계산
 			let resizeTimer;
 			window.addEventListener('resize', () => {
 				clearTimeout(resizeTimer);
 				resizeTimer = setTimeout(() => {
 					measureLayout();
-					measureSection();
+					setupScrollTrigger();
+					ScrollTrigger.refresh();
 				}, 150);
 			});
 
 			// 상단 메뉴/푸터(top-menu.html, footer.html)가 XHR로 비동기 삽입되면서
-			// 헤더 높이만큼 아래 컨텐츠가 밀려남. 삽입이 끝난 뒤 다시 측정해서
-			// sec4Top 등이 밀려나기 전 값으로 어긋나 있던 걸(예: 84px 오차) 바로잡음.
+			// 레이아웃이 밀려날 수 있어 삽입 완료 후 다시 계산
 			window.addEventListener('wv:include-loaded', () => {
 				measureLayout();
-				measureSection();
+				ScrollTrigger.refresh();
 			});
-
-			updateVisual(0);
 		})();
 	</script>
 
