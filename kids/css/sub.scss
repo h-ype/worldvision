@@ -3,22 +3,27 @@
 
 @font-face {
     font-family: 'Moduche';
-    line-height: 1.5;
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFLightA.woff') format('woff');
     font-weight: 300;
     font-display: swap;
+    ascent-override: 100%;
+    descent-override: 25%;
+    line-gap-override: 0%;
 }
 
 @font-face {
     font-family: 'Moduche';
-    line-height: 1.5;
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
     font-weight: 700;
     font-display: swap;
+    ascent-override: 100%;
+    descent-override: 25%;
+    line-gap-override: 0%;
 }
 
 @font-face {
     font-family: 'Cococho';
+    font-weight: 300;
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-1@1.0/Griun_Cocochoitoon-Rg.woff2') format('woff2');
     font-weight: normal;
     font-display: swap;
@@ -472,6 +477,7 @@ $breakpoints: (
             div[class^='desc'] {
                 display: flex;
                 font-family: 'Cococho';
+                font-weight: 300;
 
                 h4 {
                     font-size: 43px;
@@ -506,6 +512,7 @@ $breakpoints: (
 
                 p {
                     font-family: 'Cococho';
+                    font-weight: 300;
                     font-size: 22px;
                     color: #513a34;
                     line-height: 2.4em;
@@ -665,11 +672,12 @@ $breakpoints: (
     // 가로채지 않도록 꺼둠).
     .sticky {
         position: relative;
-        height: 100vh;
+        height: auto;
         overflow: hidden;
         display: flex;
         flex-direction: column;
         background-image: url('../images/sec4-bg-m.jpg');
+        background-attachment: fixed;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center top;
@@ -678,16 +686,12 @@ $breakpoints: (
             flex: 0 0 auto;
         }
 
-        &.is-active .inner {
-            overflow-y: auto;
-        }
-
         .inner {
 
             padding: 0 min(30px, 4.69vw);
             flex: 1;
             min-height: 0;
-            overflow-y: hidden;
+            overflow-y: auto;
             -webkit-overflow-scrolling: touch;
 
             .title {
@@ -728,9 +732,11 @@ $breakpoints: (
                     &:nth-child(even) {
                         .text {
                             font-family: 'Cococho';
+                            font-weight: 300;
 
                             p {
                                 font-family: 'Cococho';
+                                font-weight: 300;
                                 letter-spacing: -0.08em;
                             }
                         }
@@ -763,6 +769,7 @@ $breakpoints: (
                             font-size: min(34px, 5.3vw);
                             line-height: min(58px, 9.06vw);
                             text-align: left;
+                            letter-spacing: 0;
                         }
                     }
                 }
@@ -809,7 +816,8 @@ $breakpoints: (
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center top;
-        height: 980px;
+        height: 100vh;
+        min-height: 980px;
         overflow: hidden;
         display: flex;
     }
@@ -844,6 +852,7 @@ $breakpoints: (
         &:nth-child(4n-1) {
             .text {
                 font-family: 'Cococho';
+                font-weight: 300;
 
                 p {
                     letter-spacing: -0.08em;

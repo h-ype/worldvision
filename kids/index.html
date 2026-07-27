@@ -927,58 +927,6 @@
 
 	<script>
 		(function () {
-			// 모바일 sec4: 배경(.sticky)은 고정되고 내부 카드(.inner)만 스크롤되는 형식.
-			// GSAP ScrollTrigger의 pin이 position:fixed를 자체적으로 관리하므로
-			// #wrap{overflow-x:hidden}(common.css) 때문에 position:sticky가 어긋나던
-			// 문제(간헐적으로 안 먹던 것)와 무관하게 항상 정확히 동작함.
-			gsap.registerPlugin(ScrollTrigger);
-
-			const stWrap = document.querySelector('.sec4.mo .st-wrap');
-			const sticky = document.querySelector('.sec4.mo .sticky');
-			if (!stWrap || !sticky) return;
-
-			let scrollTriggerInstance = null;
-			function setupScrollTrigger() {
-				if (sticky.offsetHeight === 0) return; // 숨김 상태(PC 화면 등)면 스킵
-				if (scrollTriggerInstance) {
-					scrollTriggerInstance.kill();
-				}
-				scrollTriggerInstance = ScrollTrigger.create({
-					trigger: stWrap,
-					start: 'top top',
-					// 진입/이탈 여유 버퍼(뷰포트 높이만큼). .inner 내부 스크롤 자체는
-					// 자체 overflow-y:auto가 처리하므로, 이 값은 그 스크롤과 무관하게
-					// 고정/해제 전환에 필요한 여유만 결정함. 너무 좁으면(예: 30%) 트랙패드를
-					// 세게 내릴 때 이 구간을 통째로 건너뛰어 카드 스크롤 없이 바로 다음
-					// 섹션으로 넘어가 버릴 수 있어서 넉넉하게 잡음.
-					end: () => '+=' + window.innerHeight,
-					pin: sticky,
-					pinSpacing: true,
-					// 그래도 아주 빠른 스크롤이 트리거 구간을 건너뛰려 하면, 건너뛰지 않고
-					// 정확히 멈추도록 강제함 (GSAP 내장 옵션).
-					fastScrollEnd: true,
-					toggleClass: { targets: sticky, className: 'is-active' },
-				});
-			}
-			setupScrollTrigger();
-
-			let resizeTimer;
-			window.addEventListener('resize', () => {
-				clearTimeout(resizeTimer);
-				resizeTimer = setTimeout(() => {
-					setupScrollTrigger();
-					ScrollTrigger.refresh();
-				}, 150);
-			});
-
-			window.addEventListener('wv:include-loaded', () => {
-				ScrollTrigger.refresh();
-			});
-		})();
-	</script>
-
-	<script>
-		(function () {
 			// 첫 화면(sec1-container)에서는 .b_floating을 숨기고,
 			// sec1-container를 스크롤로 지나친 뒤부터 보이게 함.
 			const floating = document.querySelector('.b_floating');

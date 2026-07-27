@@ -3,20 +3,25 @@
 @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
 @font-face {
   font-family: "Moduche";
-  line-height: 1.5;
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFLightA.woff") format("woff");
   font-weight: 300;
   font-display: swap;
+  ascent-override: 100%;
+  descent-override: 25%;
+  line-gap-override: 0%;
 }
 @font-face {
   font-family: "Moduche";
-  line-height: 1.5;
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff") format("woff");
   font-weight: 700;
   font-display: swap;
+  ascent-override: 100%;
+  descent-override: 25%;
+  line-gap-override: 0%;
 }
 @font-face {
   font-family: "Cococho";
+  font-weight: 300;
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2601-1@1.0/Griun_Cocochoitoon-Rg.woff2") format("woff2");
   font-weight: normal;
   font-display: swap;
@@ -430,6 +435,7 @@
 .sec3-container ul li div[class^=desc] {
   display: flex;
   font-family: "Cococho";
+  font-weight: 300;
 }
 .sec3-container ul li div[class^=desc] h4 {
   font-size: 43px;
@@ -466,6 +472,7 @@
 }
 .sec3-container ul li div[class^=desc] p {
   font-family: "Cococho";
+  font-weight: 300;
   font-size: 22px;
   color: #513a34;
   line-height: 2.4em;
@@ -599,11 +606,12 @@
 }
 .sec4.mo .sticky {
   position: relative;
-  height: 100vh;
+  height: auto;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   background-image: url("../images/sec4-bg-m.jpg");
+  background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
@@ -611,14 +619,11 @@
 .sec4.mo .sticky .title {
   flex: 0 0 auto;
 }
-.sec4.mo .sticky.is-active .inner {
-  overflow-y: auto;
-}
 .sec4.mo .sticky .inner {
   padding: 0 min(30px, 4.69vw);
   flex: 1;
   min-height: 0;
-  overflow-y: hidden;
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
 .sec4.mo .sticky .inner .title {
@@ -655,9 +660,11 @@
 }
 .sec4.mo .sticky .inner ul li:nth-child(even) .text {
   font-family: "Cococho";
+  font-weight: 300;
 }
 .sec4.mo .sticky .inner ul li:nth-child(even) .text p {
   font-family: "Cococho";
+  font-weight: 300;
   letter-spacing: -0.08em;
 }
 .sec4.mo .sticky .inner ul li figure img {
@@ -683,6 +690,7 @@
   font-size: min(34px, 5.3vw);
   line-height: min(58px, 9.06vw);
   text-align: left;
+  letter-spacing: 0;
 }
 .sec4.mo .sticky .inner .bn-wrap {
   display: flex;
@@ -719,7 +727,8 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
-  height: 980px;
+  height: 100vh;
+  min-height: 980px;
   overflow: hidden;
   display: flex;
 }
@@ -752,6 +761,7 @@
 }
 .sec4-container .card:nth-child(4n-1) .text {
   font-family: "Cococho";
+  font-weight: 300;
 }
 .sec4-container .card:nth-child(4n-1) .text p {
   letter-spacing: -0.08em;
@@ -1528,3 +1538,5 @@
     padding-top: min(32px, 5vw);
   }
 }
+
+/*# sourceMappingURL=sub.css.map */
