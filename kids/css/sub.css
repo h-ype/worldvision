@@ -418,6 +418,7 @@
 }
 .sec3-container ul li {
   aspect-ratio: 1534/1310;
+  position: relative;
   text-align: center;
   background-image: url("../images/sec3-story1.png");
   background-size: contain;
@@ -444,6 +445,16 @@
     gap: min(905px, 141.41vw);
     justify-content: flex-start;
   }
+}
+.sec3-container ul li .name {
+  position: absolute;
+  font-family: "Cococho";
+  font-weight: 300;
+  font-size: min(19px, 1.24vw);
+  color: #513a34;
+  left: 50%;
+  margin-left: max(-192px, -12.56vw);
+  bottom: min(75px, 4.9vw);
 }
 .sec3-container ul li [class^=desc] {
   display: flex;
@@ -610,6 +621,9 @@
     gap: min(831px, 130vw);
   }
 }
+.sec3-container ul li.story2 .name {
+  bottom: min(90px, 5.89vw);
+}
 .sec3-container ul li.story2 .desc-before {
   margin-top: -24px;
 }
@@ -650,16 +664,28 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  clip-path: inset(0 0 0 0);
+}
+.sec4.mo .sticky .bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
   background-image: url("../images/sec4-bg-m.jpg");
-  background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
 }
 .sec4.mo .sticky .title {
+  position: relative;
+  z-index: 1;
   flex: 0 0 auto;
 }
 .sec4.mo .sticky .inner {
+  position: relative;
+  z-index: 1;
   width: min(640px, 100%);
   margin: 0 auto;
   padding: 0 min(35px, 5.46vw);
@@ -1099,7 +1125,7 @@
 }
 @media (max-width: 1024px) {
   .sec5-container .inner > ul li .desc h3 {
-    margin: min(4px, 0.63vw) 0 min(32px, 5vw);
+    margin: min(4px, 0.63vw) 0 min(26px, 4.06vw);
     font-size: min(43px, 6.7vw);
     line-height: min(43px, 6.7vw);
   }
@@ -1114,6 +1140,7 @@
 }
 @media (max-width: 1024px) {
   .sec5-container .inner > ul li .desc p {
+    line-height: 1.63;
     margin-left: max(-89px, -13.9vw);
     font-size: min(25px, 3.91vw);
   }
@@ -1319,7 +1346,7 @@
 .sec6-container .desc .vd iframe {
   display: block;
   width: 100%;
-  height: 320px;
+  height: 325px;
 }
 @media (max-width: 1024px) {
   .sec6-container .desc .vd iframe {

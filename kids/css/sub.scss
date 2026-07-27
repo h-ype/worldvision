@@ -470,6 +470,7 @@ $breakpoints: (
 
         li {
             aspect-ratio: 1534 / 1310;
+            position: relative;
             text-align: center;
             background-image: url('../images/sec3-story1.png');
             background-size: contain;
@@ -493,6 +494,16 @@ $breakpoints: (
                 padding: min(640px, 100vw) min(103px, 16.09vw) 0 min(81px, 12.65vw);
                 gap: min(905px, 141.41vw);
                 justify-content: flex-start;
+            }
+            .name {
+                position: absolute;
+                font-family: 'Cococho';
+                font-weight: 300;
+                font-size: min(19px, 1.24vw);
+                color: #513a34;
+                left: 50%;
+                margin-left: max(-192px, -12.56vw);
+                bottom: min(75px, 4.9vw);
             }
 
             [class^='desc'] {
@@ -655,6 +666,9 @@ $breakpoints: (
                     background-image: url('../images/sec3-story2-m.png');
                     gap: min(831px, 130vw);
                 }
+                .name {
+                    bottom: min(90px, 5.89vw);
+                }
 
                 .desc-before {
                     margin-top: -24px;
@@ -722,18 +736,38 @@ $breakpoints: (
         overflow: hidden;
         display: flex;
         flex-direction: column;
-        background-image: url('../images/sec4-bg-m.jpg');
-        background-attachment: fixed;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center top;
+        // clip-path(no-op inset(0))는 containing block은 안 바꾸면서 이 박스를 새
+        // stacking context로 만들어, 안의 position:fixed 자식(.bg)이 진짜 뷰포트
+        // 기준으로 고정된 채로 딱 이 박스 영역에만 마스킹되게 함 - background-attachment:
+        // fixed가 iOS에서 깨지는 문제를 JS 없이 순수 CSS로 우회.
+        clip-path: inset(0 0 0 0);
+
+        .bg {
+            // 진짜 position:fixed라 뷰포트 기준으로 전혀 안 움직이고(네이티브,
+            // 컴포지터 전용이라 지연/떨림 없음), width/height:100%도 .sticky가 아니라
+            // 뷰포트 기준으로 계산되어 background-size:cover가 정상 배율로 나옴.
+            // 위 clip-path가 .sticky 박스 밖으로 새는 걸 막아줌.
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            background-image: url('../images/sec4-bg-m.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center top;
+        }
 
         .title {
+            position: relative;
+            z-index: 1;
             flex: 0 0 auto;
         }
 
         .inner {
-            
+            position: relative;
+            z-index: 1;
             width: min(640px, 100%);
             margin: 0 auto;
             padding: 0 min(35px, 5.46vw);
@@ -1184,6 +1218,7 @@ $breakpoints: (
                     color: #685652;
 
                     @include media(md) {
+
                         font-size: min(35px, 5.46vw);
                     }
                 }
@@ -1246,7 +1281,7 @@ $breakpoints: (
                         background-color: #fff5af;
 
                         @include media(md) {
-                            margin: min(4px, 0.63vw) 0 min(32px, 5vw);
+                            margin: min(4px, 0.63vw) 0 min(26px, 4.06vw);
                             font-size: min(43px, 6.7vw);
                             line-height: min(43px, 6.7vw);
                         }
@@ -1260,6 +1295,7 @@ $breakpoints: (
                         font-size: 17px;
                         line-height: 1.4;
                         @include media(md) {
+                            line-height: 1.63;
                             margin-left: max(-89px, -13.9vw);
                             font-size: min(25px, 3.91vw);
                         }
@@ -1475,7 +1511,7 @@ $breakpoints: (
             iframe {
                 display: block;
                 width: 100%;
-                height: 320px;
+                height: 325px;
 
                 @include media(md) {
                     height: auto;

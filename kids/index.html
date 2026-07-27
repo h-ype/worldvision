@@ -324,6 +324,9 @@
 									<img src="images/sec3-icon2.png" alt="웃음"></p>	
 								</div>
 							</div>
+							<div class="name">
+								14살 하은이(가명)
+							</div>
 						</li>
 						<li class="story2">
 							<div class="desc-before">
@@ -337,6 +340,9 @@
 									<p>후원자님을 만난 후로 요즘은 월드비전에서 다양한 활동을 하며 <br class="pc"><span>제가 좋아하는 것들을 배우고 있어요. 꿈도 하나씩 커지고 있어요.</span> <br>엄마도 후원자님께 정말 감사하대요. <img src="images/sec3-icon2.png" alt="웃음 아이콘" class="mo"></p>
 									<h4 data-aos="fade-in" data-aos-delay="100" data-aos-duration="1500">제가 배우고 있는 것들을  <br>엄마와 함께 편지로 써서  <br>후원자님께 꼭 알려 드리고 싶어요. <img src="images/sec3-icon3.png" alt="웃음 아이콘" class="pc"></h4>
 								</div>
+							</div>
+							<div class="name">
+								12살 다빈이(가명)
 							</div>
 						</li>
 					</ul>
@@ -414,6 +420,7 @@
 				<div class="sec4 mo">
 					<div class="st-wrap">
 						<div class="sticky">
+							<div class="bg" aria-hidden="true"></div>
 							<div class="inner">
 								<div class="title">
 									<h2>다정함은 오래 이어질 때<br>더 큰 힘이 됩니다</h2>
@@ -831,23 +838,26 @@
 			const cards = Array.from(document.querySelectorAll('.card'));
 			const CARD_COUNT = cards.length;
 
-			// 스크롤 방향/속도에 따른 카드 skew 연출.
-			// - SKEW_MAX: 최대 기울기(deg)
-			// - SKEW_VELOCITY_DIVISOR: 실제 스크롤 속도(px/s)를 skew deg로 환산하는 비율.
+			// 스크롤 방향/속도에 따른 카드 rotate 연출.
+			// - ROTATE_MAX: 최대 회전각(deg)
+			// - ROTATE_VELOCITY_DIVISOR: 실제 스크롤 속도(px/s)를 rotate deg로 환산하는 비율.
 			//   값이 작을수록 살짝만 스크롤해도 최대치에 빨리 도달함(더 예민하게 반응).
-			const SKEW_MAX = 8;
-			const SKEW_VELOCITY_DIVISOR = 300;
-			// 카드마다 개별 tween을 걸어 skewX만 부드럽게(quickTo) 갱신 -
+			const ROTATE_MAX = 3;
+			const ROTATE_VELOCITY_DIVISOR = 300;
+			// 카드마다 개별 tween을 걸어 rotate만 부드럽게(quickTo) 갱신 -
 			// updateVisual()의 gsap.set(card, {...})과 속성이 겹치지 않아 서로 간섭하지 않음.
-			const skewSetters = cards.map((card) =>
-				gsap.quickTo(card, 'skewX', { duration: 0.5, ease: 'power3' })
+			// 'rotate'는 최신 CSS의 독립 rotate 프로퍼티와 이름이 겹쳐 GSAP 내부에서
+			// 충돌(콘솔에 "rotate not eligible for reset" 경고, 값 미적용)이 나서
+			// GSAP 고유 별칭인 'rotation'을 사용함(동일하게 transform:rotate()로 반영됨).
+			const rotateSetters = cards.map((card) =>
+				gsap.quickTo(card, 'rotation', { duration: 0.5, ease: 'power3' })
 			);
-			let skewResetTimer;
+			let rotateResetTimer;
 			// 스크롤이 멈추면(onUpdate가 더 이상 안 들어오면) 다시 0deg로 되돌림
-			function scheduleSkewReset() {
-				clearTimeout(skewResetTimer);
-				skewResetTimer = setTimeout(() => {
-					skewSetters.forEach((setSkew) => setSkew(0));
+			function scheduleRotateReset() {
+				clearTimeout(rotateResetTimer);
+				rotateResetTimer = setTimeout(() => {
+					rotateSetters.forEach((setRotate) => setRotate(0));
 				}, 120);
 			}
 
@@ -951,13 +961,13 @@
 					onUpdate: (self) => {
 						updateVisual(self.progress);
 
-						// 실제 스크롤 속도(px/s, 방향 포함 부호)를 skew deg로 환산.
+						// 실제 스크롤 속도(px/s, 방향 포함 부호)를 rotate deg로 환산.
 						// 스크롤을 내리는(정방향) 순간엔 카드가 오른쪽->왼쪽으로 흐르므로
-						// 음수로, 반대(역방향)일 땐 양수로 기울여 방향 대비가 드러나게 함.
+						// 음수로, 반대(역방향)일 땐 양수로 회전해 방향 대비가 드러나게 함.
 						const velocity = self.getVelocity();
-						const skew = clamp(-velocity / SKEW_VELOCITY_DIVISOR, -SKEW_MAX, SKEW_MAX);
-						skewSetters.forEach((setSkew) => setSkew(skew));
-						scheduleSkewReset();
+						const rotate = clamp(-velocity / ROTATE_VELOCITY_DIVISOR, -ROTATE_MAX, ROTATE_MAX);
+						rotateSetters.forEach((setRotate) => setRotate(rotate));
+						scheduleRotateReset();
 					},
 				});
 			}
