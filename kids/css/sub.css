@@ -439,6 +439,7 @@
 }
 .sec3-container ul li div[class^=desc] h4 {
   font-size: 43px;
+  font-weight: 300;
   color: #d46b2c;
 }
 @media (max-width: 1528px) {
@@ -755,6 +756,10 @@
   justify-content: center;
   text-align: center;
   will-change: transform, opacity, filter;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 .sec4-container .card img {
   box-shadow: 0 10px 10px rgba(135, 125, 110, 0.2);
@@ -1079,7 +1084,7 @@
 }
 .sec5-container .process ul li figure {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 @media (max-width: 1400px) {
   .sec5-container .process ul li figure img {
@@ -1105,21 +1110,25 @@
 }
 .sec5-container .process ul li p {
   font-size: 22px;
+  margin-top: 9px;
   line-height: 1.4;
   color: #705d58;
 }
 @media (max-width: 1024px) {
   .sec5-container .process ul li p {
     width: min(420px, 65.62vw);
+    margin-top: min(12px, 1.87vw);
     text-align: center;
     font-size: min(30px, 4.68vw);
   }
 }
 .sec5-container .process ul li:nth-child(even) {
   align-items: center;
+  padding-right: 24px;
 }
 @media (max-width: 1024px) {
   .sec5-container .process ul li:nth-child(even) {
+    padding-right: 0;
     transform: rotate(90deg);
   }
 }

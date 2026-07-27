@@ -481,6 +481,7 @@ $breakpoints: (
 
                 h4 {
                     font-size: 43px;
+                    font-weight: 300;
                     color: #d46b2c;
 
                     @include media(xl) {
@@ -844,6 +845,11 @@ $breakpoints: (
         justify-content: center;
         text-align: center;
         will-change: transform, opacity, filter;
+        // transform으로 움직이는 동안 텍스트가 살짝 흐려 보이는 걸 줄임
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
 
         img {
             box-shadow: 0 10px 10px rgba(135, 125, 110, 0.2);
@@ -1220,7 +1226,7 @@ $breakpoints: (
                 
                 figure {
                         display: flex;
-                        justify-content: center;
+                        justify-content: flex-start;
                     
                     img {
                         @include media(lg) {
@@ -1247,11 +1253,13 @@ $breakpoints: (
 
                 p {
                     font-size: 22px;
+                    margin-top: 9px;
                     line-height: 1.4;
                     color: #705d58;
 
                     @include media(md) {
                         width: min(420px, 65.62vw);
+                        margin-top: min(12px, 1.87vw);
                         text-align: center;
                         font-size: min(30px, 4.68vw);
                     }
@@ -1259,7 +1267,9 @@ $breakpoints: (
 
                 &:nth-child(even) {
                     align-items: center;
+                    padding-right: 24px;
                     @include media(md) {
+                        padding-right: 0;
                         transform: rotate(90deg);
                     }
                 }

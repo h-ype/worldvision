@@ -514,7 +514,7 @@
 							<li>
 								<figure><img src="images/sec5-img1.png" alt=""></figure>
 								<h4>후원이 시작되면</h4>
-								<p>웰컴메시지와 후원시작증서, 웰컴패키지가 후원자님을 찾아갑니다.</p>
+								<p>웰컴메시지와 후원시작증서,<br class="pc">웰컴패키지가 후원자님을 찾아갑니다.</p>
 							</li>
 							<li><span><img src="images/sec5-arrow.png" alt=""></span></li>
 							<li>
@@ -858,7 +858,13 @@
 				// 우연한 비율에 의존하게 되어 해상도마다 카드 0의 화면 위치가 어긋남.
 				// 대신 카드 0 자신의 실측 중심(px)만큼만 보정해서 해상도와 무관하게 항상
 				// 정확히 화면 중앙에 오도록 함.
-				gsap.set(cardTrack, { yPercent: -50, x: -trackFirstCenter + trackOffset, y: trackYOffset });
+				// x/y를 정수 px로 반올림 - 소수점 위치(sub-pixel)로 옮기면 브라우저가
+				// 텍스트를 다르게 안티앨리어싱해서 스크롤 중 글씨가 살짝 흐릿해 보임.
+				gsap.set(cardTrack, {
+					yPercent: -50,
+					x: Math.round(-trackFirstCenter + trackOffset),
+					y: Math.round(trackYOffset),
+				});
 
 				// 각 카드의 "현재 화면상 X 위치"가 화면 중앙(0)과 얼마나 가까운지로 스케일 계산
 				cards.forEach((card) => {
@@ -879,7 +885,7 @@
 					const opacity = 1 + t * 0.75;
 
 					gsap.set(card, {
-						y: baseY,
+						y: Math.round(baseY),
 						opacity: opacity,
 						zIndex: Math.round(t * 100),
 					});
