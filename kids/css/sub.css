@@ -294,7 +294,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 13px;
+  gap: 15px;
   border-radius: 8px;
 }
 @media (max-width: 1528px) {
@@ -362,10 +362,10 @@
   .sec2-container p {
     margin-top: 0px;
     width: min(100%, 570px);
-    font-size: min(35px, 5.46vw);
+    font-size: min(34px, 5.31vw);
     line-height: 1.45em;
     background-image: linear-gradient(transparent calc(1.45em - 1px), rgba(255, 255, 255, 0.1) 1px);
-    background-position: top -3px center;
+    background-position: top max(-3px, -0.47vw) center;
     background-size: 100% 1.45em;
   }
 }
@@ -729,7 +729,7 @@
   background-repeat: no-repeat;
   background-position: center top;
   height: 100vh;
-  min-height: 980px;
+  min-height: 880px;
   overflow: hidden;
   display: flex;
 }
@@ -740,7 +740,7 @@
 }
 .sec4-container .card-track {
   position: absolute;
-  top: 50%;
+  top: 54%;
   left: 50%;
   display: flex;
   align-items: center;
@@ -1087,6 +1087,11 @@
 .sec5-container .process ul li figure {
   display: flex;
   justify-content: flex-start;
+}
+@media (max-width: 1024px) {
+  .sec5-container .process ul li figure {
+    justify-content: center;
+  }
 }
 @media (max-width: 1400px) {
   .sec5-container .process ul li figure img {
