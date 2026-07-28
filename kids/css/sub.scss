@@ -1212,6 +1212,15 @@ $breakpoints: (
         line-height: 1.2em;
         background-image: linear-gradient(transparent calc(1.2em - 1px), rgba(140, 125, 117, 0.47) 1px);
         background-size: 100% 1.2em;
+        @include type_b {
+            font-size: 34px;
+            line-height: 1.4em;
+            background-image: linear-gradient(transparent calc(1.4em - 1px), rgba(140, 125, 117, 0.47) 1px);
+            background-size: 100% 1.4em;
+            @include media(md) {
+                font-size: min(48px, 7.5vw);
+            }
+        }
 
         @include media(md) {
             margin: 0 auto min(86px, 11.46vw);
@@ -1452,10 +1461,11 @@ $breakpoints: (
                     color: #705d58;
 
                     @include media(md) {
-                        width: min(420px, 65.62vw);
+                        width: min(430px, 67vw);
                         margin-top: min(12px, 1.87vw);
                         text-align: center;
                         font-size: min(32px, 5vw);
+                        letter-spacing: -0.05em;
                     }
                 }
 
@@ -1582,6 +1592,8 @@ $breakpoints: (
 
         p {
             font-size: 24px;
+            font-weight: 300;
+            color: #513a34;
 
             @include media(md) {
                 margin-top: min(16px, 2.5vw);
@@ -1669,6 +1681,7 @@ $breakpoints: (
         p {
             font-size: 24px;
             line-height: 1.5;
+            color: #513a34;
 
             @include media(md) {
                 font-size: min(36px, 5.62vw);
