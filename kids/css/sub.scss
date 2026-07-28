@@ -44,6 +44,12 @@ $breakpoints: (
     }
 }
 
+@mixin type_b {
+  .wv-kids.type_b & {
+    @content;
+  }
+}
+
 .pc {
     display: block;
 }
@@ -97,6 +103,7 @@ $breakpoints: (
         left: 50%;
         margin-left: -960px;
         opacity: 0.3;
+        display: none;
     }
 
     .mo-mok {
@@ -275,6 +282,14 @@ $breakpoints: (
         background-image: url('../images/sec1-bg-m.jpg');
     }
 
+    @include type_b {
+        @include media(md) {
+            background-color: #f8e5cf;
+            background-size: min(1280px, 190%);
+            height: min(1490px, 232.81vw);
+        }
+    }
+
     .title {
         width: min(1150px, 100%);
         display: flex;
@@ -291,6 +306,9 @@ $breakpoints: (
 
         @include media(sm) {
             align-items: flex-start;
+        }
+        @include type_b {
+            padding: min(200px, 13.88vw) min(36px, 5.62vw) 0;
         }
 
         figure {
@@ -342,10 +360,27 @@ $breakpoints: (
                 width: min(458px, 71vw);
                 font-size: min(35px, 5.46vw);
             }
-
             @include media(sm) {
                 text-align: left;
                 padding-left: min(12px, 1.87vw);
+            }
+            
+            @include type_b {
+                width: min(498px, 34.58vw);
+                margin-top: 24px;
+                font-size: min(28px, 1.94vw);
+                letter-spacing: -0.05em;
+                line-height: 1.95em;
+                background-image: linear-gradient(transparent calc(1.95em - 1px), #ccb192 1px);
+                background-size: 100% 1.95em;
+                span {
+                    color: #a44700;
+                }
+                @include media(md) {
+                    width: min(488px, 76.25vw);
+                    font-size: min(35px, 5.47vw);
+                    margin-top: min(510px, 79.68vw);
+                }
             }
         }
 
@@ -374,6 +409,9 @@ $breakpoints: (
                 gap: min(16px, 2.5vw);
                 border-radius: min(12px, 1.87vw);
             }
+            @include type_b {
+                margin-top: 44px;
+            }
 
             span {
                 font-size: 30px;
@@ -398,6 +436,7 @@ $breakpoints: (
 
 .sec2-container {
     display: flex;
+    position: relative;
     align-items: center;
     justify-content: center;
     height: min(550px, 40vw);
@@ -504,6 +543,14 @@ $breakpoints: (
                 left: 50%;
                 margin-left: max(-192px, -12.56vw);
                 bottom: min(75px, 4.9vw);
+
+                @include media(md) {
+                    font-size: min(29px, 4.53vw);
+                    margin-left: 0;
+                    bottom: min(115px, 17.97vw);
+                    
+                }
+                
             }
 
             [class^='desc'] {
@@ -668,6 +715,9 @@ $breakpoints: (
                 }
                 .name {
                     bottom: min(90px, 5.89vw);
+                    @include media(md) {
+                        bottom: min(115px, 17.97vw);
+                    }
                 }
 
                 .desc-before {
@@ -708,6 +758,7 @@ $breakpoints: (
 }
 
 .sec4.pc {
+    position: relative;
 
     // GSAP ScrollTrigger가 pin 구간만큼 스페이서로 높이를 확보하므로, 여기서 높이를
     // 고정하거나 overflow:hidden을 걸면 그 스페이서가 잘려서 pin이 중간에 풀려버림.
@@ -789,6 +840,11 @@ $breakpoints: (
                     background-image: linear-gradient(transparent calc(1.4em - 1px), rgba(140, 125, 117, 0.47) 1px);
                     background-size: 100% 1.4em;
                     letter-spacing: -0.04em;
+                    @include type_b {
+                        font-size: min(46px, 7.18vw);
+
+                    }
+                            
                 }
 
                 p {
@@ -1067,11 +1123,24 @@ $breakpoints: (
         width: 700px;
         padding-top: 130px;
         margin: 0 auto;
+        @include type_b {
+            width: min(897px, 100%);
+            padding-top: 142px;
+        }
 
         h2 {
             font-size: 48px;
             line-height: 1.2;
             border-bottom: 1px solid rgba(140, 125, 117, 0.47);
+    
+            @include type_b {
+                border-bottom: 0;
+                line-height: min(52px, 8.1250vw);
+                letter-spacing: -0.03em;
+                font-size: min(32px, 5vw);
+                background-image: linear-gradient(transparent calc(min(52px, 8.1250vw) - 1px), rgba(140, 125, 117, 0.47) 1px);
+                background-size: 100% min(52px, 8.1250vw);
+            }
         }
 
         p {
@@ -1081,6 +1150,10 @@ $breakpoints: (
             font-size: 24px;
             font-weight: 300;
             border-bottom: 1px solid rgba(140, 125, 117, 0.47);
+                
+            @include type_b {
+            display: none;
+            }
         }
     }
 
@@ -1361,6 +1434,9 @@ $breakpoints: (
                     font-weight: 700;
                     font-size: 32px;
                     color: #d46b2c;
+                    @include media(lg) {
+                        font-size: 29px;
+                    }
 
                     @include media(md) {
                         text-align: center;
@@ -1474,6 +1550,13 @@ $breakpoints: (
             position: static;
             margin: 0 auto;
         }
+            @include type_b {
+                padding-top: 162px;
+                @include media(md) {
+                    padding-top: 0;
+                }
+            }
+        
 
         h2 {
             font-size: 40px;
@@ -1487,6 +1570,14 @@ $breakpoints: (
                 background-image: linear-gradient(transparent calc(1.4em - 1px), rgba(140, 125, 117, 0.47) 1px);
                 background-size: 100% 1.4em;
             }
+            
+            @include type_b {
+                font-size: min(34px, 5.31vw);
+                line-height: 1.4em;;
+                @include media(md) {
+                    font-size: min(44px, 6.87vw);
+                }
+            }
         }
 
         p {
@@ -1495,6 +1586,9 @@ $breakpoints: (
             @include media(md) {
                 margin-top: min(16px, 2.5vw);
                 font-size: min(35px, 5.5vw);
+            }
+            @include type_b {
+                margin-top: 17px;
             }
         }
 
@@ -1524,9 +1618,9 @@ $breakpoints: (
 }
 
 .sec7-container {
+    position: relative;
     width: min(2560px, 100%);
     height: 1000px;
-    aspect-ratio: 1920 / 1000;
     padding: 0 30px;
     background-image: url('../images/sec7-bg.jpg');
     background-size: cover;
@@ -1561,6 +1655,16 @@ $breakpoints: (
             padding-top: 0;
 
         }
+        @include type_b {
+            padding-top: min(209px, 32.65vw);
+            @include media(lg) {
+                padding-top: 0;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
 
         p {
             font-size: 24px;
@@ -1570,6 +1674,11 @@ $breakpoints: (
                 font-size: min(36px, 5.62vw);
                 letter-spacing: -0.048em;
                 line-height: 1.38;
+            }
+            @include type_b {
+                span {
+                    color: #a44700;
+                }
             }
         }
     }
@@ -1588,6 +1697,9 @@ $breakpoints: (
             justify-content: center;
             margin-top: min(80px, 12.5vw);
         }
+            @include type_b {
+                margin-top: 75px;
+            } 
 
         a {
             width: 302px;
