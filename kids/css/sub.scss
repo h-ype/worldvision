@@ -154,7 +154,7 @@ $breakpoints: (
             height: 205px;
             transition: all 0.4s;
 
-            background-image: url('../images/b_float_bg2-hover.png');
+            background-image: url('../images/b_float_bg2-hover.webp');
             background-size: 100%;
             background-repeat: no-repeat;
             background-position: center;
@@ -511,7 +511,7 @@ $breakpoints: (
             aspect-ratio: 1534 / 1310;
             position: relative;
             text-align: center;
-            background-image: url('../images/sec3-story1.png');
+            background-image: url('../images/sec3-story1.webp');
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center top;
@@ -528,7 +528,7 @@ $breakpoints: (
 
             @include media(md) {
                 aspect-ratio: 1390 / 4933;
-                background-image: url('../images/sec3-story1-m.png');
+                background-image: url('../images/sec3-story1-m.webp');
                 margin: 0 max(-103px, -16.09vw) 0 max(-81px, -12.65vw);
                 padding: min(640px, 100vw) min(103px, 16.09vw) 0 min(81px, 12.65vw);
                 gap: min(905px, 141.41vw);
@@ -705,12 +705,12 @@ $breakpoints: (
             }
 
             &.story2 {
-                background-image: url('../images/sec3-story2.png');
+                background-image: url('../images/sec3-story2.webp');
 
                 @include media(md) {
                     padding-top: min(644px, 100.5vw);
                     aspect-ratio: 1390 / 4659;
-                    background-image: url('../images/sec3-story2-m.png');
+                    background-image: url('../images/sec3-story2-m.webp');
                     gap: min(831px, 130vw);
                 }
                 .name {
@@ -1257,7 +1257,7 @@ $breakpoints: (
             display: block;
             width: 165px;
             height: 98px;
-            background-image: url('../images/sec5-stamp.png');
+            background-image: url('../images/sec5-stamp.webp');
             background-repeat: no-repeat;
             position: absolute;
             right: 20px;
@@ -1905,7 +1905,7 @@ $breakpoints: (
                         height: 28px;
                         border-radius: 999px;
                         background-color: #513a34;
-                        background-image: url('../images/arr-down.png');
+                        background-image: url('../images/arr-down.webp');
                         background-repeat: no-repeat;
                         background-size: 12px;
                         background-position: center center;
@@ -1942,7 +1942,7 @@ $breakpoints: (
                     &:after {
                         content: '';
                         background-color: #e7dbcb;
-                        background-image: url('../images/arr-up.png');
+                        background-image: url('../images/arr-up.webp');
                     }
                 }
 
