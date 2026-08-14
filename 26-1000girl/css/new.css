@@ -112,6 +112,11 @@
   transform: translateY(8px);
 }
 @media (max-width: 1200px) {
+  .g_floating:hover {
+    transform: translateX(-50%);
+  }
+}
+@media (max-width: 1200px) {
   .g_floating {
     width: 290px;
     height: 81px;

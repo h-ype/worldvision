@@ -145,6 +145,10 @@ $breakpoints: (
     transition: all 0.3s;
     &:hover {
         transform: translateY(8px);
+        @include media(lg) {
+            transform: translateX(-50%);
+        }
+        
     }
 
     @include media(lg) {
