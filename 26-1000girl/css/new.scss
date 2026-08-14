@@ -653,11 +653,11 @@ html, body {
                         left: min(154px, 24.06vw);
                         top: max(-122px, -19.06vw);
                         display: block;
-                        width: 10%;
+                        width: min(52px, 8.13vw);
                         height: min(122px, 19.06vw);
-
-                    background-image: url('../images/sec1_line_mo.png');
-                    background-repeat: no-repeat;
+                        background-image: url('../images/sec1_line_mo.png');
+                        background-repeat: no-repeat;
+                        background-size: cover;
                     }
                 }
 
@@ -749,6 +749,7 @@ html, body {
 
             h3 {
                 img {
+                    width: 473px;
                     @include media(md) {
                         width: min(515px, 80.47vw);
                     }
@@ -864,6 +865,7 @@ html, body {
                     }
 
                     img {
+                        width: 494px;
                         @include media(md) {
                             width: min(503px, 78.59vw);
                         }
@@ -901,6 +903,7 @@ html, body {
                     }
 
                     img {
+                        width: 311px;
                         @include media(md) {
                             width: min(399px, 62.34vw);
                         }
@@ -970,6 +973,7 @@ html, body {
                     }
 
                     img {
+                        width: 427px;
                         @include media(md) {
                             width: min(435px, 67.97vw);
                         }

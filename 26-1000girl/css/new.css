@@ -629,10 +629,11 @@ html, body {
     left: min(154px, 24.06vw);
     top: max(-122px, -19.06vw);
     display: block;
-    width: 10%;
+    width: min(52px, 8.13vw);
     height: min(122px, 19.06vw);
     background-image: url("../images/sec1_line_mo.png");
     background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 #thousand-girl .sec1 .inner .desc > strong {
@@ -715,6 +716,9 @@ html, body {
   #thousand-girl .sec2 .txt-box {
     padding: min(528px, 82.5vw) 0 min(160px, 25vw);
   }
+}
+#thousand-girl .sec2 .txt-box h3 img {
+  width: 473px;
 }
 @media (max-width: 1024px) {
   #thousand-girl .sec2 .txt-box h3 img {
@@ -831,6 +835,9 @@ html, body {
     margin-left: max(-24px, -3.75vw);
   }
 }
+#thousand-girl .sec3 .inner .txt-box h3 img {
+  width: 494px;
+}
 @media (max-width: 1024px) {
   #thousand-girl .sec3 .inner .txt-box h3 img {
     width: min(503px, 78.59vw);
@@ -867,6 +874,9 @@ html, body {
     margin-top: min(46px, 7.19vw);
     margin-left: max(-14px, -2.19vw);
   }
+}
+#thousand-girl .sec3 .inner .txt-box figure img {
+  width: 311px;
 }
 @media (max-width: 1024px) {
   #thousand-girl .sec3 .inner .txt-box figure img {
@@ -932,6 +942,9 @@ html, body {
     margin-left: max(-24px, -3.75vw);
     padding: min(494px, 77.19vw) 0 min(60px, 9.38vw);
   }
+}
+#thousand-girl .sec4 .inner .txt-box h3 img {
+  width: 427px;
 }
 @media (max-width: 1024px) {
   #thousand-girl .sec4 .inner .txt-box h3 img {
