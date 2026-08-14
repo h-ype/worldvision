@@ -334,6 +334,7 @@ html, body {
                     margin-left: max(-28px, -4.38vw);
 
                     @include media(md) {
+                        margin-left: 0;
                         width: min(614px, 95.94vw);
                     }
                 }
