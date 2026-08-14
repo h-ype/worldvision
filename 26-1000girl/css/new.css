@@ -106,6 +106,10 @@
   font-weight: 700;
   text-align: center;
   color: var(--c-white);
+  transition: all 0.3s;
+}
+.g_floating:hover {
+  transform: translateY(8px);
 }
 @media (max-width: 1200px) {
   .g_floating {
@@ -615,9 +619,20 @@ html, body {
     font-size: min(26px, 4.06vw);
     letter-spacing: -0.02em;
     line-height: min(39px, 6.09vw);
-    margin: min(549px, 85.78vw) auto 0;
+    margin: min(530px, 82.81vw) auto 0;
     border-radius: min(26px, 4.06vw);
     padding: min(24px, 3.75vw) min(18px, 2.81vw);
+  }
+  #thousand-girl .sec1 .inner .desc::before {
+    content: "";
+    position: absolute;
+    left: min(154px, 24.06vw);
+    top: max(-122px, -19.06vw);
+    display: block;
+    width: 10%;
+    height: min(122px, 19.06vw);
+    background-image: url("../images/sec1_line_mo.png");
+    background-repeat: no-repeat;
   }
 }
 #thousand-girl .sec1 .inner .desc > strong {
@@ -660,6 +675,7 @@ html, body {
   #thousand-girl .sec1 .inner .desc span::before {
     padding: 0 min(2px, 0.32vw);
     height: 77%;
+    margin-left: -1.5px;
   }
 }
 #thousand-girl .sec2 {
@@ -2118,7 +2134,8 @@ html, body {
 }
 @media (max-width: 1024px) {
   .tab-main .acc-warp .accordion .acc-box .tit_all p {
-    font-size: min(22px, 3.44vw);
+    font-size: min(26px, 4.06vw);
+    margin-top: min(2px, 0.31vw) !important;
     line-height: min(40px, 6.25vw);
   }
 }
@@ -2133,6 +2150,7 @@ html, body {
 }
 @media (max-width: 1024px) {
   .tab-main .acc-warp .accordion .acc-box .acc-q {
+    gap: min(16px, 2.5vw);
     padding: min(3.5vw, 35px) min(6vw, 30px) min(3.5vw, 35px) min(5.94vw, 38px);
   }
 }
@@ -2192,7 +2210,7 @@ html, body {
 }
 @media (max-width: 1024px) {
   .tab-main .acc-warp .accordion .acc-box.on .acc-a .a-cont p {
-    font-size: min(22px, 3.44vw);
+    font-size: min(26px, 4.06vw);
     line-height: min(40px, 6.25vw);
   }
 }
