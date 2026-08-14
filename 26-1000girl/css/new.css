@@ -1558,6 +1558,8 @@ html, body {
 }
 #thousand-girl .sec7 .swiper_bear .swiper-slide figure {
   border: 2px solid var(--c-org);
+  border-radius: min(17px, 2.66vw);
+  overflow: hidden;
   position: relative;
   z-index: 1;
   -webkit-box-shadow: 0px 0px 20px 10px rgba(55, 46, 37, 0.2);
@@ -1565,8 +1567,6 @@ html, body {
 }
 #thousand-girl .sec7 .swiper_bear .swiper-slide figure img {
   display: block;
-  border-radius: min(17px, 2.66vw);
-  overflow: hidden;
   width: min(258px, 40.31vw);
 }
 #thousand-girl .sec7 .swiper_bear .swiper-slide:nth-child(even) {
