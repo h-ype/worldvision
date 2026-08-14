@@ -235,6 +235,7 @@ html, body {
     figure {
         margin: 0;
         padding: 0;
+        letter-spacing: -0.015em;
     }
 
     .mo {
@@ -284,6 +285,7 @@ html, body {
         @include media(md) {
             background-image: url('../images/main_bg_mo.jpg');
             background-size: min(1024px, 160vw);
+            padding: 0 min(36px, 5.63vw);
 
         }
 
@@ -324,7 +326,7 @@ html, body {
                     margin-left: max(-28px, -4.38vw);
 
                     @include media(md) {
-                        width: min(614px, 84vw);
+                        width: min(614px, 95.94vw);
                     }
                 }
 
@@ -742,8 +744,11 @@ html, body {
                 color: var(--c-white);
 
                 @include media(md) {
-                    font-size: min(30px, 4.69vw);
+                    font-size: min(32px, 5vw);
                     line-height: min(49px, 7.66vw);
+                    .ls {
+                        letter-spacing: -0.07em;
+                    }
                 }
 
                 strong {
@@ -766,8 +771,9 @@ html, body {
                         line-height: 44px;
 
                         @include media(md) {
-                            font-size: min(30px, 4.69vw);
+                            font-size: min(32px, 5vw);
                             line-height: min(49px, 7.66vw);
+                            letter-spacing: -0.03em;
                         }
                     }
 
@@ -1345,6 +1351,7 @@ html, body {
                 p {
                     font-size: 28px;
                     line-height: 44px;
+                    letter-spacing: -0.04em;
 
                     @include media(md) {
                         font-size: min(35px, 5.47vw);

@@ -196,6 +196,7 @@ html, body {
 #thousand-girl figure {
   margin: 0;
   padding: 0;
+  letter-spacing: -0.015em;
 }
 #thousand-girl .mo {
   display: none;
@@ -274,6 +275,7 @@ html, body {
   #thousand-girl .main {
     background-image: url("../images/main_bg_mo.jpg");
     background-size: min(1024px, 160vw);
+    padding: 0 min(36px, 5.63vw);
   }
 }
 #thousand-girl .main .inner {
@@ -313,7 +315,7 @@ html, body {
 }
 @media (max-width: 1024px) {
   #thousand-girl .main-title h1 img {
-    width: min(614px, 84vw);
+    width: min(614px, 95.94vw);
   }
 }
 #thousand-girl .main-title h1 + p {
@@ -710,8 +712,11 @@ html, body {
 }
 @media (max-width: 1024px) {
   #thousand-girl .sec2 .txt-box p {
-    font-size: min(30px, 4.69vw);
+    font-size: min(32px, 5vw);
     line-height: min(49px, 7.66vw);
+  }
+  #thousand-girl .sec2 .txt-box p .ls {
+    letter-spacing: -0.07em;
   }
 }
 #thousand-girl .sec2 .txt-box p strong {
@@ -734,8 +739,9 @@ html, body {
 }
 @media (max-width: 1024px) {
   #thousand-girl .sec2 .txt-box p span small {
-    font-size: min(30px, 4.69vw);
+    font-size: min(32px, 5vw);
     line-height: min(49px, 7.66vw);
+    letter-spacing: -0.03em;
   }
 }
 #thousand-girl .sec2 .txt-box p span::before {
@@ -1252,6 +1258,7 @@ html, body {
 #thousand-girl .sec6 .inner .txt p {
   font-size: 28px;
   line-height: 44px;
+  letter-spacing: -0.04em;
 }
 @media (max-width: 1024px) {
   #thousand-girl .sec6 .inner .txt p {
