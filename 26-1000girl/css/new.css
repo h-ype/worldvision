@@ -326,7 +326,7 @@ html, body {
 @media (max-width: 1024px) {
   #thousand-girl .main-title h1 img {
     margin-left: 0;
-    width: min(614px, 95.94vw);
+    width: min(614px, 83.94vw);
   }
 }
 #thousand-girl .main-title h1 + p {
