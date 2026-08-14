@@ -1,0 +1,580 @@
+<style>
+
+.g-camp  { font-family:'Gmarket Sans'; overflow:hidden; }
+.g-camp  .c-green { color:#639736; }
+.g-camp  .ta-c { text-align:center; }
+.g-camp  .inner { width:100%; max-width:1340px; margin:0 auto; position:relative; z-index: 2;} /*0926 수정*/
+.g-camp  .flex-box { display:flex; flex-wrap:wrap; align-content:center; }
+.g-camp  .ai-c { align-items:center; }
+.g-camp .pc7 { display:block; }
+.g-camp .mo7 { display:none; }
+/* 플로팅 버튼 */
+.floating-area { display:none; }
+.quick-menu-btn { pointer-events:none; display:flex; justify-content:flex-end; align-items:flex-start; position:fixed; z-index:50; top:0; right:0; bottom:0; left:0; outline:0 none; transition:0.5s; padding:160px 60px; z-index:3; text-indent:-9999px; }
+.quick-menu-btn a { pointer-events:auto; display:block; width:176px; height:266px; background:url('/uploads/campaign/template/25-1000girls/20250926/b-floating.png') no-repeat; }
+.quick-menu-btn:hover {-webkit-animation: bounce 0.35s ease-out alternate infinite; animation: bounce 0.35s ease-out alternate infinite;}
+    @-webkit-keyframes bounce {
+        0% {
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+        100% {
+            -webkit-transform: translate3d(0, -7px, 0);
+            transform: translate3d(0, -7px, 0);
+        }
+    }
+    @keyframes bounce {
+        0% {
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+        100% {
+            -webkit-transform: translate3d(0, -7px, 0);
+            transform: translate3d(0, -7px, 0);
+        }
+    }
+
+.g-camp .sec1 { background-position:center top; }
+.g-camp .sec2.pc7{background-position:center top; background-size:cover; }
+.g-camp .sec3 { background-image:url('/uploads/campaign/template/25-1000girls/20250926/sec3-bg.jpg'); background-repeat:no-repeat; height:960px; background-position:center top;  background-size:cover; }
+.g-camp .sec3.mo7 { background-image:url('/uploads/campaign/template/25-1000girls/20250926/mo-sec3-bg.jpg'); background-repeat:no-repeat; height:auto; background-position:center top;  background-size:cover; }
+.g-camp .sec4.pc7 { background-image:url('/uploads/campaign/template/25-1000girls/20250926/sec4-bg.jpg'); background-repeat:no-repeat; height:650px; background-position:center top;  background-size:cover; }
+.g-camp .sec4.mo7 { background-image:url('/uploads/campaign/template/25-1000girls/20250926/mo-sec4-bg.jpg'); background-repeat:no-repeat; height:85vw; background-position:center top;  background-size:100%; }
+.g-camp .sec5 { background-image:url('/uploads/campaign/template/25-1000girls/20250926/sec5-bg.jpg'); background-position:center top; background-size:cover; }
+.g-camp .sec6 { background-image:url('/uploads/campaign/template/25-1000girls/20250926/sec6-bg.jpg'); background-position:center top; background-size:cover; }
+.g-camp .sec7-1 { background-image:url('/uploads/campaign/template/25-1000girls/20250926/sec7-bg1.jpg'); height:auto; background-position:center bottom; background-color:#f8f5ec; background-repeat:repeat-x; background-size:cover; }
+.g-camp .sec7-2 { background-image:url('/uploads/campaign/template/25-1000girls/20250926/sec7-bg2.jpg'); height:auto; background-position:center top; background-repeat:repeat; }
+.g-camp .sec7-2.mo7 { padding-bottom:1px; }
+.g-camp .sec8 { background-color:#faf9f6; }
+.g-camp .sec9 { background-color:#eff4eb; }
+
+.g-camp  a.btn:hover{-webkit-transform:scale(1.025); -ms-transform:scale(1.025); transform:scale(1.025); }
+.g-camp  a.btn { transition:transform 0.4s, -webkit-transform 0.4s; }
+
+/* main */
+.g-camp .smain { position:relative; background-color:#2c1f16; }
+.g-camp .smain.pc > figure { overflow:hidden; height:min(150vw, 1800px); }
+.g-camp .smain.pc > figure img { position:relative; left:50%; transform:translateX(-50%); z-index:0; }
+.g-camp .smain.pc > .inner { position:absolute; top:0; left:50%; transform:translateX(-50%); }
+.g-camp .smain .main-tit { text-align:center; }
+.g-camp .smain.pc .main-tit { width:540px; padding-top:140px; }
+.g-camp .smain .main-tit h1 p { color:#f9c158; font-family:'noto sans'; font-size:min(4.4vw,26px); font-weight:600; }
+.g-camp .smain .main-tit > p { margin-top:40px; font-size:24px; font-family:'noto sans'; color:#fff; }
+.g-camp .smain .main-tit > p strong { font-weight:600; }
+.g-camp .smain .main-tit > p span { color:#fff67f; font-weight:600; }
+.g-camp .smain .main-tit a { display:block; margin:44px auto 0; font-family:'Noto Sans KR'; font-size:26px; width:378px; height:88px; line-height:88px; background:#CAB15D; background:linear-gradient(90deg,rgba(99, 151, 54, 1) 0%, rgba(202, 177, 93, 1) 90%); color:#fff; box-sizing:border-box; text-align:left; padding-left:65px; border-radius:44px; position:relative; font-weight:600; }
+.g-camp .smain .main-tit a  span { color:#fff67f; }
+.g-camp .smain .main-tit a:after { content:""; display:block; position:absolute; width:74px; height:74px; border-radius:50%; background-color:#fff; right:7px; top:7px; background-image:url('/uploads/campaign/template/25-1000girls/20250926/sec7-arrow.png'); background-repeat:no-repeat; background-position:left 55% center; }
+.g-camp .smain.pc .video-inner { height:min(51vw, 692px); position:absolute; width:min(100%, 1340px); bottom:11%; left:50%; transform:translateX(-50%); padding:0 3%; box-sizing:border-box; }
+.g-camp .smain .video-inner iframe { width:100%; height:100%; border:0; }
+.g-camp .smain .stxt { font-size:20px; color:#e0d2d2; font-family:noto sans kr; }
+.g-camp .smain.pc .stxt { position:absolute; left:50%; transform:translateX(-50%); bottom:7%; display:flex; line-height:1.5; align-items:baseline; justify-content:center; width:100%; gap:4px; }
+.g-camp .smain.pc .stxt img { width:18px; height:auto; }
+
+/* main-mo */
+.g-camp .smain.mo { background-color:#2c1f16; background-image:url('/uploads/campaign/template/25-1000girls/20250926/mo-main-bg.jpg'); background-size:100%; background-position:center top; background-repeat:no-repeat; }
+.g-camp .smain.mo .main-tit { padding-top:93%; }
+.g-camp .smain.mo .main-tit img { max-width:100%; }
+.g-camp .smain.mo .video-inner { width:100%; height:50vw; margin-top:15vw; }
+.g-camp .smain.mo .stxt { font-size:14px; text-align:center; padding:5vw 0 15vw; }
+.g-camp .smain.mo .stxt img { width:12px; height:auto; position:relative; margin-top:4px; }
+ 
+/* sec1 */
+.g-camp .sec1.pc { height:1460px;  /*0926 삭제-webkit-animation:img-change1 6s ease infinite; animation:img-change1 6s ease infinite; */ }  
+
+
+/*s ----- 0926 추가*/
+.bg-animate {position: relative;  background-repeat: no-repeat;  width: 100%;  height: auto;  overflow: hidden;}
+.bg-animate::before,
+.bg-animate::after {  content: "";  position: absolute;  inset: 0;  display: block;  background-size: cover;  background-repeat: no-repeat;  background-position: center center;  transition: opacity 1s; z-index: 0;
+}
+
+.sec1.pc.bg-animate::before { background-image: url('/uploads/campaign/template/25-1000girls/20250926/sec1-img1.jpg'); }
+.sec1.pc.bg-animate::after  { background-image: url('/uploads/campaign/template/25-1000girls/20250926/sec1-img2.jpg'); }
+
+.sec1.mo.bg-animate::before { background-image: url('/uploads/campaign/template/25-1000girls/20250926/mo-sec1-img1.jpg'); }
+.sec1.mo.bg-animate::after  { background-image: url('/uploads/campaign/template/25-1000girls/20250926/mo-sec1-img2.jpg'); }
+
+.sec2.pc7.bg-animate::before { background-image: url('/uploads/campaign/template/25-1000girls/20250926/sec2-img1.jpg'); }
+.sec2.pc7.bg-animate::after  { background-image: url('/uploads/campaign/template/25-1000girls/20250926/sec2-img2.jpg'); }
+
+.sec2.mo7.bg-animate::before { background-image: url('/uploads/campaign/template/25-1000girls/20250926/mo-sec2-img1.jpg'); }
+.sec2.mo7.bg-animate::after  { background-image: url('/uploads/campaign/template/25-1000girls/20250926/mo-sec2-img2.jpg'); }
+
+.bg-animate::before { opacity: 1; }
+.bg-animate::after  { opacity: 0; }
+.bg-animate.active::before { opacity: 0; }
+.bg-animate.active::after  { opacity: 1; }
+
+/*e ----- 0926 추가*/
+
+/*0926 삭제
+@-webkit-keyframes img-change1 { 
+  0%,100% { background-image:url('/uploads/campaign/template/25-1000girls/20250926/sec1-img1.jpg')}
+  50% { background-image:url('/uploads/campaign/template/25-1000girls/20250926/sec1-img2.jpg')}
+}
+@keyframes img-change1 {
+  0%,100% { background-image:url('/uploads/campaign/template/25-1000girls/20250926/sec1-img1.jpg')}
+  50% { background-image:url('/uploads/campaign/template/25-1000girls/20250926/sec1-img2.jpg')}
+}*/
+.g-camp .sec1 h2 { text-align:center; padding-top:170px; margin-bottom:150px; }
+.g-camp .sec1 p { color:#fff; font-family:'Noto Sans KR'; font-size:25px; line-height:1.7; }
+.g-camp .sec1 p + p { margin-top:26px; }
+.g-camp .sec1 p b { font-weight:600; }
+.g-camp .sec1 p strong { font-weight:600; line-height:33px; height:33px; background-color:#f9bd57; display:inline-block; color:#222; padding:0 3px; }
+.g-camp .sec1 p span { font-weight:600; color:#f9bd57; }
+.g-camp .sec1.pc .line-box { position:absolute; right:3%; bottom:-8%; }
+.g-camp .sec1.pc .line-box .line { position:relative; left:-32%; margin-top:-1px; }
+.g-camp .sec1.pc .line-box .txt-box { width:min(30vw, 450px); }
+.g-camp .sec1 .line-box .txt-box { border:1px solid #f9c158; background-color:rgba(255,255,255,0.1); font-size:18px; line-height:30px; font-family:Noto Sans KR; border-radius:26px; height:auto; padding:20px 20px 20px 30px; color:#fff; position:relative; letter-spacing:-0.04em; }
+.g-camp .sec1 .line-box .txt-box::before { content:"*"; font-weight:600; color:#f9c158; position:absolute; left:20px; }
+.g-camp .sec1 .line-box .txt-box strong { font-weight:600; color:#f9c158; }
+
+@-webkit-keyframes fadeOutDown{0%{opacity:1}to{opacity:0; -webkit-transform:translate3d(0,30%,0); transform:translate3d(0,30%,0)}}@keyframes fadeOutDown{0%{opacity:1}to{opacity:0; -webkit-transform:translate3d(0,30%,0); transform:translate3d(0,30%,0)}}
+
+/* sec2 */
+.g-camp .sec2.pc7 { height:960px; /*0926 삭제-webkit-animation:img-change2 7s ease infinite; animation:img-change2 7s ease infinite; */ display:flex; flex-wrap:wrap; align-content:center; }
+
+/*0926 삭제
+@-webkit-keyframes img-change2 { 
+  0%,100% { background-image:url('/uploads/campaign/template/25-1000girls/20250926/sec2-img1.jpg')}
+  50% { background-image:url('/uploads/campaign/template/25-1000girls/20250926/sec2-img2.jpg')}
+}
+@keyframes img-change2 {
+  0%,100% { background-image:url('/uploads/campaign/template/25-1000girls/20250926/sec2-img1.jpg')}
+  50% { background-image:url('/uploads/campaign/template/25-1000girls/20250926/sec2-img2.jpg')}
+}*/
+.g-camp .sec2.pc7 .inner { display:flex; justify-content:flex-end; }
+.g-camp .sec2.pc7 .txt-box { width:580px; }
+
+/* sec2-mo */
+.g-camp .sec2.mo7 { height:auto; -webkit-animation:img-change2mo 7s ease infinite; animation:img-change2mo 7s ease infinite; background-size:100%; background-repeat:no-repeat; }
+
+/*0926 삭제
+@keyframes img-change2mo { 
+  0%,100% { background-image:url('/uploads/campaign/template/25-1000girls/20250926/mo-sec2-img1.jpg')}
+  50% { background-image:url('/uploads/campaign/template/25-1000girls/20250926/mo-sec2-img2.jpg')}
+}
+@keyframes img-change2mo { 
+  0%,100% { background-image:url('/uploads/campaign/template/25-1000girls/20250926/mo-sec2-img1.jpg')}
+  50% { background-image:url('/uploads/campaign/template/25-1000girls/20250926/mo-sec2-img2.jpg')}
+}*/
+
+/* sec3 */
+.g-camp .sec3.pc7 { display:flex; flex-wrap:wrap; align-content:center; }
+
+.g-camp .sec2.pc7 h3 + p,
+.g-camp .sec3.pc7 h3 + p { margin-top:58px; }
+.g-camp .sec2.pc7 p,
+.g-camp .sec3.pc7 p { color:#222; font-family:'Noto Sans KR'; font-size:25px; line-height:43px; padding-left:14px; }
+.g-camp .sec2.pc7 p + p,
+.g-camp .sec3.pc7 p + p { margin-top:26px; }
+.g-camp .sec2.pc7 p strong,
+.g-camp .sec3.pc7 p strong { font-weight:600; line-height:33px; height:33px; background-color:#639736; display:inline-block; color:#fff; padding:0 4px; }
+.g-camp .sec2.pc7 p b,
+.g-camp .sec3.pc7 p b { font-weight:600; }
+.g-camp .sec2.pc7 p span ,
+.g-camp .sec3.pc7 p span { font-weight:600; color:#639736; }
+
+/* sec3-mo */
+.g-camp .mo7 .txt-box h3 img { height:min(19vw,148px); }
+.g-camp .sec2.mo7 .txt-box,
+.g-camp .sec3.mo7 .txt-box { padding:0 0 17vw; }
+.g-camp .sec2.mo7 h3, 
+.g-camp .sec3.mo7 h3 { padding-top:90%; }
+.g-camp .sec2.mo7 h3 + p,
+.g-camp .sec3.mo7 h3 + p { margin-top:5vw; }
+.g-camp .sec2.mo7 p,
+.g-camp .sec3.mo7 p { color:#222; font-family:'Noto Sans KR'; font-size:min(4.8vw, 25px); line-height:1.7; padding-left:4px; margin-top:5vw; padding-left:2vw; }
+.g-camp .sec2.mo7 p strong,
+.g-camp .sec3.mo7 p strong { font-weight:600; line-height:120%; height:120%; background-color:#639736; display:inline-block; color:#fff; padding:0 4px; }
+.g-camp .sec2.mo7 p b,
+.g-camp .sec3.mo7 p b { font-weight:600; }
+.g-camp .sec2.mo7 p span ,
+.g-camp .sec3.mo7 p span { font-weight:600; color:#639736; }
+
+/* sec4 */
+.g-camp .sec4 .inner { height:100%; }
+.g-camp .sec4 .inner .flex-box { height:100%; }
+
+/* sec4-mo */
+.g-camp .sec4.mo7 .inner .flex-box { align-items:center; flex-direction:column;  align-content:flex-start; justify-content:center; }
+.g-camp .sec4.mo7 img { height:23vw; }
+
+/* sec5 */
+.g-camp .sec5 h2 { font-size:52px; line-height:74px; padding:120px 0 54px ; text-align:center; color:#222; font-weight:600; }
+.g-camp .sec5 .card_area.pc { display:flex; justify-content:center; padding-bottom:140px; }
+.g-camp .sec5 .card_area.pc .flip { width:33%; height:min(55.5224vw, 716px); position:relative; perspective:1100px; }
+.g-camp .sec5 .card_area.pc .card figure img { width:100%; height:min(55.5224vw, 716px); }
+.g-camp .sec5 .card_area.pc .card .txt { position:absolute; z-index:1; }
+.g-camp .sec5 .card_area.pc .card { width:100%; height:100%; position:relative; transition:0.4s; transform-style:preserve-3d; }
+.g-camp .sec5 .card_area.pc .flip:hover .card{transform:rotateY(180deg); }
+.g-camp .sec5 .card_area.pc .card .card_back { transform:rotateY(180deg); }
+.g-camp .sec5 .card_area.pc .card_front .txt { bottom:min(7vw, 110px); padding-left:min(3.4vw, 60px); font-size:min(2.2vw, 28px); }
+.g-camp .sec5 .txt { line-height:1.4; font-weight:400; color:#fff; }
+.g-camp .sec5 .txt b { font-weight:600; }
+.g-camp .sec5 .txt strong { font-weight:600; color:#fff67f; }
+
+.g-camp .sec5 .card_area.pc .card_back .txt { top:min(44%, 330px); height:51%; padding-left:min(3.4vw, 62px); color:#222; }
+.g-camp .sec5 .card_area.pc .card_back .txt .tit { font-size:min(1.6vw, 22px); line-height:1.4; font-weight:400; color:#222; position:absolute; bottom:min(3vw, 15px); }
+.g-camp .sec5 .card_area.pc .card_back .txt .tit b { font-weight:600; }
+.g-camp .sec5 .card_area.pc .card_back .txt .tit strong { font-weight:600; color:#639736; }
+.g-camp .sec5 .card_area.pc .card_back .txt .cont {  font-size:min(1.9vw, 25px); letter-spacing:-0.08em; line-height:1.5; padding-right:3vw; }
+.g-camp .sec5 .card_area.pc .card_back .txt .cont b { font-weight:600; }
+.g-camp .sec5 .card_area.pc .card_back .txt .cont strong { font-weight:600; color:#639736; }
+.g-camp .sec5 .card_area.pc .card_back .txt .stxt { font-family:'Noto Sans KR'; font-size:min(1.3vw, 17px); line-height:1.5; margin-top:16px; padding-right:3vw; }
+.g-camp .sec5 .card_area.pc .card_back .txt .stxt strong { font-weight:600; color:#639736; }
+
+.g-camp .sec5 .card_area.pc .flip::after { content:""; width:min(5.2vw, 70px); height: min(5.2vw, 70px); background-image:url('/uploads/campaign/template/25-1000girls/20250926/sec5-arrow.png'); display:block; position:absolute; right:min(1.04vw, 14px); bottom:min(1.04vw, 14px); background-size:100%; }
+.g-camp .sec5 .card_area.pc .card > * { width:100%; border-radius:15px; backface-visibility:hidden; position:absolute; }
+.g-camp .sec5 .card_area.pc .card h3 { font-size:3.6rem; font-family:'GmarketSansBold'; }
+.g-camp .sec5 .card_area.pc .card .s_tit { font-size:2rem; padding:10px 0 0 0; }
+
+/* sec5-mo */
+.g-camp .sec5 .card_area.mo { padding:0 5%; max-width:768px; margin:0 auto; }
+.g-camp .sec5 .card_area.mo ul li { position:relative; }
+.g-camp .sec5 .card_area.mo ul li + li { margin-top:5vw; }
+.g-camp .sec5 .card_area.mo ul li figure img { width:100%; box-shadow:rgba(0,0,0,0.2) 0 0 20px; border-radius:45px; }
+.g-camp .sec5 .card_area.mo ul li div { position:absolute; padding:8vw; font-size:min(5vw, 32px); top:0; }
+.g-camp .sec5 .card_area.mo .stxt{font-family:'Noto Sans KR'; font-size:min(4vw, 16px); line-height:1.5; margin-top:5vw; padding-bottom:17.7vw; text-align:center; }
+.g-camp .sec5 .card_area.mo .stxt strong { font-weight:600; color:#639736; }
+
+/* sec6 */
+.g-camp .sec6 h3 { font-size:min(2.4vw, 30px); line-height:1.4; color:#fff; }
+.g-camp .sec6 h3 b { font-weight:600; }
+.g-camp .sec6 h3 strong { font-weight:600; color:#fff67f; }
+.g-camp .sec6 a.btn { display:block; margin-top:min(2.2vw, 44px); font-family:'Noto Sans KR'; font-size:26px; width:378px; height:88px; line-height:88px; background:#CAB15D; background:linear-gradient(90deg, #fff67f 0%, #f8b02a 90%); color:#222; box-sizing:border-box; text-align:left; padding-left:65px; border-radius:44px; position:relative; font-weight:700; }
+.g-camp .sec6 a.btn:after { content:""; display:block; position:absolute; width:74px; height:74px; border-radius:50%; background-color:#fff; right:7px; top:7px; background-image:url('/uploads/campaign/template/25-1000girls/20250926/sec6-arrow.png'); background-repeat:no-repeat; background-position:center left 55%; }
+
+.g-camp .sec6 .inner { padding:110px 0 130px; }
+.g-camp .sec6 .drag-warp { display:flex; }
+.g-camp .sec6 .drag-warp .drag-box { position:relative; flex-shrink:1; }
+.g-camp .sec6 .drag-warp .drag-box::before { content:""; width:210px; height:290px; border-radius:30px 0 0 0; background-color:#507a2c; display:block; position:absolute; left:0; top:0; }
+.g-camp .sec6 .drag-warp .drag-box::after { content:""; width:210px; height:290px; border-radius:0 0 30px 0; background-color:#507a2c; display:block; position:absolute; right:-23px; bottom:-20px; z-index:0; }
+.g-camp .sec6 .drag-warp .txt { display:flex; flex-wrap:wrap; align-content:center; margin-left:min(5.8vw, 100px); }
+
+.comparison-slider { position:relative; width:min(45vw, 710px); border-radius:20px; border:4px solid #507a2c; overflow:hidden; z-index:1; margin-left:24px; margin-top:20px; }
+.comparison-slider .after-img { background-image:url(/uploads/campaign/template/25-1000girls/20250926/sec6-after.png); }
+.comparison-slider img { display:block; width:100%; height:min(31vw, 490px); position:relative; left:50%; transform:translateX(-50%); }
+.after-img { position:absolute; top:0; left:0; width:36%; overflow:hidden; height:100%; background-size:cover; background-repeat:no-repeat}
+.slider-bar { position:absolute; top:0; left:36%; width:90px; height:100%; background-image:url(/uploads/campaign/template/25-1000girls/20250926/sec6-slider-ico.png); background-size:contain; background-repeat:no-repeat; background-position:center center; cursor:ew-resize; z-index:10; transform:translateX(-50%); }
+
+/* sec7 */
+.g-camp .sec7-1 { overflow:visible; }
+.g-camp .sec7-1 dl { display:flex; }
+.g-camp .sec7-1 dl dt { padding-top:140px; }
+.g-camp .sec7-1 dl dt div { overflow:hidden; height:822px; border-radius:20px; }
+.g-camp .sec7-1 dl dt div iframe { width:422px; height:822px; }
+.g-camp .sec7-1 dl dd { position:relative; flex-grow:1; margin-left:-34px; z-index:2; }
+.g-camp .sec7-1 h2 { font-size:46px; line-height:66px; color:#222; font-weight:600; }
+.g-camp .sec7-1.pc7 h2 { padding-left:100px; padding-top:160px; }
+.g-camp .sec7-1 h2 span { color:#639736; }
+.g-camp .sec7-1 ul { display:flex; width:100%; position:absolute; bottom:0px; gap:20px; }
+.g-camp .sec7-1 ul li img { width:100%; border-radius:20px; box-shadow:rgba(0,0,0,0.2) 0 0 20px; border:solid 2px #f8b02a; }
+.g-camp .sec7-1 dl dd ul li:nth-child(even) { margin-top:60px; }
+
+.g-camp .sec7-1 dl dd a { display:block; margin:25px 0 0 100px; font-family:'Noto Sans KR'; font-size:26px; width:448px; height:88px; line-height:88px; background:#CAB15D; background:linear-gradient(90deg,#639736 25%, #cab15d 100%); color:#fff; box-sizing:border-box; text-align:left; padding-left:40px; border-radius:44px; position:relative; font-weight:600; }
+.g-camp .sec7-1 dl dd a span { color:#fff67f; }
+.g-camp .sec7-1 dl dd a:after { content:""; display:block; position:absolute; width:74px; height:74px; border-radius:50%; background-color:#fff; right:7px; top:7px; background-image:url('/uploads/campaign/template/25-1000girls/20250926/sec7-arrow.png'); background-repeat:no-repeat; background-position:left 55% center; }
+ 
+.g-camp .sec7-2 .inner { max-width:1124px; }
+.g-camp .sec7-2 h3 { font-size:37px; line-height:107px; color:#441c00; font-weight:600; padding-top:48px; padding-left:25px; z-index:1; }
+.g-camp .sec7-2.pc7 h3 img { height:105px; }
+.g-camp .sec7-2.pc7 ul { width:min(50vw, 610px); padding-bottom:110px; }
+.g-camp .sec7-2 ul li { font-size:20px; padding-left:28px; line-height:1.5; position:relative; font-weight:400; letter-spacing:-0.04em; }
+.g-camp .sec7-2 ul li::before { content:"🐻"; font-size:20px; position:absolute; top:0; left:0; }
+.g-camp .sec7-2 ul li + li { margin-top:7px; }
+.g-camp .sec7-2 ul li b { font-weight:600; }
+.g-camp .sec7-2 ul li strong { font-weight:600; color:#e76108; }
+
+.g-camp .sec7-2.pc7 .withbear { position:absolute; right:0; top:80px; width:min(40vw, 455px); }
+.g-camp .sec7-2 .withbear > * { position:absolute; z-index:2; }
+.g-camp .sec7-2 .withbear::after { content:""; border-radius:50%; width:316px; height:316px; background-color:rgba(255,255,255,0.4); display:block; position:absolute; top:0; left:50%;  transform:translateX(-50%); z-index:0; }
+.g-camp .sec7-2 .withbear .heart { left:-4.5%; top:0.5vw; animation:shake 2.5s ease infinite; }
+.g-camp .sec7-2 .withbear .bear { left:8%;  animation:shake2 2.5s ease infinite; }
+.g-camp .sec7-2 .withbear .feel { right:3%; top:77px; animation:onoff 2s ease infinite; }
+@-webkit-keyframes shake {
+  0%{-webkit-transform:rotate(0); transform:rotate(0)}
+  50%{-webkit-transform:rotate(-13deg); transform:rotate(-13deg)}
+}
+@keyframes shake {
+  0%{-webkit-transform:rotate(0); transform:rotate(0)}
+  50%{-webkit-transform:rotate(-13deg); transform:rotate(-13deg)}
+}
+@-webkit-keyframes shake2 {
+  0%{-webkit-transform:rotate(0); transform:rotate(0)}
+  50%{-webkit-transform:rotate(7deg); transform:rotate(7deg)}
+}
+@keyframes shake2 {
+  0%{-webkit-transform:rotate(0); transform:rotate(0)}
+  50%{-webkit-transform:rotate(7deg); transform:rotate(7deg)}
+}
+@-webkit-keyframes onoff {
+  0%{opacity:0; }
+  50%{opacity:1; }
+}
+@keyframes onoff {
+  0%{opacity:0; }
+  50%{opacity:1; }
+}
+
+/* sec7-mo */
+.g-camp .sec7-1.mo7 { overflow:visible; }
+.g-camp .sec7-1.mo7 h2 { padding:17vw 3% 9.6vw; }
+.g-camp .sec7-1.mo7 .shortframe { width:94%; height:149.5vw; margin:0 3%; border-radius:20px; overflow:hidden; }
+.g-camp .sec7-1.mo7 .shortframe iframe { width:100.5%; height:100%; }
+.g-camp .sec7-1.mo7 .bearBox { margin-top:-24px; transform:translateX(25px); }
+.g-camp .sec7-1.mo7 .bearBox img { width:100%; border-radius:20px; border: solid 2px #f8b02a; box-shadow:rgba(0,0,0,0.2) 0 0 20px; }
+
+.g-camp .sec7-2.mo7 h3 { padding-left:3vw; }
+.g-camp .sec7-2.mo7 h3 img { height:min(26.1vw, 110px); }
+.g-camp .sec7-2.mo7 .inner { padding:0 6%; }
+.g-camp .sec7-2.mo7 ul li { padding-left:min(8.7vw, 34px); font-size:min(4.9vw, 20px); }
+.g-camp .sec7-1.mo7 .swiper-slide { margin-right:15px !important; }
+
+.g-camp .sec7-2.mo7 .withbear { position:relative; top:10px; width:100%; height:316px; }
+.g-camp .sec7-2.mo7 .withbear .heart { left:50%; margin-left:-230px; top:2vw; }
+.g-camp .sec7-2.mo7 .withbear .bear { left:50%; margin-left:-170px; }
+.g-camp .sec7-2.mo7 .withbear .feel { left:50%; margin-left:170px; top:11vw; }
+
+/* sec8 */
+.g-camp .sec8 { padding-bottom:140px; overflow:visible; }
+.g-camp .sec8 h2 { font-size:52px; line-height:74px; padding:120px 0 70px ; text-align:center; color:#222; font-weight:600; }
+
+.g-camp .sec8 .inner > p { font-family:Noto Sans KR; text-align:center; font-size:28px; color:#222; letter-spacing:-0.02rem; margin-top:80px; }
+.g-camp .sec8 .inner > p b { font-weight:600; }
+.g-camp .sec8 div a { font-family:Noto Sans KR; font-size:25px; margin-top:44px; display:flex; justify-content:center; align-items:center; gap:10px; }
+.g-camp .sec8 div a span { border-bottom:1px solid #3c4f1c; color:#3c4f1c; font-weight:700; }
+
+
+.g-camp .sec8 .swBox .swiper-slide { opacity:0.5; padding:0 15px; }
+.g-camp .sec8 .swBox .swiper-slide .innBox { border-radius:40px; margin:0px; overflow:hidden; box-shadow:rgba(0,0,0,0.2) 0 0 20px; }
+.g-camp .sec8 .swBox .swiper-slide-active { opacity:1; }
+.g-camp .sec8 .swBox .swiper-slide-active .innBox { opacity:1; }
+.g-camp .sec8 .swBox .swiper-slide.swiper-slide-active .innBox::before { display:none; }
+.g-camp .sec8 .swBox figure > img { width:100%; }
+.g-camp .sec8 .swBox .txt { padding:40px 40px 0; }
+.g-camp .sec8 .swBox .txt h4 { font-size:34px; font-weight:600; color:#639736; }
+.g-camp .sec8 .swBox .txt p { font-size:22px; line-height:35px; height:auto; padding-bottom:52px; font-family:'Gmarket Sans'; font-weight:400; margin-top:20px; }
+.g-camp .sec8 .swBox .txt p strong { font-weight:600; }
+
+.g-camp .sec8 .swiper-container-horizontal>.swiper-pagination-bullets { position:relative; margin-top:70px; }
+.g-camp .sec8 .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet { width:44px; height:10px; border-radius:5px; background-color:#639736; }
+
+.g-camp .sec8 .swiper-button-next,
+.g-camp .sec8 .swiper-button-prev { display:block; background-size:100%; width:60px; height:60px; margin-top:-60px; background-image:url('/uploads/campaign/template/25-1000girls/20250926/sec8-arrow-right.png'); }
+.g-camp .sec8 .swiper-button-prev { background-image:url('/uploads/campaign/template/25-1000girls/20250926/sec8-arrow-left.png'); }
+
+/* sec9 */
+.g-camp .sec9 h2 { font-size:min(6vw, 68px); padding: min(10vw, 115px) 0 min(5.4vw, 54px) 0; text-align:center; color:#639736; font-weight:600; }
+.g-camp .sec9 .inner { padding:0 2vw; }
+.g-camp .sec9 .img-list { display:flex; }
+.g-camp .sec9 .img-list li { padding:24px; }
+.g-camp .sec9 .img-list li img { height:min(32vw, 303px); }
+
+/* tab - sec9 */
+.tab-main { position:relative; width:100%; padding-bottom:min(13vw, 150px); }
+.tab-main input[type='radio'] { display:none; }
+.tab-main .tab-main-nav { width:100%; display:flex; justify-content:space-between; }
+.tab-main .tab-main-nav a { width:33%; background-color:#fff; font-size:24px; font-weight:700; text-align:center; cursor:pointer; transition:all .3s ease 0s; border-radius:8px; margin-right:min(1.8vw, 20px); }
+.tab-main .tab-main-nav a:last-child{margin-right:0; }
+.tab-main .tab-main-nav a label { display:flex; justify-content:center; align-items:center; color:#639736; height:90px; line-height:69px; }
+.tab-main .tab-main-content { overflow:hidden; display:none; margin-top:min(5vw, 50px)}
+
+.tab-main input[id='tab1']:checked ~ .tab-main-nav label[for='tab1'],
+.tab-main input[id='tab2']:checked ~ .tab-main-nav label[for='tab2'],
+.tab-main input[id='tab3']:checked ~ .tab-main-nav label[for='tab3']
+{background:#639736; color:#fff; border-radius:8px; }
+
+.tab-main input[id='tab1']:checked ~ div.tab-1, 
+.tab-main input[id='tab2']:checked ~ div.tab-2, 
+.tab-main input[id='tab3']:checked ~ div.tab-3 {display:block; }
+ 
+.acc-warp .accordion .acc-box { border-radius:15px; background:#fff; margin:0 0 15px 0; padding:min(6vw, 30px) min(3.5vw, 35px); position:relative; }
+.acc-warp .accordion .acc-box .acc-q { margin-bottom:30px; font-size:24px; }
+.acc-warp .accordion .acc-box .tit{ color:#639736; font-weight:700; margin-right:min(2.4vw, 35px); }
+.acc-warp .accordion .acc-box .tit + p { font-family:'Gmarket Sans'; }
+.acc-warp .accordion .acc-box .acc-tab { text-align:left; }
+.acc-warp .accordion .acc-box .acc-q { font-weight:700; cursor:pointer; position:relative; }
+.acc-warp .accordion .acc-box .arrow { background-image:url(/uploads/campaign/template/25-1000girls/20250926/sec9-arrow.png); position:absolute; transform:translate(0%, -50%); width:clamp(15px, 2.8vw, 25px); height:clamp(9px, 1.5vw, 15px); right:3%; top:50%; background-size:cover; background-repeat:no-repeat; }
+.acc-warp .accordion .acc-box .acc-a { display:none; font-size:20px; overflow:hidden; transition:height 0.2s ease, opacity 0.2s ease; padding-top:3%; }
+.acc-warp .accordion .acc-box .tit_all { display:flex; align-items:baseline; color:#639736; padding:5px 30px 0 0px; }
+.acc-warp .accordion .acc-box.on .acc-a .a-cont {display:flex; border-top:1px solid #eef4ea; padding-top:3%; }
+.acc-warp .accordion .acc-box.on .arrow { background-image:url(/uploads/campaign/template/25-1000girls/20250926/sec9-arrow-on.png); background-size:cover; background-repeat:no-repeat; top:40px; } 
+.acc-warp .accordion .acc-a .a-cont {  display:none; }
+.acc-warp .accordion .acc-box.on .acc-a {  display:block; }
+.acc-warp .accordion .acc-box.on .acc-a .a-cont {  display:flex; }
+
+@media screen and (max-width:1420px) {
+
+  .g-camp :not(.sec5, .sec6) .inner { padding:0 min(5.5vw, 22px); }
+
+}
+
+@media screen and (max-width:1280px) { 
+
+    .quick-menu-btn { justify-content:center; align-items:flex-end; padding:0px 5px 30px 5px; }
+    .quick-menu-btn a { width:290px; height:81px; background:url('/uploads/campaign/template/25-1000girls/20250926/mo-b-floating.png') no-repeat; background-size:cover; }
+    .quick-menu-btn:hover { -webkit-animation:bounce 0.35s ease-out alternate infinite; animation:bounce 0.35s ease-out alternate infinite; }
+
+    /* sec1-mo */
+    .g-camp .sec1.mo { height:auto; -webkit-animation:img-change1mo 6s ease infinite; animation:img-change1mo 6s ease infinite; background-size:100%; background-repeat:no-repeat; padding-bottom:20vw; background-color:#221f16; }
+    @-webkit-keyframes img-change1mo { 
+    0%,100% { background-image:url('/uploads/campaign/template/25-1000girls/20250926/mo-sec1-img1.jpg')}
+    50% { background-image:url('/uploads/campaign/template/25-1000girls/20250926/mo-sec1-img2.jpg')}
+    }
+    @keyframes img-change1mo { 
+    0%,100% { background-image:url('/uploads/campaign/template/25-1000girls/20250926/mo-sec1-img1.jpg')}
+    50% { background-image:url('/uploads/campaign/template/25-1000girls/20250926/mo-sec1-img2.jpg')}
+    }
+    .g-camp .sec1.mo p { font-size:min(4.8vw, 24px); margin-top:120%; padding:0 3%; }
+    .g-camp .sec1.mo p + p { margin-top:6vw; }
+    .g-camp .sec1.mo h2 { padding-top:18vw; }
+    .g-camp .sec1.mo h2 img { max-width:64vw; }
+    .g-camp .sec1.mo div.scroll img { max-width:6vw; }
+    .g-camp .sec1.mo .line-box { margin-top:6vw; }
+    .g-camp .sec1.mo .line-box .line { display:none; }
+    .g-camp .sec1.mo .line-box .txt-box { width:100%; font-size:min(3.6vw, 18px); line-height:1.7; padding:4vw 4vw 4vw 7vw; border-radius:20px; }
+    .g-camp .sec1.mo .line-box .txt-box br { display:none; }
+
+    /* sec2~3 */
+    .g-camp .sec2.pc7, 
+    .g-camp .sec3.pc7 { height:640px; background-size:cover; }
+    .g-camp .sec2.pc7 .txt-box,
+    .g-camp .sec3.pc7 .txt-box { width:min(45vw, 490px) ; }
+    .g-camp .sec2.pc7 .txt-box img,
+    .g-camp .sec3.pc7 .txt-box img { height:min(11vw, 120px); }
+    .g-camp .sec2.pc7 p,
+    .g-camp .sec3.pc7 p { font-size:min(4.4vw, 22px); line-height:1.6; letter-spacing:-0.04em; }
+
+    /* sec4 */
+    .g-camp .sec4.pc7 { height:480px; background-size:cover; }
+    .g-camp .sec4.pc7 img { height:8.7vw; }
+    
+    /* sec7 */
+    .g-camp .sec7-1.pc7 h2 { padding-left:70px; }
+    .g-camp .sec7-1 dl dd a { margin-left:70px; }
+    .g-camp .sec7-2.pc7 ul { padding-left:24px; }
+    .g-camp .sec7-2.pc7 .withbear { transform:scale(0.85); top:165px; right:0; width:440px; }
+    .g-camp .sec7-2 .withbear .feel { right:10px; }
+
+    /* sec8 */
+    .g-camp .sec8 .inner > p br  { display:none; }
+
+}
+
+@media screen and (max-width:1024px) {
+
+    /* main */
+    .g-camp .smain .main-tit a.btn { width:min(66.7vw, 275px); padding-left:5vw; margin-top:5vw; font-size:min(4.9vw, 20px); height:min(14.9vw, 61px); line-height:min(14.9vw, 61px); }
+    .g-camp .smain .main-tit a.btn:after { width:min(12.5vw, 51px); height:min(12.5vw, 51px); right:min(1.5vw, 5px); top:min(1.25vw, 5px); background-size:22.5%; }
+    .g-camp .smain.mo .main-tit img { width:min(82vw, 480px ); }
+    .g-camp .smain .main-tit > p { margin-top:min(3.2vw, 40px ); font-size:min(4.9vw, 20px); }
+
+    /* sec1 */
+    .g-camp .sec1 .line-box .txt-box::before { left:5vw; }
+    .g-camp .sec1 p strong { line-height:120%; height:120%; }
+
+    /* sec5 */
+    .g-camp .sec5 { background-image:url('/uploads/campaign/template/25-1000girls/20250926/mo-sec5-bg.jpg'); }
+
+    /* sec6 */
+    .g-camp .sec6 .inner { padding:21vw 3% 18vw; }
+    .g-camp .sec6 .drag-warp { flex-direction:column; }
+    .g-camp .sec6 .drag-warp .txt { margin-left:0; margin-top:9vw; text-align:center; justify-content:center; flex-direction:column; align-items:center; }
+    .g-camp .sec6 h3 { font-size:min(5vw, 32px); line-height:1.6; }
+    .g-camp .sec6 .drag-warp .drag-box { width:84%; margin: 0 auto; }
+    .g-camp .sec6 .drag-warp .drag-box::before { width:25vw; height:34vw; margin-left:-3.3vw; margin-top:-3vw; }
+    .g-camp .sec6 .drag-warp .drag-box::after { width:25vw; height:34vw; right:-3vw; bottom:-3.3vw; }
+    .g-camp .sec6 a.btn { width:min(66.7vw, 275px); padding-left:min(11vw, 46px); margin-top:5vw; font-size:min(4.9vw, 20px); height:min(14.9vw, 61px); line-height:min(14.9vw, 61px); }
+    .g-camp .sec6 a.btn:after { width:min(12.5vw, 51px); height:min(12.5vw, 51px); right:min(1.25vw, 5px); top:min(1.25vw, 5px); background-size:22.5%; }
+
+    /* sec7 */
+    .g-camp .sec7-1 h2 { font-size:min(7vw, 29px); line-height:1.35; }
+    .g-camp .sec7-1 h2 img { height:min(7vw, 22px); }
+    .g-camp .sec7-2 h3 { padding-top:70px; }
+    .g-camp .sec7-2 a.btn  { display:block; margin:min(10vw,33px) auto min(21.4vw, 80px);  background:#CAB15D; background:linear-gradient(90deg,#639736 25%, #cab15d 100%); color:#fff; box-sizing:border-box; text-align:left; padding-left:40px; border-radius:44px; position:relative; font-weight:600; font-family:noto sans kr; }
+    .g-camp .sec7-2 a.btn  span { color:#fff67f; }
+    .g-camp .sec7-2 a.btn:after { content:""; display:block; position:absolute; border-radius:50%; background-color:#fff; background-image:url('/uploads/campaign/template/25-1000girls/20250926/sec7-arrow.png'); background-repeat:no-repeat; background-position:left 55% center; background-size:22.5%; }
+    .g-camp .sec7-2 a.btn { width:min(82vw, 331px); padding-left:min(6vw, 25px); margin-top:3vw; font-size:min(4.9vw, 20px); height:min(14.9vw, 61px); line-height:min(14.9vw, 61px); }
+    .g-camp .sec7-2 a.btn:after { width:min(12.5vw, 51px); height:min(12.5vw, 51px); right:min(1.25vw, 5px); top:min(1.25vw, 5px); }
+    .g-camp .sec7-1 dl dt div { height:58vw; }
+    .g-camp .sec7-1 dl dt div iframe { width:32vw; height:58vw; }
+    .g-camp .sec7-1.pc7 h2 { padding-top:140px; font-size:32px; line-height:1.4; }
+    .g-camp .sec7-1.pc7 h2 img { height:30px; }
+    .g-camp .sec7-1.pc7 dl dd { margin-left:-20px; }
+    .g-camp .sec7-1.pc7 dl dd a { margin-top:24px; height:min(15vw, 60px); line-height:min(15vw, 60px); font-size:min(4vw, 22px); width:min(49vw, 372px); }
+    .g-camp .sec7-1.pc7 dl dd a:after { width:min(12vw, 54px); height:min(12vw, 54px); right:3px; top:3px; }
+    .g-camp .sec7-1.pc7 ul { bottom:-40px; }
+    .slider-bar { width:min(12vw, 80px); }
+    .comparison-slider { width:100%; margin-left:0; margin-top:0; margin:0 auto; }
+    .comparison-slider img { width:100%; height:100%; }
+
+    /* sec8 */
+    .g-camp .sec5 h2,
+    .g-camp .sec8 h2 { font-size:min(7vw, 29px); line-height:1.4; padding:min(19.4vw, 70px) 0 min(9.7vw, 40px); }
+    .g-camp .sec8 .swBox .txt { padding:4.8vw 6vw 0; height:220px; }
+    .g-camp .sec8 .swBox .txt h4 { font-size:min(6vw, 25px); }
+    .g-camp .sec8 .swBox .txt p { font-size:min(4vw, 16px); line-height:1.5; margin-top:2vw; padding-bottom:40px; }
+    .g-camp .sec8 .swBox .swiper-slide {  padding:0 10px; }
+    .g-camp .sec8 .swBox .swiper-slide .innBox { border-radius:20px; }
+    .g-camp .sec8 { padding-bottom:min(20vw, 80px) ; }
+    .g-camp .sec8 .inner > p { font-size:min(4.4vw, 17px); margin-top:min(8vw, 36px); }
+    .g-camp .sec8 div a { margin-top:min(4.4vw, 14px); }
+    .g-camp .sec8 div a span { font-size:min(4.4vw, 17px); }
+    .g-camp .sec8 .swiper-button-next, .g-camp .sec8 .swiper-button-prev { display:none; }
+    .g-camp .sec8 .swiper-container-horizontal>.swiper-pagination-bullets {  margin-top:50px; }
+    .g-camp .sec8 div a { gap:6px; }
+    .g-camp  .ta-c img { width:17px; }
+
+    /* tab - sec9 */
+    .tab-main .tab-main-content { margin-top:min(6vw, 25px); }
+    .tab-main .tab-main-nav a label { padding: min(6.5vw, 26px); }
+    .tab-main .tab-main-nav a { font-size:20px; }
+    .acc-warp .accordion .acc-box { padding:min(6.5vw, 26px); }
+    .acc-warp .accordion .acc-box .arrow { width:15px; height:9px; }
+    .acc-warp .accordion .acc-box .acc-q,
+    .acc-warp .accordion .acc-box .acc-a,
+    .acc-warp .accordion .acc-box .tit + p { font-size:16px; }
+    .acc-warp .accordion .acc-box .tit + p { margin-top:min(2vw, 4px); }
+    .acc-warp .accordion .acc-box .arrow { right:26px; }
+}
+
+@media screen and (max-width:980px) {
+
+    .g-camp .sec7-2.pc7 ul { width:100%; padding-bottom:30px; }
+    .g-camp .sec7-2.pc7 ul li br { display:none; }
+    .g-camp .sec7-2.pc7 .withbear { position:relative; top:24px; height:420px; transform:scale(1); left:50%; transform:translateX(-50%); }
+
+}
+
+@media screen and (max-width:768px) { 
+
+    .g-camp .pc7 { display:none !important; }
+    .g-camp .mo7 { display:block !important; }
+    .g-camp .sec7-2.mo7 .withbear { transform:scale(0.7); }
+
+    .g-camp .sec8 .swBox .txt { padding:7vw 6vw 0; height:auto; }
+
+    .tab-main .tab-main-nav a label { height:44px; line-height:48px; }
+    .tab-main .tab-main-nav a { font-size:16px; }
+    .acc-warp .accordion .acc-box .acc-q,
+    .acc-warp .accordion .acc-box .acc-a,
+    .acc-warp .accordion .acc-box .tit + p { font-size:14px; }
+    .g-camp .smain .main-tit a.btn,
+    .g-camp .sec7-2 a.btn { padding-left:min(4vw, 16px); padding-right:min(13.8vw, 56px); text-align:center; }
+}
+
+@media screen and (max-width:468px) { 
+
+    .tab-main .tab-main-nav a label { padding:2px 0 0 0; height:50px; }
+
+    .g-camp .sec5 .card_area.mo ul li figure img { border-radius:25px; }
+
+    .g-camp .sec7-1 { background-image:url('/uploads/campaign/template/25-1000girls/20250926/sec7-bg1-2.jpg'); }
+    .g-camp .sec7-2 a.btn { max-width:100%; }
+    .g-camp .sec7-2.mo7 .withbear .feel { left:50%;  margin-left:170px; top:19vw; }
+
+}
+
+</style>

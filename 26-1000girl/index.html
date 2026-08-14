@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="#fff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+    <!-- SEO 정보 입력-->
+    <title>한국월드비전 공식홈 | 세계 최대 구호개발 NGO - 월드비전</title>
+    <meta name="description" content="한국월드비전은 지구촌 2억 명 어린이와 가족, 지역사회를 돕는 글로벌 NGO 입니다. 월드비전은 투명한 기부금을 약속합니다.">
+    <meta property="og:title" content="한국월드비전 공식홈 | 세계 최대 구호개발 NGO - 월드비전">
+    <meta property="og:description" content="한국월드비전은 지구촌 2억 명 어린이와 가족, 지역사회를 돕는 글로벌 NGO 입니다. 월드비전은 투명한 기부금을 약속합니다.">
+    <meta property="og:image" content="https://www.worldvision.or.kr/static/images/common/logo.png">
+    <meta property="og:url" content="https://www.worldvision.or.kr/">
+    <link rel="canonical" href="//www.worldvision.or.kr">
+
+    <!-- //SEO 정보 입력 -->
+
+    <link rel="shortcut icon" href="https://www.worldvision.or.kr/static/images/common/favicon.ico">
+
+    <link type="text/css" rel="stylesheet" href="https://www.worldvision.or.kr/static/css/jquery-ui.min.css">
+    <link type="text/css" rel="stylesheet" href="https://www.worldvision.or.kr/static/css/swiper.min.css">
+    <link type="text/css" rel="stylesheet" href="https://www.worldvision.or.kr/static/css/common.css?v=20240226171940">
+    <link type="text/css" rel="stylesheet" href="https://www.worldvision.or.kr/static/css/main.css?v=20240226171940">
+    <link type="text/css" rel="stylesheet" href="https://www.worldvision.or.kr/static/css/sub.css?v=20240226171940">
+    <link type="text/css" rel="stylesheet" href="https://www.worldvision.or.kr/static/css/module.css?v=20240226171940">
+    <link type="text/css" rel="stylesheet" href="https://www.worldvision.or.kr/static/css/cmsModule.css">
+    <link type="text/css" rel="stylesheet"
+        href="https://gb.worldvision.or.kr/resources/wvFrt/project/template/inc/wv-add.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean"
+        rel="stylesheet">
+
+
+    <style>
+        #container .container {
+            min-height: 500px
+        }
+
+        [class^='box'] {
+            width: initial;
+            display: initial;
+            padding: initial;
+        }
+    </style>
+
+    <script type="text/javascript" src="https://www.worldvision.or.kr/static/js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="https://www.worldvision.or.kr/static/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://www.worldvision.or.kr/static/js/jquery.nicescroll.min.js"></script>
+    <script type="text/javascript" src="https://www.worldvision.or.kr/static/js/swiper.min.js"></script>
+    <script type="text/javascript" src="https://www.worldvision.or.kr/static/js/in-view.js"></script>
+    <script type="text/javascript" src="https://www.worldvision.or.kr/static/js/ui.js"></script>
+    <script type="text/javascript" src="https://www.worldvision.or.kr/static/js/common/common.js?v=20240226171940">
+    </script>
+    <script type="text/javascript" src="https://www.worldvision.or.kr/static/js/common.js?v=20240226171940"></script>
+    <script type="text/javascript" src="https://www.worldvision.or.kr/static/js/cmsModule.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="https://www.worldvision.or.kr/static/css/section.css">
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //타이틀 내용 엔터처리
+            $('.l-grid input[name=titleContents]').closest('.l-grid').each(function (i) {
+                var titleContents = $(this).find('input[name=titleContents]').val();
+                if (typeof titleContents != "undefined" && titleContents != '') {
+                    titleContents = titleContents.replaceAll("\n", "<br/>")
+                    $(this).find('p[name=titleContentsPc]').append(titleContents);
+                    $(this).find('p[name=titleContentsMo]').append(titleContents);
+                }
+            });
+
+            //영상.내용 엔터처리
+            $('.l-grid input[name=videoContents]').closest('.l-grid').each(function (i) {
+                var videoContents = $(this).find('input[name=videoContents]').val();
+                if (typeof videoContents != "undefined" && videoContents != '') {
+                    videoContents = videoContents.replaceAll("\n", "<br/>")
+                    $(this).find('p[name=videoContentsPc]').append(videoContents);
+                    $(this).find('p[name=videoContentsMo]').append(videoContents);
+                }
+            });
+
+            //텍스트상자.설명 엔터처리
+            $('.section-banner input[name=textContents]').closest('.section-banner').each(function (i) {
+                var textContents = $(this).find('input[name=textContents]').val();
+                if (typeof textContents != "undefined" && textContents != '') {
+                    textContents = textContents.replaceAll("\n", "<br/>")
+                    $(this).find('p[name=textContentsPc]').append(textContents);
+                    $(this).find('p[name=textContentsMo]').append(textContents);
+                }
+            });
+            //텍스트상자.내용 엔터처리
+            $('.l-grid input[name=textPContents]').closest('.l-grid').each(function (i) {
+                var textPContents = $(this).find('input[name=textPContents]').val();
+                if (typeof textPContents != "undefined" && textPContents != '') {
+                    textPContents = textPContents.replaceAll("\n", "<br/>")
+                    $(this).find('p[name=pContentsPc]').append(textPContents);
+                    $(this).find('p[name=pContentsMo]').append(textPContents);
+                }
+            });
+
+            //변화3단.내용 엔터처리
+            $('.section-banner input[name=changeContents]').closest('.section-banner').each(function (i) {
+                var changeContents = $(this).find('input[name=changeContents]').val();
+                if (typeof changeContents != "undefined" && changeContents != '') {
+                    changeContents = changeContents.replaceAll("\n", "<br/>")
+                    $(this).find('p[name=changeContentsPc]').append(changeContents);
+                    $(this).find('p[name=changeContentsMo]').append(changeContents);
+                }
+            });
+        });
+
+        //버튼클릭 링크이동 이벤트
+        function moveLink(flag, url) {
+            var setUrl = '';
+            if (url.includes('https')) {
+                setUrl = url;
+            } else {
+                setUrl = 'https://' + url
+            }
+
+            if (flag == '1') {
+                location.href = setUrl;
+            } else {
+                window.open(setUrl);
+            }
+        }
+
+        //플로팅 클릭이벤트
+        function clickArrow() {
+
+            var floatUrl = $("#floatUrl").val();
+            var floatTargetFlag = $("#floatTargetFlag").val();
+
+            var setUrl = '';
+            if (floatUrl.includes('https')) {
+                setUrl = floatUrl;
+            } else {
+                setUrl = 'https://' + floatUrl
+            }
+
+            if (floatTargetFlag == '1') {
+                location.href = setUrl;
+            } else {
+                window.open(setUrl);
+            }
+        }
+
+        $(function () {
+            $("#arrow").click(function () { });
+
+            /* 섹션 스와이퍼 */
+            var section_swiper = new Array();
+            $('.section_swiper').each(function (e) {
+                section_swiper[e] = new Swiper($(this).find('.swiper-container'), {
+                    //loop: true, /* loop: true 넣음 에러남 */
+                    pagination: {
+                        el: $(this).find('.progress_pagination'),
+                        type: "progressbar"
+                    },
+                    navigation: {
+                        nextEl: $(this).find('.btn_next'),
+                        prevEl: $(this).find('.btn_prev')
+                    },
+                    on: {
+                        init: function () {
+                            var len = this.slides.length;
+                            var idx = this.activeIndex + 1;
+                            $('.section_swiper').eq(e).find('.total').text(len);
+                            $('.section_swiper').eq(e).find('.idx').text(idx);
+                            if (len == 1) {
+                                setTimeout(function () {
+                                    section_swiper[e].destroy();
+                                    $('.section_swiper').eq(e).find('.pag_wrap')
+                                        .hide();
+                                });
+                            }
+                        },
+                        update: function () {
+                            var len = this.slides.length;
+                            var idx = this.activeIndex + 1;
+                            $('.section_swiper').eq(e).find('.total').text(len);
+                            $('.section_swiper').eq(e).find('.idx').text(idx);
+                            if (len == 1) {
+                                setTimeout(function () {
+                                    section_swiper[e].destroy();
+                                    $('.section_swiper').eq(e).find('.pag_wrap')
+                                        .hide();
+                                });
+                            }
+                        },
+                        slideChange: function () {
+                            var len = this.slides.length;
+                            var idx = this.activeIndex + 1;
+                            if (idx > len) {
+                                idx = 1;
+                            } else if (idx < 1) {
+                                idx = len;
+                            }
+                            $('.section_swiper').eq(e).find('.idx').text(idx);
+                        }
+                    }
+                });
+
+                /* //이미지 모듈 높이 값 제어
+                $('.section_swiper').each(function () {
+	
+                    var _length = $(this).find('.swiper-slide');
+                    var $target = _length.find('.caption');
+	
+                    if (_length.length > 1) {
+                        var $maxHeight = 0;
+	
+                        $target.each(function () {
+                            $thisHeight = $(this).height();
+	
+                            if ($thisHeight > $maxHeight) {
+                                $maxHeight = $thisHeight;
+                            }
+                        });
+                        $target.height($maxHeight);
+                    }
+                }); */
+            });
+
+        });
+    </script>
+
+    <script async="" src="https://script.hotjar.com/modules.3ba69200791f16077ba8.js" charset="utf-8"></script>
+    <script type="text/javascript" async=""
+        src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/651132761/?random=1708935699077&amp;cv=11&amp;fst=1708935699077&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45be42l0za200&amp;gcd=13l3l3l3l1&amp;dma=0&amp;u_w=1920&amp;u_h=1080&amp;url=https%3A%2F%2Fwww.worldvision.or.kr%2Fparticipate%2FchurchVisionSunday&amp;ref=https%3A%2F%2Fwww.worldvision.or.kr%2FworldVisionIntro%2FintroInfo&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=%EB%B9%84%EC%A0%84%EC%A3%BC%EC%9D%BC%20%7C%20%EC%B0%B8%EC%97%AC%ED%95%98%EA%B8%B0%20-%20%EC%9B%94%EB%93%9C%EB%B9%84%EC%A0%84&amp;npa=0&amp;pscdl=noapi&amp;auid=1947791541.1708906766&amp;uaa=x86&amp;uab=64&amp;uafvl=Chromium%3B122.0.6261.69%7CNot(A%253ABrand%3B24.0.0.0%7CGoogle%2520Chrome%3B122.0.6261.69&amp;uamb=0&amp;uap=Windows&amp;uapv=10.0.0&amp;uaw=0&amp;fledge=1&amp;data=event%3Dgtag.config&amp;rfmt=3&amp;fmt=4">
+        </script>
+
+
+    <!-- 추가 css js 입력 -->
+    <link href="css/new.css" rel="stylesheet">
+    <!-- //추가 css js 입력 -->
+
+</head>
+
+<body>
+
+    <div id="wrap">
+        <!-- top-menu -->
+        <div data-include-path="https://gb.worldvision.or.kr/resources/wvFrt/project/template/inc/top-menu.html"></div>
+        <!-- //top-menu -->
+
+        <section id="container">
+            <!-- 컨텐츠 작업 영역 -->
+             <!--
+                // 일시후원 버튼 
+                움직임 구현 -- 참고사이트
+                // 모바일, pc 정렬/크기 맞추기
+                // 키링부분 모바일 정렬
+                // 키링부분 그림자 구현
+                가이드 맞춰서 다시 확인
+             -->
+            <div id="thousand-girl">
+                <div class="g_floating">
+                    <a href="" class="donate-btn" id="float_donation">
+                        <div class="txt">여아 후원하고 <br class="pc"> <span>키링받기</span></div>
+                    </a>
+                </div>
+
+                <div class="main">
+                    <!-- <div class="dummy"><img src="images/main_mo.jpg" alt=""></div> -->
+                    <div class="inner">
+                        <div class="main-title">
+                            <h1 class="ob__">
+                                <p>월드비전 해외여아후원 캠페인</p>
+                                <img src="images/main_title.png" alt="1000명의 소녀들">
+                            </h1>
+                            <p class="ob__ t_d_200">
+                                가난 때문에 푼돈에 팔려 <br>
+                                <span>여덟 살 나이에 결혼해야 하는 리나.</span>
+                            </p>
+                            <p class="ob__ t_d_400">
+                                <span>지금 조혼의 위기</span>에 처해있는<br>
+                                <span>아프리카 소녀들</span>을 구해주세요.
+                            </p>
+                            <div class="ob__ t_d_600">
+                            <a href="#" target="_blank" class="bttn " id="smain-btn-donate"><span>해외여아</span> 후원하기</a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="video-inner">
+                        <iframe
+                            src="https://www.youtube.com/embed/YtXSdKJ3cAk?si=OdLL3uPv8Sld4sQh&amp;autoplay=1&amp;mute=1&amp;loop=1&amp;rel=0&amp;enablejsapi=1"
+                            title="[Overseas Child Sponsorship] 1000 Girls_Sophie's Story" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    
+                </div>
+                <div class="sec1">
+                    <!-- <div class="dummy"><img src="images/sec1_mo.jpg" alt=""></div> -->
+                    <div class="inner">
+                        <p class="inner__desc">
+                            <img src="images/main_ico.png" alt="">
+                            케냐 투르카나 지역에서 만난 <br class="mo">8살 리나의 실제 이야기입니다.
+                        </p>
+
+                        <div class="line-box pc ">
+                            <div class="ob__right t_d_600">
+                                <div class="desc">
+                                    <strong> * </strong>
+                                    <div>
+                                        <strong>조혼 목걸이: </strong>케냐, 우간다 등 아프리카 일부 지역에서
+                                        조혼이 결정된 <span><small>어린 소녀에게 표식으로 채우는 목걸이.</small></span>
+                                        목걸이가 채워진 아이는 학교에 갈 수 없습니다.
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="ob__right t_d_600">
+                                <div class="line">
+                                    <img src="images/sec1-line.png" alt="라인과 점">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="txt-box">
+                            <h2 class="ob__left">
+                                <img src="images/sec1_title.png" alt="목걸이를 했으니 넌 이제 내 아내야." class="pc">
+                                <img src="images/sec1_title_mo.png" alt="목걸이를 했으니 넌 이제 내 아내야." class="mo">
+                            </h2>
+
+                            <div class="desc ob__">
+                                <strong> * </strong>
+                                <div>
+                                    <strong>조혼 목걸이: </strong>케냐, 우간다 등 아프리카 일부 <br>
+                                    지역에서 조혼이 결정된 <span><small>어린 소녀에게</small></span><span><small> 표식으로 </small></span><span><small>채우는 목걸이.</small></span>  &nbsp;목걸이가 채워진 아이는 학교에 
+                                    갈 수 없습니다.
+                                </div>
+                            </div>
+
+                            <p class="ob__left t_d_300">어느 날 목걸이를 들고  <br>
+                                리나 앞에 한 아저씨가 나타났습니다.<br>
+                                <strong>“넌 이제 내 아내가 되어야 해“</strong> <br><br>
+
+                                여덟 살 리나의 목에 <strong>조혼 목걸이*</strong>가<br>
+                                강제로 채워진 순간부터 리나는<br>
+                                <span>
+                                    <small> 아저씨의 아내로 예약되었습니다.</small>
+                                </span>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="sec2">
+                     <!-- <div class="dummy"><img src="images/sec2_mo.jpg" alt=""></div> -->
+                    <!-- <div class="dummy"><img src="images/sec2.jpg" alt=""></div> -->
+                    <div class="inner">
+                        <div class="txt-box">
+                            <h3 class="ob__right"><img src="images/sec2_title.png" alt="며칠 치 식비에 팔린 리나의 미래"></h3>
+                            <p class="ob__right t_d_300">
+                                극심한 가뭄 끝에 <br>
+                                <strong>엄마마저 떠나보내고 혼자 남겨진 리나.</strong><br>
+                                할머니는 리나를 결혼시키는 것 말고는<br>
+                                다른 선택지가 없었습니다.
+                            </p>
+                            <p class="ob__right t_d_600"><br>
+                                리나의 미래는 고작 며칠을 버틸 만한 정도의 <br>
+                                <span><small>밀가루 몇 봉지 값에 거래됐습니다.</small></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sec3 ">
+                    <!-- <div class="dummy"><img src="images/sec3_mo.jpg" alt=""></div> -->
+                    <!-- <div class="dummy"><img src="images/sec3.jpg" alt=""></div> -->
+                    <div class="inner">
+                        <div class="txt-box">
+                            <h3 class="ob__left"><img src="images/sec3_title.png" alt="“엄마... 오늘도 아저씨가 저를 보러 왔어요"></h3>
+                            <p class="ob__left t_d_300">
+                                출산이 가능한 12살 무렵이 되면<br>
+                                <strong>아저씨네 집으로 끌려가야 하는 리나.</strong>
+                            </p>
+                            <p class="ob__left t_d_600"> <br>
+                                아저씨가 리나를 감시하러 <br>
+                                집으로 찾아오는 날이면<br>
+                                겁에 질려 엄마의 무덤가로 갑니다.
+                            </p>
+                            <figure class="ob__left t_d_1000"><img src="images/sec3_desc.png" alt="엄마, 저는 아직 어린데 왜 벌써 결혼해야 하나요? 매일 너무 무서워요..." ></figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="sec4 bg-animate">
+                    <!-- <div class="dummy"><img src="images/sec4_mo.jpg" alt=""></div> -->
+                    <div class="inner">
+                        <div class="txt-box">
+                            <h3 class="ob__right"><img src="images/sec4_title.png" alt="학교에 가고 싶은데, 엄마가 되래요..."></h3>
+                            <p class="ob__right t_d_300">
+                                리나의 유일한 소원은 <br>
+                                <strong>친구들처럼 학교에 다니는 것.</strong>
+                            </p>
+                            <p class="ob__right t_d_600"><br>
+
+                                하지만 조혼 목걸이가 채워진 후<br>
+                                리나는 절대 학교에 다닐 수 없습니다.
+                            </p>
+                            <p class="ob__right t_d_900"><br>
+
+                                <span><small>이제 리나에게 남은 건</small></span><br>
+                                <span><small>강요된 결혼과 출산뿐입니다.</small></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sec5">
+                    <!-- <div class="dummy"><img src="images/sec5_mo.jpg" alt=""></div> -->
+                    <div class="inner">
+                        <h2 class="ob__bottom">
+                            지금 이 순간에도 <br>
+                            <span> 3초마다 1명의 소녀가 <br class="mo">강제로 결혼</span>합니다
+                            <small>(UNFPA-UNICEF, 2026)</small>
+                        </h2>
+                        <div class="flip_area pc">
+                                <div class="ob__bottom t_d_300 flip">
+                                    <a href="#">Click</a>
+                                    <div class="card">
+                                        <div class="card_front">
+                                            <figure><img src="images/sec5-img01.png" alt="마리암"></figure>
+                                            <h4 class="txt">
+                                                <b>첫아이</b>를 낳다가<br>
+                                                <b>세상을 떠난</b> <strong>13살 마리암</strong>
+                                            </h4>
+                                        </div>
+                                        <div class="card_back">
+                                            <figure><img src="images/sec5-img01-hover.png" alt="마리암"></figure>
+                                            <div class="txt">
+                                                <h4>
+                                                    <b>13살에 첫아이</b>를 낳다가<br>
+                                                    <strong>세상을 떠난 마리암</strong>
+                                                </h4>
+                                                <p>
+                                                    매일 60명 이상의 소녀가 <br>
+                                                    조혼으로 인한<br>
+                                                    <b>임신·출산 합병증으로 사망합니다.</b>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <div class="ob__bottom t_d_500 flip">
+                                <a href="#">Click</a>
+                                <div class="card">
+                                    <div class="card_front">
+                                        <figure><img src="images/sec5-img02.png" alt="다니엘라"></figure>
+                                        <h4 class="txt">
+                                            <b>조혼이 너무 고통</b>스러워 <br>
+                                            극단적 선택을 시도한<br>
+                                            <strong>11살 다니엘라</strong>
+                                        </h4>
+                                    </div>
+                                    <div class="card_back">
+                                        <figure><img src="images/sec5-img02-hover.png" alt="티비스"></figure>
+                                        <div class="txt">
+                                            <h4>
+                                                <b>조혼이 너무 고통</b>스러워 <br>
+                                                극단적 선택을 시도한<br>
+                                                <strong>다니엘라</strong>
+                                            </h4>
+                                            <p>
+                                                조혼을 피할 방법이 없다고<br>
+                                                느낀 소녀들은 때로<br>
+                                                목숨을 걸고서라도<br>
+                                                <b>조혼에서 벗어나려 합니다.</b>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ob__bottom t_d_700 flip">
+                                <a href="#">Click</a>
+                                <div class="card">
+                                    <div class="card_front">
+                                        <figure><img src="images/sec5-img03.png" alt="샤론"></figure>
+                                        <h4 class="txt">
+                                            어린 나이에 <br>
+                                            <b>임신과 출산을 반복</b>해<br>
+                                            <strong>누공병에 걸린 18살 샤론</strong>
+                                        </h4>
+                                    </div>
+                                    <div class="card_back">
+                                        <figure><img src="images/sec5-img03-hover.png" alt="샤론"></figure>
+                                        <div class="txt">
+                                            <h4>
+                                                어린 나이에 <br>
+                                                <b>반복된 임신과 출산</b>으로 인해<br>
+                                                <strong>누공병에 걸린 샤론</strong>
+                                            </h4>
+                                            <p>
+                                                출산 중 생긴 <strong>*누공</strong> 사례의 <br>
+                                                <b>4명 중 1명은 이른 임신과 출산</b>을 겪은 <br>
+                                                소녀들에게서 발생합니다.
+                                            </p>
+                                            <p class="stxt">
+                                                <strong>*누공</strong>은 출산 과정에서 내장에 구멍이 생겨 대소변이 새어 나오는 병입니다.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card_area mo">
+                            <ul>
+                                <li>
+                                    <p>
+                                        <b>첫 아이</b>를 낳다가<br>
+                                        <b>세상을 떠난</b><br>
+                                        <strong>13살 마리암 </strong> 
+
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <b>조혼이 너무 고통</b>스러워<br>
+                                        극단적 선택을 시도한  <br>
+                                        <strong>11살 다니엘라</strong>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        어린 나이에 <br>
+                                        <b>임신과 출산을 반복</b>해 <br>
+                                        <strong>누공병에 걸린 18살 샤론</strong>
+                                    </p>
+                                </li>
+                            </ul>
+                            <div class="desc">
+                                <strong>*누공</strong>은 출산 과정에서 내장에 구멍이 생겨 <br> 대소변이 새어 나오는 병입니다.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sticky-wrap">
+                    <div class="sec6">
+                        <!-- <div class="dummy"><img src="images/sec6_mo.jpg" alt=""></div> -->
+                        <!-- <div class="dummy"><img src="images/sec6.jpg" alt=""></div> -->
+                        <div class="inner">
+                            <h2 class="ob__bottom">
+                                조혼을 막을 가장 확실한 <br class="mo"> 방법은 <br class="pc"><span>아이들을 <br class="mo"> 학교에 보내주는 것.</span>
+                            </h2>
+                            <figure class="ob__bottom t_d_300">
+                                <img src="images/sec6_img.png" alt="아이를 학교에 보내주세요" class="pc">
+                                <img src="images/sec6_img_mo.png" alt="아이를 학교에 보내주세요" class="mo">
+                            </figure>
+                            <div class="txt">
+                                <p>후원을 통해 학교에 다니게 된  <br class="mo">소녀들은 조혼 목걸이를 풀고 <br>안전한 환경에서 보호받으며  <br class="mo">꿈을 키울 수 있습니다.</p>
+                                <div class="desc_box">
+                                    <div></div>
+                                    지금, 리나와 같은 <br class="mo">소녀들을 구해주세요.
+                                    <div></div>
+                                </div>
+                                <div class="ob__bottom t_d_700">
+                                    <a href="" target="_blank" class="bttn" id="sec6-btn-donate">해외여아 후원하기</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sec7">
+                        <!-- <div class="dummy"><img src="images/sec7_mo.jpg" alt=""></div> -->
+                        <!-- <div class="dummy"><img src="images/sec7.jpg" alt=""></div> -->
+                        <div class="sky">
+                            <div class="inner">
+                                <h2>
+                                    캠페인에 참여하시면 <br class="mo"><span class="c-org"> 조혼 위기 소녀들을 지키는 </span><br>
+                                    <span class="c-org">위드베어 키링</span>을 드립니다.
+                                </h2>
+                                <div class="bear">
+                                    <div class="logo"><img src="images/sec7_logo.png" alt=""></div>
+                                    <ul>
+                                        <li>
+                                            <span></span>
+                                            <i>🐻</i>
+                                            <p class="pc"><span>예쁜 꽃핀</span>을 귀에 달고 <br>
+                                                언제나 소녀들의 목소리에 <br>
+                                                귀 기울이는 것을 좋아해요</p>
+                                            <p class="mo">포인트 <span> 꽃핀</span></p>
+                                        </li>
+                                        <li>
+                                            <span></span>
+                                            <i>✨</i>
+                                            <p class="pc">
+                                                <span>실용적인 스트랩</span>으로<br>
+                                                어느 곳이든 쉽게 달 수 있어요
+                                            </p>
+                                            <p class="mo">실용적인 <span> 스트랩</span></p>
+                                        </li>
+                                        <li>
+                                            <span></span>
+                                            <i>❤️</i>
+                                            <p class="pc">
+                                                원피스에는 <span>World Vision</span>과 <br>
+                                                <span>With</span>의 의미를 담은 <br>
+                                                <span>오렌지빛 W</span>가 새겨져 있어요
+                                            </p>
+                                            <p class="mo">
+                                                <span> W</span>orld Vision 과<br>
+                                                <span>W</span>ith의 의미
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <span></span>
+                                            <i>🏫</i>
+                                            <p class="pc">
+                                                학교에 다니는 소녀들처럼<br>
+                                                <span>귀여운 가방</span>을 메고 있어요
+                                            </p>
+                                            <p class="mo">귀여운 <span> 가방</span></p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="swiper_bear mo">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <figure><img src="images/sec7_img1.jpg" alt=""></figure>
+                                            <div class="shadow"></div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <figure><img src="images/sec7_img2.jpg" alt=""></figure>
+                                            <div class="shadow"></div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <figure><img src="images/sec7_img3.jpg" alt=""></figure>
+                                            <div class="shadow"></div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <figure><img src="images/sec7_img4.jpg" alt=""></figure>
+                                            <div class="shadow"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid">
+                            <ul>
+                                <li>
+                                    <figure><img src="images/sec7_img1.jpg" alt=""></figure>
+                                    <div class="shadow"></div>
+                                </li>
+                                <li>
+                                    <figure><img src="images/sec7_img2.jpg" alt=""></figure>
+                                    <div class="shadow"></div>
+                                </li>
+                                <li>
+                                    <figure><img src="images/sec7_img3.jpg" alt=""></figure>
+                                    <div class="shadow"></div>
+                                </li>
+                                <li>
+                                    <figure><img src="images/sec7_img4.jpg" alt=""></figure>
+                                    <div class="shadow"></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="sec8">
+                    <!-- <div class="dummy"><img src="images/sec8.jpg" alt=""></div>  -->
+                    <div class="inner">
+                        <h2 class="ob__bottom">
+                            리나와 같은 소녀들을 위해<br>
+                            <span class="c-org">보내주신 후원금은 <br class="mo">이렇게 사용</span>됩니다.
+                        </h2>
+                        <div class="ob__bottom t_d_300 swiper swBox">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="innBox">
+                                        <figure><img src="images/sec8_img1.jpg"
+                                                alt="I'm a child, do not make me a wife 라고 쓰여진 현판">
+                                        </figure>
+                                        <div class="txt">
+                                            <h4>인식 개선</h4>
+                                            <p>
+                                                대부분 가족이나 지역 주민을 통해 <br>조혼이 결정되므로 <br>부모·마을·남아·교사 대상<br>
+                                                <strong>인식 개선 활동을 진행합니다.</strong>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="innBox">
+                                        <figure><img src="images/sec8_img2.jpg" alt="위생적인 학교">
+                                        </figure>
+                                        <div class="txt">
+                                            <h4>위생 환경 개선</h4>
+                                            <p>생리 중에도 학교에 다닐 수 있게 <br>위생적이고 잠금장치가 있는 <br>
+                                                <strong>여아 친화적 화장실을 만들고, <br>생리대를 제공합니다.</strong>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="innBox">
+                                        <figure><img src="images/sec8_img3.jpg" alt="보건교육을 해주고 있는 선생님과 그 주변의 아이들">
+                                        </figure>
+                                        <div class="txt">
+                                            <h4>성생식보건교육</h4>
+                                            <p>성교육과 생리 교육을 통해 <br>여아가 몸의 변화를 이해하고, <br>
+                                                비위생적 환경과 폭력으로부터 <br><strong>자신을 보호할 수 있게 돕습니다. </strong>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="innBox">
+                                        <figure><img src="images/sec8_img4.jpg" alt="어른에게 보호받고 있는 아이">
+                                        </figure>
+                                        <div class="txt">
+                                            <h4>아동 보호</h4>
+                                            <p>조혼·노동착취·성폭력·학대 등을 <br>신고할 창구를 마련하고, <br>지역사회를 모니터링하여 <br><strong>위기 상황에 조기개입합니다.</strong>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="innBox">
+                                        <figure><img src="images/sec8_img5.jpg" alt="웃고있는 아이">
+                                        </figure>
+                                        <div class="txt">
+                                            <h4>경제적 역량 강화</h4>
+                                            <p>여성 청소년들의 경제적 자립을 <br>위한 취·창업 교육을 제공하고, <br><strong>창업 키트와 소액 금융 <br>서비스를 연계합니다.</strong>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+
+                        <p class="ob__bottom t_d_600 ta-c"  >
+                            캠페인을 통해 모인 후원금은 <br>
+                            <b>우간다, 케냐, 가나, 부룬디, 말라위, 잠비아, <br class="mo">에티오피아, 모잠비크  총 8개국</b>에서 <br>
+                            소녀들이 건강하게 자랄 수 있도록 <br class="mo"><b class="c-org">지역개발사업과 여아 위생사업을 위해 사용됩니다.</b>
+                        </p>
+                        <div class="ob__bottom t_d_900 ta-c">
+                            <a href="" target="_blank"
+                                id="sec8-btn-result"><span>1000명의 소녀들 2025년 사업 진행 결과보고 </span><img src="images/sec8-arrow-btn.png"
+                                    alt="화살표 이미지"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="sec9">
+                    <div class="inner">
+                        <h2>FAQ</h2>
+                        <div class="tab-main">
+                            <input type="radio" name="a" id="tab1" tabindex="1" checked="">
+                            <input type="radio" name="a" id="tab2" tabindex="2">
+                            <input type="radio" name="a" id="tab3" tabindex="3">
+
+                            <div class="tab-main-nav">
+                                <a id="tab01"><label for="tab1">참여 문의</label></a>
+                                <a id="tab02"><label for="tab2">제품 문의</label></a>
+                                <a id="tab03"><label for="tab3">기타 문의</label></a>
+                            </div>
+
+                            <div class="tab-main-content tab-1">
+                                <!-- tab1 -->
+                                <div class="acc-warp">
+                                    <div class="accordion">
+                                        <div class="acc-box on">
+                                            <a class="acc-tab acc-q" id="accordion-btn-11">
+                                                <div class="tit_all">
+                                                    <div class="tit">Q.</div><p>위드베어 키링은 어떻게 받을 수 있나요?</p>
+                                                </div>
+                                                <span class="arrow"></span>
+                                            </a>
+
+                                            <div class="acc-tab acc-a">
+                                                <div class="a-cont">
+                                                    <p class="tit">A.</p>
+                                                    <p>&lt;1000명의 소녀들&gt; 캠페인을 통해 해외 여아 1명을 정기 후원하시면, 위드베어 키링 1개를 보내드립니다. <br>
+                                                        키링은 후원 신청 시 입력하신 주소로 발송되며 잘못된 주소지 기재로 인한 재발송은 어려우니, 주소를 꼭 확인해 주세요. <br>
+                                                        만약 주소 입력을 놓치셨다면 ‘홈페이지 로그인 &gt; 마이월드비전’이나 챗봇 혹은 대표번호(02-2078-7000)로 연락 주시면 추가하실 수 있습니다.​
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="acc-box">
+                                            <a class="acc-tab acc-q" id="accordion-btn-12">
+                                                <div class="tit_all">
+                                                    <div class="tit">Q.</div><p>키링을 여러 개 받을 수도 있나요?</p>
+                                                </div>
+                                                <span class="arrow"></span>
+                                            </a>
+
+                                            <div class="acc-tab acc-a">
+                                                <div class="a-cont">
+                                                    <p class="tit">A.</p>
+                                                    <p>
+                                                        &lt;1000명의 소녀들&gt;을 통해 정기후원 신청을 한 아동 수에 맞춰 키링이 발송됩니다. <br>(*2명 아동 정기후원 시, 키링 2개 발송)
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="acc-box">
+                                            <a class="acc-tab acc-q" id="accordion-btn-14">
+                                                <div class="tit_all">
+                                                    <div class="tit">Q.</div><p>정기후원 신청하면 언제 키링을 받아볼 수 있나요?</p>
+                                                </div>
+                                                <span class="arrow"></span>
+                                            </a>
+
+                                            <div class="acc-tab acc-a">
+                                                <div class="a-cont">
+                                                    <p class="tit">A.</p>
+                                                    <p>후원금 첫 결제 후, 3주 이내에 택배로 받아보실 수 있습니다. <br>
+                                                        첫 후원금이 납입되지 않았을 경우, 키링이 발송되지 않습니다. 선택하신 납입일에 후원금이 납입될 수 있도록 확인 부탁드립니다. 
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="acc-box">
+                                            <a class="acc-tab acc-q" id="accordion-btn-14">
+                                                <div class="tit_all">
+                                                    <div class="tit">Q.</div><p>기존 정기 후원자도 위드베어를 받을 수 있나요?</p>
+                                                </div>
+                                                <span class="arrow"></span>
+                                            </a>
+
+                                            <div class="acc-tab acc-a">
+                                                <div class="a-cont">
+                                                    <p class="tit">A.</p>
+                                                    <p>
+                                                        기존 후원자이신 경우, 일시후원(5만원 이상)을 통해 위드베어를 받으실 수 있습니다. 해당 일시 후원금은 해외 사업비로 사용됩니다.<br>
+                                                        더 많은 분들이 소녀들을 위해 동참하실 수 있도록, 일시 후원은 선착순 300명으로 제한되니 이 점 너그러이 양해를 부탁드립니다.<br>
+                                                        <a href="" class="tempDona_btn">일시 <span>후원하기</span></a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-main-content tab-2">
+                                <!-- tab2 -->
+                                <div class="acc-warp">
+                                    <div class="accordion">
+                                        <div class="acc-box on">
+                                            <a class="acc-tab acc-q" id="accordion-btn-22">
+                                                <div class="tit_all">
+                                                    <div class="tit">Q.</div><p>위드베어 사이즈가 어떻게 되나요?</p>
+                                                </div>
+                                                <span class="arrow"></span>
+                                            </a>
+
+                                            <div class="acc-tab acc-a">
+                                                <div class="a-cont">
+                                                    <p class="tit">A.</p>
+                                                    <p>
+                                                        아래 사진을 참고해 주세요. 곰 인형 크기 기준이며 측정 방식에 따라 약 ± 0.5cm 정도 편차가 있을 수 있습니다.
+                                                    </p>
+                                                </div>
+                                                <ol class="img-list">
+                                                    <li>
+                                                        <figure>
+                                                            <img src="images/withbear-spec01.png" alt="가로 9cm 세로 12cm">
+                                                        </figure>
+                                                        <table>
+                                                            <tr>
+                                                                <th>가로</th>
+                                                                <td>9cm</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>세로</th>
+                                                                <td>14.5cm</td>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                    <li>
+                                                        <figure>
+                                                            <img src="images/withbear-spec02.png" alt="가로 9cm 세로 9cm">
+                                                        </figure>
+                                                        <table>
+                                                            <tr>
+                                                                <th>가로</th>
+                                                                <td>9cm</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>세로</th>
+                                                                <td>12cm</td>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                        <div class="acc-box">
+                                            <a class="acc-tab acc-q" id="accordion-btn-21">
+                                                <div class="tit_all">
+                                                    <div class="tit">Q.</div><p>위드베어 가방은 어떻게 활용할 수 있나요?</p>
+                                                </div>
+                                                <span class="arrow"></span>
+                                            </a>
+
+                                            <div class="acc-tab acc-a">
+                                                <div class="a-cont">
+                                                    <p class="tit">A.</p>
+                                                    <p>위드베어가 메고 있는 가방은 에어팟 프로/3세대 케이스로 활용하실 수 있습니다. <br>
+                                                        또한, 뒷면의 똑딱이 버튼으로 위드베어 인형과 탈부착이 가능하니 가방 분실에 주의해 주세요. <br>
+                                                        에어팟 케이스로 활용하시는 동안 발생한 내용물 분실에 대해서는 보상이 어려운 점 양해 부탁드립니다.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="acc-box">
+                                            <a class="acc-tab acc-q" id="accordion-btn-23">
+                                                <div class="tit_all">
+                                                    <div class="tit">Q.</div><p>위드베어 귀에 달린 꽃핀 색상을 고를 수 있나요?</p>
+                                                </div>
+                                                <span class="arrow"></span>
+                                            </a>
+
+                                            <div class="acc-tab acc-a">
+                                                <div class="a-cont">
+                                                    <p class="tit">A.</p>
+                                                    <p>
+                                                        양쪽 귀에 달린 꽃핀은 주황, 보라, 파랑, 초록 등 색상이 다양하며 랜덤으로 발송됩니다.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-main-content tab-3">
+                                <!-- tab3 -->
+                                <div class="acc-warp">
+                                    <div class="accordion">
+                                        <div class="acc-box on">
+                                            <a class="acc-tab acc-q" id="accordion-btn-31">
+                                                <div class="tit_all">
+                                                    <div class="tit">Q.</div><p>위드베어 키링 받을 주소를 변경하고 싶어요​.</p>
+                                                </div>
+                                                <span class="arrow"></span>
+                                            </a>
+
+                                            <div class="acc-tab acc-a">
+                                                <div class="a-cont">
+                                                    <p class="tit">A.</p>
+                                                    <p>배송지 변경은 월드비전 홈페이지 로그인 후 또는 대표전화(02-2078-7000)를 통해 가능하며,<br>
+                                                        이미 발송 시작 안내 연락을 받으신 이후에는 배송지 변경이 어렵습니다.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="acc-box">
+                                            <a class="acc-tab acc-q" id="accordion-btn-32">
+                                                <div class="tit_all">
+                                                    <div class="tit">Q.</div><p>교환, 반품은 어떻게 하나요?</p>
+                                                </div>
+                                                <span class="arrow"></span>
+                                            </a>
+
+                                            <div class="acc-tab acc-a">
+                                                <div class="a-cont">
+                                                    <p class="tit">A.</p>
+                                                    <p>후원 신청 완료 후, ①단순 변심 ②분실 ③사용 중 생긴 손상의 경우에는 교환 및 반품이 어렵습니다. <br>
+        불량의 경우, 키링 수령 후 1개월 이내 월드비전 홈페이지 또는 대표전화(02-2078-7000)로 연락 주시면 이후 프로세스를 안내해 드리겠습니다.<br>
+        *위드베어의 얼굴 부분은 수작업으로 만들어지므로, 눈코입 모양이 제품 사진과 다를 수 있으나 이는 불량이 아닙니다. </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //컨텐츠 작업 영역 -->
+        </section>
+    </div>
+    <!-- footer -->
+    <div data-include-path="https://gb.worldvision.or.kr/resources/wvFrt/project/template/inc/footer.html"></div>
+    <!-- //footer -->
+    </div>
+
+    <script>
+        window.addEventListener('load', function () {
+            var allElements = document.getElementsByTagName('*');
+            Array.prototype.forEach.call(allElements, function (el) {
+                var includePath = el.dataset.includePath;
+                if (includePath) {
+                    var xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4 && this.status == 200) {
+                            el.outerHTML = this.responseText;
+                        }
+                    };
+                    xhttp.open('GET', includePath, true);
+                    xhttp.send();
+                }
+            });
+        });
+
+
+        // 레이아웃 스크롤 모션
+        const observer = new IntersectionObserver((evt) => {
+            evt.forEach((item) => {
+            if (item.isIntersecting) item.target.classList.add('ob_af')
+            });
+        });
+
+        const scrEvt = document.querySelectorAll(".ob__, .ob__bottom, .ob__right, .ob__left");
+        scrEvt.forEach((item) => {
+            observer.observe(item);
+        });
+
+        $(".acc-warp .accordion .acc-box").click(function () {
+            $(this).siblings().removeClass('on');
+            $(this).toggleClass('on');
+        });
+
+        const swiper_girls = new Swiper('.sec8 .swiper', {
+            slidesPerView: 5,
+            loop: true,
+            loopedSlides: 3,
+            loopAdditionalSlides: 3,
+            slidesPerGroup: 1,
+            spaceBetween: 0,
+            centeredSlides: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            },
+            breakpoints: {
+
+                869: {
+                    slidesPerView: 1.3
+                },
+                1024: {
+                    slidesPerView: 1.7
+                },
+                1080: {
+                    slidesPerView: 2
+                },
+                1380: {
+                    slidesPerView: 2.5
+                },
+                1440: {
+                    slidesPerView: 3
+                },
+                1980: {
+                    slidesPerView: 3.8
+                },
+            },
+
+        });
+
+        const swiper_bear = new Swiper('.swiper_bear', {
+            slidesPerView: 'auto',
+            loop: true,
+            centeredSlides: false,
+            loopedSlides: 3,
+            loopAdditionalSlides: 3,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            }
+        });
+
+
+        const sections = document.querySelectorAll('.bg-animate');
+        sections.forEach(section => {
+            setInterval(() => {
+                section.classList.toggle('active');
+            }, 4000);
+        });
+
+        // g_floating purple 색상 전환: 아래 목록에 있는 section에 도달하면 purple, 벗어나면 제거
+        // section 구성이 바뀌면 purpleSectionSelectors 배열만 수정하면 됨
+        (function () {
+            const $floating = document.querySelector('.g_floating');
+            if (!$floating) return;
+
+            // sec7은 실제로 .sec7-1 / .sec7-2 로 나뉘어 있어 둘 다 등록
+            const purpleSectionSelectors = ['.sec3', '.sec4', '.sec7-1', '.sec7-2', '.sec8', '.sec9'];
+
+            const purpleSections = purpleSectionSelectors
+                .flatMap(sel => Array.from(document.querySelectorAll(sel)));
+
+            if (!purpleSections.length) return;
+
+            const activeSections = new Set();
+
+            const purpleObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        activeSections.add(entry.target);
+                    } else {
+                        activeSections.delete(entry.target);
+                    }
+                });
+
+                $floating.classList.toggle('purple', activeSections.size > 0);
+            }, {
+                root: null,
+                // 화면 세로 중앙 지점을 기준으로 section 진입/이탈 판단
+                rootMargin: '-50% 0px -50% 0px',
+                threshold: 0
+            });
+
+            purpleSections.forEach((section) => purpleObserver.observe(section));
+        })();
+
+    </script>
+
+</body>
+
+</html>

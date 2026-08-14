@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="theme-color" content="#fff">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+	<!-- SEO 정보 입력-->
+	<title>한국월드비전 공식홈 | 세계 최대 구호개발 NGO - 월드비전</title>
+	<meta name="description" content="한국월드비전은 지구촌 2억 명 어린이와 가족, 지역사회를 돕는 글로벌 NGO 입니다. 월드비전은 투명한 기부금을 약속합니다.">
+	<meta property="og:title" content="한국월드비전 공식홈 | 세계 최대 구호개발 NGO - 월드비전">
+	<meta property="og:description" content="한국월드비전은 지구촌 2억 명 어린이와 가족, 지역사회를 돕는 글로벌 NGO 입니다. 월드비전은 투명한 기부금을 약속합니다.">
+	<meta property="og:image" content="https://www.worldvision.or.kr/static/images/common/logo.png">
+	<meta property="og:url" content="https://www.worldvision.or.kr/">
+	<link rel="canonical" href="//www.worldvision.or.kr">
+
+	<!-- //SEO 정보 입력 -->
+
+	<link rel="shortcut icon" href="https://www.worldvision.or.kr/static/images/common/favicon.ico">
+
+	<link type="text/css" rel="stylesheet" href="https://www.worldvision.or.kr/static/css/jquery-ui.min.css">
+	<link type="text/css" rel="stylesheet" href="https://www.worldvision.or.kr/static/css/swiper.min.css">
+	<link type="text/css" rel="stylesheet" href="https://www.worldvision.or.kr/static/css/common.css?v=20240226171940">
+	<link type="text/css" rel="stylesheet" href="https://www.worldvision.or.kr/static/css/main.css?v=20240226171940">
+	<link type="text/css" rel="stylesheet" href="https://www.worldvision.or.kr/static/css/sub.css?v=20240226171940">
+	<link type="text/css" rel="stylesheet" href="https://www.worldvision.or.kr/static/css/module.css?v=20240226171940">
+	<link type="text/css" rel="stylesheet" href="https://www.worldvision.or.kr/static/css/cmsModule.css">
+	<link type="text/css" rel="stylesheet"
+		href="https://gb.worldvision.or.kr/resources/wvFrt/project/template/inc/wv-add.css">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean"
+		rel="stylesheet">
+
+
+	<style>
+		#container .container {
+			min-height: 500px
+		}
+
+		[class^='box'] {
+			width: initial;
+			display: initial;
+			padding: initial;
+		}
+	</style>
+
+	<script type="text/javascript" src="https://www.worldvision.or.kr/static/js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="https://www.worldvision.or.kr/static/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="https://www.worldvision.or.kr/static/js/jquery.nicescroll.min.js"></script>
+	<script type="text/javascript" src="https://www.worldvision.or.kr/static/js/swiper.min.js"></script>
+	<script type="text/javascript" src="https://www.worldvision.or.kr/static/js/in-view.js"></script>
+	<script type="text/javascript" src="https://www.worldvision.or.kr/static/js/ui.js"></script>
+	<script type="text/javascript"
+		src="https://www.worldvision.or.kr/static/js/common/common.js?v=20240226171940"></script>
+	<script type="text/javascript" src="https://www.worldvision.or.kr/static/js/common.js?v=20240226171940"></script>
+	<script type="text/javascript" src="https://www.worldvision.or.kr/static/js/cmsModule.js"></script>
+
+	<link type="text/css" rel="stylesheet" href="https://www.worldvision.or.kr/static/css/section.css">
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			//타이틀 내용 엔터처리
+			$('.l-grid input[name=titleContents]').closest('.l-grid').each(function (i) {
+				var titleContents = $(this).find('input[name=titleContents]').val();
+				if (typeof titleContents != "undefined" && titleContents != '') {
+					titleContents = titleContents.replaceAll("\n", "<br/>")
+					$(this).find('p[name=titleContentsPc]').append(titleContents);
+					$(this).find('p[name=titleContentsMo]').append(titleContents);
+				}
+			});
+
+			//영상.내용 엔터처리
+			$('.l-grid input[name=videoContents]').closest('.l-grid').each(function (i) {
+				var videoContents = $(this).find('input[name=videoContents]').val();
+				if (typeof videoContents != "undefined" && videoContents != '') {
+					videoContents = videoContents.replaceAll("\n", "<br/>")
+					$(this).find('p[name=videoContentsPc]').append(videoContents);
+					$(this).find('p[name=videoContentsMo]').append(videoContents);
+				}
+			});
+
+			//텍스트상자.설명 엔터처리
+			$('.section-banner input[name=textContents]').closest('.section-banner').each(function (i) {
+				var textContents = $(this).find('input[name=textContents]').val();
+				if (typeof textContents != "undefined" && textContents != '') {
+					textContents = textContents.replaceAll("\n", "<br/>")
+					$(this).find('p[name=textContentsPc]').append(textContents);
+					$(this).find('p[name=textContentsMo]').append(textContents);
+				}
+			});
+			//텍스트상자.내용 엔터처리
+			$('.l-grid input[name=textPContents]').closest('.l-grid').each(function (i) {
+				var textPContents = $(this).find('input[name=textPContents]').val();
+				if (typeof textPContents != "undefined" && textPContents != '') {
+					textPContents = textPContents.replaceAll("\n", "<br/>")
+					$(this).find('p[name=pContentsPc]').append(textPContents);
+					$(this).find('p[name=pContentsMo]').append(textPContents);
+				}
+			});
+
+			//변화3단.내용 엔터처리
+			$('.section-banner input[name=changeContents]').closest('.section-banner').each(function (i) {
+				var changeContents = $(this).find('input[name=changeContents]').val();
+				if (typeof changeContents != "undefined" && changeContents != '') {
+					changeContents = changeContents.replaceAll("\n", "<br/>")
+					$(this).find('p[name=changeContentsPc]').append(changeContents);
+					$(this).find('p[name=changeContentsMo]').append(changeContents);
+				}
+			});
+		});
+
+		//버튼클릭 링크이동 이벤트
+		function moveLink(flag, url) {
+			var setUrl = '';
+			if (url.includes('https')) {
+				setUrl = url;
+			} else {
+				setUrl = 'https://' + url
+			}
+
+			if (flag == '1') {
+				location.href = setUrl;
+			} else {
+				window.open(setUrl);
+			}
+		}
+
+		//플로팅 클릭이벤트
+		function clickArrow() {
+
+			var floatUrl = $("#floatUrl").val();
+			var floatTargetFlag = $("#floatTargetFlag").val();
+
+			var setUrl = '';
+			if (floatUrl.includes('https')) {
+				setUrl = floatUrl;
+			} else {
+				setUrl = 'https://' + floatUrl
+			}
+
+			if (floatTargetFlag == '1') {
+				location.href = setUrl;
+			} else {
+				window.open(setUrl);
+			}
+		}
+
+		$(function () {
+
+
+			$("#arrow").click(function () {
+			});
+
+			/* 섹션 스와이퍼 */
+			var section_swiper = new Array();
+			$('.section_swiper').each(function (e) {
+				section_swiper[e] = new Swiper($(this).find('.swiper-container'), {
+					//loop: true, /* loop: true 넣음 에러남 */
+					pagination: {
+						el: $(this).find('.progress_pagination'),
+						type: "progressbar"
+					},
+					navigation: {
+						nextEl: $(this).find('.btn_next'),
+						prevEl: $(this).find('.btn_prev')
+					},
+					on: {
+						init: function () {
+							var len = this.slides.length;
+							var idx = this.activeIndex + 1;
+							$('.section_swiper').eq(e).find('.total').text(len);
+							$('.section_swiper').eq(e).find('.idx').text(idx);
+							if (len == 1) {
+								setTimeout(function () {
+									section_swiper[e].destroy();
+									$('.section_swiper').eq(e).find('.pag_wrap').hide();
+								});
+							}
+						},
+						update: function () {
+							var len = this.slides.length;
+							var idx = this.activeIndex + 1;
+							$('.section_swiper').eq(e).find('.total').text(len);
+							$('.section_swiper').eq(e).find('.idx').text(idx);
+							if (len == 1) {
+								setTimeout(function () {
+									section_swiper[e].destroy();
+									$('.section_swiper').eq(e).find('.pag_wrap').hide();
+								});
+							}
+						},
+						slideChange: function () {
+							var len = this.slides.length;
+							var idx = this.activeIndex + 1;
+							if (idx > len) {
+								idx = 1;
+							} else if (idx < 1) {
+								idx = len;
+							}
+							$('.section_swiper').eq(e).find('.idx').text(idx);
+						}
+					}
+				});
+
+				/* //이미지 모듈 높이 값 제어
+				$('.section_swiper').each(function () {
+	
+					var _length = $(this).find('.swiper-slide');
+					var $target = _length.find('.caption');
+	
+					if (_length.length > 1) {
+						var $maxHeight = 0;
+	
+						$target.each(function () {
+							$thisHeight = $(this).height();
+	
+							if ($thisHeight > $maxHeight) {
+								$maxHeight = $thisHeight;
+							}
+						});
+						$target.height($maxHeight);
+					}
+				}); */
+			});
+
+		});
+
+	</script>
+
+	<script async="" src="https://script.hotjar.com/modules.3ba69200791f16077ba8.js" charset="utf-8"></script>
+	<script type="text/javascript" async=""
+		src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/651132761/?random=1708935699077&amp;cv=11&amp;fst=1708935699077&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45be42l0za200&amp;gcd=13l3l3l3l1&amp;dma=0&amp;u_w=1920&amp;u_h=1080&amp;url=https%3A%2F%2Fwww.worldvision.or.kr%2Fparticipate%2FchurchVisionSunday&amp;ref=https%3A%2F%2Fwww.worldvision.or.kr%2FworldVisionIntro%2FintroInfo&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=%EB%B9%84%EC%A0%84%EC%A3%BC%EC%9D%BC%20%7C%20%EC%B0%B8%EC%97%AC%ED%95%98%EA%B8%B0%20-%20%EC%9B%94%EB%93%9C%EB%B9%84%EC%A0%84&amp;npa=0&amp;pscdl=noapi&amp;auid=1947791541.1708906766&amp;uaa=x86&amp;uab=64&amp;uafvl=Chromium%3B122.0.6261.69%7CNot(A%253ABrand%3B24.0.0.0%7CGoogle%2520Chrome%3B122.0.6261.69&amp;uamb=0&amp;uap=Windows&amp;uapv=10.0.0&amp;uaw=0&amp;fledge=1&amp;data=event%3Dgtag.config&amp;rfmt=3&amp;fmt=4"></script>
+
+
+	<!-- 추가 css js 입력 -->
+	<link rel="stylesheet" href="css/sub.css">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<!-- //추가 css js 입력 -->
+
+</head>
+
+<body>
+
+	<div id="wrap">
+		<!-- top-menu -->
+		<div data-include-path="https://gb.worldvision.or.kr/resources/wvFrt/project/template/inc/top-menu.html"></div>
+		<!-- //top-menu -->
+
+		<section id="container">
+
+			<div class="popover">
+				<div class="content">
+					<div class="inner">
+						<img src="images/sec4-pop.jpg" alt="반지 이미지" class="pc">
+						<img src="images/sec4-pop-mo.jpg" alt="반지 이미지" class="mo">
+						<button class="close-btn">
+							<img src="images/sec4-pop-close.webp" alt="닫기">
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="floating pc">
+				<a href="https://www.worldvision.or.kr/campaign/2025/25-jarip-reg?camID=25-jarip" id="btn-floating-pc">
+					<img src="images/ring.webp" alt="스탑링 45도">
+					<span class="text"><strong>후원</strong>하고</span><br>
+					<span class="text2"><strong>스탑링</strong> 받기</span>
+				</a>
+			</div>
+			<div class="floating mo">
+				<a href="https://www.worldvision.or.kr/campaign/2025/25-jarip-reg?camID=25-jarip" id="btn-floating-pc">
+					<img src="images/ring.webp" alt="스탑링 45도">
+					<div>
+						<span class="text"><strong>후원</strong>하고</span>
+						<span class="text2"><strong>스탑링</strong> 받기 <img src="images/main-arr.webp" alt="화살표"></span>
+					</div>
+				</a>
+			</div>
+
+			<div class="main-content">
+				<div class="mainimg">
+					<img src="images/main-img.webp" alt="model" class="model pc">
+					<img src="images/main-img-mo.webp" alt="model" class="model mo">
+					<div class="label">STOP RING</div>
+				</div>
+
+				<div class="maintext">
+					<h2 data-aos="fade-up" data-aos-duration="1000">멈추는 순간 빛나는 반지</h2>
+					<p data-aos="fade-up" data-aos-duration="1600">
+						<strong>마을이 스스로 설 수 있을 때</strong><br>후원을 멈춥니다.<br>그 여정에 함께해주세요.
+					</p>
+
+					<a href="https://www.worldvision.or.kr/campaign/2025/25-jarip-reg?camID=25-jarip"
+						id="btn-main-content">
+						<img src="images/sec1-ring.webp" alt="스탑링 정면">
+						<p><strong>마을 후원</strong>하고 <strong>스탑링</strong> 받기</p>
+					</a>
+				</div>
+			</div>
+			<div class="sec1">
+				<div class="swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><img src="images/sec1-slide1.jpg" alt="스탑링 모델 착용 사진 - 카메라를 들고"
+								width="478" height="678"></div>
+						<div class="swiper-slide"><img src="images/sec1-slide2.jpg" alt="스탑링 모델 착용 사진 - 꽃을 들고"
+								width="375" height="678"></div>
+						<div class="swiper-slide"><img src="images/sec1-slide3.jpg" alt="스탑링 모델 착용 사진 - 턱을 괴고"
+								width="536" height="678"></div>
+						<div class="swiper-slide"><img src="images/sec1-slide4.jpg" alt="스탑링 모델 착용 사진 - 레몬 티 마시기"
+								width="424" height="678"></div>
+						<div class="swiper-slide"><img src="images/sec1-slide5.jpg" alt="스탑링 모델 착용 사진 - 레몬을 들고"
+								width="384" height="678"></div>
+					</div>
+				</div>
+			</div>
+			<div class="sec2">
+				<h3 class="titleMsg tac">
+					<img src="images/sec2-title.webp" alt="일상 속에서 뿌듯함을 느끼는 반지예요." class="title">
+					<img src="images/sec2-light.webp" alt="반짝" class="light">
+				</h3>
+				<p>이 반지를 통해 지구 반대편에 있는 <br class="mo">아프리카 마을이<br>스스로 자립할 수 있도록 도울 수 있어요.</p>
+				<div class="posterWrap">
+					<div class="posterBox">
+						<ul>
+							<li>WATER</li>
+							<li>LIFE</li>
+							<li>FOOD</li>
+							<li>SCHOOL</li>
+						</ul>
+						<img src="images/sec2-text1.webp" alt="stop ring" class="text1">
+						<img src="images/sec2-text2.webp" alt="STOP RING : A RING OF HOPE" class="text2">
+					</div>
+					<div class="bottom-sheet"></div>
+				</div>
+			</div>
+			<div class="sec3">
+				<dl>
+					<dd>
+						<h3><img src="images/sec3-title.webp" alt="반지 하나로 아프리카 마을이 바뀐다면?"></h3>
+						<p>스탑링은 한 마을 전체가 <br><strong>스스로 살아갈 수 있도록 돕는 반지</strong>예요.</p>
+						<p>일회성 도움으로 끝나는 것이 아닌, <br><strong>후원 없이도 살아갈 수 있도록 </strong> <br>지속가능한 변화를 만들어 냅니다.</p>
+					</dd>
+					<dt>
+						<div class="shorts-container">
+							<iframe src="https://www.youtube.com/embed/sV11Dm7DiH8?si=TJAktWtfVIFGBzTD"
+								title="YouTube video player" frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+								referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+						</div>
+					</dt>
+				</dl>
+			</div>
+			<div class="sec4">
+				<dl>
+					<dt>
+						<div class="ringBox">
+							<button>
+								<span>+</span>
+							</button>
+							<a href="">
+								<figure>
+									<img src="images/sec4-ring.webp" alt="스탑링 정면 사진">
+								</figure>
+							</a>
+							<p>* 사진을 클릭하면 더 자세히 볼 수 있어요.</p>
+						</div>
+					</dt>
+					<dd>
+						<h3><img src="images/sec4-title.webp" alt="스타일도, 의미도 놓치지 않는 나만의 착한 소비."></h3>
+						<p>스탑링의 <span>일시정지</span> 모양처럼,<br>마을이 스스로 살아갈 수 있을 때<br>후원을 멈추고,<br>도움이 필요한 다음 마을로 <br>변화를
+							이어갑니다.</p>
+					</dd>
+				</dl>
+			</div>
+			<div class="sec5">
+				<dl class="pc">
+					<dd>
+						<div class="img"><img src="images/sec5-img1.jpg" alt="스탑링 스튜디오 사진"></div>
+					</dd>
+					<dt>
+						<div class="descBox" data-aos="fade-up">
+							<figure><img src="images/sec5-title1.webp" alt="스탑링 스튜디오 사진"></figure>
+							<p>오픈링 특성상 핏 조절이 자유로워요. <br>SM(10~13호), ML(15~18호) 중 <br>나에게 맞는 사이즈를 골라보세요!</p>
+						</div>
+						<ul>
+							<li>
+								<img src="images/sec5-img2.jpg" alt="스탑링 스튜디오 사진">
+								<div class="descBox" data-aos="fade-up">
+									<figure><img src="images/sec5-title2.webp" alt="스탑링 스튜디오 사진"></figure>
+									<p>은은한 광택의 실버 925 소재로, <br>데일리로 끼기 딱 좋아요</p>
+								</div>
+							</li>
+							<li>
+								<img src="images/sec5-img3.jpg" alt="스탑링 스튜디오 사진">
+								<div class="descBox" data-aos="fade-up">
+									<figure><img src="images/sec5-title3.webp" alt="스탑링 스튜디오 사진"></figure>
+									<p>미니멀한 디자인으로 캐주얼부터 포멀까지, <br>어떤 룩에도 잘 어울려요</p>
+								</div>
+							</li>
+						</ul>
+					</dt>
+				</dl>
+				<dl class="mo">
+					<dd>
+						<div class="img"><img src="images/sec5-img1-mo.jpg" alt="스탑링 스튜디오 사진"></div>
+						<div class="img2"><img src="images/sec5-img2-mo.jpg" alt="스탑링 스튜디오 사진"></div>
+					</dd>
+					<dt>
+						<div class="descBox first" data-aos="fade-up" data-aos-duration="1000">
+							<figure><img src="images/sec5-title1.webp" alt="스탑링 스튜디오 사진"></figure>
+							<p>오픈링 특성상 핏 조절이 자유로워요. <br>SM(10~13호), ML(15~18호) 중 <br>나에게 맞는 사이즈를 골라보세요!</p>
+						</div>
+						<div class="img"><img src="images/sec5-img3-mo.jpg" alt="스탑링 스튜디오 사진"></div>
+						<ul>
+							<li>
+								<div class="descBox" data-aos="fade-up" data-aos-duration="1400">
+									<figure><img src="images/sec5-title3.webp" alt="스탑링 스튜디오 사진"></figure>
+									<p>미니멀한 디자인으로 캐주얼부터 포멀까지, <br>어떤 룩에도 잘 어울려요</p>
+								</div>
+							</li>
+							<li>
+								<div class="descBox" data-aos="fade-up" data-aos-duration="1600">
+									<figure><img src="images/sec5-title2.webp" alt="스탑링 스튜디오 사진"></figure>
+									<p>은은한 광택의 실버 925 소재로, <br>데일리로 끼기 딱 좋아요</p>
+								</div>
+							</li>
+						</ul>
+					</dt>
+				</dl>
+				<div class="btnwrap">
+					<ul>
+						<li>
+							<a href="https://my.worldvision.or.kr/support/?key=26-stop-reg-sm&crmcd=72697"
+								id="link-ring-sm">스탑링 SM 신청
+								<img src="images/sec5-btn-arr1.webp" alt="화살표">
+							</a>
+							<p><span class="pc">SM사이즈 : </span>반지 10-13호</p>
+						</li>
+						<li>
+							<a href="https://my.worldvision.or.kr/support/?key=26-stop-reg-ml&crmcd=72698"
+								id="link-ring-ml">스탑링 ML 신청
+								<img src="images/sec5-btn-arr2.webp" alt="화살표"></a>
+							<p><span class="pc">ML사이즈 : </span>반지 15호-18호</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="sec6">
+				<h3 class="titleMsg tac">
+					<img src="images/sec6-title.webp" alt="월드비전과 후원자님이 함께 자립시킨 마을 47개" class="title">
+					<img src="images/sec6-light.webp" alt="반짝" class="light">
+				</h3>
+				<div class="textBox">
+					<p>썸머아일랜드(1997-2012) 호아방(1998-2016) 썬더번(1998-2016) 트라미(1998-2018) 날라이흐(2000-2018) 비사카파트남(2003-2018)
+						로로키(2003-2018)
+						아르할가이(2005-2018) 보그라(2001-2019) 라쉬바(2008-2019) 버바스(2008-2019) 굴렐레(2003-2019) 노노(2003-2019)
+						군틀루펫(2003-2019)
+						부바네스와르(2003-2019) 뭄바이 이스트(2001-2020) 카총가(2005-2020) 나만요니(2005-2020) 모랑(2005-2020) 카인두(2006-2020)
+						뭄브와(2006-2020) 자비테흐난(2008-2020) 바얀흔거르(2006-2022) 오즈렌(2011-2022) 리브라즈드(2006-2022)
+						마들란감피시(2007-2022)
+						이스트숨바(2007-2022) 피지다곤(2002-2023) 미야난다르(2003-2023) 에네모레나 에너(2005-2023) 카킨도(2005-2023)
+						호브트(2007-2023) 에스페란사(2006-2023)
+						남부 제닌(2007-2023) 북동부 제닌(2007-2023) 빌라스푸르(2006-2023) 아샤딥(2005-2023) 디브라(2008-2023) 나항(2013-2023)
+						옌뚜이(2008-2023)
+						소로(2007-2024) 사모리(2007-2024) 락상(2006-2024) 음키웨니(2007-2024) 하브로(2006-2025) 마카본디(2009-2025)
+						카삼브야(2006-2025)
+					</p>
+					<img src="images/sec6-ring.webp" alt="스탑링 크게" class="pc">
+					<img src="images/sec6-ring-mo.webp" alt="스탑링 크게" class="mo">
+				</div>
+				<div class="line"></div>
+				<p class="desc">47개 마을은 이제 더 이상 후원에 의존하지 않습니다. <br>다음 마을에도 같은 변화가 일어날 수 있도록,</p>
+				<div class="descTitle">후원이 필요 없는 <br class="mo">내일을 함께 만들어주세요.</div>
+			</div>
+			<div class="sec7">
+				<h3 class="titleMsg tac">
+					<img src="images/sec7-title.webp" alt="스탑링으로 마을에 일어나는 변화" class="pc title">
+					<img src="images/sec7-title-mo.webp" alt="스탑링으로 마을에 일어나는 변화" class="mo title">
+					<img src="images/sec7-light.webp" alt="반짝" class="light">
+				</h3>
+				<div class="swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img src="images/sec7-slide1.jpg" alt="식수위생">
+							<h5>식수위생</h5>
+							<p>깨끗한 물을 마실 수 있도록 안전한 식수 환경을 만들어요.</p>
+						</div>
+						<div class="swiper-slide">
+							<img src="images/sec7-slide2.jpg" alt="보건영양">
+							<h5>보건영양</h5>
+							<p>아이들이 제때 끼니를 챙기고 건강하게 자랄 수 있도록 영양 상태를 개선하고 의료접근성을 높여요.</p>
+						</div>
+						<div class="swiper-slide">
+							<img src="images/sec7-slide3.jpg" alt="교육">
+							<h5>교육</h5>
+							<p>안정된 환경에서 아이들이 배움을 이어갈 수 있도록 교육 환경을 지원해요.</p>
+						</div>
+						<div class="swiper-slide">
+							<img src="images/sec7-slide4.jpg" alt="생계자립">
+							<h5>생계자립</h5>
+							<p>마을 사람들이 스스로 살아갈 수 있는 힘을 기를 수 있도록 생계 역량을 키워요.</p>
+						</div>
+					</div>
+				</div>
+				<div class="textWrap">
+					<p>보내주시는 소중한 후원금은 식수위생, 보건영양, 교육, 생계자립 등 <br class="pc">마을과 아이들을 살리는 지역개발사업을 위해 사용됩니다.</p>
+				</div>
+			</div>
+			<div class="sec8">
+				<h3 class="titleMsg tac">
+					<img src="images/sec8-title.webp" alt="FAQ" class="title">
+				</h3>
+				<div class="faq-wrap">
+					<dl class="on">
+						<dt>
+							<div>
+								<span class="q-sign">Q</span>
+								<span class="category">참여문의</span>
+								<p>스탑링은 어떻게 받을 수 있나요?</p>
+							</div>
+							<button>열기</button>
+						</dt>
+						<dd>
+							<div>&lt;월드비전 스탑링&gt; 캠페인을 통해 해외사업을 정기후원하시면 스탑링 1개를 발송해 드립니다. 아이들에게 지속적인 변화를 만들기 위해 정기후원으로
+								동참을 부탁드립니다.</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>
+							<div>
+								<span class="q-sign">Q</span>
+								<span class="category">참여문의</span>
+								<p>스탑링은 언제 받을 수 있나요?</p>
+							</div>
+							<button>열기</button>
+						</dt>
+						<dd>
+							<div>첫 후원금 납입 내역이 확인된 후, 일반 우편으로 스탑링을 발송해드립니다. 후원 신청 시 입력한 주소지로 발송되며 후원 신청 일자로부터 3~5주 가량 소요될
+								수 있습니다. 일반 우편 특성상 배송 추적이 어려우니 우편함을 꼭 확인해주시기 바랍니다. 첫 후원금 납입 후 5주가 지난 후에도 스탑링이 도착하지 않을 경우,
+								대표전화(02-2078-7000)으로 연락주시면 안내드리도록 하겠습니다.</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>
+							<div>
+								<span class="q-sign">Q</span>
+								<span class="category">반지문의</span>
+								<p>스탑링의 사이즈는 어떻게 되나요?</p>
+							</div>
+							<button>열기</button>
+						</dt>
+						<dd>
+							<div>
+
+								스탑링은 사이즈 조절이 가능한 오픈링으로, 총 2개의 사이즈로 제작되었습니다. <br>
+								후원신청 완료 후 사이즈 변경이 어려우니 신청 전에 다시 한번 사이즈를 확인해주세요.
+								<table>
+									<thead>
+										<tr>
+											<th>사이즈</th>
+											<th>호수</th>
+											<th>손가락 둘레</th>
+											<th>반지 안지름</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>SM</td>
+											<td>10호-13호</td>
+											<td>53mm <br class="mo">-56mm</td>
+											<td>16mm <br class="mo">-17mm</td>
+										</tr>
+										<tr>
+											<td>ML</td>
+											<td>15호-18호</td>
+											<td>58mm <br class="mo">-61mm</td>
+											<td>17.66mm <br class="mo">-18.66mm</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td colspan="4">
+												*KS표준 사이즈 기준
+											</td>
+										</tr>
+									</tfoot>
+								</table>
+
+
+								오픈링 특성상, 사이즈별 반지 호수 범위 내에서 사이즈 조절이 가능하나 강한 힘이 가해질 경우 부러질 수 있으니 착용에 유의해주세요.
+							</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>
+							<div>
+								<span class="q-sign">Q</span>
+								<span class="category">반지문의</span>
+								<p>스탑링의 재질은 무엇인가요?</p>
+							</div>
+							<button>열기</button>
+						</dt>
+						<dd>
+							<div>
+								스탑링은 실버 925 소재로 제작되었습니다. <br>
+								실버 소재 특성상 화장품, 세제, 땀에 자연스러운 변색이 진행될 수 있으니 지퍼백에 넣어 보관해주세요. <br>
+								실버 소재는 알레르기 반응이 거의 없는 소재이지만, 개인에 따라 다를 수 있으니 반드시 확인 후 착용해주세요. <br>
+								반지는 수작업으로 완성되어 제작 과정 특성상 미세한 차이가 발생할 수 있으며, 이는 제품의 하자가 아닙니다.
+
+							</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>
+							<div>
+								<span class="q-sign">Q</span>
+								<span class="category">배송문의</span>
+								<p>배송지를 변경하고 싶어요.</p>
+							</div>
+							<button>열기</button>
+						</dt>
+						<dd>
+							<div>스탑링은 후원 신청 시 입력한 주소지로 일반우편 발송됩니다. <br>
+								잘못된 주소지 기재로 인한 재발송은 어려우니, 주소를 한번 더 확인해주세요. <br>
+								배송지 변경은 월드비전 홈페이지 또는 대표전화(02-2078-7000)을 통해 가능하며, 후원 신청일로부터 3일이 지나면 배송지 변경이 어렵습니다.
+							</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>
+							<div>
+								<span class="q-sign">Q</span>
+								<span class="category">배송문의</span>
+								<p>스탑링도 교환이나 반품이 되나요?</p>
+							</div>
+							<button>열기</button>
+						</dt>
+						<dd>
+							<div>후원 신청 완료 후, 단순 변심이나 사이즈 착오 등으로 인한 교환 및 반품은 어렵습니다. <br>
+								사이즈 조절이 필요한 경우, 반지의 앞쪽을 아주 살짝 벌려 착용해보세요. <br>
+								어느 손가락에도 멋지게 착용이 가능합니다. <br>
+								불량의 경우, 1개월 이내에 월드비전 홈페이지 또는 대표전화(02-2078-7000)로 연락주시면 이후 프로세스를 안내 드리도록 하겠습니다. 손으로 하나 하나
+								세공한 핸드메이드 실버 반지의 특성 상 미세한 스크래치나 반지 모양의 차이는 불량이 아니며, 착용하시다가 생긴 변색이나 반지 손상의 경우도 교환 및 반품이
+								어려우니 양해 부탁드립니다. </div>
+						</dd>
+					</dl>
+				</div>
+			</div>
+
+			<!-- //컨텐츠 작업 영역 -->
+		</section>
+
+		<!-- footer -->
+		<div data-include-path="https://gb.worldvision.or.kr/resources/wvFrt/project/template/inc/footer.html"></div>
+		<!-- //footer -->
+	</div>
+
+	<script>
+
+		window.addEventListener('load', function () {
+			var allElements = document.getElementsByTagName('*');
+			Array.prototype.forEach.call(allElements, function (el) {
+				var includePath = el.dataset.includePath;
+				if (includePath) {
+					var xhttp = new XMLHttpRequest();
+					xhttp.onreadystatechange = function () {
+						if (this.readyState == 4 && this.status == 200) {
+							el.outerHTML = this.responseText;
+						}
+					};
+					xhttp.open('GET', includePath, true);
+					xhttp.send();
+				}
+			});
+		});
+
+
+		AOS.init();
+
+
+		$(".faq-wrap dl").click(function () {
+			// 1. 모든 형제 요소들에서 'on' 클래스를 제거
+			$(this).siblings().removeClass('on');
+
+			// 2. 클릭된 요소에 'on' 클래스를 토글
+			$(this).toggleClass('on');
+		});
+
+		let swiperNum1 = new Swiper('.sec1 .swiper', {
+			slidesPerView: 'auto', // 슬라이드 너비를 CSS에 맞춤
+			speed: 3000,           // 흐르는 속도 (숫자가 클수록 느림)
+			autoplay: {
+				delay: 0,            // 대기 시간 없이 연속 재생
+				disableOnInteraction: false, // 마우스 터치/드래그 후에도 자동 재생 유지
+			},
+			loop: true,
+			spaceBetween: 0,
+		});
+
+		let swiperNum7 = null;
+		let sec7Breakpoint = window.matchMedia('(min-width: 1550px)');
+
+		function initSec7Swiper() {
+			if (sec7Breakpoint.matches) {
+				if (swiperNum7) {
+					swiperNum7.destroy(true, true); // 1550px 이상에서는 swiper 해제
+					swiperNum7 = null;
+				}
+				return;
+			}
+			if (swiperNum7) return;
+			swiperNum7 = new Swiper('.sec7 .swiper', {
+				slidesPerView: 4,
+				speed: 3000,
+				autoplay: {
+					delay: 1000,
+					disableOnInteraction: false,
+				},
+				loop: true,
+				loopedSlides: 8, // 슬라이드(4개)가 적어서 복제 버퍼 부족 → 한 바퀴 후 loop 끊기는 문제 방지
+				spaceBetween: 24,
+				breakpoints: {
+					640: {
+						slidesPerView: 1.9,
+					},
+					1024: {
+						slidesPerView: 2.3,
+					},
+				}
+			});
+		}
+
+		initSec7Swiper();
+		sec7Breakpoint.addEventListener('change', initSec7Swiper);
+
+		/* ringBox 클릭 시 popover 열기/닫기 */
+		$('.ringBox').on('click', function (e) {
+			e.preventDefault();
+			$('.popover').addClass('active');
+			$('body').addClass('no-scroll');
+		});
+		$('.popover .close-btn').on('click', function () {
+			$('.popover').removeClass('active');
+			$('body').removeClass('no-scroll');
+		});
+
+
+	</script>
+
+</body>
+
+</html>
