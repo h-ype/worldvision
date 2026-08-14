@@ -62,7 +62,7 @@
 $breakpoints: (
     sm: '640px',
     md: '1024px',
-    lg: '1280px',
+    lg: '1200px',
     xl: '1340px',
     1980: '1980px'
 );
@@ -143,9 +143,9 @@ $breakpoints: (
     text-align: center;
     color: var(--c-white);
 
-    @include media(md) {
-        width: min(496px, 77.5vw);
-        height: min(137px, 21.41vw);
+    @include media(lg) {
+        width: 290px;
+        height: 81px;
         left: 50%;
         top: calc(100% - min(137px, 21.41vw) - min(60px, 9.38vw));
         transform: translateX(-50%);
@@ -155,7 +155,7 @@ $breakpoints: (
     &.purple {
         background-image: url('../images/floating_pp.png');
 
-        @include media(md) {
+        @include media(lg) {
             background-image: url('../images/floating_pp_mo.png');
         }
     }
@@ -172,13 +172,16 @@ $breakpoints: (
         font-size: 20px;
         line-height: 26px;
 
-        @include media(md) {
+        @include media(lg) {
             text-align: left;
-            padding-left: min(180px, 28.13vw);
+            padding-left: 110px;
             width: 100%;
-            bottom: min(42px, 6.56vw);
-            font-size: min(31px, 4.84vw);
-            line-height: min(31px, 4.84vw);
+            bottom: 0;
+            font-size: 18px;
+            line-height: 70px;
+            br {
+                display: none;
+            }
         }
     }
 
@@ -239,10 +242,10 @@ html, body {
     }
 
     .mo {
-        display: none;
+        display: none !important;
 
         @include media(md) {
-            display: block;
+            display: block !important;
         }
     }
 
@@ -255,6 +258,7 @@ html, body {
 
 
     [class^="ob__"] { transition: all 1s; filter: blur(2px); opacity: 0; } 
+    .ob__top { transform: translateY(-25px); } 
     .ob__bottom { transform: translateY(25px); } 
     .ob__right { transform: translateX(25px); } 
     .ob__left { transform: translateX(-25px); } 
@@ -530,12 +534,18 @@ html, body {
                     line-height: 44px;
                     margin-top: 57px;
                     color: var(--c-white);
+                    & + p {
+                        margin-top: 0;
+                    }
 
                     @include media(md) {
                         width: min(570px, 100%);
                         margin: min(66px, 10.31vw) auto 0;
                         font-size: min(32px, 5vw);
                         line-height: min(49px, 7.86vw);
+                        & + p {
+                            margin-top: 0;
+                        }
                     }
 
                     strong {
@@ -653,7 +663,6 @@ html, body {
 
                     small {
                         position: relative;
-                        margin-left: 2px;
                         z-index: 2;
                         font-size: min(18px, 1.41vw);
 
@@ -668,18 +677,14 @@ html, body {
                         z-index: 0;
                         top: 50%;
                         transform: translateY(-50%);
-                        margin-left: -2px;
                         display: inline-block;
-                        padding: 0 2px;
                         width: 100%;
                         height: min(23px, 1.8vw);
                         background-color: var(--c-org2);
 
                         @include media(md) {
-
-                            margin-left: max(-2px, -0.32vw);
                             padding: 0 min(2px, 0.32vw);
-                            height: min(28px, 4.38vw);
+                            height: 77%;
                         }
                     }
                 }
@@ -1220,7 +1225,7 @@ html, body {
                     width: 100%;
                     height: min(266px, 38.58vw);
                     border-radius: min(25px, 3.91vw);
-                    background-size: 103%;
+                    background-size: 105%;
                     background-position: center center;
                     background-image: url('../images/sec5_card1_mo.jpg');
 
@@ -1468,6 +1473,8 @@ html, body {
                     @include media(md) {
                         width: min(80px, 12.5vw);
                         height: min(80px, 12.5vw);
+                        right: min(8px, 1.25vw);
+                        top: min(8px, 1.25vw);
                         background-size: 22%;
                     }
                 }
@@ -1714,6 +1721,9 @@ html, body {
                     z-index: 1;
                     -webkit-box-shadow: 0px 0px 20px 10px rgba(55,46,37,0.2); 
                     box-shadow: 0px 0px 20px 10px rgba(55,46,37,0.2);
+                        @include media(md) {
+                            box-shadow: 0px 0px 20px 5px rgba(55,46,37,0.1);
+                        }
 
                     img {
                         display: block;
@@ -1767,8 +1777,8 @@ html, body {
                         position: relative;
                         z-index: 1;
 
-                    -webkit-box-shadow: 0px 0px 20px 10px rgba(55,46,37,0.14); 
-                    box-shadow: 0px 0px 20px 10px rgba(55,46,37,0.14);
+                        -webkit-box-shadow: 0px 0px 20px 10px rgba(55,46,37,0.14); 
+                        box-shadow: 0px 0px 20px 10px rgba(55,46,37,0.14);
 
                         img {
                             width: 100%;
@@ -1800,6 +1810,11 @@ html, body {
             height: 30px;
             left: 0;
             top: -17px;
+            @include media(md) {
+                background-size: min(8px, 1.25vw);
+                top: max(-16px, -2.5vw);
+                height: min(30px, 4.69vw);
+            }
         }
 
     }
@@ -1889,7 +1904,9 @@ html, body {
                     box-shadow: rgba(0, 0, 0, 0.25) 0 0 40px;
 
                     @include media(md) {
+                        margin: 0 min(4px, 0.63vw);
                         border-radius: min(35px, 5.47vw);
+                        box-shadow: rgba(0, 0, 0, 0.12) 0 0 min(30px, 4.69vw);
                     }
 
                     &::before {
@@ -1962,11 +1979,21 @@ html, body {
             position: relative;
             margin-top: 60px;
 
+            
             .swiper-pagination-bullet {
+                opacity: 0.5;
                 width: 44px;
                 height: 10px;
                 border-radius: 5px;
                 background-color: var(--c-org);
+                @include media(md) {
+                    width: min(71px, 11.09vw);
+                    height: min(16px, 2.5vw);
+                    border-radius: 999px;
+                }
+                &.swiper-pagination-bullet-active {
+                    opacity: 1;
+                }
             }
         }
 
@@ -1974,6 +2001,7 @@ html, body {
         .swiper-button-prev {
             display: block;
             background-size: 100%;
+            top: 48%;
             width: 60px;
             height: 60px;
             background-image: url('../images/sec8-arrow-right.png');
@@ -1984,20 +2012,24 @@ html, body {
         }
 
         .swiper-button-prev {
-            top: 40%;
             left: 20%;
             background-image: url('../images/sec8-arrow-left.png');
 
             @include media(1980) {
+                left: 10%;
+            }
+            @include media(xl) {
                 left: min(24px, 1.88vw);
             }
         }
 
         .swiper-button-next {
-            top: 40%;
             right: 20%;
 
             @include media(1980) {
+                right: 10%;
+            }
+            @include media(xl) {
                 right: min(24px, 1.88vw);
             }
         }
