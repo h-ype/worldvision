@@ -271,6 +271,8 @@ html, body {
     .t_d_900 { transition-delay: .9s; } 
     .t_d_1000 { transition-delay: 1s; } 
 
+    [class^='sec'] {overflow: hidden;}
+
     .main {
         background-color: #3e2011;
         background-image: url('../images/main_bg.jpg');
@@ -322,7 +324,7 @@ html, body {
                     margin-left: max(-28px, -4.38vw);
 
                     @include media(md) {
-                        width: min(614px, 90vw);
+                        width: min(614px, 84vw);
                     }
                 }
 
@@ -362,7 +364,7 @@ html, body {
 
             .bttn {
                 display: block;
-                transition: transform 0.2s;
+                transition: all 0.3s;
                 margin: 46px auto 0;
                 font-size: 26px;
                 width: 378px;
@@ -377,6 +379,8 @@ html, body {
                 border-radius: 44px;
                 position: relative;
                 font-weight: 700;
+
+                box-shadow: rgba(0, 0, 0, 0.2) 0 0 40px;
 
                 @include media(md) {
                     margin-top: min(70px, 10.94vw);
@@ -415,7 +419,8 @@ html, body {
                 }
 
                 &:hover {
-                    transform: scale(1.02);
+                    box-shadow: rgba(0, 0, 0, 0.1) 0 0 20px;
+                    transform: translateY(-3px) scale(1.02);
                 }
             }
         }
@@ -692,7 +697,7 @@ html, body {
             background-image: url('../images/sec2_bg_mo.jpg');
             background-size: min(1024px, 160vw);
             background-color: #332a26;
-            padding: 0 min(32px, 5vw);
+            padding: 0 min(50px, 7.81vw);
         }
 
         .inner {
@@ -737,7 +742,7 @@ html, body {
                 color: var(--c-white);
 
                 @include media(md) {
-                    font-size: min(32px, 5vw);
+                    font-size: min(30px, 4.69vw);
                     line-height: min(49px, 7.66vw);
                 }
 
@@ -751,7 +756,7 @@ html, body {
                     position: relative;
                     z-index: 1;
                     font-weight: 700;
-                    height: auto;
+                    height: 100%;
                     color: #222;
 
                     small {
@@ -761,7 +766,7 @@ html, body {
                         line-height: 44px;
 
                         @include media(md) {
-                            font-size: min(32px, 5vw);
+                            font-size: min(30px, 4.69vw);
                             line-height: min(49px, 7.66vw);
                         }
                     }
@@ -780,7 +785,7 @@ html, body {
                         background-color: var(--c-org2);
 
                         @include media(md) {
-                            height: min(42px, 6.56vw);
+                            height: 77%;
                         }
                     }
                 }
@@ -1000,7 +1005,7 @@ html, body {
     }
 
     .sec5 {
-        height: 1210px;
+        height: auto;
         padding: 0 40px min(180px, 14.06vw);
         background-color: #3e2011;
         background-image: url('../images/sec5_bg.jpg');
@@ -1258,14 +1263,6 @@ html, body {
     .sticky-wrap {
         position: relative;
         width: 100%;
-    }
-
-    .sec6 {
-        position: sticky;
-        z-index: 1;
-        top: 0; right: 0;
-        overflow: hidden; 
-        padding: 0 24px 100px;
         background-image: url('../images/sec6_bg.jpg');
         background-size: 2560px;
         background-position: center top;
@@ -1274,8 +1271,29 @@ html, body {
         @include media(md) {
             background-image: url('../images/sec6_bg_mo.jpg');
             background-size: cover;
-            padding: 0 min(24px, 3.75vw) min(144px, 22.5vw);
         }
+    }
+
+    .sec6 {
+        top: 0; right: 0;
+        overflow: hidden; 
+        padding: 0 24px 0;
+        @include media(md) {
+            padding: 0 min(24px, 3.75vw) 0;
+
+        }
+
+        &.second {
+            padding: 0 24px 100px;
+            position: sticky;
+            z-index: 1;
+            background-position: center bottom;
+            @include media(md) {
+                padding: 0 min(24px, 3.75vw) min(144px, 22.5vw);
+
+            }
+        }
+
 
         .inner {
             width: min(1252px, 100%);
@@ -1415,6 +1433,7 @@ html, body {
                 border-radius: 44px;
                 position: relative;
                 font-weight: 700;
+                box-shadow: rgba(0, 0, 0, 0.2) 0 0 40px;
 
                 @include media(md) {
                     width: min(444px, 69.38vw);
@@ -1447,7 +1466,8 @@ html, body {
                 }
 
                 &:hover {
-                    transform: scale(1.02);
+                    box-shadow: rgba(0, 0, 0, 0.1) 0 0 20px;
+                    transform: translateY(-3px) scale(1.02);
                 }
 
             }
@@ -1812,7 +1832,7 @@ html, body {
             }
 
             b {
-                font-weight: 600;
+                font-weight: 700;
             }
         }
 

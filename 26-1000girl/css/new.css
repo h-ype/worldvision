@@ -259,6 +259,9 @@ html, body {
 #thousand-girl .t_d_1000 {
   transition-delay: 1s;
 }
+#thousand-girl [class^=sec] {
+  overflow: hidden;
+}
 #thousand-girl .main {
   background-color: #3e2011;
   background-image: url("../images/main_bg.jpg");
@@ -310,7 +313,7 @@ html, body {
 }
 @media (max-width: 1024px) {
   #thousand-girl .main-title h1 img {
-    width: min(614px, 90vw);
+    width: min(614px, 84vw);
   }
 }
 #thousand-girl .main-title h1 + p {
@@ -347,7 +350,7 @@ html, body {
 }
 #thousand-girl .main-title .bttn {
   display: block;
-  transition: transform 0.2s;
+  transition: all 0.3s;
   margin: 46px auto 0;
   font-size: 26px;
   width: 378px;
@@ -362,6 +365,7 @@ html, body {
   border-radius: 44px;
   position: relative;
   font-weight: 700;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 0 40px;
 }
 @media (max-width: 1024px) {
   #thousand-girl .main-title .bttn {
@@ -400,7 +404,8 @@ html, body {
   }
 }
 #thousand-girl .main-title .bttn:hover {
-  transform: scale(1.02);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0 20px;
+  transform: translateY(-3px) scale(1.02);
 }
 #thousand-girl .main .video-inner {
   margin: 0 auto;
@@ -659,7 +664,7 @@ html, body {
     background-image: url("../images/sec2_bg_mo.jpg");
     background-size: min(1024px, 160vw);
     background-color: #332a26;
-    padding: 0 min(32px, 5vw);
+    padding: 0 min(50px, 7.81vw);
   }
 }
 #thousand-girl .sec2 .inner {
@@ -705,7 +710,7 @@ html, body {
 }
 @media (max-width: 1024px) {
   #thousand-girl .sec2 .txt-box p {
-    font-size: min(32px, 5vw);
+    font-size: min(30px, 4.69vw);
     line-height: min(49px, 7.66vw);
   }
 }
@@ -718,7 +723,7 @@ html, body {
   position: relative;
   z-index: 1;
   font-weight: 700;
-  height: auto;
+  height: 100%;
   color: #222;
 }
 #thousand-girl .sec2 .txt-box p span small {
@@ -729,7 +734,7 @@ html, body {
 }
 @media (max-width: 1024px) {
   #thousand-girl .sec2 .txt-box p span small {
-    font-size: min(32px, 5vw);
+    font-size: min(30px, 4.69vw);
     line-height: min(49px, 7.66vw);
   }
 }
@@ -748,7 +753,7 @@ html, body {
 }
 @media (max-width: 1024px) {
   #thousand-girl .sec2 .txt-box p span::before {
-    height: min(42px, 6.56vw);
+    height: 77%;
   }
 }
 #thousand-girl .sec3 {
@@ -955,7 +960,7 @@ html, body {
   }
 }
 #thousand-girl .sec5 {
-  height: 1210px;
+  height: auto;
   padding: 0 40px min(180px, 14.06vw);
   background-color: #3e2011;
   background-image: url("../images/sec5_bg.jpg");
@@ -1166,23 +1171,36 @@ html, body {
 #thousand-girl .sticky-wrap {
   position: relative;
   width: 100%;
-}
-#thousand-girl .sec6 {
-  position: sticky;
-  z-index: 1;
-  top: 0;
-  right: 0;
-  overflow: hidden;
-  padding: 0 24px 100px;
   background-image: url("../images/sec6_bg.jpg");
   background-size: 2560px;
   background-position: center top;
   background-repeat: no-repeat;
 }
 @media (max-width: 1024px) {
-  #thousand-girl .sec6 {
+  #thousand-girl .sticky-wrap {
     background-image: url("../images/sec6_bg_mo.jpg");
     background-size: cover;
+  }
+}
+#thousand-girl .sec6 {
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  padding: 0 24px 0;
+}
+@media (max-width: 1024px) {
+  #thousand-girl .sec6 {
+    padding: 0 min(24px, 3.75vw) 0;
+  }
+}
+#thousand-girl .sec6.second {
+  padding: 0 24px 100px;
+  position: sticky;
+  z-index: 1;
+  background-position: center bottom;
+}
+@media (max-width: 1024px) {
+  #thousand-girl .sec6.second {
     padding: 0 min(24px, 3.75vw) min(144px, 22.5vw);
   }
 }
@@ -1314,6 +1332,7 @@ html, body {
   border-radius: 44px;
   position: relative;
   font-weight: 700;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 0 40px;
 }
 @media (max-width: 1024px) {
   #thousand-girl .sec6 .inner .bttn {
@@ -1347,7 +1366,8 @@ html, body {
   }
 }
 #thousand-girl .sec6 .inner .bttn:hover {
-  transform: scale(1.02);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0 20px;
+  transform: translateY(-3px) scale(1.02);
 }
 #thousand-girl .sec7 {
   position: relative;
@@ -1686,7 +1706,7 @@ html, body {
   }
 }
 #thousand-girl .sec8 .inner > p b {
-  font-weight: 600;
+  font-weight: 700;
 }
 #thousand-girl .sec8 div a {
   font-size: 26.5px;
