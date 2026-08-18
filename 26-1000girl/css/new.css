@@ -98,7 +98,7 @@
   right: 67px;
   top: 215px;
   z-index: 3;
-  background-image: url("../images/floating_or.png");
+  background-image: url("../images/floating_or.webp");
   transition: background 0.3s;
   background-size: 100%;
   width: 214px;
@@ -123,15 +123,15 @@
     left: 50%;
     top: calc(100% - min(137px, 21.41vw) - min(60px, 9.38vw));
     transform: translateX(-50%);
-    background-image: url("../images/floating_or_mo.png");
+    background-image: url("../images/floating_or_mo.webp");
   }
 }
 .g_floating.purple {
-  background-image: url("../images/floating_pp.png");
+  background-image: url("../images/floating_pp.webp");
 }
 @media (max-width: 1200px) {
   .g_floating.purple {
-    background-image: url("../images/floating_pp_mo.png");
+    background-image: url("../images/floating_pp_mo.webp");
   }
 }
 .g_floating > a {
@@ -408,7 +408,7 @@ html, body {
   background-color: #fff;
   right: 7px;
   top: 7px;
-  background-image: url("../images/main_btn_arr.png");
+  background-image: url("../images/main_btn_arr.webp");
   background-repeat: no-repeat;
   background-position: center left 55%;
 }
@@ -637,7 +637,7 @@ html, body {
     display: block;
     width: min(52px, 8.13vw);
     height: min(122px, 19.06vw);
-    background-image: url("../images/sec1_line_mo.png");
+    background-image: url("../images/sec1_line_mo.webp");
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -1404,7 +1404,7 @@ html, body {
   background-color: #fff;
   right: 7px;
   top: 7px;
-  background-image: url("../images/sec6-arrow.png");
+  background-image: url("../images/sec6-arrow.webp");
   background-repeat: no-repeat;
   background-position: center left 55%;
 }
@@ -1464,7 +1464,7 @@ html, body {
   position: relative;
   height: min(503px, 37.54vw);
   margin: 75px auto 0;
-  background-image: url("../images/sec7_bear.png");
+  background-image: url("../images/sec7_bear.webp");
   background-size: min(641px, 44.51vw);
   background-repeat: no-repeat;
   background-position: center top;
@@ -1908,7 +1908,7 @@ html, body {
   top: 48%;
   width: 60px;
   height: 60px;
-  background-image: url("../images/sec8-arrow-right.png");
+  background-image: url("../images/sec8-arrow-right.webp");
 }
 @media (max-width: 1024px) {
   #thousand-girl .sec8 .swiper-button-next,
@@ -1918,7 +1918,7 @@ html, body {
 }
 #thousand-girl .sec8 .swiper-button-prev {
   left: 20%;
-  background-image: url("../images/sec8-arrow-left.png");
+  background-image: url("../images/sec8-arrow-left.webp");
 }
 @media (max-width: 1980px) {
   #thousand-girl .sec8 .swiper-button-prev {
@@ -2027,7 +2027,7 @@ html, body {
   background-color: #fff;
   right: min(5px, 0.78vw);
   top: min(5px, 0.78vw);
-  background-image: url("../images/main_btn_arr.png");
+  background-image: url("../images/main_btn_arr.webp");
   background-size: 24%;
   background-repeat: no-repeat;
   background-position: center left 55%;
@@ -2181,7 +2181,7 @@ html, body {
   text-align: left;
 }
 .tab-main .acc-warp .accordion .acc-box .arrow {
-  background-image: url(../images/sec9-arrow.png);
+  background-image: url(../images/sec9-arrow.webp);
   width: min(32px, 3.13vw);
   height: min(32px, 3.13vw);
   background-size: 60%;
