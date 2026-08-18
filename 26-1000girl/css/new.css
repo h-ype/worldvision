@@ -136,6 +136,7 @@
 }
 .g_floating > a {
   display: block;
+  height: 100%;
 }
 .g_floating .txt {
   position: absolute;
