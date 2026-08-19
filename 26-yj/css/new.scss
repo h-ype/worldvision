@@ -193,6 +193,9 @@ html, body {
     strong {
         font-weight: 700;
     }
+    span {
+        color: var(--c-green);
+    }
 
     small {
         font-size: normal;
@@ -233,10 +236,41 @@ html, body {
             display: none !important;
         }
     }
+    .flex {
+        display: flex;
+    }
 
     [class^='sec'] {overflow: hidden;}
+    .main {
+        background-color: #F7F6F1;
+    }
+    .sec2 {
+        .neckless {
+            background-image: url('../images/sec2_neck_bg.jpg');
+            background-repeat: repeat;
+            .flex {
+                .left {
+                    width: 580px;
+                    figure {
+                        overflow: hidden;
+                        border-radius: 15px;
+                        img {
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+                .right {
+                    p {
+                        color: #fff
+                    }
+                }
+            }
+        }
+    }
 
-    // 바디3 다짐 - sec4가 스크롤로 위로 올라오며 덮을 때까지 화면에 고정
     .sec3 {
         position: sticky;
         top: 0;
@@ -1077,7 +1111,7 @@ html, body {
     input[id='tab1']:checked~.tab-main-nav label[for='tab1'],
     input[id='tab2']:checked~.tab-main-nav label[for='tab2'],
     input[id='tab3']:checked~.tab-main-nav label[for='tab3'] {
-        background: var(--c-org);
+        background: var(--c-green);
         color: #fff;
         border-radius: 8px;
 
