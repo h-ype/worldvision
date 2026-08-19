@@ -50,6 +50,7 @@ $breakpoints: (
 }
 
 .dummy {
+    display: none;
     position: absolute;
     z-index: 999;
     top: 0;
@@ -99,14 +100,14 @@ $breakpoints: (
 
 .g_floating {
     position: fixed;
-    right: 67px;
-    top: 215px;
+    right: min(67px, 4.53vw);
+    top: min(215px, 14.53vw);
     z-index: 3;
     background-image: url('../images/floating_btn.png');
     transition: background 0.3s;
     background-size: 100%;
-    width: 198px;
-    height: 332px;
+    width: min(198px, 13.38vw);
+    height: min(332px, 22.43vw);
     font-weight: 700;
     text-align: center;
     color: var(--c-white);
@@ -122,12 +123,12 @@ $breakpoints: (
     }
 
     @include media(lg) {
-        width: 290px;
-        height: 81px;
+        width: min(290px, 19.59vw);
+        height: min(81px, 5.47vw);
         left: 50%;
         top: calc(100% - min(137px, 21.41vw) - min(60px, 9.38vw));
         transform: translateX(-50%);
-        background-image: url('../images/floating_or_mo.webp');
+        background-image: url('../images/floating_btn_mo.png');
     }
 
     &>a {
@@ -138,22 +139,23 @@ $breakpoints: (
             position: absolute;
             color: #fff;
             width: 100%;
-            bottom: 17px;
+            bottom: min(17px, 1.15vw);
             left: 50%;
             transform: translateX(-50%);
-            font-size: 22px;
-            line-height: 28px;
+            font-size: min(22px, 1.49vw);
+            line-height: min(28px, 1.89vw);
+
             span {
                 color: #f5efc0 !important;
             }
 
             @include media(lg) {
                 text-align: left;
-                padding-left: 110px;
+                padding-left: min(110px, 7.43vw);
                 width: 100%;
                 bottom: 0;
-                font-size: 18px;
-                line-height: 70px;
+                font-size: min(18px, 1.22vw);
+                line-height: min(70px, 4.73vw);
 
                 br {
                     display: none;
@@ -262,7 +264,7 @@ body {
             padding: 0 2%;
             width: 100%;
             height: 50%;
-            border-radius: 999px;
+            border-radius: min(999px, 67.50vw);
             background-color: rgba(241, 232, 164, 0.3);
             top: 50%;
             transform: translateY(0%);
@@ -279,19 +281,35 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 10px;
-        box-shadow: 0 0 10px 3px rgba(136, 126, 47, 0.2);
-        gap: 50px;
-        font-size: 23px;
+        border-radius: min(10px, 0.68vw);
+        box-shadow: 0 0 min(10px, 0.68vw) min(3px, 0.20vw) rgba(136, 126, 47, 0.2);
+        gap: min(50px, 3.38vw);
+        font-size: min(23px, 1.55vw);
         font-weight: 600;
         color: #fff;
-        height: 80px;
-        width: 360px;
+        height: min(80px, 5.41vw);
+        width: min(360px, 24.32vw);
         background: linear-gradient(90deg, #726e4f 40%, #96881a 100%);
 
         &:hover {
-            gap: 55px;
+            gap: min(55px, 3.72vw);
             scale: 1.03;
+        }
+    }
+
+    .scroll {
+        color: var(--c-brown);
+        font-weight: 300;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        gap: min(8px, 0.54vw);
+        small {
+        font-size: min(15px, 1.01vw);
+        }
+
+        img {
+            height: min(14px, 0.95vw);
         }
     }
 
@@ -299,76 +317,115 @@ body {
         position: relative;
         background-color: #F7F6F1;
 
-        figure {
-            overflow: hidden;
-            border-radius: 20px;
-        }
 
         h2 {
             display: flex;
             font-family: 'Pretendard';
             align-items: center;
-            gap: 4px;
-            font-size: 28px;
+            gap: min(4px, 0.27vw);
+            font-size: min(28px, 1.89vw);
             color: #000;
 
             img {
-                height: 32px;
+                height: min(32px, 2.16vw);
             }
         }
 
+
+        figure {
+            overflow: hidden;
+            border-radius: min(20px, 1.35vw);
+        }
         .withyj {
             img {
-                height: 47px;
+                height: min(47px, 3.18vw);
             }
         }
 
         h1 {
-            font-size: 60px;
-            line-height: 80px;
+            font-size: min(60px, 4.05vw);
+            line-height: min(80px, 5.41vw);
         }
 
         &.type-A {
-            padding: 62px 0 82px;
+            padding: min(62px, 4.19vw) 0 min(82px, 5.54vw);
 
             .flex {
                 margin: 0 auto;
                 align-items: flex-start;
                 justify-content: flex-start;
-                width: 1288px;
-                padding-left: 44px;
-                gap: 125px;
-                .withyj {
-                    margin: 72px 0 12px;
+                width: min(1288px, 87.03vw);
+                padding-left: min(44px, 2.97vw);
+                gap: min(125px, 8.45vw);
+                .left {
+
+                    img {
+                        width: min(635px, 42.91vw);
+                    }
                 }
+
+                .withyj {
+                    margin: min(72px, 4.86vw) 0 min(12px, 0.81vw);
+                }
+
                 .right {
                     h2 {
-                        margin: 42px 0 20px;
+                        margin: min(42px, 2.84vw) 0 min(20px, 1.35vw);
+                    }
+
+                    .scroll {
+                        margin: min(127px, 8.58vw) min(14px, 0.95vw);
                     }
                 }
             }
         }
 
         &.type-B {
+            padding: min(92px, 5.34vw) 0 min(53px, 3.08vw);
+
             .flex {
                 width: min(1723px, 100%);
-                gap: 24px;
-                padding: 0 40px;
+                gap: min(24px, 1.39vw);
+                padding: 0 min(40px, 2.32vw);
                 margin: 0 auto;
                 display: flex;
                 justify-content: space-between;
+                .left, .right {
+                    figure {
+                        img {
+                            width: min(491px, 28.5vw);
+                        }
+                    }
+                }
 
                 .mid {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    justify-content: center;
+                    justify-content: flex-start;
                     text-align: center;
+                    h1 {
+
+                        font-size: min(60px, 3.48vw);
+                        line-height: min(80px, 4.64vw);
+                    }
+
+                    h2 {
+                        padding: min(17px, 0.99vw) 0 min(10px, 0.58vw);
+                    }
 
                     p {
-                        font-size: 22px;
-                        line-height: 34px;
+                        font-size: min(22px, 1.28vw);
+                        line-height: min(34px, 1.97vw);
+                        margin: min(34px, 1.97vw) auto min(48px, 2.79vw);
+                    }
 
+                    .withyj {
+                        margin-bottom: min(20px, 1.35vw);
+                    }
+
+                    .scroll {
+                        margin-top: min(34px,  1.97vw);
                     }
                 }
             }
@@ -377,13 +434,13 @@ body {
     }
 
     .sec1 {
-        padding: 180px 0 150px;
+        padding: min(180px, 12.16vw) 0 min(150px, 10.14vw);
         background: linear-gradient(0deg, #f5efc0 0%, #f7f6ef 80%);
 
         .flex {
-            width: 1200px;
+            width: min(1200px, 81.08vw);
             margin: 0 auto;
-            gap: 101px;
+            gap: min(101px, 6.82vw);
 
             .left {
                 flex-basis: 50%;
@@ -394,8 +451,8 @@ body {
                     width: min(100%, 395px);
                     aspect-ratio: 9 / 16;
                     box-sizing: border-box;
-                    border-radius: 15px;
-                    box-shadow: 0 26px 60px rgba(0, 0, 0, .3);
+                    border-radius: min(15px, 1.01vw);
+                    box-shadow: 0 min(26px, 1.76vw) min(60px, 4.05vw) rgba(0, 0, 0, .3);
                     overflow: hidden;
                 }
 
@@ -408,14 +465,16 @@ body {
 
             .right {
                 h2 {
-                    font-size: 48px;
-                    line-height: 66px;
-                    margin: 19px 0 46px;
+                    font-size: min(48px, 3.24vw);
+                    line-height: min(66px, 4.46vw);
+                    margin: min(19px, 1.28vw) 0 min(46px, 3.11vw);
                 }
+
                 h3 {
-                    font-size: 28px;
-                    margin-top: 70px;
+                    font-size: min(28px, 1.89vw);
+                    margin-top: min(70px, 4.73vw);
                 }
+
                 em {
                     &::before {
                         background-color: rgba(150, 136, 26, 0.15);
@@ -423,11 +482,11 @@ body {
                 }
 
                 p {
-                    font-size: 24px;
-                    line-height: 38px;
+                    font-size: min(24px, 1.62vw);
+                    line-height: min(38px, 2.57vw);
 
                     &+p {
-                        margin-top: 38px;
+                        margin-top: min(38px, 2.57vw);
                     }
 
                     &.emp {
@@ -447,21 +506,21 @@ body {
             background-repeat: repeat;
 
             .flex {
-                width: 1160px;
+                width: min(1160px, 78.38vw);
                 margin: 0 auto;
-                padding: 52px 0;
-                gap: 100px;
+                padding: min(52px, 3.51vw) 0;
+                gap: min(100px, 6.76vw);
 
                 .left {
-                    width: 580px;
+                    width: min(580px, 39.19vw);
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
-                    gap: 35px;
+                    gap: min(35px, 2.36vw);
 
                     figure {
                         overflow: hidden;
-                        border-radius: 15px;
+                        border-radius: min(15px, 1.01vw);
 
                         img {
                             display: block;
@@ -476,17 +535,17 @@ body {
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
-                    gap: 35px;
+                    gap: min(35px, 2.36vw);
 
                     p {
                         color: #fff;
-                        font-size: 24px;
-                        line-height: 36px;
+                        font-size: min(24px, 1.62vw);
+                        line-height: min(36px, 2.43vw);
                     }
 
                     .b_title {
                         img {
-                            height: 60px;
+                            height: min(60px, 4.05vw);
                         }
                     }
                 }
@@ -494,14 +553,14 @@ body {
         }
 
         .girl {
-            width: 1200px;
-            padding-top: 150px;
+            width: min(1200px, 81.08vw);
+            padding-top: min(150px, 10.14vw);
             margin: 0 auto;
             display: flex;
             align-items: center;
 
             .b_img {
-                width: 754px;
+                width: min(754px, 50.95vw);
 
                 img {
                     width: 100%;
@@ -510,13 +569,14 @@ body {
 
             .memo {
                 position: relative;
-                margin-left: -57px;
-                padding-left: 57px;
+                margin-left: max(-64px, -4.32vw);
+                padding-left: min(64px, 4.32vw);
+                margin-top: max(-37px, -2.50vw);
                 background-image: url('../images/sec2_memo.png');
                 background-size: 100%;
                 background-repeat: no-repeat;
-                width: 493px;
-                height: 564px;
+                width: min(493px, 33.31vw);
+                height: min(564px, 38.11vw);
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
@@ -524,17 +584,17 @@ body {
 
                 p {
                     text-align: left;
-                    font-size: 24px;
+                    font-size: min(24px, 1.62vw);
                     line-height: 1.5;
 
                     &+p {
-                        margin-top: 36px;
+                        margin-top: min(36px, 2.43vw);
                     }
 
                     &.name {
                         font-weight: 600;
-                        font-size: 20px;
-                        margin-top: 60px;
+                        font-size: min(20px, 1.35vw);
+                        margin-top: min(60px, 4.05vw);
 
                     }
 
@@ -549,17 +609,17 @@ body {
         }
 
         .card {
-            margin: 150px auto 0;
-            width: 1400px;
+            margin: min(140px, 9.46vw) auto 0;
+            width: min(1400px, 94.59vw);
 
             &>p {
                 color: #fff;
-                font-size: 18px;
+                font-size: min(18px, 1.22vw);
                 text-align: right;
             }
 
             ul {
-                margin-top: 8px;
+                margin-top: min(8px, 0.54vw);
                 display: flex;
                 justify-content: space-between;
 
@@ -570,7 +630,7 @@ body {
                         position: absolute;
                         z-index: 3;
                         bottom: 0;
-                        padding: 0 20px 20px;
+                        padding: 0 min(20px, 1.35vw) min(20px, 1.35vw);
                         display: flex;
                         width: 100%;
                         justify-content: space-between;
@@ -578,19 +638,19 @@ body {
 
                         i {
                             opacity: 0.6;
-                            font-size: 16px;
+                            font-size: min(16px, 1.08vw);
                         }
 
                         p {
-                            font-size: 18px;
+                            font-size: min(18px, 1.22vw);
                             font-weight: 600;
                         }
                     }
 
                     figure {
-                        width: 340px;
+                        width: min(340px, 22.97vw);
                         overflow: hidden;
-                        border-radius: 15px;
+                        border-radius: min(15px, 1.01vw);
 
                         &.hover {
                             position: absolute;
@@ -609,10 +669,10 @@ body {
                             width: 100%;
                             color: #fff;
                             top: 0;
-                            padding: 12px 24px 0;
+                            padding: min(12px, 0.81vw) min(24px, 1.62vw) 0;
                             width: 100%;
-                            font-size: 20px;
-                            line-height: 30px;
+                            font-size: min(20px, 1.35vw);
+                            line-height: min(30px, 2.03vw);
                         }
                     }
 
@@ -647,22 +707,22 @@ body {
 
         .inner {
             width: min(1480px, 100%);
-            padding: 150px 40px 140px;
+            padding: min(150px, 10.14vw) min(40px, 2.70vw) min(140px, 9.46vw);
             margin: 0 auto;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 70px;
+            gap: min(70px, 4.73vw);
         }
 
         .photo {
             flex: 0 0 auto;
             overflow: hidden;
             position: relative;
-            border-radius: 20px;
-            width: 700px;
+            border-radius: min(20px, 1.35vw);
+            width: min(700px, 47.30vw);
             aspect-ratio: 700 / 718px;
-            box-shadow: 0 26px 60px rgba(0, 0, 0, .5);
+            box-shadow: 0 min(26px, 1.76vw) min(60px, 4.05vw) rgba(0, 0, 0, .5);
 
             img {
                 width: 100%;
@@ -673,7 +733,7 @@ body {
 
         .txt {
             flex: 1 1 auto;
-            max-width: 620px;
+            max-width: min(620px, 41.89vw);
 
             @include media(md) {
                 max-width: 100%;
@@ -683,7 +743,7 @@ body {
 
         .lead {
             font-weight: 700;
-            font-size: 48px;
+            font-size: min(48px, 3.24vw);
             line-height: 1.42;
             letter-spacing: -0.03em;
 
@@ -692,7 +752,7 @@ body {
             }
 
             &+.lead {
-                margin-top: 42px;
+                margin-top: min(42px, 2.84vw);
             }
 
             .mark {
@@ -701,9 +761,10 @@ body {
         }
 
         .scroll-cue {
-            margin-top: 150px;
+            margin-top: min(150px, 10.14vw);
 
             img {
+                width: min(57px, 3.85vw);
                 animation: sec3ScrollNudge 1.8s ease-in-out infinite;
             }
         }
@@ -724,7 +785,7 @@ body {
     .sec4 {
         background-color: #f6f7e9;
         position: relative;
-        padding: 130px 0;
+        padding: min(130px, 8.78vw) 0;
         z-index: 2;
         height: auto;
         box-sizing: border-box;
@@ -734,7 +795,7 @@ body {
 
         .inner {
             width: min(1480px, 92%);
-            padding: 0 40px;
+            padding: 0 min(40px, 2.70vw);
             margin: 0 auto;
             display: flex;
             align-items: flex-start;
@@ -750,9 +811,9 @@ body {
         .photo {
             flex: 0 0 auto;
             overflow: hidden;
-            border-radius: 20px;
-            width: 700px;
-            box-shadow: 0 24px 50px rgba(28, 40, 52, .22);
+            border-radius: min(20px, 1.35vw);
+            width: min(700px, 47.30vw);
+            box-shadow: 0 min(24px, 1.62vw) min(50px, 3.38vw) rgba(28, 40, 52, .22);
 
             img {
                 width: 100%;
@@ -762,28 +823,30 @@ body {
         }
 
         h2 {
-            font-size: 47px;
+            font-size: min(47px, 3.18vw);
             line-height: 1.26;
             letter-spacing: -0.045em;
-            margin-top: 60px;
+            margin-top: min(60px, 4.05vw);
         }
 
         p {
-            font-size: 24px;
-            line-height: 38px;
+            font-size: min(24px, 1.62vw);
+            line-height: min(38px, 2.57vw);
             letter-spacing: -0.015em;
-            margin-top: 64px;
+            margin-top: min(64px, 4.32vw);
 
             strong {
                 font-weight: 700;
                 color: #0e1113;
             }
-            & + p {
-                margin-top: 36px;
+
+            &+p {
+                margin-top: min(36px, 2.43vw);
             }
         }
+
         .bt_wrap {
-            margin-top: 80px;
+            margin-top: min(80px, 5.41vw);
         }
 
     }
@@ -800,6 +863,20 @@ body {
             @include media(md) {
                 height: 260vh;
             }
+
+
+            .scroll {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: min(80px, 5.41vw);
+                small {
+                font-size: min(20px, 1.35vw);
+                }
+                img {
+                    height: min(20px, 1.35vw);
+                }
+            }
         }
 
         .fixed {
@@ -811,7 +888,7 @@ body {
             align-items: center;
             padding: 0 min(72px, 5.63vw);
             width: min(1480px, 100%);
-            padding: 0 40px;
+            padding: 0 min(40px, 2.70vw);
             margin: 0 auto;
 
             @include media(md) {
@@ -823,27 +900,28 @@ body {
         }
 
         .left {
-            width: 482px;
+            width: min(482px, 32.57vw);
 
             .label {
-                font-size: 11px;
+                font-size: min(11px, 0.74vw);
                 font-weight: 700;
                 letter-spacing: 0.22em;
                 color: #6e9ab5;
             }
 
             h4 {
-                font-size: 32px;
-                line-height: 78px;
+                font-size: min(32px, 2.16vw);
+                line-height: min(78px, 5.27vw);
             }
+
             h2 {
-                font-size: 60px;
-                line-height: 76px;
+                font-size: min(60px, 4.05vw);
+                line-height: min(76px, 5.14vw);
             }
 
             .desc {
-                margin-top: 20px;
-                font-size: 14px;
+                margin-top: min(20px, 1.35vw);
+                font-size: min(14px, 0.95vw);
                 line-height: 1.8;
                 color: #78848c;
             }
@@ -851,8 +929,8 @@ body {
             .dots {
                 display: flex;
                 align-items: center;
-                gap: 8px;
-                margin-top: 34px;
+                gap: min(8px, 0.54vw);
+                margin-top: min(34px, 2.30vw);
 
                 @include media(md) {
                     justify-content: center;
@@ -860,8 +938,8 @@ body {
                 }
 
                 .dot {
-                    width: 24px;
-                    height: 2px;
+                    width: min(24px, 1.62vw);
+                    height: min(2px, 0.14vw);
                     background: rgba(142, 151, 157, .4);
                     transition: background .4s;
 
@@ -887,7 +965,7 @@ body {
             position: absolute;
             inset: 0;
             display: flex;
-            gap: 120px;
+            gap: min(120px, 8.11vw);
             justify-content: flex-start;
             align-items: center;
             opacity: 0;
@@ -903,9 +981,9 @@ body {
             }
 
             .photo {
-                width: 435px;
-                height: 520px;
-                border-radius: 20px;
+                width: min(435px, 29.39vw);
+                height: min(520px, 35.14vw);
+                border-radius: min(20px, 1.35vw);
                 overflow: hidden;
 
                 img {
@@ -916,8 +994,8 @@ body {
 
             .txt {
                 p {
-                    font-size: 24px;
-                    line-height: 38px;
+                    font-size: min(24px, 1.62vw);
+                    line-height: min(38px, 2.57vw);
                 }
             }
         }
@@ -925,38 +1003,44 @@ body {
 
     .sec6 {
         background: linear-gradient(0deg, #d8cf88 0%, #fff 80%);
-        padding: 190px 0 80px;
+        padding: min(190px, 12.84vw) 0 min(80px, 5.41vw);
 
         h2 {
             text-align: center;
-            font-size: 40px;
+            font-size: min(40px, 2.70vw);
         }
+
         .chips-container {
-                margin: 52px auto 0;
+            margin: min(52px, 3.51vw) auto 0;
+
             ul {
-                width: 1400px;
+                width: min(1400px, 94.59vw);
                 display: flex;
                 justify-content: center;
-                gap: 12px;
+                gap: min(12px, 0.81vw);
+
                 li {
                     a {
-                        border: 1px solid var(--c-brown);
-                        border-radius: 99px;
+                        border: min(1px, 0.07vw) solid var(--c-brown);
+                        border-radius: min(99px, 6.69vw);
                         display: inline-flex;
-                        padding: 0 16px;
-                        height: 36px;
+                        padding: 0 min(16px, 1.08vw);
+                        height: min(36px, 2.43vw);
                         align-items: center;
+
                         small {
                             display: inline-block;
-                            margin-left: 4px;
-                            width: 83px;
-                            height: 15px;
+                            margin-left: min(4px, 0.27vw);
+                            width: min(83px, 5.61vw);
+                            height: min(15px, 1.01vw);
                             background-size: contain;
                             background-image: url('../images/logo_bearpaw.png');
                         }
+
                         &.on {
                             background-color: var(--c-brown);
                             color: #fff;
+
                             small {
                                 background-image: url('../images/logo_bearpaw_wh.png');
                             }
@@ -964,18 +1048,21 @@ body {
                     }
                 }
             }
+
             .gallery {
-                width: 1400px;
-                margin: 34px auto 130px;
+                width: min(1400px, 94.59vw);
+                margin: min(34px, 2.30vw) auto min(130px, 8.78vw);
                 display: flex;
                 justify-content: space-between;
+
                 figure {
                     position: relative;
                     overflow: hidden;
-                    border-radius: 10px;
+                    border-radius: min(10px, 0.68vw);
                     width: 100%;
-                    max-width: 270px;
+                    max-width: min(270px, 18.24vw);
                     aspect-ratio: 274 / 327;
+
                     img {
                         position: absolute;
                         top: 50%;
@@ -985,6 +1072,7 @@ body {
                         height: 100%;
                         transition: all 0.2s;
                     }
+
                     &.on {
                         img {
                             width: 120%;
@@ -995,20 +1083,24 @@ body {
             }
 
         }
+
         .flex {
-            width: 1400px;
+            width: min(1400px, 94.59vw);
             margin: 0 auto;
-            gap: 100px;
+            gap: min(100px, 6.76vw);
             justify-content: flex-start;
+
             .left {
                 ul {
                     display: flex;
                     flex-direction: column;
-                    gap: 10px;
+                    gap: min(10px, 0.68vw);
+
                     li {
                         overflow: hidden;
-                        border-radius: 15px;
-                        width: 600px;
+                        border-radius: min(15px, 1.01vw);
+                        width: min(600px, 40.54vw);
+
                         img {
                             width: 100%;
                         }
@@ -1016,22 +1108,25 @@ body {
                 }
 
             }
+
             .right {
-                width: 685px;
+                width: min(685px, 46.28vw);
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
                 justify-content: center;
-                gap: 67px;
+                gap: min(67px, 4.53vw);
                 background-repeat: no-repeat;
-                background-position: right bottom 98px;
+                background-position: right bottom min(98px, 6.62vw);
                 background-image: url('../images/sec6_sig.png');
+                background-size: min(374px, 25.27vw);
                 h3 {
-                    font-size: 28px;
-                    line-height: 48px;
+                    font-size: min(28px, 1.89vw);
+                    line-height: min(48px, 3.24vw);
                 }
+
                 .btn_gradient {
-                    width: 386px;
+                    width: min(386px, 26.08vw);
                 }
             }
         }
@@ -1047,8 +1142,8 @@ body {
         }
 
         h2 {
-            font-size: 43px;
-            line-height: 60px;
+            font-size: min(43px, 2.91vw);
+            line-height: min(60px, 4.05vw);
             text-align: center;
 
             @include media(md) {
@@ -1058,10 +1153,10 @@ body {
         }
 
         .inner>p {
-            font-size: 20px;
-            line-height: 32px;
+            font-size: min(20px, 1.35vw);
+            line-height: min(32px, 2.16vw);
             letter-spacing: -0.03em;
-            margin-top: 47px;
+            margin-top: min(47px, 3.18vw);
             letter-spacing: -0.04em;
 
             @include media(md) {
@@ -1075,20 +1170,20 @@ body {
         }
 
         div a {
-            font-size: 20px;
-            margin-top: 24px;
+            font-size: min(20px, 1.35vw);
+            margin-top: min(24px, 1.62vw);
             display: inline-flex;
             justify-content: center;
             align-items: center;
-            gap: 10px;
+            gap: min(10px, 0.68vw);
 
             @include media(md) {
                 font-size: min(28px, 4.38vw);
             }
 
             span {
-                height: 28px;
-                border-bottom: 2px solid var(--c-brown);
+                height: min(28px, 1.89vw);
+                border-bottom: min(2px, 0.14vw) solid var(--c-brown);
                 color: var(--c-brown);
                 font-weight: 700;
             }
@@ -1113,12 +1208,12 @@ body {
 
             .swiper-slide {
                 .innBox {
-                    border-radius: 40px;
+                    border-radius: min(40px, 2.70vw);
                     transform: scale(0.9);
                     transform-origin: center;
-                    margin: 0 8px;
+                    margin: 0 min(8px, 0.54vw);
                     overflow: hidden;
-                    box-shadow: rgba(0, 0, 0, 0.25) 0 0 40px;
+                    box-shadow: rgba(0, 0, 0, 0.25) 0 0 min(40px, 2.70vw);
 
                     @include media(md) {
                         margin: 0 min(4px, 0.63vw);
@@ -1153,14 +1248,14 @@ body {
             }
 
             .txt {
-                padding: 50px 50px 0;
+                padding: min(50px, 3.38vw) min(50px, 3.38vw) 0;
 
                 @include media(md) {
                     padding: min(54px, 8.44vw) min(60px, 9.38vw) 0;
                 }
 
                 h4 {
-                    font-size: 34px;
+                    font-size: min(34px, 2.30vw);
                     color: var(--c-org);
 
                     @include media(md) {
@@ -1169,13 +1264,13 @@ body {
                 }
 
                 p {
-                    font-size: 22px;
-                    line-height: 35px;
+                    font-size: min(22px, 1.49vw);
+                    line-height: min(35px, 2.36vw);
                     height: auto;
-                    padding-bottom: 52px;
-                    
+                    padding-bottom: min(52px, 3.51vw);
+
                     font-weight: 400;
-                    margin-top: 17px;
+                    margin-top: min(17px, 1.15vw);
 
                     @include media(md) {
                         margin-top: min(12px, 1.88vw);
@@ -1193,14 +1288,14 @@ body {
 
         .swiper-container-horizontal>.swiper-pagination-bullets {
             position: relative;
-            margin-top: 60px;
+            margin-top: min(60px, 4.05vw);
 
 
             .swiper-pagination-bullet {
                 opacity: 0.5;
-                width: 44px;
-                height: 10px;
-                border-radius: 5px;
+                width: min(44px, 2.97vw);
+                height: min(10px, 0.68vw);
+                border-radius: min(5px, 0.34vw);
                 background-color: var(--c-org);
 
                 @include media(md) {
@@ -1220,8 +1315,8 @@ body {
             display: block;
             background-size: 100%;
             top: 48%;
-            width: 60px;
-            height: 60px;
+            width: min(60px, 4.05vw);
+            height: min(60px, 4.05vw);
             background-image: url('../images/sec8-arrow-right.webp');
 
             @include media(md) {
@@ -1257,11 +1352,11 @@ body {
 
     .sec11 {
         background-color: #ebe7c6;
-        padding: 120px min(4.69vw, 30px) min(205px, 20vw);
+        padding: min(120px, 8.11vw) min(4.69vw, 30px) min(205px, 20vw);
 
 
         h2 {
-            font-size: 40px;
+            font-size: min(40px, 2.70vw);
             text-align: center;
 
             @include media(md) {
@@ -1275,8 +1370,8 @@ body {
 
             .img-list {
                 display: flex;
-                padding-left: 62px;
-                padding-top: 34px;
+                padding-left: min(62px, 4.19vw);
+                padding-top: min(34px, 2.30vw);
                 gap: min(64px, 5vw);
 
                 @include media(md) {
@@ -1315,19 +1410,19 @@ body {
         .tempDona_btn {
             display: inline-flex;
             align-items: center;
-            gap: 28px;
+            gap: min(28px, 1.89vw);
             transition: transform 0.2s;
             margin: min(24px, 3.75vw) 0 0;
             font-size: min(18px, 2.81vw);
             width: min(205px, 32.03vw);
             height: min(56px, 8.75vw);
             line-height: min(56px, 8.75vw);
-            border: 1px solid var(--c-green);
+            border: min(1px, 0.07vw) solid var(--c-green);
             color: var(--c-green);
             box-sizing: border-box;
             text-align: left;
             padding-left: min(34px, 5.31vw);
-            border-radius: 999px;
+            border-radius: min(999px, 67.50vw);
             position: relative;
             font-weight: 700;
 
@@ -1345,7 +1440,7 @@ body {
 .tab-main {
     position: relative;
     width: 100%;
-    margin-top: 47px;
+    margin-top: min(47px, 3.18vw);
 
     @include media(md) {
         margin-top: min(38px, 5.94vw);
@@ -1363,14 +1458,14 @@ body {
         a {
             width: 33%;
             background-color: #fff;
-            font-size: 24px;
+            font-size: min(24px, 1.62vw);
             font-weight: 700;
             text-align: center;
             cursor: pointer;
             transition: all .3s ease 0s;
-            border-radius: 8px;
+            border-radius: min(8px, 0.54vw);
             margin-right: min(1.8vw, 20px);
-            box-shadow: 1px 1px 10px 5px rgba(3, 24, 41, 0.02);
+            box-shadow: min(1px, 0.07vw) min(1px, 0.07vw) min(10px, 0.68vw) min(5px, 0.34vw) rgba(3, 24, 41, 0.02);
 
             @include media(md) {
                 border-radius: min(6px, 0.94vw);
@@ -1384,8 +1479,8 @@ body {
             label {
                 display: block;
                 color: var(--c-org);
-                height: 80px;
-                line-height: 80px;
+                height: min(80px, 5.41vw);
+                line-height: min(80px, 5.41vw);
 
                 @include media(md) {
                     height: min(62px, 9.69vw);
@@ -1399,7 +1494,7 @@ body {
     .tab-main-content {
         overflow: hidden;
         display: none;
-        margin-top: 30px;
+        margin-top: min(30px, 2.03vw);
 
         @include media(md) {
             margin-top: min(39px, 6.09vw);
@@ -1411,7 +1506,7 @@ body {
     input[id='tab3']:checked~.tab-main-nav label[for='tab3'] {
         background: var(--c-green);
         color: #fff;
-        border-radius: 8px;
+        border-radius: min(8px, 0.54vw);
 
         @include media(md) {
             border-radius: min(6px, 0.94vw);
@@ -1430,16 +1525,16 @@ body {
                 border-radius: min(15px, 2.34vw);
                 background: #fff;
                 margin: 0 0 min(20px, 3.13vw) 0;
-                box-shadow: 1px 1px 10px 5px rgba(3, 24, 41, 0.02);
+                box-shadow: min(1px, 0.07vw) min(1px, 0.07vw) min(10px, 0.68vw) min(5px, 0.34vw) rgba(3, 24, 41, 0.02);
                 position: relative;
 
                 .tit {
                     font-family: 'Pretendard';
                     font-weight: 600;
-                    flex-basis: 62px;
+                    flex-basis: min(62px, 4.19vw);
                     flex-shrink: 0;
-                    font-size: 28px;
-                    line-height: 40px;
+                    font-size: min(28px, 1.89vw);
+                    line-height: min(40px, 2.70vw);
                     color: var(--c-green);
                     font-weight: 700;
 
@@ -1456,8 +1551,8 @@ body {
                     color: var(--c-org);
 
                     p {
-                        font-size: 24px;
-                        line-height: 40px;
+                        font-size: min(24px, 1.62vw);
+                        line-height: min(40px, 2.70vw);
                         font-weight: 700;
 
                         @include media(md) {
@@ -1471,8 +1566,8 @@ body {
                 .acc-q {
                     display: flex;
                     align-items: center;
-                    padding: 25px min(3.5vw, 35px);
-                    font-size: 24px;
+                    padding: min(25px, 1.69vw) min(3.5vw, 35px);
+                    font-size: min(24px, 1.62vw);
                     font-weight: 700;
                     cursor: pointer;
                     position: relative;
@@ -1511,7 +1606,7 @@ body {
                 .acc-a {
                     display: none;
                     padding: 0 min(6vw, 30px) min(3.5vw, 35px);
-                    font-size: 20px;
+                    font-size: min(20px, 1.35vw);
                     overflow: hidden;
                     transition: height 0.2s ease, opacity 0.2s ease;
 
@@ -1531,7 +1626,7 @@ body {
 
                         .a-cont {
                             display: flex;
-                            border-top: 1px solid #f2dfe9;
+                            border-top: min(1px, 0.07vw) solid #f2dfe9;
                             padding-top: min(6vw, 30px);
 
                             @include media(md) {
