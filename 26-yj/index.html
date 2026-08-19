@@ -257,6 +257,7 @@
                     </a>
                 </div>
                 <div class="main type-A">
+                    <div class="dummy"><img src="images/mainA.png" alt=""></div>
                     <div class="flex">
                         <div class="left">
                             <figure><img src="images/main_img.jpg" alt=""></figure>
@@ -279,6 +280,7 @@
                     </div>
                 </div>
                 <div class="main type-B">
+                    <div class="dummy"><img src="images/mainB.png" alt=""></div>
                     <div class="flex">
                         <div class="left">
                             <figure><img src="images/mainB-yj.jpg" alt=""></figure>
@@ -305,6 +307,7 @@
                     </div>
                 </div>
                 <div class="sec1">
+                    <div class="dummy"><img src="images/sec1.png" alt=""></div>
                     <div class="flex">
                         <div class="left">
                                     
@@ -352,6 +355,7 @@
                     </div>
                 </div>
                 <div class="sec2">
+                    <div class="dummy"><img src="images/sec2.png" alt=""></div>
                     <div class="neckless">
                         <div class="flex">
                             <div class="left">
@@ -446,6 +450,7 @@
 
                 <div class="sticky-wrap">
                     <div class="sec3">
+                        <div class="dummy"><img src="images/sec3.png" alt=""></div>
                         <div class="inner">
                             <div class="photo">
                                 <img src="images/sec3_img.jpg" alt="캠페인 후원자 장윤주">
@@ -469,6 +474,7 @@
                     </div>
 
                     <div class="sec4">
+                        <div class="dummy"><img src="images/sec4.png" alt=""></div>
                         <div class="inner">
                             <div class="photo">
                                 <img src="images/sec4_img.jpg" alt="위드베어 키링을 든 장윤주">
@@ -477,7 +483,7 @@
                                 <h2>조혼을 막는 가장 확실한 방법은<br>아이들을 <span>학교에 보내주는 것</span>입니다.</h2>
                                 <p>지금 후원에 참여하시면 <br> <strong>한 소녀가 조혼에서 벗어나 <br>학교에 다닐 수 있습니다.</strong></p>
                                 <p>후원에 참여해주신 모든 분께는 <br> <em><strong><span>위드베어 키링</span></strong></em>을 드립니다.</p>
-                                <div >
+                                <div class="bt_wrap">
                                     <a href="" class="btn_gradient">
                                         조혼 위기 소녀 후원하기
                                         <img src="images/btn_arr.png" alt="">
@@ -489,6 +495,7 @@
                 </div>
 
                 <div class="sec5">
+                    <div class="dummy"><img src="images/sec5.png" alt=""></div>
                     <div class="sticky-wrap">
 
                         <div class="scroll-cue">
@@ -510,7 +517,7 @@
                                         <img src="images/sec5-1_img.jpg" alt="가방에 단 위드베어">
                                     </div>
                                     <div class="txt">
-                                        <p class="tit">평범한 키링이 아니라<br><span>의미가 담긴 키링</span>이라 좋아요. <br><br></p>
+                                        <p class="tit">평범한 키링이 아니라<br><em><strong><span>의미가 담긴 키링</span></strong></em>이라 좋아요. <br><br></p>
                                         <p class="desc">내 힘으로 <strong>한 아이를<br>안전하게 지켜주고 있다</strong>는 뜻이잖아요.</p>
                                     </div>
                                 </div>
@@ -531,19 +538,23 @@
                 </div>
                 
                 <div class="sec6">
+                    <div class="dummy"><img src="images/sec6.png" alt=""></div>
                     <h2>우리와 항상 함께(WITH) 하는 <span>위드베어</span></h2>
                     <div class="chips-container">
                         <ul>
-                            <li><a href="">아이들의 학교 가방을 닮은 가방</a></li>
+                            <li><a href="" class="on">아이들의 학교 가방을 닮은 가방</a></li>
                             <li><a href="">알록달록 머리핀</a></li>
-                            <li><a href="">Made by <img src="images/logo_bearpaw.png" alt=""></a></li>
+                            <li><a href="">Made by <small></small></a></li>
                             <li><a href="">의미있는 W로고</a></li>
                             <li><a href="">실용적인 스트랩</a></li>
                         </ul>
-                        <div>
-                            <figure><img src="images/" alt=""></figure>
+                        <div class="gallery">
+                            <figure class="on"><img src="images/sec6_img1.jpg" alt=""></figure>
+                            <figure><img src="images/sec6_img2.jpg" alt=""></figure>
+                            <figure><img src="images/sec6_img3.jpg" alt=""></figure>
+                            <figure><img src="images/sec6_img4.jpg" alt=""></figure>
+                            <figure><img src="images/sec6_img5.jpg" alt=""></figure>
                         </div>
-
                     </div>
                     <div class="flex">
                         <div class="left">
@@ -575,6 +586,7 @@
                 </div>
 
                 <div class="sec10">
+                    <div class="dummy"><img src="images/sec10.png" alt=""></div>
                     <div class="inner">
                         <h2 >
                             리나와 같은 소녀들을 위해<br>
@@ -663,6 +675,7 @@
                     </div>
                 </div>
                 <div class="sec11">
+                    <div class="dummy"><img src="images/sec11.png" alt=""></div>
                     <div class="inner">
                         <h2>자주 묻는 질문</h2>
                         <div class="tab-main">
@@ -943,6 +956,17 @@
         $(".acc-warp .accordion .acc-box").click(function () {
             $(this).siblings().removeClass('on');
             $(this).toggleClass('on');
+        });
+
+        $(".chips-container ul li a").on('click', function (e) {
+            e.preventDefault();
+            var idx = $(this).closest('li').index();
+            var $container = $(this).closest('.chips-container');
+
+            $container.find('ul li a').removeClass('on');
+            $(this).addClass('on');
+
+            $container.find('.gallery figure').removeClass('on').eq(idx).addClass('on');
         });
 
         const swiper_girls = new Swiper('.sec10 .swiper', {
