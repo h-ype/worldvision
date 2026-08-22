@@ -110,6 +110,7 @@ $breakpoints: (
     text-align: center;
     color: var(--c-white);
     transition: all 0.3s;
+
     &::before {
         content: '';
         position: absolute;
@@ -124,6 +125,7 @@ $breakpoints: (
 
     &:hover {
         transform: translateY(6px);
+
         @include media(md) {
             transform: translateX(-50%);
         }
@@ -131,8 +133,8 @@ $breakpoints: (
     }
 
     @include media(md) {
-        width: min(320px, 50.00vw);
-        height: min(101px, 15.78vw);
+        width: 320px;
+        height: 101px;
         left: 50%;
         top: calc(100% - min(137px, 21.41vw) - min(60px, 9.38vw));
         transform: translateX(-50%);
@@ -145,6 +147,7 @@ $breakpoints: (
         position: relative;
         background-size: 100%;
         background-image: url('../images/floating_btn.png');
+
         @include media(md) {
             background-image: url('../images/floating_btn_mo.png');
         }
@@ -158,26 +161,31 @@ $breakpoints: (
             transform: translateX(-50%);
             font-size: min(22px, 1.49vw);
             line-height: min(28px, 1.89vw);
+
             span {
                 color: #f5efc0 !important;
             }
+
             img {
                 display: none;
             }
+
             @include media(md) {
                 display: flex;
-                gap: min(8px, 1.25vw);
+                gap: 8px;
                 align-items: center;
                 text-align: left;
-                padding-left: min(100px, 15.63vw);
+                padding-left: 100px;
                 width: 100%;
                 bottom: 0;
-                font-size:min(18px, 2.81vw);
-                line-height: min(60px, 9.38vw);
+                font-size: 18px;
+                line-height: 60px;
+
                 img {
                     display: block !important;
-                    height: min(11px, 1.72vw);
+                    height: 11px;
                 }
+
                 br {
                     display: none;
                 }
@@ -288,6 +296,7 @@ body {
             background-color: rgba(241, 232, 164, 0.3);
             top: 50%;
             transform: translateX(-50%) translateY(0%);
+
             @include media(md) {
                 height: 43%;
                 top: 55%;
@@ -315,6 +324,7 @@ body {
         height: min(80px, 5.41vw);
         width: min(360px, 24.32vw);
         background: linear-gradient(90deg, #726e4f 40%, #96881a 100%);
+
         @include media(md) {
             width: min(547px, 85.47vw);
             height: min(120px, 18.75vw);
@@ -327,12 +337,15 @@ body {
             gap: min(55px, 3.72vw);
             scale: 1.03;
             background: linear-gradient(90deg, #615e42 40%, #7f7317 100%);
+
             @include media(md) {
                 gap: min(85px, 13.28vw);
             }
         }
+
         img {
             height: min(15px, 1.01vw);
+
             @include media(md) {
                 height: min(27px, 4.22vw);
             }
@@ -346,8 +359,9 @@ body {
         flex-direction: column;
         align-items: center;
         gap: min(8px, 0.54vw);
+
         small {
-        font-size: min(15px, 1.01vw);
+            font-size: min(15px, 1.01vw);
         }
 
         img {
@@ -368,6 +382,7 @@ body {
             gap: min(4px, 0.27vw);
             font-size: min(28px, 1.89vw);
             color: #000;
+
             @include media(md) {
                 font-size: min(26px, 4.06vw);
                 gap: min(7px, 1.09vw);
@@ -375,6 +390,7 @@ body {
 
             img {
                 height: min(32px, 2.16vw);
+
                 @include media(md) {
                     height: min(30px, 4.69vw);
                 }
@@ -386,9 +402,11 @@ body {
             overflow: hidden;
             border-radius: min(20px, 1.35vw);
         }
+
         .withyj {
             img {
                 height: min(47px, 3.18vw);
+
                 @include media(md) {
                     height: min(54px, 8.44vw);
                 }
@@ -407,9 +425,10 @@ body {
         }
 
         &.type-A {
-            padding: min(62px, 4.19vw) 0 min(82px, 5.54vw);
+            padding: min(62px, 4.19vw) 0 min(110px, 7.43vw);
+
             @include media(md) {
-                padding: min(34px, 5.31vw) 0 min(82px, 12.81vw);
+                padding: min(34px, 5.31vw) 0 min(77px, 12.03vw);
             }
 
             .flex {
@@ -419,17 +438,25 @@ body {
                 width: min(1288px, 87.03vw);
                 padding-left: min(44px, 2.97vw);
                 gap: min(125px, 8.45vw);
+
                 @include media(md) {
                     width: min(548px, 85.63vw);
                     padding: 0;
                 }
+
                 .left {
+                    overflow: hidden;
+                    border-radius: min(20px, 1.35vw);
+                    box-shadow: 0 15px 30px min(16px, 1vw) rgba(136, 126, 47, .1);
+
                     img {
                         width: min(635px, 42.91vw);
                     }
                 }
+
                 .withyj {
                     margin: min(72px, 4.86vw) 0 min(12px, 0.81vw);
+
                     @include media(md) {
                         margin: min(64px, 10.00vw) 0 min(16px, 2.50vw);
                     }
@@ -441,21 +468,31 @@ body {
                         flex-direction: column;
                         align-items: center;
                     }
+
                     h2 {
                         margin: min(42px, 2.84vw) 0 min(20px, 1.35vw);
+
                         @include media(md) {
                             text-align: center;
                         }
                     }
 
-                    .scroll {
-                        margin: min(127px, 8.58vw) min(14px, 0.95vw);
+                    // #thousand-girl 아래 있어 특정도가 항상 AOS css를 이기므로,
+                    // 여기서 opacity/transform 트랜지션과 delay를 data-aos-delay="600"에 맞춰 직접 지정
+                    .btn_gradient {
+                        transition: background 0.3s, gap 0.3s, scale 0.3s, opacity 0.4s 0.6s, transform 0.4s 0.6s;
                     }
+
+                    .scroll {
+                        margin: min(127px, 8.58vw) min(14px, 0.95vw) 0;
+                    }
+
                     @include media(md) {
                         .mo {
                             overflow: hidden;
                             border-radius: min(24px, 3.75vw);
                             margin-top: min(39px, 6.09vw);
+
                             img {
                                 width: min(546px, 85.31vw);
                             }
@@ -466,7 +503,8 @@ body {
         }
 
         &.type-B {
-            padding: min(92px, 5.34vw) 0 min(53px, 3.08vw);
+            padding: min(92px, 5.34vw) 0 min(180px, 12.16vw);
+
             @include media(md) {
                 padding: min(51px, 7.97vw) 0 min(77px, 12.03vw);
             }
@@ -478,11 +516,14 @@ body {
                 margin: 0 auto;
                 display: flex;
                 justify-content: space-between;
+
                 @include media(md) {
                     width: min(610px, 95.31vw);
                     padding: 0;
                 }
-                .left, .right {
+
+                .left,
+                .right {
                     figure {
                         img {
                             width: min(491px, 28.5vw);
@@ -496,8 +537,10 @@ body {
                     align-items: center;
                     justify-content: flex-start;
                     text-align: center;
+
                     h2 {
                         padding: min(17px, 0.99vw) 0 min(10px, 0.58vw);
+
                         @include media(md) {
                             padding: min(8px, 1.25vw) 0 min(14px, 2.19vw);
                         }
@@ -508,19 +551,24 @@ body {
                         line-height: min(34px, 1.97vw);
                         margin: min(34px, 1.97vw) auto min(48px, 2.79vw);
                     }
+
                     @include media(md) {
                         .visual {
                             display: flex !important;
                             margin: min(49px, 7.66vw) 0 min(57px, 8.91vw);
+
                             li {
                                 position: relative;
-                                    z-index: 1;
+                                z-index: 1;
+
                                 img {
                                     width: min(355px, 55.47vw);
                                 }
+
                                 &:last-child {
-                                        z-index: 0;
+                                    z-index: 0;
                                     margin-left: max(-50px, -7.81vw);
+
                                     img {
                                         width: min(299px, 46.72vw);
                                     }
@@ -534,7 +582,7 @@ body {
                     }
 
                     .scroll {
-                        margin-top: min(34px,  1.97vw);
+                        margin-top: min(34px, 1.97vw);
                     }
                 }
             }
@@ -543,8 +591,9 @@ body {
     }
 
     .sec1 {
-        padding: min(180px, 12.16vw) 0 min(150px, 10.14vw);
+        padding: 0 0 min(150px, 10.14vw);
         background: linear-gradient(0deg, #f5efc0 0%, #f7f6ef 80%);
+
         @include media(md) {
             padding: 0 0 min(72px, 11.25vw);
         }
@@ -553,6 +602,7 @@ body {
             width: min(1200px, 81.08vw);
             margin: 0 auto;
             gap: min(101px, 6.82vw);
+
             @include media(md) {
                 width: min(548px, 85.63vw);
                 gap: min(58px, 9.06vw);
@@ -564,6 +614,7 @@ body {
                 flex-basis: 50%;
                 display: flex;
                 justify-content: flex-end;
+
                 @include media(md) {
                     justify-content: center;
                 }
@@ -573,8 +624,9 @@ body {
                     aspect-ratio: 395 / 705;
                     box-sizing: border-box;
                     border-radius: min(15px, 1.01vw);
-                    box-shadow: 0 min(26px, 1.76vw) min(60px, 4.05vw) rgba(0, 0, 0, .3);
+                    box-shadow: 0 min(32px, 2vw) min(50px, 3.4vw) min(16px, 1vw) rgba(46, 22, 12, .15);
                     overflow: hidden;
+
                     @include media(md) {
                         width: min(100%, 548px);
                         border-radius: min(24px, 3.75vw);
@@ -593,6 +645,7 @@ body {
                     font-size: min(48px, 3.24vw);
                     line-height: min(66px, 4.46vw);
                     margin: min(19px, 1.28vw) 0 min(46px, 3.11vw);
+
                     @include media(md) {
                         font-size: min(50px, 7.81vw);
                         line-height: min(67px, 10.47vw);
@@ -603,6 +656,7 @@ body {
                 h3 {
                     font-size: min(28px, 1.89vw);
                     margin-top: min(70px, 4.73vw);
+
                     @include media(md) {
                         font-size: min(34px, 5.31vw);
                         line-height: min(64px, 10.00vw);
@@ -620,6 +674,7 @@ body {
                 p {
                     font-size: min(24px, 1.62vw);
                     line-height: min(38px, 2.57vw);
+
                     @include media(md) {
                         font-size: min(31px, 4.84vw);
                         line-height: min(46px, 7.19vw);
@@ -627,6 +682,7 @@ body {
 
                     &+p {
                         margin-top: min(38px, 2.57vw);
+
                         @include media(md) {
                             margin-top: min(47px, 7.34vw);
                         }
@@ -668,10 +724,14 @@ body {
                     flex-direction: column;
                     justify-content: center;
                     gap: min(35px, 2.36vw);
+                    @include media(md) {
+                        width: 100%;
+                    }
 
                     figure {
                         overflow: hidden;
                         border-radius: min(15px, 1.01vw);
+
                         @include media(md) {
                             width: min(548px, 85.63vw);
                         }
@@ -690,6 +750,7 @@ body {
                     flex-direction: column;
                     justify-content: center;
                     gap: min(35px, 2.36vw);
+
                     @include media(md) {
                         gap: min(14px, 2.19vw);
                     }
@@ -698,8 +759,10 @@ body {
                         color: #fff;
                         font-size: min(24px, 1.62vw);
                         line-height: min(36px, 2.43vw);
+                        letter-spacing: -0.04em;
+
                         @include media(md) {
-                            font-size: min(32px, 5.00vw);
+                            font-size: min(32px, 4.8vw);
                             line-height: min(46px, 7.19vw);
                         }
                     }
@@ -707,6 +770,7 @@ body {
                     .b_title {
                         img {
                             height: min(60px, 4.05vw);
+
                             @include media(md) {
                                 height: min(69px, 10.78vw);
                             }
@@ -722,6 +786,7 @@ body {
             margin: 0 auto;
             display: flex;
             align-items: center;
+
             @include media(md) {
                 width: min(548px, 85.63vw);
                 padding-top: min(73px, 11.41vw);
@@ -730,12 +795,14 @@ body {
 
             .b_img {
                 width: min(754px, 50.95vw);
+
                 @include media(md) {
                     width: min(500px, 78.13vw);
                 }
 
                 img {
                     width: 100%;
+
                     @include media(md) {
                         transform: rotate(-2deg);
                         margin-left: min(0px, 0.00vw);
@@ -767,12 +834,13 @@ body {
                     padding-top: min(103px, 16.09vw);
                     padding-left: min(71px, 11.09vw);
                 }
-                
+
 
                 p {
                     text-align: left;
                     font-size: min(24px, 1.62vw);
                     line-height: 1.5;
+
                     @include media(md) {
                         font-size: min(26px, 4.06vw);
                         line-height: min(39px, 6.09vw);
@@ -780,6 +848,7 @@ body {
 
                     &+p {
                         margin-top: min(36px, 2.43vw);
+
                         @include media(md) {
                             margin-top: min(41px, 6.41vw);
                         }
@@ -812,6 +881,7 @@ body {
         .card {
             margin: min(140px, 9.46vw) auto 0;
             width: min(1400px, 94.59vw);
+
             @include media(md) {
                 margin: 0;
                 width: 100%;
@@ -836,7 +906,7 @@ body {
                         position: absolute;
                         z-index: 3;
                         bottom: 0;
-                        padding: 0 min(20px, 1.35vw) min(20px, 1.35vw);
+                        padding: 0 min(20px, 1.35vw) min(12px, 0.81vw);
                         display: flex;
                         width: 100%;
                         justify-content: space-between;
@@ -890,6 +960,7 @@ body {
                 }
             }
         }
+
         @include media(md) {
 
             .girls {
@@ -918,9 +989,11 @@ body {
                 figure {
                     overflow: hidden;
                     border-radius: min(24px, 3.75vw);
+
                     img {
                         width: 100%;
                     }
+
                     .text {
                         position: absolute;
                         width: 100%;
@@ -928,10 +1001,11 @@ body {
                         top: 0;
                         padding: min(20px, 3.13vw) min(20px, 3.13vw) 0;
                         width: 100%;
+
                         p {
                             font-size: min(28px, 4.38vw);
                             line-height: min(43px, 6.72vw);
-                            
+
                         }
                     }
                 }
@@ -966,6 +1040,7 @@ body {
             align-items: center;
             justify-content: space-between;
             gap: min(70px, 4.73vw);
+
             @include media(md) {
                 padding: min(78px, 12.19vw) 0 min(92px, 14.37vw);
             }
@@ -1014,6 +1089,7 @@ body {
 
             &+.lead {
                 margin-top: min(42px, 2.84vw);
+
                 @include media(md) {
                     margin-top: min(49px, 7.66vw);
                 }
@@ -1032,6 +1108,7 @@ body {
                 animation: sec3ScrollNudge 1.8s ease-in-out infinite;
             }
         }
+
         @include media(md) {
             em {
                 &::before {
@@ -1065,6 +1142,7 @@ body {
         display: flex;
         align-items: center;
         justify-content: space-between;
+
         @include media(md) {
             padding: min(79px, 12.34vw) 0 min(94px, 14.69vw);
         }
@@ -1091,7 +1169,8 @@ body {
             overflow: hidden;
             border-radius: min(20px, 1.35vw);
             width: min(700px, 47.30vw);
-            box-shadow: 0 min(24px, 1.62vw) min(50px, 3.38vw) rgba(28, 40, 52, .22);
+            box-shadow: 0 0 min(24px, 1.62vw) min(40px, 0.27vw) rgba(164, 158, 93, .25);
+
             @include media(md) {
                 width: 100%;
             }
@@ -1108,11 +1187,12 @@ body {
             line-height: 1.26;
             letter-spacing: -0.045em;
             margin-top: min(60px, 4.05vw);
+
             @include media(md) {
                 font-size: min(43px, 6.72vw);
                 line-height: min(62px, 9.69vw);
                 margin-top: 0;
-            letter-spacing: 0em;
+                letter-spacing: 0em;
             }
         }
 
@@ -1121,6 +1201,7 @@ body {
             line-height: min(38px, 2.57vw);
             letter-spacing: -0.015em;
             margin-top: min(64px, 4.32vw);
+
             @include media(md) {
                 font-size: min(31px, 4.84vw);
                 line-height: min(46px, 7.19vw);
@@ -1134,6 +1215,7 @@ body {
 
             &+p {
                 margin-top: min(36px, 2.43vw);
+
                 @include media(md) {
                     margin-top: min(47px, 7.34vw);
                 }
@@ -1172,9 +1254,11 @@ body {
                 left: 50%;
                 transform: translateX(-50%);
                 bottom: min(80px, 5.41vw);
+
                 small {
-                font-size: min(20px, 1.35vw);
+                    font-size: min(20px, 1.35vw);
                 }
+
                 img {
                     height: min(20px, 1.35vw);
                 }
@@ -1287,6 +1371,7 @@ body {
                 height: min(520px, 35.14vw);
                 border-radius: min(20px, 1.35vw);
                 overflow: hidden;
+                box-shadow: 0 0 min(24px, 1.62vw) min(40px, 0.27vw) rgba(164, 158, 93, .25);
 
                 img {
                     width: 100%;
@@ -1298,6 +1383,12 @@ body {
                 p {
                     font-size: min(24px, 1.62vw);
                     line-height: min(38px, 2.57vw);
+
+                    em {
+                        &::before {
+                            background-color: rgba(150, 136, 26, 0.15);
+                        }
+                    }
                 }
             }
         }
@@ -1309,14 +1400,17 @@ body {
                 flex-direction: column;
                 align-items: center;
                 padding: min(90px, 14.06vw) 0 0;
+
                 h4 {
                     font-size: min(31px, 4.84vw);
                     line-height: min(44px, 6.88vw);
                 }
+
                 h2 {
                     font-size: min(48px, 7.50vw);
                     line-height: min(58px, 9.06vw);
                 }
+
                 .yj {
                     margin: min(40px, 6.25vw) 0 min(60px, 9.38vw);
                     width: min(484px, 75.63vw);
@@ -1328,22 +1422,27 @@ body {
                     background-repeat: no-repeat;
                     background-size: min(298px, 46.56vw);
                     background-position: center top min(26px, 4.06vw);
+
                     p {
                         font-size: min(27px, 4.22vw);
                         line-height: min(42px, 6.56vw);
                         letter-spacing: -0.02em;
                     }
+
                     em {
                         font-weight: 600;
+
                         &:before {
                             background-color: rgba(150, 136, 26, .15);
                         }
                     }
                 }
+
                 .scroll {
                     small {
                         font-size: min(27px, 4.22vw);
                     }
+
                     span {
                         img {
                             height: min(31px, 4.84vw);
@@ -1357,14 +1456,16 @@ body {
 
     .sec6 {
         background: linear-gradient(0deg, #d8cf88 0%, #fff 80%);
-        padding: min(190px, 12.84vw) 0 min(80px, 5.41vw);
+        padding: min(120px, 8.11vw) 0 min(130px, 8.78vw);
+
         @include media(md) {
-            padding: min(87px, 13.59vw) 0 min(80px, 12.50vw);
+            padding: min(87px, 13.59vw) 0 min(98px, 15.31vw);
         }
 
         h2 {
             text-align: center;
             font-size: min(40px, 2.70vw);
+
             @include media(md) {
                 font-size: min(43px, 6.72vw);
                 line-height: min(62px, 9.69vw);
@@ -1375,6 +1476,7 @@ body {
             margin: min(52px, 3.51vw) auto 0;
 
             ul {
+                margin: 0 auto;
                 width: min(1400px, 94.59vw);
                 display: flex;
                 justify-content: center;
@@ -1451,6 +1553,7 @@ body {
             margin: 0 auto;
             gap: min(100px, 6.76vw);
             justify-content: flex-start;
+
             @include media(md) {
                 width: min(548px, 85.63vw);
                 flex-direction: column;
@@ -1468,6 +1571,7 @@ body {
                         overflow: hidden;
                         border-radius: min(15px, 1.01vw);
                         width: min(600px, 40.54vw);
+
                         @include media(md) {
                             width: 100%;
                         }
@@ -1491,15 +1595,18 @@ body {
                 background-position: right bottom min(98px, 6.62vw);
                 background-image: url('../images/sec6_sig.png');
                 background-size: min(374px, 25.27vw);
+
                 @include media(md) {
                     width: 100%;
                     background-size: min(443px, 69.22vw);
                     gap: min(347px, 54.22vw);
                     background-position: right 55% bottom 28%
                 }
+
                 h3 {
                     font-size: min(28px, 1.89vw);
                     line-height: min(48px, 3.24vw);
+
                     @include media(md) {
                         font-size: min(31px, 4.84vw);
                         line-height: min(46px, 7.19vw);
@@ -1508,6 +1615,7 @@ body {
 
                 .btn_gradient {
                     width: min(386px, 26.08vw);
+
                     @include media(md) {
                         width: min(548px, 85.63vw);
                         height: min(112px, 17.50vw);
@@ -1515,27 +1623,32 @@ body {
                 }
             }
         }
+
         @include media(md) {
             .withbear {
                 margin-top: min(30px, 4.69vw);
+
                 .swiper-slide {
                     text-align: center;
+
                     figure {
                         border-radius: min(24px, 3.75vw);
                         overflow: hidden;
+
                         img {
                             width: 100%;
                         }
                     }
                 }
+
                 b {
                     position: absolute;
                     left: 50%;
-                    bottom:min(30px, 4.69vw);
+                    bottom: min(30px, 4.69vw);
                     background-color: var(--c-green);
                     padding: 0 min(16px, 2.50vw);
-                    margin-left:  max(-16px, -2.50vw);
-                    margin-right:  max(-16px, -2.50vw);
+                    margin-left: max(-16px, -2.50vw);
+                    margin-right: max(-16px, -2.50vw);
                     transform: translateX(-44%);
                     display: inline-flex;
                     font-size: min(25px, 3.91vw);
@@ -1549,6 +1662,7 @@ body {
                     align-items: center;
                     justify-content: center;
                     letter-spacing: -0.01em;
+
                     small {
                         display: block;
                         width: min(130px, 20.31vw);
@@ -1564,9 +1678,10 @@ body {
     }
 
     .sec10 {
-        padding: min(120px, 18.75vw) 0 min(140px, 21.88vw);
+        padding: min(130px, 9.78vw) 0;
+
         @include media(md) {
-            padding: min(83px, 12.97vw) 0 min(100px, 15.63vw);
+            padding: min(94px, 14.69vw) 0;
         }
 
         .inner {
@@ -1587,10 +1702,10 @@ body {
         }
 
         .inner>p {
-            font-size: min(20px, 1.35vw);
-            line-height: min(32px, 2.16vw);
+            font-size: 20px;
+            line-height: 32px;
             letter-spacing: -0.03em;
-            margin-top: min(47px, 3.18vw);
+            margin-top: 47px;
             letter-spacing: -0.04em;
 
             @include media(md) {
@@ -1606,8 +1721,8 @@ body {
         }
 
         div a {
-            font-size: min(20px, 1.35vw);
-            margin-top: min(24px, 1.62vw);
+            font-size: 20px;
+            margin-top: 24px;
             display: inline-flex;
             justify-content: center;
             align-items: flex-start;
@@ -1620,11 +1735,12 @@ body {
             }
 
             span {
-                height: 22px;
+                height: 25px;
                 line-height: 1;
                 border-bottom: min(2px, 0.14vw) solid var(--c-brown);
                 color: var(--c-brown);
                 font-weight: 700;
+
                 @include media(md) {
                     font-size: min(28px, 4.38vw);
                     height: min(33px, 5.16vw);
@@ -1653,16 +1769,16 @@ body {
 
             .swiper-slide {
                 .innBox {
-                    border-radius: min(40px, 2.70vw);
+                    border-radius: min(20px, 1.35vw);
                     transform: scale(0.9);
                     transform-origin: center;
                     margin: 0 min(8px, 0.54vw);
                     overflow: hidden;
-                    box-shadow: rgba(0, 0, 0, 0.25) 0 0 min(40px, 2.70vw);
+                    box-shadow: rgba(0, 0, 0, 0.14) 0 0 min(40px, 2.70vw);
 
                     @include media(md) {
                         margin: 0 min(4px, 0.63vw);
-                        border-radius: min(35px, 5.47vw);
+                        border-radius: min(20px, 3.13vw);
                         box-shadow: rgba(0, 0, 0, 0.12) 0 0 min(30px, 4.69vw);
                     }
 
@@ -1696,7 +1812,7 @@ body {
                 padding: min(36px, 2.44vw) min(50px, 3.38vw) 0;
 
                 @include media(md) {
-                    padding: min(36px, 5.63vw) min(60px, 9.38vw) 0;
+                    padding: min(44px, 6.88vw) min(60px, 9.38vw) 0;
                 }
 
                 div {
@@ -1735,6 +1851,7 @@ body {
         .swiper-container-horizontal>.swiper-pagination-bullets {
             position: relative;
             margin-top: min(60px, 4.05vw);
+
             @include media(md) {
                 margin-top: min(71px, 11.09vw);
             }
@@ -1802,7 +1919,8 @@ body {
 
     .sec11 {
         background-color: #ebe7c6;
-        padding: min(120px, 8.11vw) min(4.69vw, 30px) min(205px, 20vw);
+        padding: min(120px, 8.11vw) min(4.69vw, 30px) min(130px, 8.78vw);
+
         @include media(md) {
             padding: min(80px, 12.50vw) min(24px, 3.75vw) min(80px, 12.50vw);
         }
@@ -2098,6 +2216,7 @@ body {
 
                             p.tit {
                                 font-weight: 600;
+
                                 @include media(md) {
                                     font-size: min(26px, 4.06vw);
                                 }
