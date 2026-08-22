@@ -103,19 +103,27 @@ $breakpoints: (
     right: min(67px, 4.53vw);
     top: min(215px, 14.53vw);
     z-index: 3;
-    background-image: url('../images/floating_btn.png');
     transition: background 0.3s;
-    background-size: 100%;
     width: min(198px, 13.38vw);
     height: min(332px, 22.43vw);
     font-weight: 700;
     text-align: center;
     color: var(--c-white);
     transition: all 0.3s;
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, transparent, #112646);
+        border-radius: 12px;
+        z-index: 0;
+        filter: blur(20px);
+        opacity: 0.15;
+        transform: translateY(10px);
+    }
 
     &:hover {
-        transform: translateY(-6px);
-
+        transform: translateY(6px);
         @include media(md) {
             transform: translateX(-50%);
         }
@@ -123,17 +131,24 @@ $breakpoints: (
     }
 
     @include media(md) {
-        width: 320px;
-        height: 101px;
+        width: min(320px, 50.00vw);
+        height: min(101px, 15.78vw);
         left: 50%;
         top: calc(100% - min(137px, 21.41vw) - min(60px, 9.38vw));
         transform: translateX(-50%);
-        background-image: url('../images/floating_btn_mo.png');
     }
 
     &>a {
         display: block;
         height: 100%;
+        z-index: 3;
+        position: relative;
+        background-size: 100%;
+        background-image: url('../images/floating_btn.png');
+        @include media(md) {
+            background-image: url('../images/floating_btn_mo.png');
+        }
+
         .txt {
             position: absolute;
             color: #fff;
@@ -151,17 +166,17 @@ $breakpoints: (
             }
             @include media(md) {
                 display: flex;
-                gap: 8px;
+                gap: min(8px, 1.25vw);
                 align-items: center;
                 text-align: left;
-                padding-left: 100px;
+                padding-left: min(100px, 15.63vw);
                 width: 100%;
                 bottom: 0;
-                font-size:18px;
-                line-height: 60px;
+                font-size:min(18px, 2.81vw);
+                line-height: min(60px, 9.38vw);
                 img {
                     display: block !important;
-                    height: 11px;
+                    height: min(11px, 1.72vw);
                 }
                 br {
                     display: none;
@@ -225,7 +240,6 @@ body {
         padding: 0;
         font-family: 'DDH';
         font-weight: 400;
-        letter-spacing: -0.04em;
     }
 
     p,
@@ -277,7 +291,7 @@ body {
             @include media(md) {
                 height: 43%;
                 top: 55%;
-                padding: 0 7px;
+                padding: 0 min(7px, 1.09vw);
             }
 
         }
@@ -301,23 +315,26 @@ body {
         height: min(80px, 5.41vw);
         width: min(360px, 24.32vw);
         background: linear-gradient(90deg, #726e4f 40%, #96881a 100%);
+        @include media(md) {
+            width: min(547px, 85.47vw);
+            height: min(120px, 18.75vw);
+            gap: min(80px, 12.50vw);
+            border-radius: min(15px, 2.34vw);
+            font-size: min(34px, 5.31vw);
+        }
 
         &:hover {
             gap: min(55px, 3.72vw);
             scale: 1.03;
             background: linear-gradient(90deg, #615e42 40%, #7f7317 100%);
-        }
-        @include media(md) {
-            width: 547px;
-            height: 120px;
-            gap: 80px;
-            border-radius: 15px;
-            font-size: 34px;
+            @include media(md) {
+                gap: min(85px, 13.28vw);
+            }
         }
         img {
             height: min(15px, 1.01vw);
             @include media(md) {
-                height: 27px;
+                height: min(27px, 4.22vw);
             }
         }
     }
@@ -352,14 +369,14 @@ body {
             font-size: min(28px, 1.89vw);
             color: #000;
             @include media(md) {
-                font-size: 26px;
-                gap: 7px;
+                font-size: min(26px, 4.06vw);
+                gap: min(7px, 1.09vw);
             }
 
             img {
                 height: min(32px, 2.16vw);
                 @include media(md) {
-                    height: 30px;
+                    height: min(30px, 4.69vw);
                 }
             }
         }
@@ -373,7 +390,7 @@ body {
             img {
                 height: min(47px, 3.18vw);
                 @include media(md) {
-                    height: 54px;
+                    height: min(54px, 8.44vw);
                 }
             }
         }
@@ -384,15 +401,15 @@ body {
 
             @include media(md) {
                 text-align: center;
-                font-size: 56px;
-                line-height: 75px;
+                font-size: min(56px, 8.75vw);
+                line-height: min(75px, 11.72vw);
             }
         }
 
         &.type-A {
             padding: min(62px, 4.19vw) 0 min(82px, 5.54vw);
             @include media(md) {
-                padding: 34px 0 82px;
+                padding: min(34px, 5.31vw) 0 min(82px, 12.81vw);
             }
 
             .flex {
@@ -403,7 +420,7 @@ body {
                 padding-left: min(44px, 2.97vw);
                 gap: min(125px, 8.45vw);
                 @include media(md) {
-                    width: 548px;
+                    width: min(548px, 85.63vw);
                     padding: 0;
                 }
                 .left {
@@ -414,7 +431,7 @@ body {
                 .withyj {
                     margin: min(72px, 4.86vw) 0 min(12px, 0.81vw);
                     @include media(md) {
-                        margin: 64px 0 16px;
+                        margin: min(64px, 10.00vw) 0 min(16px, 2.50vw);
                     }
                 }
 
@@ -437,10 +454,10 @@ body {
                     @include media(md) {
                         .mo {
                             overflow: hidden;
-                            border-radius: 24px;
-                            margin-top: 39px;
+                            border-radius: min(24px, 3.75vw);
+                            margin-top: min(39px, 6.09vw);
                             img {
-                                width: 546px;
+                                width: min(546px, 85.31vw);
                             }
                         }
                     }
@@ -451,7 +468,7 @@ body {
         &.type-B {
             padding: min(92px, 5.34vw) 0 min(53px, 3.08vw);
             @include media(md) {
-                padding: 51px 0 77px;
+                padding: min(51px, 7.97vw) 0 min(77px, 12.03vw);
             }
 
             .flex {
@@ -462,7 +479,7 @@ body {
                 display: flex;
                 justify-content: space-between;
                 @include media(md) {
-                    width: 610px;
+                    width: min(610px, 95.31vw);
                     padding: 0;
                 }
                 .left, .right {
@@ -482,7 +499,7 @@ body {
                     h2 {
                         padding: min(17px, 0.99vw) 0 min(10px, 0.58vw);
                         @include media(md) {
-                            padding: 8px 0 14px;
+                            padding: min(8px, 1.25vw) 0 min(14px, 2.19vw);
                         }
                     }
 
@@ -494,18 +511,18 @@ body {
                     @include media(md) {
                         .visual {
                             display: flex !important;
-                            margin: 49px 0 57px;
+                            margin: min(49px, 7.66vw) 0 min(57px, 8.91vw);
                             li {
                                 position: relative;
                                     z-index: 1;
                                 img {
-                                    width: 355px;
+                                    width: min(355px, 55.47vw);
                                 }
                                 &:last-child {
                                         z-index: 0;
-                                    margin-left: -50px;
+                                    margin-left: max(-50px, -7.81vw);
                                     img {
-                                        width: 299px;
+                                        width: min(299px, 46.72vw);
                                     }
                                 }
                             }
@@ -529,7 +546,7 @@ body {
         padding: min(180px, 12.16vw) 0 min(150px, 10.14vw);
         background: linear-gradient(0deg, #f5efc0 0%, #f7f6ef 80%);
         @include media(md) {
-            padding: 0 0 64px;
+            padding: 0 0 min(72px, 11.25vw);
         }
 
         .flex {
@@ -537,7 +554,8 @@ body {
             margin: 0 auto;
             gap: min(101px, 6.82vw);
             @include media(md) {
-                width: 548px;
+                width: min(548px, 85.63vw);
+                gap: min(58px, 9.06vw);
                 flex-direction: column;
                 padding: 0;
             }
@@ -559,7 +577,7 @@ body {
                     overflow: hidden;
                     @include media(md) {
                         width: min(100%, 548px);
-                        border-radius: 24px;
+                        border-radius: min(24px, 3.75vw);
                     }
                 }
 
@@ -576,9 +594,9 @@ body {
                     line-height: min(66px, 4.46vw);
                     margin: min(19px, 1.28vw) 0 min(46px, 3.11vw);
                     @include media(md) {
-                        font-size: 50px;
-                        line-height: 67px;
-                        margin: 11px 0 42px;
+                        font-size: min(50px, 7.81vw);
+                        line-height: min(67px, 10.47vw);
+                        margin: min(11px, 1.72vw) 0 min(42px, 6.56vw);
                     }
                 }
 
@@ -586,8 +604,9 @@ body {
                     font-size: min(28px, 1.89vw);
                     margin-top: min(70px, 4.73vw);
                     @include media(md) {
-                        font-size: 34px;
-                        line-height: 64px;
+                        font-size: min(34px, 5.31vw);
+                        line-height: min(64px, 10.00vw);
+                        margin-top: min(41px, 6.41vw);
                     }
 
                 }
@@ -602,14 +621,14 @@ body {
                     font-size: min(24px, 1.62vw);
                     line-height: min(38px, 2.57vw);
                     @include media(md) {
-                        font-size: 31px;
-                        line-height: 46px;
+                        font-size: min(31px, 4.84vw);
+                        line-height: min(46px, 7.19vw);
                     }
 
                     &+p {
                         margin-top: min(38px, 2.57vw);
                         @include media(md) {
-                            margin-top: 47px;
+                            margin-top: min(47px, 7.34vw);
                         }
                     }
 
@@ -636,11 +655,11 @@ body {
                 gap: min(100px, 6.76vw);
 
                 @include media(md) {
-                    width: 548px;
+                    width: min(548px, 85.63vw);
                     flex-direction: column;
                     text-align: center;
-                    padding: 61px 0 53px;
-                    gap: 40px;
+                    padding: min(61px, 9.53vw) 0 min(53px, 8.28vw);
+                    gap: min(40px, 6.25vw);
                 }
 
                 .left {
@@ -654,7 +673,7 @@ body {
                         overflow: hidden;
                         border-radius: min(15px, 1.01vw);
                         @include media(md) {
-                            width: 548px;
+                            width: min(548px, 85.63vw);
                         }
 
                         img {
@@ -672,7 +691,7 @@ body {
                     justify-content: center;
                     gap: min(35px, 2.36vw);
                     @include media(md) {
-                        gap: 14px;
+                        gap: min(14px, 2.19vw);
                     }
 
                     p {
@@ -680,8 +699,8 @@ body {
                         font-size: min(24px, 1.62vw);
                         line-height: min(36px, 2.43vw);
                         @include media(md) {
-                            font-size: 32px;
-                            line-height: 46px;
+                            font-size: min(32px, 5.00vw);
+                            line-height: min(46px, 7.19vw);
                         }
                     }
 
@@ -689,7 +708,7 @@ body {
                         img {
                             height: min(60px, 4.05vw);
                             @include media(md) {
-                                height: 69px;
+                                height: min(69px, 10.78vw);
                             }
                         }
                     }
@@ -704,22 +723,22 @@ body {
             display: flex;
             align-items: center;
             @include media(md) {
-                width: 548px;
-                padding-top: 73px;
+                width: min(548px, 85.63vw);
+                padding-top: min(73px, 11.41vw);
                 flex-direction: column;
             }
 
             .b_img {
                 width: min(754px, 50.95vw);
                 @include media(md) {
-                    width: 500px;
+                    width: min(500px, 78.13vw);
                 }
 
                 img {
                     width: 100%;
                     @include media(md) {
                         transform: rotate(-2deg);
-                        margin-left: 0px;
+                        margin-left: min(0px, 0.00vw);
                     }
                 }
             }
@@ -741,12 +760,12 @@ body {
 
                 @include media(md) {
                     justify-content: flex-start;
-                    width: 529px;
-                    height: 600px;
-                    margin-top: -148px;
-                    margin-left: 47px;
-                    padding-top: 103px;
-                    padding-left: 71px;
+                    width: min(529px, 82.66vw);
+                    height: min(600px, 93.75vw);
+                    margin-top: max(-148px, -23.13vw);
+                    margin-left: min(47px, 7.34vw);
+                    padding-top: min(103px, 16.09vw);
+                    padding-left: min(71px, 11.09vw);
                 }
                 
 
@@ -755,14 +774,14 @@ body {
                     font-size: min(24px, 1.62vw);
                     line-height: 1.5;
                     @include media(md) {
-                        font-size: 26px;
-                        line-height: 39px;
+                        font-size: min(26px, 4.06vw);
+                        line-height: min(39px, 6.09vw);
                     }
 
                     &+p {
                         margin-top: min(36px, 2.43vw);
                         @include media(md) {
-                            margin-top: 41px;
+                            margin-top: min(41px, 6.41vw);
                         }
                     }
 
@@ -772,9 +791,9 @@ body {
                         margin-top: min(60px, 4.05vw);
 
                         @include media(md) {
-                            font-size: 24px;
-                            line-height: 39px;
-                            margin-top: 54px;
+                            font-size: min(24px, 3.75vw);
+                            line-height: min(39px, 6.09vw);
+                            margin-top: min(54px, 8.44vw);
                         }
 
 
@@ -796,7 +815,7 @@ body {
             @include media(md) {
                 margin: 0;
                 width: 100%;
-                padding-bottom: 90px;
+                padding-bottom: min(90px, 14.06vw);
             }
 
             &>p {
@@ -879,7 +898,7 @@ body {
                     position: absolute;
                     z-index: 3;
                     bottom: 0;
-                    padding: 0 min(20px, 1.35vw) min(20px, 1.35vw);
+                    padding: 0 min(20px, 3.13vw) min(20px, 3.13vw);
                     display: flex;
                     width: 100%;
                     justify-content: space-between;
@@ -887,18 +906,18 @@ body {
 
                     i {
                         opacity: 0.6;
-                        font-size: 23px;
+                        font-size: min(23px, 3.59vw);
                     }
 
                     p {
-                        font-size: 26px;
+                        font-size: min(26px, 4.06vw);
                         font-weight: 600;
                     }
                 }
 
                 figure {
                     overflow: hidden;
-                    border-radius: 24px;
+                    border-radius: min(24px, 3.75vw);
                     img {
                         width: 100%;
                     }
@@ -907,11 +926,11 @@ body {
                         width: 100%;
                         color: #fff;
                         top: 0;
-                        padding: 20px 20px 0;
+                        padding: min(20px, 3.13vw) min(20px, 3.13vw) 0;
                         width: 100%;
                         p {
-                            font-size: 28px;
-                            line-height: 43px;
+                            font-size: min(28px, 4.38vw);
+                            line-height: min(43px, 6.72vw);
                             
                         }
                     }
@@ -948,7 +967,7 @@ body {
             justify-content: space-between;
             gap: min(70px, 4.73vw);
             @include media(md) {
-                padding: 78px 0 92px;
+                padding: min(78px, 12.19vw) 0 min(92px, 14.37vw);
             }
         }
 
@@ -985,8 +1004,8 @@ body {
             letter-spacing: -0.03em;
 
             @include media(md) {
-                font-size: 43px;
-                line-height: 56px;
+                font-size: min(43px, 6.72vw);
+                line-height: min(56px, 8.75vw);
             }
 
             span {
@@ -996,7 +1015,7 @@ body {
             &+.lead {
                 margin-top: min(42px, 2.84vw);
                 @include media(md) {
-                    margin-top: 49px;
+                    margin-top: min(49px, 7.66vw);
                 }
             }
 
@@ -1031,7 +1050,7 @@ body {
         }
 
         100% {
-            transform: translateY(10px);
+            transform: translateY(15px);
             opacity: 0;
         }
     }
@@ -1047,7 +1066,7 @@ body {
         align-items: center;
         justify-content: space-between;
         @include media(md) {
-            padding: 79px 0 94px;
+            padding: min(79px, 12.34vw) 0 min(94px, 14.69vw);
         }
 
         .inner {
@@ -1060,10 +1079,10 @@ body {
             gap: min(72px, 7.03vw);
 
             @include media(md) {
-                width: 640px;
-                padding: 0 47px;
+                width: min(640px, 100.00vw);
+                padding: 0 min(47px, 7.34vw);
                 flex-direction: column;
-                gap: 52px;
+                gap: min(52px, 8.13vw);
             }
         }
 
@@ -1085,13 +1104,13 @@ body {
         }
 
         h2 {
-            font-size: min(47px, 3.18vw);
+            font-size: min(47px, 3.1vw);
             line-height: 1.26;
             letter-spacing: -0.045em;
             margin-top: min(60px, 4.05vw);
             @include media(md) {
-                font-size: 43px;
-                line-height: 62px;
+                font-size: min(43px, 6.72vw);
+                line-height: min(62px, 9.69vw);
                 margin-top: 0;
             letter-spacing: 0em;
             }
@@ -1103,9 +1122,9 @@ body {
             letter-spacing: -0.015em;
             margin-top: min(64px, 4.32vw);
             @include media(md) {
-                font-size: 31px;
-                line-height: 46px;
-                margin-top: 26px;
+                font-size: min(31px, 4.84vw);
+                line-height: min(46px, 7.19vw);
+                margin-top: min(26px, 4.06vw);
             }
 
             strong {
@@ -1116,7 +1135,7 @@ body {
             &+p {
                 margin-top: min(36px, 2.43vw);
                 @include media(md) {
-                    margin-top: 47px;
+                    margin-top: min(47px, 7.34vw);
                 }
             }
 
@@ -1289,29 +1308,30 @@ body {
                 display: flex !important;
                 flex-direction: column;
                 align-items: center;
-                padding: 90px 0 0;
+                padding: min(90px, 14.06vw) 0 0;
                 h4 {
-                    font-size: 31px;
-                    line-height: 44px;
+                    font-size: min(31px, 4.84vw);
+                    line-height: min(44px, 6.88vw);
                 }
                 h2 {
-                    font-size: 48px;
-                    line-height: 58px;
+                    font-size: min(48px, 7.50vw);
+                    line-height: min(58px, 9.06vw);
                 }
                 .yj {
-                    margin: 40px 0 60px;
-                    width: 484px;
-                    height: 681px;
-                    padding: 390px 50px 0;
+                    margin: min(40px, 6.25vw) 0 min(60px, 9.38vw);
+                    width: min(484px, 75.63vw);
+                    height: min(681px, 106.41vw);
+                    padding: min(390px, 60.94vw) min(50px, 7.81vw) 0;
                     background-color: #edefd2;
-                    border-radius: 20px;
+                    border-radius: min(20px, 3.13vw);
                     background-image: url('../images/sec5_yj.png');
                     background-repeat: no-repeat;
-                    background-size: 298px;
-                    background-position: center top 26px;
+                    background-size: min(298px, 46.56vw);
+                    background-position: center top min(26px, 4.06vw);
                     p {
-                        font-size: 27px;
-                        line-height: 42px;
+                        font-size: min(27px, 4.22vw);
+                        line-height: min(42px, 6.56vw);
+                        letter-spacing: -0.02em;
                     }
                     em {
                         font-weight: 600;
@@ -1322,11 +1342,11 @@ body {
                 }
                 .scroll {
                     small {
-                        font-size: 27px;
+                        font-size: min(27px, 4.22vw);
                     }
                     span {
                         img {
-                            height: 31px;
+                            height: min(31px, 4.84vw);
                         }
                     }
                 }
@@ -1339,15 +1359,15 @@ body {
         background: linear-gradient(0deg, #d8cf88 0%, #fff 80%);
         padding: min(190px, 12.84vw) 0 min(80px, 5.41vw);
         @include media(md) {
-            padding: 87px 0 80px;
+            padding: min(87px, 13.59vw) 0 min(80px, 12.50vw);
         }
 
         h2 {
             text-align: center;
             font-size: min(40px, 2.70vw);
             @include media(md) {
-                font-size: 43px;
-                line-height: 62px;
+                font-size: min(43px, 6.72vw);
+                line-height: min(62px, 9.69vw);
             }
         }
 
@@ -1362,7 +1382,7 @@ body {
 
                 li {
                     a {
-                        border: min(1px, 0.07vw) solid var(--c-brown);
+                        border: 1px solid var(--c-brown);
                         border-radius: min(99px, 6.69vw);
                         display: inline-flex;
                         padding: 0 min(16px, 1.08vw);
@@ -1432,10 +1452,10 @@ body {
             gap: min(100px, 6.76vw);
             justify-content: flex-start;
             @include media(md) {
-                width: 548px;
+                width: min(548px, 85.63vw);
                 flex-direction: column;
-                margin: 120px auto 0;
-                gap: 64px;
+                margin: min(120px, 18.75vw) auto 0;
+                gap: min(64px, 10.00vw);
             }
 
             .left {
@@ -1473,35 +1493,35 @@ body {
                 background-size: min(374px, 25.27vw);
                 @include media(md) {
                     width: 100%;
-                    background-size: 443px;
-                    gap: 347px;
+                    background-size: min(443px, 69.22vw);
+                    gap: min(347px, 54.22vw);
                     background-position: right 55% bottom 28%
                 }
                 h3 {
                     font-size: min(28px, 1.89vw);
                     line-height: min(48px, 3.24vw);
                     @include media(md) {
-                        font-size: 31px;
-                        line-height: 46px;
+                        font-size: min(31px, 4.84vw);
+                        line-height: min(46px, 7.19vw);
                     }
                 }
 
                 .btn_gradient {
                     width: min(386px, 26.08vw);
                     @include media(md) {
-                        width: 548px;
-                        height: 112px;
+                        width: min(548px, 85.63vw);
+                        height: min(112px, 17.50vw);
                     }
                 }
             }
         }
         @include media(md) {
             .withbear {
-                margin-top: 30px;
+                margin-top: min(30px, 4.69vw);
                 .swiper-slide {
                     text-align: center;
                     figure {
-                        border-radius: 24px;
+                        border-radius: min(24px, 3.75vw);
                         overflow: hidden;
                         img {
                             width: 100%;
@@ -1511,30 +1531,32 @@ body {
                 b {
                     position: absolute;
                     left: 50%;
-                    bottom:30px;
+                    bottom:min(30px, 4.69vw);
                     background-color: var(--c-green);
-                    padding: 0 16px;
-                    margin-left:  -16px;
-                    margin-right:  -16px;
+                    padding: 0 min(16px, 2.50vw);
+                    margin-left:  max(-16px, -2.50vw);
+                    margin-right:  max(-16px, -2.50vw);
                     transform: translateX(-44%);
                     display: inline-flex;
-                    font-size: 25px;
-                    height: 52px;
-                    line-height: 52px;
+                    font-size: min(25px, 3.91vw);
+                    width: max-content;
+                    height: min(52px, 8.13vw);
+                    line-height: min(52px, 8.13vw);
                     max-width: 100%;
-                    border-radius: 99px;
+                    border-radius: min(99px, 15.47vw);
                     color: #fff;
                     font-weight: 600;
                     align-items: center;
                     justify-content: center;
+                    letter-spacing: -0.01em;
                     small {
                         display: block;
-                        width: 130px;
+                        width: min(130px, 20.31vw);
                         background-size: contain;
                         background-position: center top;
                         background-repeat: no-repeat;
                         background-image: url('../images/logo_bearpaw_wh.png');
-                        height: 20px;
+                        height: min(20px, 3.13vw);
                     }
                 }
             }
@@ -1544,7 +1566,7 @@ body {
     .sec10 {
         padding: min(120px, 18.75vw) 0 min(140px, 21.88vw);
         @include media(md) {
-            padding: 83px 0 100px;
+            padding: min(83px, 12.97vw) 0 min(100px, 15.63vw);
         }
 
         .inner {
@@ -1572,10 +1594,10 @@ body {
             letter-spacing: -0.04em;
 
             @include media(md) {
-                font-size: 25px;
-                line-height: 36px;
-                margin-top: 35px;
-                letter-spacing: -0.05em;
+                font-size: min(25px, 3.91vw);
+                line-height: min(37px, 5.78vw);
+                margin-top: min(37px, 5.78vw);
+                letter-spacing: -0.02em;
             }
 
             b {
@@ -1588,43 +1610,45 @@ body {
             margin-top: min(24px, 1.62vw);
             display: inline-flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             gap: min(10px, 0.68vw);
 
             @include media(md) {
-                margin-top: 37px;
+                margin-top: min(37px, 5.78vw);
                 font-size: min(28px, 4.38vw);
-                gap: 8px;
+                gap: min(8px, 1.25vw);
             }
 
             span {
-                height: min(28px, 1.89vw);
+                height: 22px;
+                line-height: 1;
                 border-bottom: min(2px, 0.14vw) solid var(--c-brown);
                 color: var(--c-brown);
                 font-weight: 700;
                 @include media(md) {
-                    font-size: 28px;
-                    height: 37px;
+                    font-size: min(28px, 4.38vw);
+                    height: min(33px, 5.16vw);
                     border-bottom-width: 2px;
                 }
             }
 
             img {
                 @include media(md) {
-                    width: min(25px, 3.91vw);
+                    position: relative;
+                    width: min(27px, 4.22vw);
                 }
             }
         }
 
         .swBox {
             width: min(2560px, 100%);
-            padding-top: min(84px, 13.13vw);
+            padding-top: min(65px, 4.39vw);
             margin: 0 auto;
             position: relative;
             overflow: hidden;
 
             @include media(md) {
-                padding-top: min(60px, 9.38vw);
+                padding-top: min(49px, 7.66vw);
             }
 
             .swiper-slide {
@@ -1669,15 +1693,16 @@ body {
             }
 
             .txt {
-                padding: min(50px, 3.38vw) min(50px, 3.38vw) 0;
+                padding: min(36px, 2.44vw) min(50px, 3.38vw) 0;
 
                 @include media(md) {
-                    padding: min(54px, 8.44vw) min(60px, 9.38vw) 0;
+                    padding: min(36px, 5.63vw) min(60px, 9.38vw) 0;
                 }
 
-                h4 {
-                    font-size: min(34px, 2.30vw);
-                    color: var(--c-org);
+                div {
+                    font-size: min(32px, 2.3vw);
+                    font-weight: 600;
+                    color: var(--c-green);
 
                     @include media(md) {
                         font-size: min(39px, 6.09vw);
@@ -1696,8 +1721,8 @@ body {
                     @include media(md) {
                         margin-top: min(12px, 1.88vw);
                         padding-bottom: min(60px, 9.38vw);
-                        font-size: 26px;
-                        line-height: 36px;
+                        font-size: min(26px, 4.06vw);
+                        line-height: min(36px, 5.63vw);
                     }
 
                     strong {
@@ -1711,7 +1736,7 @@ body {
             position: relative;
             margin-top: min(60px, 4.05vw);
             @include media(md) {
-                margin-top: 48px;
+                margin-top: min(71px, 11.09vw);
             }
 
 
@@ -1724,8 +1749,8 @@ body {
 
                 @include media(md) {
                     width: min(71px, 11.09vw);
-                    height: min(16px, 2.5vw);
-                    border-radius: 999px;
+                    height: min(16px, 2.50vw);
+                    border-radius: min(999px, 156.09vw);
                 }
 
                 &.swiper-pagination-bullet-active {
@@ -1779,7 +1804,7 @@ body {
         background-color: #ebe7c6;
         padding: min(120px, 8.11vw) min(4.69vw, 30px) min(205px, 20vw);
         @include media(md) {
-            padding: 80px 24px 80px;
+            padding: min(80px, 12.50vw) min(24px, 3.75vw) min(80px, 12.50vw);
         }
 
 
@@ -1845,7 +1870,7 @@ body {
             width: min(205px, 32.03vw);
             height: min(56px, 8.75vw);
             line-height: min(56px, 8.75vw);
-            border: min(1px, 0.07vw) solid var(--c-green);
+            border: 1px solid var(--c-green);
             color: var(--c-green);
             box-sizing: border-box;
             text-align: left;
@@ -1871,7 +1896,7 @@ body {
     margin-top: min(47px, 3.18vw);
 
     @include media(md) {
-        margin-top: min(38px, 5.94vw);
+        margin-top: min(31px, 4.84vw);
     }
 
     input[type='radio'] {
@@ -1893,7 +1918,7 @@ body {
             transition: all .3s ease 0s;
             border-radius: min(8px, 0.54vw);
             margin-right: min(1.8vw, 20px);
-            box-shadow: min(1px, 0.07vw) min(1px, 0.07vw) min(10px, 0.68vw) min(5px, 0.34vw) rgba(3, 24, 41, 0.02);
+            box-shadow: 1px 1px min(10px, 0.68vw) min(5px, 0.34vw) rgba(3, 24, 41, 0.02);
 
             @include media(md) {
                 border-radius: min(6px, 0.94vw);
@@ -1953,7 +1978,7 @@ body {
                 border-radius: min(15px, 2.34vw);
                 background: #fff;
                 margin: 0 0 min(20px, 3.13vw) 0;
-                box-shadow: min(1px, 0.07vw) min(1px, 0.07vw) min(10px, 0.68vw) min(5px, 0.34vw) rgba(3, 24, 41, 0.02);
+                box-shadow: 1px 1px min(10px, 0.68vw) min(5px, 0.34vw) rgba(3, 24, 41, 0.02);
                 position: relative;
 
                 .tit {
@@ -1967,7 +1992,7 @@ body {
                     font-weight: 700;
 
                     @include media(md) {
-                        font-size: 28px;
+                        font-size: min(28px, 4.38vw);
                         line-height: min(40px, 6.25vw);
                         flex-basis: min(54px, 8.44vw);
                     }
@@ -1984,7 +2009,7 @@ body {
                         font-weight: 700;
 
                         @include media(md) {
-                            font-size: 22px;
+                            font-size: min(22px, 3.44vw);
                             margin-top: 0;
                             line-height: min(40px, 6.25vw);
                         }
@@ -2001,8 +2026,8 @@ body {
                     position: relative;
 
                     @include media(md) {
-                        gap: min(16px, 2.5vw);
-                        padding: min(3.5vw, 35px) min(6vw, 30px) min(3.5vw, 35px) min(5.94vw, 38px);
+                        gap: min(16px, 2.50vw);
+                        padding: min(5.00vw, 32px) min(4.69vw, 30px) min(5.00vw, 32px) min(5.94vw, 38px);
                     }
 
                     .tit_all {
@@ -2017,7 +2042,7 @@ body {
                 }
 
                 .arrow {
-                    background-image: url(../images/sec9-arrow.webp);
+                    background-image: url('../images/sec11-arrow.png');
                     width: min(32px, 3.13vw);
                     height: min(32px, 3.13vw);
                     background-size: 60%;
@@ -2025,8 +2050,8 @@ body {
                     background-repeat: no-repeat;
 
                     @include media(md) {
-                        width: min(32px, 5vw);
-                        height: min(32px, 5vw);
+                        width: min(32px, 5.00vw);
+                        height: min(32px, 5.00vw);
 
                     }
                 }
@@ -2054,19 +2079,19 @@ body {
 
                         .a-cont {
                             display: flex;
-                            border-top: min(1px, 0.07vw) solid #f2dfe9;
+                            border-top: 1px solid #f2dfe9;
                             padding-top: min(6vw, 30px);
 
                             @include media(md) {
-                                padding: min(3.91vw, 25px) min(16px, 2.5vw) 0;
+                                padding: min(3.91vw, 25px) min(16px, 2.50vw) 0;
                             }
 
                             p {
                                 font-weight: 500;
 
                                 @include media(md) {
-                                    font-size: 22px;
-                                    line-height: 34px;
+                                    font-size: min(22px, 3.44vw);
+                                    line-height: min(34px, 5.31vw);
                                     letter-spacing: -0.04em !important;
                                 }
                             }
@@ -2074,7 +2099,7 @@ body {
                             p.tit {
                                 font-weight: 600;
                                 @include media(md) {
-                                    font-size: 26px;
+                                    font-size: min(26px, 4.06vw);
                                 }
                             }
                         }

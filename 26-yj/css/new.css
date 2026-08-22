@@ -76,9 +76,7 @@
   right: min(67px, 4.53vw);
   top: min(215px, 14.53vw);
   z-index: 3;
-  background-image: url("../images/floating_btn.png");
   transition: background 0.3s;
-  background-size: 100%;
   width: min(198px, 13.38vw);
   height: min(332px, 22.43vw);
   font-weight: 700;
@@ -86,8 +84,19 @@
   color: var(--c-white);
   transition: all 0.3s;
 }
+.g_floating::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent, #112646);
+  border-radius: 12px;
+  z-index: 0;
+  filter: blur(20px);
+  opacity: 0.15;
+  transform: translateY(10px);
+}
 .g_floating:hover {
-  transform: translateY(-6px);
+  transform: translateY(6px);
 }
 @media (max-width: 1024px) {
   .g_floating:hover {
@@ -96,17 +105,25 @@
 }
 @media (max-width: 1024px) {
   .g_floating {
-    width: 320px;
-    height: 101px;
+    width: min(320px, 50vw);
+    height: min(101px, 15.78vw);
     left: 50%;
     top: calc(100% - min(137px, 21.41vw) - min(60px, 9.38vw));
     transform: translateX(-50%);
-    background-image: url("../images/floating_btn_mo.png");
   }
 }
 .g_floating > a {
   display: block;
   height: 100%;
+  z-index: 3;
+  position: relative;
+  background-size: 100%;
+  background-image: url("../images/floating_btn.png");
+}
+@media (max-width: 1024px) {
+  .g_floating > a {
+    background-image: url("../images/floating_btn_mo.png");
+  }
 }
 .g_floating > a .txt {
   position: absolute;
@@ -127,18 +144,18 @@
 @media (max-width: 1024px) {
   .g_floating > a .txt {
     display: flex;
-    gap: 8px;
+    gap: min(8px, 1.25vw);
     align-items: center;
     text-align: left;
-    padding-left: 100px;
+    padding-left: min(100px, 15.63vw);
     width: 100%;
     bottom: 0;
-    font-size: 18px;
-    line-height: 60px;
+    font-size: min(18px, 2.81vw);
+    line-height: min(60px, 9.38vw);
   }
   .g_floating > a .txt img {
     display: block !important;
-    height: 11px;
+    height: min(11px, 1.72vw);
   }
   .g_floating > a .txt br {
     display: none;
@@ -192,7 +209,6 @@ body {
   padding: 0;
   font-family: "DDH";
   font-weight: 400;
-  letter-spacing: -0.04em;
 }
 #thousand-girl p,
 #thousand-girl figure {
@@ -241,7 +257,7 @@ body {
   #thousand-girl em:before {
     height: 43%;
     top: 55%;
-    padding: 0 7px;
+    padding: 0 min(7px, 1.09vw);
   }
 }
 #thousand-girl [class^=sec] {
@@ -262,18 +278,23 @@ body {
   width: min(360px, 24.32vw);
   background: linear-gradient(90deg, #726e4f 40%, #96881a 100%);
 }
+@media (max-width: 1024px) {
+  #thousand-girl .btn_gradient {
+    width: min(547px, 85.47vw);
+    height: min(120px, 18.75vw);
+    gap: min(80px, 12.5vw);
+    border-radius: min(15px, 2.34vw);
+    font-size: min(34px, 5.31vw);
+  }
+}
 #thousand-girl .btn_gradient:hover {
   gap: min(55px, 3.72vw);
   scale: 1.03;
   background: linear-gradient(90deg, #615e42 40%, #7f7317 100%);
 }
 @media (max-width: 1024px) {
-  #thousand-girl .btn_gradient {
-    width: 547px;
-    height: 120px;
-    gap: 80px;
-    border-radius: 15px;
-    font-size: 34px;
+  #thousand-girl .btn_gradient:hover {
+    gap: min(85px, 13.28vw);
   }
 }
 #thousand-girl .btn_gradient img {
@@ -281,7 +302,7 @@ body {
 }
 @media (max-width: 1024px) {
   #thousand-girl .btn_gradient img {
-    height: 27px;
+    height: min(27px, 4.22vw);
   }
 }
 #thousand-girl .scroll {
@@ -313,8 +334,8 @@ body {
 }
 @media (max-width: 1024px) {
   #thousand-girl .main h2 {
-    font-size: 26px;
-    gap: 7px;
+    font-size: min(26px, 4.06vw);
+    gap: min(7px, 1.09vw);
   }
 }
 #thousand-girl .main h2 img {
@@ -322,7 +343,7 @@ body {
 }
 @media (max-width: 1024px) {
   #thousand-girl .main h2 img {
-    height: 30px;
+    height: min(30px, 4.69vw);
   }
 }
 #thousand-girl .main figure {
@@ -334,7 +355,7 @@ body {
 }
 @media (max-width: 1024px) {
   #thousand-girl .main .withyj img {
-    height: 54px;
+    height: min(54px, 8.44vw);
   }
 }
 #thousand-girl .main h1 {
@@ -344,8 +365,8 @@ body {
 @media (max-width: 1024px) {
   #thousand-girl .main h1 {
     text-align: center;
-    font-size: 56px;
-    line-height: 75px;
+    font-size: min(56px, 8.75vw);
+    line-height: min(75px, 11.72vw);
   }
 }
 #thousand-girl .main.type-A {
@@ -353,7 +374,7 @@ body {
 }
 @media (max-width: 1024px) {
   #thousand-girl .main.type-A {
-    padding: 34px 0 82px;
+    padding: min(34px, 5.31vw) 0 min(82px, 12.81vw);
   }
 }
 #thousand-girl .main.type-A .flex {
@@ -366,7 +387,7 @@ body {
 }
 @media (max-width: 1024px) {
   #thousand-girl .main.type-A .flex {
-    width: 548px;
+    width: min(548px, 85.63vw);
     padding: 0;
   }
 }
@@ -378,7 +399,7 @@ body {
 }
 @media (max-width: 1024px) {
   #thousand-girl .main.type-A .flex .withyj {
-    margin: 64px 0 16px;
+    margin: min(64px, 10vw) 0 min(16px, 2.5vw);
   }
 }
 @media (max-width: 1024px) {
@@ -402,11 +423,11 @@ body {
 @media (max-width: 1024px) {
   #thousand-girl .main.type-A .flex .right .mo {
     overflow: hidden;
-    border-radius: 24px;
-    margin-top: 39px;
+    border-radius: min(24px, 3.75vw);
+    margin-top: min(39px, 6.09vw);
   }
   #thousand-girl .main.type-A .flex .right .mo img {
-    width: 546px;
+    width: min(546px, 85.31vw);
   }
 }
 #thousand-girl .main.type-B {
@@ -414,7 +435,7 @@ body {
 }
 @media (max-width: 1024px) {
   #thousand-girl .main.type-B {
-    padding: 51px 0 77px;
+    padding: min(51px, 7.97vw) 0 min(77px, 12.03vw);
   }
 }
 #thousand-girl .main.type-B .flex {
@@ -427,7 +448,7 @@ body {
 }
 @media (max-width: 1024px) {
   #thousand-girl .main.type-B .flex {
-    width: 610px;
+    width: min(610px, 95.31vw);
     padding: 0;
   }
 }
@@ -446,7 +467,7 @@ body {
 }
 @media (max-width: 1024px) {
   #thousand-girl .main.type-B .flex .mid h2 {
-    padding: 8px 0 14px;
+    padding: min(8px, 1.25vw) 0 min(14px, 2.19vw);
   }
 }
 #thousand-girl .main.type-B .flex .mid p {
@@ -457,21 +478,21 @@ body {
 @media (max-width: 1024px) {
   #thousand-girl .main.type-B .flex .mid .visual {
     display: flex !important;
-    margin: 49px 0 57px;
+    margin: min(49px, 7.66vw) 0 min(57px, 8.91vw);
   }
   #thousand-girl .main.type-B .flex .mid .visual li {
     position: relative;
     z-index: 1;
   }
   #thousand-girl .main.type-B .flex .mid .visual li img {
-    width: 355px;
+    width: min(355px, 55.47vw);
   }
   #thousand-girl .main.type-B .flex .mid .visual li:last-child {
     z-index: 0;
-    margin-left: -50px;
+    margin-left: max(-50px, -7.81vw);
   }
   #thousand-girl .main.type-B .flex .mid .visual li:last-child img {
-    width: 299px;
+    width: min(299px, 46.72vw);
   }
 }
 #thousand-girl .main.type-B .flex .mid .withyj {
@@ -486,7 +507,7 @@ body {
 }
 @media (max-width: 1024px) {
   #thousand-girl .sec1 {
-    padding: 0 0 64px;
+    padding: 0 0 min(72px, 11.25vw);
   }
 }
 #thousand-girl .sec1 .flex {
@@ -496,7 +517,8 @@ body {
 }
 @media (max-width: 1024px) {
   #thousand-girl .sec1 .flex {
-    width: 548px;
+    width: min(548px, 85.63vw);
+    gap: min(58px, 9.06vw);
     flex-direction: column;
     padding: 0;
   }
@@ -522,7 +544,7 @@ body {
 @media (max-width: 1024px) {
   #thousand-girl .sec1 .flex .left .video-inner {
     width: min(100%, 548px);
-    border-radius: 24px;
+    border-radius: min(24px, 3.75vw);
   }
 }
 #thousand-girl .sec1 .flex .left iframe {
@@ -537,9 +559,9 @@ body {
 }
 @media (max-width: 1024px) {
   #thousand-girl .sec1 .flex .right h2 {
-    font-size: 50px;
-    line-height: 67px;
-    margin: 11px 0 42px;
+    font-size: min(50px, 7.81vw);
+    line-height: min(67px, 10.47vw);
+    margin: min(11px, 1.72vw) 0 min(42px, 6.56vw);
   }
 }
 #thousand-girl .sec1 .flex .right h3 {
@@ -548,8 +570,9 @@ body {
 }
 @media (max-width: 1024px) {
   #thousand-girl .sec1 .flex .right h3 {
-    font-size: 34px;
-    line-height: 64px;
+    font-size: min(34px, 5.31vw);
+    line-height: min(64px, 10vw);
+    margin-top: min(41px, 6.41vw);
   }
 }
 #thousand-girl .sec1 .flex .right em::before {
@@ -561,8 +584,8 @@ body {
 }
 @media (max-width: 1024px) {
   #thousand-girl .sec1 .flex .right p {
-    font-size: 31px;
-    line-height: 46px;
+    font-size: min(31px, 4.84vw);
+    line-height: min(46px, 7.19vw);
   }
 }
 #thousand-girl .sec1 .flex .right p + p {
@@ -570,7 +593,7 @@ body {
 }
 @media (max-width: 1024px) {
   #thousand-girl .sec1 .flex .right p + p {
-    margin-top: 47px;
+    margin-top: min(47px, 7.34vw);
   }
 }
 #thousand-girl .sec1 .flex .right p.emp {
@@ -591,11 +614,11 @@ body {
 }
 @media (max-width: 1024px) {
   #thousand-girl .sec2 .neckless .flex {
-    width: 548px;
+    width: min(548px, 85.63vw);
     flex-direction: column;
     text-align: center;
-    padding: 61px 0 53px;
-    gap: 40px;
+    padding: min(61px, 9.53vw) 0 min(53px, 8.28vw);
+    gap: min(40px, 6.25vw);
   }
 }
 #thousand-girl .sec2 .neckless .flex .left {
@@ -611,7 +634,7 @@ body {
 }
 @media (max-width: 1024px) {
   #thousand-girl .sec2 .neckless .flex .left figure {
-    width: 548px;
+    width: min(548px, 85.63vw);
   }
 }
 #thousand-girl .sec2 .neckless .flex .left figure img {
@@ -628,7 +651,7 @@ body {
 }
 @media (max-width: 1024px) {
   #thousand-girl .sec2 .neckless .flex .right {
-    gap: 14px;
+    gap: min(14px, 2.19vw);
   }
 }
 #thousand-girl .sec2 .neckless .flex .right p {
@@ -638,8 +661,8 @@ body {
 }
 @media (max-width: 1024px) {
   #thousand-girl .sec2 .neckless .flex .right p {
-    font-size: 32px;
-    line-height: 46px;
+    font-size: min(32px, 5vw);
+    line-height: min(46px, 7.19vw);
   }
 }
 #thousand-girl .sec2 .neckless .flex .right .b_title img {
@@ -647,7 +670,7 @@ body {
 }
 @media (max-width: 1024px) {
   #thousand-girl .sec2 .neckless .flex .right .b_title img {
-    height: 69px;
+    height: min(69px, 10.78vw);
   }
 }
 #thousand-girl .sec2 .girl {
@@ -659,8 +682,8 @@ body {
 }
 @media (max-width: 1024px) {
   #thousand-girl .sec2 .girl {
-    width: 548px;
-    padding-top: 73px;
+    width: min(548px, 85.63vw);
+    padding-top: min(73px, 11.41vw);
     flex-direction: column;
   }
 }
@@ -669,7 +692,7 @@ body {
 }
 @media (max-width: 1024px) {
   #thousand-girl .sec2 .girl .b_img {
-    width: 500px;
+    width: min(500px, 78.13vw);
   }
 }
 #thousand-girl .sec2 .girl .b_img img {
@@ -678,7 +701,7 @@ body {
 @media (max-width: 1024px) {
   #thousand-girl .sec2 .girl .b_img img {
     transform: rotate(-2deg);
-    margin-left: 0px;
+    margin-left: min(0px, 0vw);
   }
 }
 #thousand-girl .sec2 .girl .memo {
@@ -699,12 +722,12 @@ body {
 @media (max-width: 1024px) {
   #thousand-girl .sec2 .girl .memo {
     justify-content: flex-start;
-    width: 529px;
-    height: 600px;
-    margin-top: -148px;
-    margin-left: 47px;
-    padding-top: 103px;
-    padding-left: 71px;
+    width: min(529px, 82.66vw);
+    height: min(600px, 93.75vw);
+    margin-top: max(-148px, -23.13vw);
+    margin-left: min(47px, 7.34vw);
+    padding-top: min(103px, 16.09vw);
+    padding-left: min(71px, 11.09vw);
   }
 }
 #thousand-girl .sec2 .girl .memo p {
@@ -714,8 +737,8 @@ body {
 }
 @media (max-width: 1024px) {
   #thousand-girl .sec2 .girl .memo p {
-    font-size: 26px;
-    line-height: 39px;
+    font-size: min(26px, 4.06vw);
+    line-height: min(39px, 6.09vw);
   }
 }
 #thousand-girl .sec2 .girl .memo p + p {
@@ -723,7 +746,7 @@ body {
 }
 @media (max-width: 1024px) {
   #thousand-girl .sec2 .girl .memo p + p {
-    margin-top: 41px;
+    margin-top: min(41px, 6.41vw);
   }
 }
 #thousand-girl .sec2 .girl .memo p.name {
@@ -733,9 +756,9 @@ body {
 }
 @media (max-width: 1024px) {
   #thousand-girl .sec2 .girl .memo p.name {
-    font-size: 24px;
-    line-height: 39px;
-    margin-top: 54px;
+    font-size: min(24px, 3.75vw);
+    line-height: min(39px, 6.09vw);
+    margin-top: min(54px, 8.44vw);
   }
 }
 #thousand-girl .sec2 .girl .memo p em::before {
@@ -749,7 +772,7 @@ body {
   #thousand-girl .sec2 .card {
     margin: 0;
     width: 100%;
-    padding-bottom: 90px;
+    padding-bottom: min(90px, 14.06vw);
   }
 }
 #thousand-girl .sec2 .card > p {
@@ -816,7 +839,7 @@ body {
     position: absolute;
     z-index: 3;
     bottom: 0;
-    padding: 0 min(20px, 1.35vw) min(20px, 1.35vw);
+    padding: 0 min(20px, 3.13vw) min(20px, 3.13vw);
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -824,15 +847,15 @@ body {
   }
   #thousand-girl .sec2 .girls .name i {
     opacity: 0.6;
-    font-size: 23px;
+    font-size: min(23px, 3.59vw);
   }
   #thousand-girl .sec2 .girls .name p {
-    font-size: 26px;
+    font-size: min(26px, 4.06vw);
     font-weight: 600;
   }
   #thousand-girl .sec2 .girls figure {
     overflow: hidden;
-    border-radius: 24px;
+    border-radius: min(24px, 3.75vw);
   }
   #thousand-girl .sec2 .girls figure img {
     width: 100%;
@@ -842,12 +865,12 @@ body {
     width: 100%;
     color: #fff;
     top: 0;
-    padding: 20px 20px 0;
+    padding: min(20px, 3.13vw) min(20px, 3.13vw) 0;
     width: 100%;
   }
   #thousand-girl .sec2 .girls figure .text p {
-    font-size: 28px;
-    line-height: 43px;
+    font-size: min(28px, 4.38vw);
+    line-height: min(43px, 6.72vw);
   }
 }
 #thousand-girl > .sticky-wrap {
@@ -879,7 +902,7 @@ body {
 }
 @media (max-width: 1024px) {
   #thousand-girl .sec3 .inner {
-    padding: 78px 0 92px;
+    padding: min(78px, 12.19vw) 0 min(92px, 14.37vw);
   }
 }
 #thousand-girl .sec3 .photo {
@@ -914,8 +937,8 @@ body {
 }
 @media (max-width: 1024px) {
   #thousand-girl .sec3 .lead {
-    font-size: 43px;
-    line-height: 56px;
+    font-size: min(43px, 6.72vw);
+    line-height: min(56px, 8.75vw);
   }
 }
 #thousand-girl .sec3 .lead span {
@@ -926,7 +949,7 @@ body {
 }
 @media (max-width: 1024px) {
   #thousand-girl .sec3 .lead + .lead {
-    margin-top: 49px;
+    margin-top: min(49px, 7.66vw);
   }
 }
 #thousand-girl .sec3 .lead .mark {
@@ -952,7 +975,7 @@ body {
     opacity: 1;
   }
   100% {
-    transform: translateY(10px);
+    transform: translateY(15px);
     opacity: 0;
   }
 }
@@ -969,7 +992,7 @@ body {
 }
 @media (max-width: 1024px) {
   #thousand-girl .sec4 {
-    padding: 79px 0 94px;
+    padding: min(79px, 12.34vw) 0 min(94px, 14.69vw);
   }
 }
 #thousand-girl .sec4 .inner {
@@ -983,10 +1006,10 @@ body {
 }
 @media (max-width: 1024px) {
   #thousand-girl .sec4 .inner {
-    width: 640px;
-    padding: 0 47px;
+    width: min(640px, 100vw);
+    padding: 0 min(47px, 7.34vw);
     flex-direction: column;
-    gap: 52px;
+    gap: min(52px, 8.13vw);
   }
 }
 #thousand-girl .sec4 .photo {
@@ -1007,15 +1030,15 @@ body {
   object-fit: cover;
 }
 #thousand-girl .sec4 h2 {
-  font-size: min(47px, 3.18vw);
+  font-size: min(47px, 3.1vw);
   line-height: 1.26;
   letter-spacing: -0.045em;
   margin-top: min(60px, 4.05vw);
 }
 @media (max-width: 1024px) {
   #thousand-girl .sec4 h2 {
-    font-size: 43px;
-    line-height: 62px;
+    font-size: min(43px, 6.72vw);
+    line-height: min(62px, 9.69vw);
     margin-top: 0;
     letter-spacing: 0em;
   }
@@ -1028,9 +1051,9 @@ body {
 }
 @media (max-width: 1024px) {
   #thousand-girl .sec4 p {
-    font-size: 31px;
-    line-height: 46px;
-    margin-top: 26px;
+    font-size: min(31px, 4.84vw);
+    line-height: min(46px, 7.19vw);
+    margin-top: min(26px, 4.06vw);
   }
 }
 #thousand-girl .sec4 p strong {
@@ -1042,7 +1065,7 @@ body {
 }
 @media (max-width: 1024px) {
   #thousand-girl .sec4 p + p {
-    margin-top: 47px;
+    margin-top: min(47px, 7.34vw);
   }
 }
 #thousand-girl .sec4 p em:before {
@@ -1188,31 +1211,32 @@ body {
     display: flex !important;
     flex-direction: column;
     align-items: center;
-    padding: 90px 0 0;
+    padding: min(90px, 14.06vw) 0 0;
   }
   #thousand-girl .sec5 .mo h4 {
-    font-size: 31px;
-    line-height: 44px;
+    font-size: min(31px, 4.84vw);
+    line-height: min(44px, 6.88vw);
   }
   #thousand-girl .sec5 .mo h2 {
-    font-size: 48px;
-    line-height: 58px;
+    font-size: min(48px, 7.5vw);
+    line-height: min(58px, 9.06vw);
   }
   #thousand-girl .sec5 .mo .yj {
-    margin: 40px 0 60px;
-    width: 484px;
-    height: 681px;
-    padding: 390px 50px 0;
+    margin: min(40px, 6.25vw) 0 min(60px, 9.38vw);
+    width: min(484px, 75.63vw);
+    height: min(681px, 106.41vw);
+    padding: min(390px, 60.94vw) min(50px, 7.81vw) 0;
     background-color: #edefd2;
-    border-radius: 20px;
+    border-radius: min(20px, 3.13vw);
     background-image: url("../images/sec5_yj.png");
     background-repeat: no-repeat;
-    background-size: 298px;
-    background-position: center top 26px;
+    background-size: min(298px, 46.56vw);
+    background-position: center top min(26px, 4.06vw);
   }
   #thousand-girl .sec5 .mo .yj p {
-    font-size: 27px;
-    line-height: 42px;
+    font-size: min(27px, 4.22vw);
+    line-height: min(42px, 6.56vw);
+    letter-spacing: -0.02em;
   }
   #thousand-girl .sec5 .mo .yj em {
     font-weight: 600;
@@ -1221,10 +1245,10 @@ body {
     background-color: rgba(150, 136, 26, 0.15);
   }
   #thousand-girl .sec5 .mo .scroll small {
-    font-size: 27px;
+    font-size: min(27px, 4.22vw);
   }
   #thousand-girl .sec5 .mo .scroll span img {
-    height: 31px;
+    height: min(31px, 4.84vw);
   }
 }
 #thousand-girl .sec6 {
@@ -1233,7 +1257,7 @@ body {
 }
 @media (max-width: 1024px) {
   #thousand-girl .sec6 {
-    padding: 87px 0 80px;
+    padding: min(87px, 13.59vw) 0 min(80px, 12.5vw);
   }
 }
 #thousand-girl .sec6 h2 {
@@ -1242,8 +1266,8 @@ body {
 }
 @media (max-width: 1024px) {
   #thousand-girl .sec6 h2 {
-    font-size: 43px;
-    line-height: 62px;
+    font-size: min(43px, 6.72vw);
+    line-height: min(62px, 9.69vw);
   }
 }
 #thousand-girl .sec6 .chips-container {
@@ -1256,7 +1280,7 @@ body {
   gap: min(12px, 0.81vw);
 }
 #thousand-girl .sec6 .chips-container ul li a {
-  border: min(1px, 0.07vw) solid var(--c-brown);
+  border: 1px solid var(--c-brown);
   border-radius: min(99px, 6.69vw);
   display: inline-flex;
   padding: 0 min(16px, 1.08vw);
@@ -1314,10 +1338,10 @@ body {
 }
 @media (max-width: 1024px) {
   #thousand-girl .sec6 .flex {
-    width: 548px;
+    width: min(548px, 85.63vw);
     flex-direction: column;
-    margin: 120px auto 0;
-    gap: 64px;
+    margin: min(120px, 18.75vw) auto 0;
+    gap: min(64px, 10vw);
   }
 }
 #thousand-girl .sec6 .flex .left ul {
@@ -1353,8 +1377,8 @@ body {
 @media (max-width: 1024px) {
   #thousand-girl .sec6 .flex .right {
     width: 100%;
-    background-size: 443px;
-    gap: 347px;
+    background-size: min(443px, 69.22vw);
+    gap: min(347px, 54.22vw);
     background-position: right 55% bottom 28%;
   }
 }
@@ -1364,8 +1388,8 @@ body {
 }
 @media (max-width: 1024px) {
   #thousand-girl .sec6 .flex .right h3 {
-    font-size: 31px;
-    line-height: 46px;
+    font-size: min(31px, 4.84vw);
+    line-height: min(46px, 7.19vw);
   }
 }
 #thousand-girl .sec6 .flex .right .btn_gradient {
@@ -1373,19 +1397,19 @@ body {
 }
 @media (max-width: 1024px) {
   #thousand-girl .sec6 .flex .right .btn_gradient {
-    width: 548px;
-    height: 112px;
+    width: min(548px, 85.63vw);
+    height: min(112px, 17.5vw);
   }
 }
 @media (max-width: 1024px) {
   #thousand-girl .sec6 .withbear {
-    margin-top: 30px;
+    margin-top: min(30px, 4.69vw);
   }
   #thousand-girl .sec6 .withbear .swiper-slide {
     text-align: center;
   }
   #thousand-girl .sec6 .withbear .swiper-slide figure {
-    border-radius: 24px;
+    border-radius: min(24px, 3.75vw);
     overflow: hidden;
   }
   #thousand-girl .sec6 .withbear .swiper-slide figure img {
@@ -1394,31 +1418,33 @@ body {
   #thousand-girl .sec6 .withbear b {
     position: absolute;
     left: 50%;
-    bottom: 30px;
+    bottom: min(30px, 4.69vw);
     background-color: var(--c-green);
-    padding: 0 16px;
-    margin-left: -16px;
-    margin-right: -16px;
+    padding: 0 min(16px, 2.5vw);
+    margin-left: max(-16px, -2.5vw);
+    margin-right: max(-16px, -2.5vw);
     transform: translateX(-44%);
     display: inline-flex;
-    font-size: 25px;
-    height: 52px;
-    line-height: 52px;
+    font-size: min(25px, 3.91vw);
+    width: max-content;
+    height: min(52px, 8.13vw);
+    line-height: min(52px, 8.13vw);
     max-width: 100%;
-    border-radius: 99px;
+    border-radius: min(99px, 15.47vw);
     color: #fff;
     font-weight: 600;
     align-items: center;
     justify-content: center;
+    letter-spacing: -0.01em;
   }
   #thousand-girl .sec6 .withbear b small {
     display: block;
-    width: 130px;
+    width: min(130px, 20.31vw);
     background-size: contain;
     background-position: center top;
     background-repeat: no-repeat;
     background-image: url("../images/logo_bearpaw_wh.png");
-    height: 20px;
+    height: min(20px, 3.13vw);
   }
 }
 #thousand-girl .sec10 {
@@ -1426,7 +1452,7 @@ body {
 }
 @media (max-width: 1024px) {
   #thousand-girl .sec10 {
-    padding: 83px 0 100px;
+    padding: min(83px, 12.97vw) 0 min(100px, 15.63vw);
   }
 }
 #thousand-girl .sec10 .inner {
@@ -1454,10 +1480,10 @@ body {
 }
 @media (max-width: 1024px) {
   #thousand-girl .sec10 .inner > p {
-    font-size: 25px;
-    line-height: 36px;
-    margin-top: 35px;
-    letter-spacing: -0.05em;
+    font-size: min(25px, 3.91vw);
+    line-height: min(37px, 5.78vw);
+    margin-top: min(37px, 5.78vw);
+    letter-spacing: -0.02em;
   }
 }
 #thousand-girl .sec10 .inner > p b {
@@ -1468,44 +1494,46 @@ body {
   margin-top: min(24px, 1.62vw);
   display: inline-flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: min(10px, 0.68vw);
 }
 @media (max-width: 1024px) {
   #thousand-girl .sec10 div a {
-    margin-top: 37px;
+    margin-top: min(37px, 5.78vw);
     font-size: min(28px, 4.38vw);
-    gap: 8px;
+    gap: min(8px, 1.25vw);
   }
 }
 #thousand-girl .sec10 div a span {
-  height: min(28px, 1.89vw);
+  height: 22px;
+  line-height: 1;
   border-bottom: min(2px, 0.14vw) solid var(--c-brown);
   color: var(--c-brown);
   font-weight: 700;
 }
 @media (max-width: 1024px) {
   #thousand-girl .sec10 div a span {
-    font-size: 28px;
-    height: 37px;
+    font-size: min(28px, 4.38vw);
+    height: min(33px, 5.16vw);
     border-bottom-width: 2px;
   }
 }
 @media (max-width: 1024px) {
   #thousand-girl .sec10 div a img {
-    width: min(25px, 3.91vw);
+    position: relative;
+    width: min(27px, 4.22vw);
   }
 }
 #thousand-girl .sec10 .swBox {
   width: min(2560px, 100%);
-  padding-top: min(84px, 13.13vw);
+  padding-top: min(65px, 4.39vw);
   margin: 0 auto;
   position: relative;
   overflow: hidden;
 }
 @media (max-width: 1024px) {
   #thousand-girl .sec10 .swBox {
-    padding-top: min(60px, 9.38vw);
+    padding-top: min(49px, 7.66vw);
   }
 }
 #thousand-girl .sec10 .swBox .swiper-slide .innBox {
@@ -1544,19 +1572,20 @@ body {
   width: 100%;
 }
 #thousand-girl .sec10 .swBox .txt {
-  padding: min(50px, 3.38vw) min(50px, 3.38vw) 0;
+  padding: min(36px, 2.44vw) min(50px, 3.38vw) 0;
 }
 @media (max-width: 1024px) {
   #thousand-girl .sec10 .swBox .txt {
-    padding: min(54px, 8.44vw) min(60px, 9.38vw) 0;
+    padding: min(36px, 5.63vw) min(60px, 9.38vw) 0;
   }
 }
-#thousand-girl .sec10 .swBox .txt h4 {
-  font-size: min(34px, 2.3vw);
-  color: var(--c-org);
+#thousand-girl .sec10 .swBox .txt div {
+  font-size: min(32px, 2.3vw);
+  font-weight: 600;
+  color: var(--c-green);
 }
 @media (max-width: 1024px) {
-  #thousand-girl .sec10 .swBox .txt h4 {
+  #thousand-girl .sec10 .swBox .txt div {
     font-size: min(39px, 6.09vw);
   }
 }
@@ -1572,8 +1601,8 @@ body {
   #thousand-girl .sec10 .swBox .txt p {
     margin-top: min(12px, 1.88vw);
     padding-bottom: min(60px, 9.38vw);
-    font-size: 26px;
-    line-height: 36px;
+    font-size: min(26px, 4.06vw);
+    line-height: min(36px, 5.63vw);
   }
 }
 #thousand-girl .sec10 .swBox .txt p strong {
@@ -1585,7 +1614,7 @@ body {
 }
 @media (max-width: 1024px) {
   #thousand-girl .sec10 .swiper-container-horizontal > .swiper-pagination-bullets {
-    margin-top: 48px;
+    margin-top: min(71px, 11.09vw);
   }
 }
 #thousand-girl .sec10 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
@@ -1599,7 +1628,7 @@ body {
   #thousand-girl .sec10 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
     width: min(71px, 11.09vw);
     height: min(16px, 2.5vw);
-    border-radius: 999px;
+    border-radius: min(999px, 156.09vw);
   }
 }
 #thousand-girl .sec10 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active {
@@ -1654,7 +1683,7 @@ body {
 }
 @media (max-width: 1024px) {
   #thousand-girl .sec11 {
-    padding: 80px 24px 80px;
+    padding: min(80px, 12.5vw) min(24px, 3.75vw) min(80px, 12.5vw);
   }
 }
 #thousand-girl .sec11 h2 {
@@ -1709,7 +1738,7 @@ body {
   width: min(205px, 32.03vw);
   height: min(56px, 8.75vw);
   line-height: min(56px, 8.75vw);
-  border: min(1px, 0.07vw) solid var(--c-green);
+  border: 1px solid var(--c-green);
   color: var(--c-green);
   box-sizing: border-box;
   text-align: left;
@@ -1730,7 +1759,7 @@ body {
 }
 @media (max-width: 1024px) {
   .tab-main {
-    margin-top: min(38px, 5.94vw);
+    margin-top: min(31px, 4.84vw);
   }
 }
 .tab-main input[type=radio] {
@@ -1751,7 +1780,7 @@ body {
   transition: all 0.3s ease 0s;
   border-radius: min(8px, 0.54vw);
   margin-right: min(1.8vw, 20px);
-  box-shadow: min(1px, 0.07vw) min(1px, 0.07vw) min(10px, 0.68vw) min(5px, 0.34vw) rgba(3, 24, 41, 0.02);
+  box-shadow: 1px 1px min(10px, 0.68vw) min(5px, 0.34vw) rgba(3, 24, 41, 0.02);
 }
 @media (max-width: 1024px) {
   .tab-main .tab-main-nav a {
@@ -1808,7 +1837,7 @@ body {
   border-radius: min(15px, 2.34vw);
   background: #fff;
   margin: 0 0 min(20px, 3.13vw) 0;
-  box-shadow: min(1px, 0.07vw) min(1px, 0.07vw) min(10px, 0.68vw) min(5px, 0.34vw) rgba(3, 24, 41, 0.02);
+  box-shadow: 1px 1px min(10px, 0.68vw) min(5px, 0.34vw) rgba(3, 24, 41, 0.02);
   position: relative;
 }
 .tab-main .acc-warp .accordion .acc-box .tit {
@@ -1823,7 +1852,7 @@ body {
 }
 @media (max-width: 1024px) {
   .tab-main .acc-warp .accordion .acc-box .tit {
-    font-size: 28px;
+    font-size: min(28px, 4.38vw);
     line-height: min(40px, 6.25vw);
     flex-basis: min(54px, 8.44vw);
   }
@@ -1840,7 +1869,7 @@ body {
 }
 @media (max-width: 1024px) {
   .tab-main .acc-warp .accordion .acc-box .tit_all p {
-    font-size: 22px;
+    font-size: min(22px, 3.44vw);
     margin-top: 0;
     line-height: min(40px, 6.25vw);
   }
@@ -1857,7 +1886,7 @@ body {
 @media (max-width: 1024px) {
   .tab-main .acc-warp .accordion .acc-box .acc-q {
     gap: min(16px, 2.5vw);
-    padding: min(3.5vw, 35px) min(6vw, 30px) min(3.5vw, 35px) min(5.94vw, 38px);
+    padding: min(5vw, 32px) min(4.69vw, 30px) min(5vw, 32px) min(5.94vw, 38px);
   }
 }
 .tab-main .acc-warp .accordion .acc-box .acc-q .tit_all {
@@ -1868,7 +1897,7 @@ body {
   text-align: left;
 }
 .tab-main .acc-warp .accordion .acc-box .arrow {
-  background-image: url(../images/sec9-arrow.webp);
+  background-image: url("../images/sec11-arrow.png");
   width: min(32px, 3.13vw);
   height: min(32px, 3.13vw);
   background-size: 60%;
@@ -1901,7 +1930,7 @@ body {
 }
 .tab-main .acc-warp .accordion .acc-box.on .acc-a .a-cont {
   display: flex;
-  border-top: min(1px, 0.07vw) solid #f2dfe9;
+  border-top: 1px solid #f2dfe9;
   padding-top: min(6vw, 30px);
 }
 @media (max-width: 1024px) {
@@ -1914,8 +1943,8 @@ body {
 }
 @media (max-width: 1024px) {
   .tab-main .acc-warp .accordion .acc-box.on .acc-a .a-cont p {
-    font-size: 22px;
-    line-height: 34px;
+    font-size: min(22px, 3.44vw);
+    line-height: min(34px, 5.31vw);
     letter-spacing: -0.04em !important;
   }
 }
@@ -1924,7 +1953,7 @@ body {
 }
 @media (max-width: 1024px) {
   .tab-main .acc-warp .accordion .acc-box.on .acc-a .a-cont p.tit {
-    font-size: 26px;
+    font-size: min(26px, 4.06vw);
   }
 }
 .tab-main .acc-warp .accordion .acc-box.on .arrow {
